@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "PUBLIC_URL=/MarciaCreations REACT_APP_PREVIEW=0 react-scripts build",
+    "build": "REACT_APP_PREVIEW=0 react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build:preview": "REACT_APP_PREVIEW=1 BUILD_PATH=editor/preview-site react-scripts build"
