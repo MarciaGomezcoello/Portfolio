@@ -409,14 +409,39 @@ async function sendToInternet(version) {
     return { commit: await git(["rev-parse", "--short", "HEAD"]), pulled };
 }
 
+/* Where Node may be installed. An app opened from the Dock gets a bare PATH and
+   never reads the shell profile, so installs made through nvm, Volta, fnm or
+   asdf — which live under the home folder — have to be looked up by hand. For
+   nvm the newest version comes first. */
+function nodePaths() {
+    const home = process.env.HOME || "";
+    const nvm = path.join(process.env.NVM_DIR || path.join(home, ".nvm"), "versions", "node");
+    let nvmBins = [];
+    try {
+        nvmBins = fsSync
+            .readdirSync(nvm)
+            .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }))
+            .map((v) => path.join(nvm, v, "bin"));
+    } catch {
+        // no nvm here
+    }
+    return [
+        ...nvmBins,
+        path.join(home, ".volta", "bin"),
+        path.join(home, ".local", "share", "fnm", "aliases", "default", "bin"),
+        path.join(home, ".asdf", "shims"),
+        "/opt/homebrew/bin",
+        "/usr/local/bin",
+    ].filter((dir) => fsSync.existsSync(dir));
+}
+
 /* Makes the site live: `npm run deploy` builds it and pushes the result to the
-   `gh-pages` branch, which GitHub Pages serves. An app opened from the Dock
-   gets a bare PATH, so the usual places Node is installed are added. */
+   `gh-pages` branch, which GitHub Pages serves. */
 async function deploy() {
     if (!fsSync.existsSync(path.join(SITE, "node_modules"))) {
         throw new UploadProblem("falta preparar el sitio en esta computadora (npm install)");
     }
-    const PATH = ["/opt/homebrew/bin", "/usr/local/bin", process.env.PATH].filter(Boolean).join(":");
+    const PATH = [...nodePaths(), process.env.PATH].filter(Boolean).join(":");
     try {
         await run("npm", ["run", "deploy"], {
             cwd: SITE,

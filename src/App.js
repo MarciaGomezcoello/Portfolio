@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import SiteFooter from "./components/Footer/SiteFooter";
 import { FiestaProvider } from "./components/common/Fiesta";
 import ScrollToTop from "./components/common/ScrollToTop";
+import PageViews from "./components/common/PageViews";
 import { VisorProvider } from "./components/common/Visor";
 import { WordsProvider } from "./components/common/Words";
 import Home from "./pages/Home";
@@ -266,6 +267,7 @@ function App() {
             <FiestaProvider theme={theme} extras={all.site?.holidayExtras}>
             <VisorProvider>
                 <ScrollToTop />
+                <PageViews />
                 <a className="skipLink" href="#main">{c.site?.ui?.skipLink || "Saltar al contenido"}</a>
                 <Navbar site={c.site} lang={lang} overHero={sectionOn(c.home?.hero)} />
                 <main id="main">
