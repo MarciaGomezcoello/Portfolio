@@ -84,11 +84,11 @@
 
 .adorno-portrait { top: 0; }
 
-/* Antlers and bunny ears rise out of the top edge, centred. */
-.adorno-portrait.is-navidad { left: 50%; width: 66%; transform: translate(-50%, -80%); }
+/* Bunny ears rise out of the top edge, centred. */
 .adorno-portrait.is-pascua { left: 50%; width: 46%; transform: translate(-50%, -84%); }
 
 /* Hats sit tipped on a corner. */
+.adorno-portrait.is-navidad { left: -9%; width: 40%; transform: translateY(-44%) rotate(-16deg); }
 .adorno-portrait.is-halloween { left: -7%; width: 40%; transform: translateY(-60%) rotate(-14deg); }
 .adorno-portrait.is-anonuevo { right: -3%; width: 26%; transform: translateY(-72%) rotate(16deg); }
 
