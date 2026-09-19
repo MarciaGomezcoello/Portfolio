@@ -12,6 +12,11 @@ import Confirm from "./Confirm.jsx";
    things as they were. Going back never deletes a version; publishing the old
    one simply becomes the newest.
 
+   Borrar takes a version off the list, and «Borrar las anteriores» every one
+   but the newest. Only the list on this Mac shrinks — the site and GitHub are
+   untouched. The published version stays, since "what is new" is measured
+   against it; one that never reached the internet may go.
+
    A version kept but not uploaded — no internet, say — is `pending`, and the
    button offers to send it again.
    ============================================================================ */
@@ -40,6 +45,7 @@ export default function Publisher({ base, dirty, changed, summarize, onOpenVersi
     const [busy, setBusy] = useState(false);
     const [result, setResult] = useState(null); // { kind, text }
     const [asking, setAsking] = useState(null); // "publicar" or a version
+    const [erasing, setErasing] = useState(null); // a version, or "anteriores"
 
     const refresh = useCallback(async () => {
         try {
@@ -91,6 +97,28 @@ export default function Publisher({ base, dirty, changed, summarize, onOpenVersi
             await refresh();
         } catch (err) {
             setResult({ kind: "bad", text: String(err.message || err) });
+        } finally {
+            setBusy(false);
+        }
+    }
+
+    async function erase(target) {
+        setBusy(true);
+        setResult(null);
+        try {
+            const url = target === "anteriores" ? "/api/versiones" : `/api/versiones/${target.id}`;
+            const res = await fetch(url, { method: "DELETE" });
+            const out = await res.json();
+            if (!res.ok) throw new Error(out.error || "No se pudo borrar.");
+            setResult({
+                kind: "ok",
+                text: target === "anteriores"
+                    ? `Se borraron ${out.deleted} versiones anteriores.`
+                    : `Se borró la versión del ${when(target.date)}.`,
+            });
+            await refresh();
+        } catch (err) {
+            setResult({ kind: "bad", text: `No se pudo borrar: ${err.message || err}` });
         } finally {
             setBusy(false);
         }
@@ -177,8 +205,20 @@ export default function Publisher({ base, dirty, changed, summarize, onOpenVersi
                 <span className="rowLabel">Versiones publicadas</span>
                 <span className="rowHelp">
                     Se guardan las últimas {data.kept}, con el español y el inglés. Cualquiera se
-                    puede volver a abrir.
+                    puede volver a abrir. Borrar una solo la quita de esta lista: el sitio no cambia.
                 </span>
+                {data.versions.length > 1 && (
+                    <span className="englishTools">
+                        <button
+                            type="button"
+                            className="picBtn quiet"
+                            disabled={busy}
+                            onClick={() => setErasing("anteriores")}
+                        >
+                            Borrar las anteriores ({data.versions.length - 1})
+                        </button>
+                    </span>
+                )}
                 {data.versions.length === 0 ? (
                     <p className="versionsEmpty">Aquí aparecerá cada publicación.</p>
                 ) : (
@@ -199,9 +239,21 @@ export default function Publisher({ base, dirty, changed, summarize, onOpenVersi
                                         <span className="rowHelp">{joined(v.changes)}</span>
                                     )}
                                 </span>
-                                <button type="button" className="picBtn" onClick={() => setAsking(v)}>
-                                    Volver a esta
-                                </button>
+                                <span className="versionTools">
+                                    <button type="button" className="picBtn" onClick={() => setAsking(v)}>
+                                        Volver a esta
+                                    </button>
+                                    {(i > 0 || data.pending) && (
+                                        <button
+                                            type="button"
+                                            className="picBtn quiet"
+                                            disabled={busy}
+                                            onClick={() => setErasing(v)}
+                                        >
+                                            Borrar
+                                        </button>
+                                    )}
+                                </span>
                             </li>
                         ))}
                     </ol>
@@ -225,6 +277,32 @@ export default function Publisher({ base, dirty, changed, summarize, onOpenVersi
                         </ul>
                     )}
                     <p>Queda guardado como una versión a la que siempre se puede volver.</p>
+                </Confirm>
+            )}
+            {erasing && (
+                <Confirm
+                    title={erasing === "anteriores" ? "¿Borrar las versiones anteriores?" : "¿Borrar esta versión?"}
+                    yes="Sí, borrar"
+                    danger
+                    onNo={() => setErasing(null)}
+                    onYes={() => {
+                        const target = erasing;
+                        setErasing(null);
+                        erase(target);
+                    }}
+                >
+                    {erasing === "anteriores" ? (
+                        <p>
+                            Se borran {data.versions.length - 1} versiones de esta lista. Queda solo
+                            la más reciente, del {when(data.versions[0].date)}.
+                        </p>
+                    ) : (
+                        <p>Se borra la versión del {when(erasing.date)} de esta lista.</p>
+                    )}
+                    <p>
+                        El sitio en internet no cambia. Lo borrado ya no se podrá volver a abrir
+                        desde aquí.
+                    </p>
                 </Confirm>
             )}
             {asking && asking !== "publicar" && (

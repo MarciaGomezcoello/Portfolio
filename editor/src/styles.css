@@ -1036,7 +1036,7 @@ body.isDragging iframe { pointer-events: none; }
 }
 .versionTag.isPending { background: #fbf1dc; color: #7a5a14; }
 .versionNote { font-size: 0.85rem; color: var(--ink-soft); }
-.version .picBtn { flex: none; }
+.versionTools { display: flex; flex: none; gap: 0.3rem; }
 
 .previewLang { display: flex; gap: 0.3rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid var(--line); }
 

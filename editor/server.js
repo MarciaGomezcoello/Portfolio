@@ -666,11 +666,49 @@ function makeApi({ uiDir, previewUrl }) {
         res.json(v);
     });
 
+    let publishing = false;
+
+    /* Borrar. Only the list on this Mac shrinks: the site, GitHub and the
+       commits are untouched. The newest version is what the screen measures
+       "what is new" against, so it stays — unless it never reached the
+       internet, in which case it is not the published site and may go. */
+    async function deletable() {
+        const ids = await versionIds();
+        const newest = ids[0] ? await readVersion(ids[0]) : null;
+        return newest?.uploaded === true ? ids.slice(1) : ids;
+    }
+
+    app.delete("/api/versiones/:id", async (req, res) => {
+        if (publishing) return res.status(409).json({ error: "Se está publicando; espere un momento." });
+        try {
+            const id = req.params.id;
+            if (!VERSION_ID.test(id)) return res.status(404).json({ error: "No se encontró esa versión." });
+            if (!(await deletable()).includes(id)) {
+                return res.status(400).json({ error: "La versión publicada no se puede borrar." });
+            }
+            await fs.rm(path.join(versionsDir(), `${id}.json`), { force: true });
+            res.json({ ok: true });
+        } catch (err) {
+            res.status(500).json({ error: String(err.message || err) });
+        }
+    });
+
+    // Every version but the published one.
+    app.delete("/api/versiones", async (_req, res) => {
+        if (publishing) return res.status(409).json({ error: "Se está publicando; espere un momento." });
+        try {
+            const gone = (await versionIds()).slice(1);
+            for (const id of gone) await fs.rm(path.join(versionsDir(), `${id}.json`), { force: true });
+            res.json({ deleted: gone.length });
+        } catch (err) {
+            res.status(500).json({ error: String(err.message || err) });
+        }
+    });
+
     /* Publicar. What is SAVED is published, read from disk, never the draft on
        screen — so a change she has not applied cannot slip out. The version is
        kept first; then it goes to the internet. `pulled` says that other
        commits came down with it, so the screen reads the files again. */
-    let publishing = false;
     app.post("/api/publicar", async (req, res) => {
         if (publishing) return res.status(409).json({ error: "Ya se está publicando." });
         publishing = true;
