@@ -114,18 +114,6 @@ function Calavera({ detail = true }) {
     );
 }
 
-/* Red, flopping over to one side, with a white fur brim and pom-pom. */
-function SantaHat() {
-    return (
-        <svg viewBox="0 0 130 104">
-            <path className="fa" d="M14 80C16 44 34 14 62 8c26-5 46 14 54 52-10-12-20-16-28-14 6 10 10 22 10 34z" />
-            <path className="fshine" d="M30 64c4-22 16-40 34-48-10 14-18 30-22 50z" />
-            <rect className="fd" x="6" y="74" width="104" height="22" rx="11" />
-            <circle className="fd" cx="116" cy="62" r="12" />
-        </svg>
-    );
-}
-
 function PilgrimHat() {
     return (
         <svg viewBox="0 0 80 64">
@@ -141,7 +129,6 @@ function PilgrimHat() {
 /* --- On the portrait ------------------------------------------------------- */
 
 const PORTRAIT = {
-    navidad: <SantaHat />,
     halloween: <WitchHat />,
     sanvalentin: (
         <svg viewBox="0 0 120 110">
