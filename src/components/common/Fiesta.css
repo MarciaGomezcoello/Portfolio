@@ -88,7 +88,7 @@
 .adorno-portrait.is-pascua { left: 50%; width: 46%; transform: translate(-50%, -84%); }
 
 /* Santa's hat is worn: on her head, where the portrait's crown sits. */
-.adorno-portrait.is-navidad { left: 32%; width: 48%; transform: translateY(-38%) rotate(-8deg); }
+.adorno-portrait.is-navidad { left: 23%; width: 65%; transform: translateY(-26%) rotate(-8deg); }
 
 /* Hats sit tipped on a corner. */
 .adorno-portrait.is-halloween { left: -7%; width: 40%; transform: translateY(-60%) rotate(-14deg); }
