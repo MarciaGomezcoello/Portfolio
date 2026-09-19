@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin-top: 0;
+    /* The bar floats over the cover page (see .nav.isHome), so the top padding
+       is the bar's own height and then the breathing room. Cutting it to the
+       room alone put the greeting underneath the bar. */
+    padding: calc(var(--nav-h) + clamp(1.25rem, 5vh, 3rem)) var(--gutter) clamp(1.5rem, 3vh, 2.5rem);
+    /* One flat colour, like every other band. The radial washes that were here
+       faded out towards the right edge, which read as an unfinished gradient
+       rather than as light. */
+    background: var(--paper-warm);
+}
+
+/* The drifting thread behind everything. */
+.heroThread {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--rose);
+    stroke-width: 1;
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.heroThread path:nth-child(2) {
+    stroke: var(--gold);
+    opacity: 0.5;
+    stroke-dasharray: 5 9;
+}
+
+.heroInner {
+    position: relative;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+/* --- Text side ----------------------------------------------------------- */
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.heroGreeting {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin-bottom: 1.4rem;
+    animation: heroIn 0.9s var(--ease) both;
+}
+
+.heroName {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-size: calc(clamp(2.6rem, 4.6vw, 3.6rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    margin: 0;
+    animation: heroIn 0.9s var(--ease) 0.08s both;
+}
+
+.heroHon {
+    /* A label, not part of the title: it never leans with a theme's titles. */
+    font-style: normal;
+    display: block;
+    font-family: var(--body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+}
+
+/* --- Cycling roles ------------------------------------------------------- */
+
+.heroRoles {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.3rem;
+    min-height: 2.6rem;
+    animation: heroIn 0.9s var(--ease) 0.16s both;
+}
+
+.heroRolesRule {
+    width: clamp(2rem, 6vw, 4rem);
+    height: 1px;
+    background: var(--rose);
+    flex-shrink: 0;
+}
+
+.heroRolesType {
+    font-family: var(--display);
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    font-weight: 400;
+    font-style: italic;
+    color: var(--rose-dark);
+}
+
+/* typewriter-effect renders its own caret; make it match the type. */
+.heroRolesType .Typewriter__cursor {
+    color: var(--rose);
+    font-weight: 300;
+}
+
+.heroIntro {
+    max-width: 46ch;
+    margin: 1.5rem 0 0;
+    font-size: clamp(1rem, 1.35vw, 1.08rem);
+    line-height: 1.8;
+    color: var(--ink-soft);
+    animation: heroIn 0.9s var(--ease) 0.24s both;
+}
+
+.heroActions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-top: 1.8rem;
+    animation: heroIn 0.9s var(--ease) 0.32s both;
+}
+
+.heroPlace {
+    margin-top: 1.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--line);
+    width: 100%;
+    max-width: 30ch;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    animation: heroIn 0.9s var(--ease) 0.4s both;
+}
+
+/* --- Portrait ------------------------------------------------------------ */
+
+.heroPortrait {
+    position: relative;
+    border-radius: var(--radius-lg);
+    animation: heroIn 1s var(--ease) 0.2s both;
+}
+
+.heroPortrait > .ph,
+.heroPortrait > .figureImg {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* A solid block of her rose set behind the portrait and out to one corner.
+   It was a hairline at 45%, which on warm paper was all but invisible — the
+   portrait is the first picture on the site and wants something to stand on. */
+.heroPortraitFrame {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--rose);
+    border-radius: var(--radius-lg);
+    transform: translate(22px, 22px) rotate(var(--portrait-turn));
+    pointer-events: none;
+}
+
+@media (max-width: 560px) {
+    .heroPortraitFrame {
+        transform: translate(12px, 12px) rotate(var(--portrait-turn));
+    }
+}
+
+/* Beside the words, the portrait is held to the screen's height rather than
+   its column's width, so the whole hero fits on a laptop: the height is set
+   and the width follows the photograph's own proportion. The frame block
+   behind it follows the portrait, because the portrait box shrinks to fit. */
+@media (min-width: 901px) {
+    .heroPortrait {
+        justify-self: center;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .heroPortrait > .figureImg {
+        width: auto;
+        height: min(52vh, 460px);
+        max-width: 100%;
+    }
+
+    .heroPortrait > .ph {
+        width: calc(min(52vh, 460px) * 0.8);
+        max-width: 100%;
+    }
+}
+
+/* --- Scroll hint --------------------------------------------------------- */
+
+.heroScroll {
+    position: relative;
+    display: block;
+    max-width: var(--maxw);
+    margin: clamp(1.5rem, 3vw, 2.25rem) auto 0;
+    height: 34px;
+}
+
+.heroScrollLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--rose), transparent);
+    transform-origin: top;
+    animation: heroScroll 2.4s var(--ease) infinite;
+}
+
+@keyframes heroIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes heroScroll {
+    0% { transform: scaleY(0); opacity: 0; }
+    35% { transform: scaleY(1); opacity: 1; }
+    100% { transform: scaleY(1) translateY(100%); opacity: 0; }
+}
+
+@media (max-width: 900px) {
+    .heroInner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* The portrait leads on a narrow screen, and it is centred: capped at
+       320px it is narrower than the column it sits in, and left in the corner
+       of a full-width band it reads as having slipped rather than as having
+       been placed. */
+    .heroPortrait {
+        order: -1;
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
+    .heroScroll { display: none; }
+}
+
+/* On a phone the portrait was 320px of a 390px screen — the whole first screen
+   was her photograph, and her name started below the fold. Held to about two
+   thirds of the width, the name and the portrait share the first screen. */
+@media (max-width: 560px) {
+    .heroPortrait {
+        max-width: min(68vw, 250px);
+    }
+}

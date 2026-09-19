@@ -1,0 +1,33 @@
+.notFound {
+    padding-top: clamp(4rem, 10vw, 8rem);
+    padding-bottom: clamp(4rem, 10vw, 8rem);
+}
+
+.notFoundInner {
+    max-width: 56ch;
+}
+
+.notFoundTitle {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-weight: var(--title-weight);
+    font-size: calc(clamp(2.4rem, 7vw, 4rem) * var(--title-scale));
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    margin: 0;
+}
+
+.notFoundText {
+    margin: 1.6rem 0 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+.notFoundLinks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 2.4rem;
+}

@@ -1,0 +1,508 @@
+/* --- The next one -------------------------------------------------------- */
+
+/* The four grounds down this page have to alternate, and the deepest belongs
+   here: the next encounter is the feature, and it is the band that most needs
+   telling apart from the archive under it. A hairline closes the seam so the
+   change of paper reads as an edge rather than as a gradient. */
+.nextBand {
+    background: var(--paper-deep);
+    border-bottom: 1px solid var(--line);
+}
+
+.nextInner {
+    display: grid;
+    /* The poster column is capped rather than given a share of the width: at a
+       share, a wide screen made a 2:3 flyer nearly 700px tall, taller than the
+       screen and three times the height of the few lines beside it. A poster is
+       the announcement, not the whole band. */
+    grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+/* A flyer taped to a noticeboard: hanging a little out of true, and straightening
+   when it is pointed at. */
+/* Smaller than it was. Poster-led is the point of the band, but at full width
+   the flyer was taking most of the first screen before a word of the encounter
+   had been read. */
+.nextPoster {
+    max-width: min(250px, 31vh);
+    margin-inline: auto;
+}
+
+.nextPosterSheet {
+    position: relative;
+    padding: 0.7rem;
+    background: var(--card);
+    box-shadow: var(--shadow-md);
+    transform: rotate(-1.4deg);
+    transition: transform 0.55s var(--ease), box-shadow 0.55s var(--ease);
+}
+
+/* A touch screen has no pointer to hover with: `:hover` latches on when the
+   card is tapped and stays until something else is, so a card that lifts is
+   left hanging in its raised state — and these are the cards that stay on
+   screen after the tap rather than navigating away from it. */
+@media (hover: hover) {
+    .nextPosterSheet:hover {
+        transform: rotate(0deg);
+        box-shadow: var(--shadow-lg);
+    }
+}
+
+/* Whatever shape the afiche is, it is fitted inside the reserved frame rather
+   than made to fill it — a flyer is mostly type, and cropping one costs the
+   date off the bottom or the title off the top. */
+.nextPosterSheet .figureImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: var(--paper-deep);
+}
+
+/* Two strips of tape over the top corners, laid across at opposite angles. */
+.nextTape {
+    position: absolute;
+    top: -0.6rem;
+    width: 4.2rem;
+    height: 1.35rem;
+    background: var(--tape);
+    border-left: 1px solid var(--tape-edge);
+    border-right: 1px solid var(--tape-edge);
+    box-shadow: 0 1px 3px var(--tape-shadow);
+    z-index: 1;
+}
+
+/* How far the tape hangs off the corner is a share of the screen rather than a
+   fixed distance. At 1.1rem it reached past the left gutter on a 360px phone —
+   about four pixels outside the page, which is enough to give the whole
+   document a horizontal scrollbar. There is no rung to put that on: it is a
+   distance that has to shrink with the margin it sits in, not at a threshold. */
+.nextTapeLeft {
+    left: clamp(-1.1rem, -3vw, -0.45rem);
+    transform: rotate(-38deg);
+}
+
+.nextTapeRight {
+    right: clamp(-1.1rem, -3vw, -0.45rem);
+    transform: rotate(38deg);
+}
+
+/* The details are type on the page, not a panel. */
+.nextDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Her part in it — the one thing the page could not work out for itself. Small
+   caps over a short rose rule rather than a filled pill, because a pill is a
+   control and this is a label. */
+.nextRole {
+    position: relative;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.1rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+}
+
+.nextRole::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 2.1rem;
+    height: 2px;
+    background: var(--rose-deep);
+    border-radius: 2px;
+}
+
+.nextWhen {
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+}
+
+.nextTitle {
+    margin: 0.45rem 0 0;
+    font-size: clamp(1.9rem, 3.4vw, 2.3rem);
+    line-height: 1.08;
+    color: var(--ink);
+}
+
+.nextWhere {
+    margin: 0.85rem 0 0;
+    font-family: var(--display);
+    font-size: clamp(1rem, 1.9vw, 1.2rem);
+    color: var(--ink-soft);
+}
+
+.nextNote {
+    max-width: 46ch;
+    margin: 1.1rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+.nextActions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem 1.75rem;
+    margin-top: 1.8rem;
+}
+
+.nextCta,
+.nextMore {
+    margin-top: 0;
+}
+
+/* Two steps down rather than one cliff. On a tablet the poster narrows and the
+   band stays in two columns, which is the arrangement it was designed as; only
+   on a phone does it stack, poster first — it is the announcement. Capped there
+   so it does not run the whole width and push the details off the screen. */
+@media (max-width: 900px) {
+    .nextInner {
+        grid-template-columns: minmax(0, 290px) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .nextInner {
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(2rem, 7vw, 2.75rem);
+    }
+
+    .nextPoster {
+        max-width: 320px;
+        margin-inline: auto;
+    }
+}
+
+/* --- Archive ------------------------------------------------------------- */
+
+/* The lightest paper, against the deep ground of the band above — the widest
+   step the palette allows, at the one join the two sections share. */
+.archiveBand {
+    background: var(--paper);
+}
+
+/* --- The index line ------------------------------------------------------- */
+
+/* Not a control — a line of writing. The books page filters with pills, which
+   are chrome; this is type, marked in ink, so the two cannot be read as the same
+   thing. Nothing here is boxed or shaded, and no panel sits under the entries. */
+.indexLine {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem clamp(1rem, 2.5vw, 1.9rem);
+    margin-bottom: clamp(2.25rem, 4vw, 3rem);
+}
+
+.indexWord {
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.22rem;
+    padding: 0.1rem 0 0.55rem;
+    background: none;
+    border: 0;
+    font-family: var(--display);
+    font-size: clamp(1.05rem, 2.1vw, 1.3rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: color 0.3s var(--ease);
+}
+
+.indexWord:hover,
+.indexWord:focus-visible {
+    color: var(--ink);
+}
+
+.indexWord.isRead {
+    color: var(--ink);
+    font-weight: 600;
+    cursor: default;
+}
+
+/* Thread-gold hairlines between the words, the way a rule divides a running
+   head. Not after the last one, and not doubled when the line wraps. */
+.indexWord:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: clamp(-0.95rem, -1.25vw, -0.5rem);
+    top: 0.28em;
+    bottom: 0.72rem;
+    width: 1px;
+    background: var(--gold-soft);
+}
+
+/* Enough of a target to be tapped. The words are set on the page rather than
+   in boxes, so nothing about them says how big they are to a finger; the
+   padding is invisible and does the saying. */
+@media (pointer: coarse) {
+    .indexWord {
+        padding-top: 0.4rem;
+        padding-bottom: 0.85rem;
+    }
+}
+
+/* The count, raised beside the word like the marker on a footnote. */
+.indexWordCount {
+    font-family: var(--body);
+    font-size: 0.62em;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+    transition: color 0.3s var(--ease);
+}
+
+.indexWord.isRead .indexWordCount {
+    color: var(--gold-ink);
+}
+
+/* The ink. A drawn stroke rather than a border, so it wavers the way a pen
+   does, and it draws itself across the word when the word is chosen. */
+.indexInk {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.05rem;
+    width: 100%;
+    height: 0.42rem;
+    overflow: visible;
+    opacity: 0;
+    transition: opacity 0.25s var(--ease);
+}
+
+.indexInk path {
+    fill: none;
+    stroke: var(--rose);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    /* The path is about 100 units long, so one dash of 100 covers it exactly and
+       the offset walks the stroke on from the left. */
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    transition: stroke-dashoffset 0.45s var(--ease);
+}
+
+/* A faint stroke follows the cursor, so the words read as markable before one
+   is marked. */
+.indexWord:hover .indexInk,
+.indexWord:focus-visible .indexInk {
+    opacity: 0.4;
+}
+
+.indexWord:hover .indexInk path,
+.indexWord:focus-visible .indexInk path {
+    stroke-dashoffset: 0;
+}
+
+.indexWord.isRead .indexInk {
+    opacity: 1;
+}
+
+.indexWord.isRead .indexInk path {
+    stroke: var(--rose-deep);
+    stroke-width: 1.9;
+    stroke-dashoffset: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .indexInk path {
+        transition: none;
+        stroke-dashoffset: 0;
+    }
+}
+
+/* --- What the chosen word is about --------------------------------------- */
+
+/* A standfirst, not a caption box: the span of years set small over a line of
+   her prose, ranged left under the index line and capped at a reading measure
+   so it stays a sentence rather than stretching across the whole band. Keyed on
+   the chosen word in the markup, so it fades in again each time it changes. */
+.archiveNote {
+    max-width: 56ch;
+    margin-bottom: clamp(2.25rem, 4vw, 3rem);
+}
+
+.archiveNoteSpan {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+}
+
+.archiveNoteText {
+    margin: 0;
+    font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+/* The index line hands straight down to the note, so it does not also hold the
+   gap that separated it from the grid. */
+.archiveNote + .archiveGrid,
+.indexLine + .archiveGrid {
+    margin-top: 0;
+}
+
+.indexLine:has(+ .archiveNote) {
+    margin-bottom: clamp(1.4rem, 2.5vw, 1.9rem);
+}
+
+/* Every card borrows the archive's own rows. The first is as tall as the
+   tallest photograph on the line and the second starts wherever that row ends,
+   so the year, the title and the place all begin on one line however tall the
+   photograph above them turned out.
+
+   That matters here because the photographs are deliberately not all the same
+   height — they come in three shapes. Without it the words under a wide
+   photograph started halfway up the card beside it, and the archive read as
+   three unrelated columns rather than as one row of entries.
+
+   It takes two levels of `subgrid` because the link sits between the card and
+   its contents: the card borrows the grid's rows and the link borrows the
+   card's. */
+.archiveGrid {
+    display: grid;
+    /* Four across on a desktop rather than three: at three the photographs
+       ran to half a screen tall each, and narrower again so a standing
+       photograph stays under about 270px on a laptop. */
+    grid-template-columns: repeat(auto-fill, minmax(min(175px, 100%), 1fr));
+    gap: 2.25rem 1.5rem;
+}
+
+.archiveCard,
+.archiveEntry {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+    /* A subgrid takes the grid's row gap between its own two rows too, which
+       put the whole gap between a card and one row of cards between each
+       photograph and its own year. The meta's padding is the space there. */
+    row-gap: 0;
+}
+
+/* Where subgrid is not supported the borrowed rows do not exist and a card laid
+   out to span them collapses. An ordinary stack costs only the shared line the
+   titles start on. */
+@supports not (grid-template-rows: subgrid) {
+    .archiveCard,
+    .archiveEntry {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* The card is a link only when the encounter has a page. Either way it is laid
+   out the same, so the archive stays an even grid whether or not she has written
+   about a given night. */
+.archiveEntry {
+    color: inherit;
+    text-decoration: none;
+}
+
+.archiveEntry.hasPage {
+    cursor: pointer;
+}
+
+.archiveEntry.hasPage:hover .archiveTitle,
+.archiveEntry.hasPage:focus-visible .archiveTitle {
+    color: var(--rose-dark);
+}
+
+/* Centred in the height its row came to, so photographs of different shapes are
+   centred against each other rather than dropped from a common top edge — the
+   same arrangement the recognitions on the biography page use, and the reason
+   the ragged edges are shared out top and bottom instead of piling up under the
+   shortest picture. */
+.archiveImg {
+    align-self: center;
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+.archiveEntry.hasPage:hover .archiveImg,
+.archiveEntry.hasPage:focus-visible .archiveImg {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Fills the second borrowed row and stacks from its top, which is what puts
+   every year on one line across the archive. */
+.archiveMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding-top: 1.1rem;
+}
+
+.archiveYear {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--rose-deep);
+}
+
+.archiveTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+}
+
+.archiveWhere {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+
+
+/* --- A phone -----------------------------------------------------------------
+   The poster at 320px filled the screen on its own, and a full-width archive
+   photograph was a screen per encounter. The poster is held to about two thirds
+   of the width, and the archive goes two to a row — the same answer the book
+   shelf gives — so a few encounters can be seen at a glance. */
+@media (max-width: 560px) {
+    .nextPoster {
+        max-width: min(64vw, 240px);
+    }
+
+    .archiveGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1rem;
+    }
+
+    .archiveMeta {
+        padding-top: 0.8rem;
+        gap: 0.25rem;
+    }
+
+    .archiveTitle {
+        font-size: 1rem;
+    }
+
+    .archiveWhere {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,266 @@
+{
+    "_guia": "La página de eventos. Arriba va SIEMPRE UNO SOLO: el próximo, con su afiche. Abajo va el archivo de los que ya pasaron. Para añadir un encuentro pasado, copiar un bloque de 'past' y cambiarle los valores.",
+
+    "kicker": "Encuentros",
+
+    "title": "Eventos",
+
+    "subtitle": "",
+
+    "lead": "Tertulias, recitales y presentaciones — las que ella organiza y las que la invitan.",
+
+    "upcomingKicker": "Lo próximo",
+
+    "upcomingTitle": "El próximo encuentro",
+
+    "upcoming": {
+        "_guia": "EL PRÓXIMO ENCUENTRO. Uno solo: cuando pase, se le cambian los valores por los del siguiente. Si no hay ninguno confirmado, dejar 'date' y 'title' vacíos y esta franja entera desaparece sola — la página empieza directamente por el archivo, sin dejar un hueco. 'rol' es la palabra que sale arriba y dice qué papel tiene ella: 'Organiza' si el encuentro es suyo, 'Invitada' o 'Se presenta' si va a uno ajeno; se escribe como se quiera. Cada foto de 'fotos' puede llevar su propia 'shape'; si no la lleva, usa la del encuentro. 'poster' es el afiche: el archivo se pone en public/content/ y aquí se escribe su nombre. El afiche sale entero, nunca recortado, sea cual sea su forma; si no hay ninguno todavía, sale un marco de reserva. 'shape' es la forma de las fotos del encuentro: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta). 'posterShape' es la forma del AFICHE, que suele ser otra cosa —un afiche casi siempre es alto y las fotos de la tarde son anchas—: si se deja vacío, el afiche usa la misma forma que las fotos. El afiche igual sale entero y sin recortar, así que esta forma solo reserva el espacio donde va. 'linkUrl' y 'linkLabel' son opcionales: si se dejan vacíos, no sale ningún botón.",
+        "_guiaPagina": "El próximo encuentro también puede tener su propia página, igual que los del archivo: se abre sola en cuanto se le escriba el 'body' o se le carguen 'fotos', y desde la portada aparece entonces el enlace para entrar. Sin ninguna de las dos cosas no hay página y no sale el enlace, que es lo correcto para un encuentro que todavía no ha pasado. El afiche encabeza la galería solo.",
+        "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con el afiche al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
+        "slug": "tertulia-de-septiembre",
+        "rol": "Organiza",
+        "categoria": "",
+        "date": "Sábado 27 de septiembre",
+        "time": "3:00 pm",
+        "year": "",
+        "title": "Tertulia de septiembre",
+        "venue": "Biblioteca de Corona",
+        "city": "Queens, Nueva York",
+        "note": "Como cada último sábado del mes. Entrada libre y gratuita: se llega, se escucha y el que quiera leer, lee.",
+        "poster": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+        "posterAlt": "Afiche de la tertulia de septiembre",
+        "posterShape": "alto",
+        "photo": "",
+        "photoAlt": "",
+        "shape": "ancho",
+        "linkLabel": "",
+        "linkUrl": "",
+        "body": "Aquí va lo que se quiera contar de antemano: quiénes van a leer, qué se va a presentar, si hace falta llevar algo. Una línea en blanco separa un párrafo del siguiente.",
+        "fotos": [
+            {
+                "src": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "alt": "",
+                "shape": "ancho"
+            },
+            {
+                "src": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "alt": "",
+                "shape": "alto"
+            },
+            {
+                "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                "alt": "",
+                "shape": "cuadrado"
+            },
+            {
+                "src": "marcia.jpg",
+                "alt": "",
+                "shape": "ancho"
+            }
+        ]
+    },
+
+    "past": {
+        "_guia": "El archivo de encuentros. Cada bloque de 'items' es uno. Un encuentro que tenga 'body' (el relato) o 'fotos' se vuelve clickeable en el archivo y gana su propia página, con las fotos arriba y el relato debajo; el que no tenga ni lo uno ni lo otro sale igual en el archivo, pero sin enlace — así no se llega nunca a una página vacía. Para darle página a un encuentro, basta con escribirle el relato o cargarle fotos. En 'fotos' cada bloque es una imagen: 'src' es el nombre del archivo puesto en public/content/ y 'alt' lo que se describe para quien no la ve. 'photo' sigue siendo la que se ve en el archivo, y encabeza la galería. Cada foto puede llevar además su propia 'shape' —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta), las mismas tres de todo el sitio—: si se deja vacía o no se pone, esa foto usa la 'shape' del encuentro, que es la de más abajo y la que se ve en el archivo. En el carrusel todas salen de la misma altura y cada una toma el ancho que le pida su forma, así que la fila nunca salta al pasarlas y de una foto alta, por ser más angosta, se asoman más las de al lado. Las tres formas quedan parecidas de tamaño a propósito, para que una tarjeta del archivo no salga del doble de alto que la de al lado. 'categoria' es la clase de encuentro, y es una de las clases de la lista 'categorias' de más abajo, escrita igual: cada clase de esa lista tiene su pestaña en el archivador, en ese orden, en cuanto algún encuentro la use. Si se deja vacía, el encuentro sale igual pero solo en 'Todos'. Las pestañas no salen mientras haya una sola clase. Cada clase de la lista puede llevar además una línea de presentación.",
+        "kicker": "Encuentros pasados",
+        "title": "Del archivo",
+        "lead": "Siete años de sábados. Lo que sigue es una parte de lo que ha pasado por la Biblioteca de Corona desde 2019.",
+        "_nota": "MUESTRA — reemplazar con encuentros reales y sus fotos.",
+        "items": [
+            {
+                "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con la foto de portada al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
+                "slug": "tertulia-de-aniversario",
+                "rol": "",
+                "categoria": "Tertulia",
+                "date": "28 de septiembre de 2024",
+                "time": "",
+                "year": "2024",
+                "title": "Tertulia de aniversario",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "Aquí va el relato del encuentro: quiénes leyeron, qué se presentó, cómo estuvo la tarde.\n\nUna línea en blanco separa un párrafo del siguiente, igual que en el resto del sitio. Puede ser tan largo o tan corto como haga falta.",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            },
+            {
+                "slug": "recital-de-poesia",
+                "rol": "",
+                "categoria": "Recital",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Recital de poesía",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "Un encuentro con relato pero sin fotos sale igual: la página se arma con lo que haya.",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "marcia.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            },
+            {
+                "slug": "encuentro-de-escritoras",
+                "rol": "",
+                "categoria": "Encuentro",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Encuentro de escritoras",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    }
+                ]
+            },
+            {
+                "slug": "primera-tarde-literaria",
+                "rol": "",
+                "categoria": "Tertulia",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Primera Tarde Literaria",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            }
+        ],
+        "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
+        "detalle": {
+            "_guia": "Las palabras de la página de cada encuentro. Nada de esto cambia el contenido, solo cómo se llaman las cosas.",
+            "backLabel": "Todos los encuentros",
+            "detalleLabel": "Ver el encuentro",
+            "galleryLabel": "Fotos del encuentro"
+        },
+        "categorias": [
+            {
+                "nombre": "Tertulia",
+                "texto": "La forma de siempre: se lee, se escucha y se conversa, el último sábado del mes."
+            },
+            {
+                "nombre": "Recital",
+                "texto": "Tardes en las que la poesía se dice en voz alta, que es como fue escrita."
+            },
+            {
+                "nombre": "Encuentro",
+                "texto": "Cuando la tarde se arma alrededor de un grupo — escritoras, músicos, gente que trabaja junta."
+            }
+        ]
+    }
+}

@@ -1,0 +1,29 @@
+/* Fitted, never cropped. The frame reserves the space the shape asks for and
+   the picture sits inside it whole, so a file that is not quite the shape it was
+   filed under loses nothing — it simply leaves a little of the frame showing at
+   the sides or above and below. This is the rule for every picture on the site;
+   where a frame would otherwise show its own weave or pattern through that
+   margin, the frame is given a quiet ground instead. */
+.figureImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: inherit;
+}
+
+/* Until the file arrives the image wears the reserved frame's own ground and
+   weave, so the slot reads as a waiting frame rather than a white hole. The
+   `ph-<kind>` class it also carries tints that ground the way the placeholder
+   for that kind of picture is tinted. Once loaded the ground is dropped, which
+   matters only for a picture with transparency in it. */
+.figureImg.isLoading {
+    background-image:
+        repeating-linear-gradient(45deg,
+            var(--weave) 0 1px,
+            transparent 1px 11px),
+        repeating-linear-gradient(-45deg,
+            var(--weave) 0 1px,
+            transparent 1px 11px);
+    box-shadow: inset 0 0 0 1px var(--line);
+}

@@ -1,0 +1,183 @@
+{
+    "_guia": "La portada. Cada franja es independiente: lo que se escribe aquí no cambia ninguna otra página, y lo que se cambia en otra página no cambia esta. Cada franja tiene además un interruptor, 'visible': ponerlo en false la apaga sin borrar nada de lo que hay dentro, y volver a ponerlo en true la enciende igual que estaba. Una franja también desaparece sola si se le vacía el contenido. Las direcciones de los enlaces del sitio no se escriben aquí: el sitio ya sabe a dónde va cada botón, y solo se cambia la palabra que se ve.",
+
+    "hero": {
+        "visible": true,
+        "greeting": "Welcome",
+        "honorific": "Dr.",
+        "name": "Marcia Gomezcoello",
+        "roles": [
+            "Writer",
+            "Poet",
+            "Doctor",
+            "Songwriter",
+            "Knitter"
+        ],
+        "intro": "I wrote my first story when I was eleven. I haven't stopped since: novels, poems for children, songs, and two channels where I teach knitting to thousands of people whose faces I have never seen.",
+        "_guiaFoto": "El retrato. 'photoShape' es su forma: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta). Son las mismas tres formas en todo el sitio.",
+        "photo": "marcia.jpg",
+        "photoAlt": "Portrait of Marcia Gomezcoello",
+        "photoShape": "alto",
+        "_guiaBotones": "Los dos botones. Solo se cambia lo que dicen: el primero lleva siempre a los libros y el segundo a los tejidos. Si se deja una etiqueta vacía, ese botón no sale.",
+        "primaryLabel": "See the books",
+        "secondaryLabel": "The knitting channels",
+        "place": "Azogues, Ecuador · Queens, New York"
+    },
+
+    "proximo": {
+        "_guia": "La franja del próximo encuentro, justo debajo de la portada. El encuentro va entero dentro de 'evento', con exactamente los mismos campos que un encuentro de eventos.json —incluidos el relato ('body') y las fotos ('fotos')— aunque en la portada solo se vean el afiche, la fecha, el título y el lugar: es lo que se le entrega a la página del encuentro al tocar 'Ver el encuentro', así que tiene que estar completo. Es la copia de la portada: cambiarla no toca la página de Eventos, ni al revés. Si se dejan 'date' y 'title' vacíos, la franja desaparece sola.",
+        "visible": true,
+        "kicker": "Coming up",
+        "title": "The next gathering",
+        "detalleLabel": "See the gathering",
+        "todosLabel": "See all events",
+        "evento": {
+            "slug": "tertulia-de-septiembre",
+            "rol": "Host",
+            "categoria": "",
+            "date": "Saturday, September 27",
+            "time": "3:00 pm",
+            "year": "",
+            "title": "September Literary Salon",
+            "venue": "Corona Library",
+            "city": "Queens, New York",
+            "note": "As on the last Saturday of every month. Free and open to all: come along, listen, and anyone who wants to read, reads.",
+            "poster": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+            "posterAlt": "Poster for the September literary salon",
+            "posterShape": "alto",
+            "photo": "",
+            "photoAlt": "",
+            "shape": "ancho",
+            "linkLabel": "",
+            "linkUrl": "",
+            "body": "Here goes whatever you'd like to share ahead of time: who will be reading, what will be presented, whether to bring anything. A blank line separates one paragraph from the next.",
+            "fotos": [
+                {
+                    "src": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                    "alt": "",
+                    "shape": "ancho"
+                },
+                {
+                    "src": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                    "alt": "",
+                    "shape": "alto"
+                },
+                {
+                    "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                    "alt": "",
+                    "shape": "cuadrado"
+                },
+                {
+                    "src": "marcia.jpg",
+                    "alt": "",
+                    "shape": "ancho"
+                }
+            ]
+        }
+    },
+
+    "books": {
+        "_guia": "La franja de libros de la portada. Estos tres libros son la copia de la portada: se eligen y se escriben aquí, y no cambian nada en la página de Libros. Cada uno lleva el libro COMPLETO —sinopsis, páginas, fragmento, enlace de compra— aunque en la portada solo se vean la carátula, el título y el año: es lo que se le entrega a la página del libro al tocarlo, así que tiene que estar todo. 'shape' es la forma de la carátula: 'cuadrado', 'alto' o 'ancho'.",
+        "visible": true,
+        "kicker": "Books",
+        "title": "Novels, stories and poems",
+        "lead": "Drama, suspense, fantasy, illustrated children's stories and books of poetry. All available on Amazon.",
+        "linkLabel": "All the books",
+        "items": [
+            {
+                "slug": "new-york-casi-devora-a-mis-abuelos",
+                "title": "New York casi devora a mis Abuelos",
+                "year": "2026",
+                "categoria": "Novel",
+                "shape": "alto",
+                "cover": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+                "pages": "375 pages",
+                "tagline": "Two grandparents land in New York without speaking the language, and the city nearly swallows them whole.",
+                "synopsis": "A grandmother and grandfather leave the calm of their South American city and land in New York. The Big Apple greets them as a maze of skyscrapers, noise and customs they don't understand.\n\nWith nothing but their wits and their courage for a compass, and the language against them, they set out to conquer the city amid the chaos of the subway and the everyday misunderstandings.\n\nA novel about what it takes to start over far from home, told without losing its sense of humor.",
+                "excerpt": "",
+                "buyLabel": "Buy on Amazon",
+                "buyUrl": "https://www.amazon.com/dp/B0HF5YWFGC"
+            },
+            {
+                "slug": "ivan-el-guia",
+                "title": "Iván el Guía",
+                "year": "2026",
+                "categoria": "Children's",
+                "shape": "cuadrado",
+                "cover": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                "pages": "35 pages",
+                "tagline": "A tour guide who turns every trip into an adventure.",
+                "synopsis": "Iván is a fun, curious guide, always with his backpack on and a story for every corner. He leads tourists who have come from all over the world.\n\nOn every tour, children learn something about history, culture and friendship, and discover the joy of traveling without any suitcases at all.\n\nThe fourth book in the Box of Dreams Collection.",
+                "excerpt": "",
+                "buyLabel": "Buy on Amazon",
+                "buyUrl": "https://www.amazon.com/dp/B0GSR76GNM"
+            },
+            {
+                "slug": "chanir-y-mayaluca",
+                "title": "Chánir y Mayaluca",
+                "year": "2025",
+                "categoria": "Children's",
+                "shape": "alto",
+                "cover": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                "pages": "62 pages",
+                "tagline": "Two curious creatures who wander from home to find where they belong.",
+                "synopsis": "Not every path is already laid out: some are built step by step. Chánir and Mayaluca set off on an unexpected journey through a city full of surprises.\n\nThey discover that sometimes you have to go far away to find what you were looking for, and that home can be where you least expected it.\n\nA fable about courage and friendship.",
+                "excerpt": "",
+                "buyLabel": "Buy on Amazon",
+                "buyUrl": "https://www.amazon.com/dp/B0FLQFSJVV"
+            }
+        ]
+    },
+
+    "poem": {
+        "visible": true,
+        "kicker": "Poem",
+        "heading": "A poem of hers",
+        "title": "From «Sueños de mi Niñez»",
+        "_nota": "TEXTO DE MUESTRA. Reemplazar 'body' con un poema real del libro.",
+        "body": "One of her poems goes here.\nEvery line break is kept,\nand a blank line opens a new stanza.\n\nThe space grows with the text:\nit can be four lines long\nor forty.",
+        "attribution": "from «Sueños de mi Niñez» · 2024",
+        "_guiaFoto": "La imagen al lado del poema. Ahora está la portada del libro del que sale; puede ser también una fotografía. Si se deja \"\", queda el marco de reserva. 'photoShape' es su forma: 'cuadrado', 'alto' o 'ancho'.",
+        "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+        "photoAlt": "Cover of «Sueños de mi Niñez»",
+        "photoShape": "alto",
+        "linkLabel": "More poems"
+    },
+
+    "tejidos": {
+        "_guia": "La franja de tejidos de la portada. Los canales de aquí son la copia de la portada: se escriben aquí y no cambian nada en la página de Tejidos.",
+        "visible": true,
+        "kicker": "Knitting",
+        "title": "Two channels, the same patience",
+        "text": "One for crochet and one for knitting needles. It began with free workshops for women in the Corona neighborhood of Queens, and carried on in video for anyone who wanted to learn from wherever they were.",
+        "_guiaVideo": "El video de esta franja. Puede ser un enlace en formato 'embed' (YouTube, Vimeo) o el nombre de un archivo puesto en public/content/, como 'clase.mp4'. Si se deja \"\", queda el marco de reserva.",
+        "video": "https://www.youtube.com/embed/SyRL5p7qNSU",
+        "videoLabel": "Featured video",
+        "linkLabel": "See the knitting",
+        "channels": [
+            {
+                "name": "Marcia Gomezcoello Creations",
+                "short": "Crochet",
+                "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ",
+                "logo": "canal-crochet.jpg",
+                "logoAlt": "Logo of the Marcia Gomezcoello Creations channel"
+            },
+            {
+                "name": "Knitting with Marcia Gomezcoello",
+                "short": "Knitting",
+                "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ",
+                "logo": "canal-palillos.jpg",
+                "logoAlt": "Logo of the Knitting with Marcia Gomezcoello channel"
+            }
+        ]
+    },
+
+    "quote": {
+        "visible": true,
+        "_nota": "TEXTO DE MUESTRA. Reemplazar con una frase suya.",
+        "kicker": "In her own words",
+        "title": "Why she writes",
+        "text": "A sentence of hers about why she writes, or why she teaches knitting.",
+        "source": "Marcia Gomezcoello"
+    }
+}

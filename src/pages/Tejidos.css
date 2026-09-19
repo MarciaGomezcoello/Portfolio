@@ -1,0 +1,508 @@
+/* --- The two channels ---------------------------------------------------- */
+
+.channelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 1.6rem;
+}
+
+.channelPanel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: clamp(1.8rem, 3.5vw, 2.6rem);
+    background: var(--card);
+    border: var(--card-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease),
+                border-color 0.5s var(--ease);
+}
+
+/* A blush wash that rises from the bottom on hover. */
+.channelPanel::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 0;
+    background: linear-gradient(to top, var(--blush-soft), transparent);
+    transition: height 0.55s var(--ease);
+    pointer-events: none;
+}
+
+@media (hover: hover) {
+    .channelPanel:hover {
+        transform: translateY(-6px);
+        border-color: var(--rose);
+        box-shadow: var(--shadow-md);
+    }
+
+    .channelPanel:hover::before {
+        height: 100%;
+    }
+}
+
+.channelPanel > * {
+    position: relative;
+}
+
+/* The logo and the tag share a line, so the card opens with a picture and the
+   word that names it rather than with a lone pill. The margin that used to sit
+   under the tag belongs to the row now, and the row keeps it whether or not
+   there is a logo — a channel without one reads exactly as it did before. */
+.channelPanelHead {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.4rem;
+}
+
+/* Round, because that is the shape a channel picture is published in, and
+   ringed in the same thread colour as the tag beside it. */
+.channelPanelLogo {
+    flex: 0 0 auto;
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--paper-warm);
+    box-shadow: 0 0 0 1px var(--line), var(--shadow-sm);
+}
+
+.channelPanelTag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+    background: var(--blush);
+    border-radius: var(--radius-btn);
+    padding: 0.34rem 0.8rem;
+}
+
+.channelPanelName {
+    font-size: clamp(1.4rem, 2.2vw, 1.6rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0;
+}
+
+.channelPanelText {
+    margin: 1.2rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+.channelPanelCta {
+    margin-top: auto;
+    padding-top: 1.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+}
+
+/* --- The chosen videos ----------------------------------------------------
+   An even grid of cards: the photograph with the play mark over it, then the
+   channel it came from, the title and a line about it. Deeper paper than the
+   bands either side, to set the pictures off. */
+
+.reelBand {
+    background: var(--paper-deep);
+}
+
+/* Auto-filled and uncapped, so the same rules hold for six videos or sixty. */
+.videoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.videoCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--card);
+    border: var(--card-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+                border-color 0.45s var(--ease);
+}
+
+/* A touch screen has no pointer to hover with: `:hover` latches on when the
+   card is tapped and stays until something else is, so a card that lifts is
+   left hanging in its raised state — and these are the cards that stay on
+   screen after the tap rather than navigating away from it. */
+@media (hover: hover) {
+    .videoCard:hover {
+        transform: translateY(-5px);
+        border-color: var(--rose);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+.videoCardFrame {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    background: var(--ink);
+    overflow: hidden;
+}
+
+.videoCardOpen {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.videoCardFrame > span.videoCardOpen {
+    cursor: default;
+}
+
+.videoCardMedia {
+    position: absolute;
+    inset: 0;
+}
+
+/* The frame keeps its shape whatever shape the file is, and the picture is
+   fitted inside it rather than cropped to fill it. */
+.videoCardMedia img,
+.videoCardMedia .ph {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    transition: transform 0.7s var(--ease);
+}
+
+.videoCardOpen:hover .videoCardMedia img,
+.videoCardOpen:hover .videoCardMedia .ph {
+    transform: scale(1.05);
+}
+
+/* A rounded square stood on its corner rather than the usual circle — the one
+   mark on the site that is unmistakably "press me". */
+.videoCardPlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: -1.8rem 0 0 -1.8rem;
+    border-radius: 30%;
+    background: var(--rose-deep);
+    box-shadow: var(--shadow-rose);
+    transform: rotate(45deg);
+    transition: background 0.35s var(--ease), transform 0.4s var(--ease);
+}
+
+.videoCardOpen:hover .videoCardPlay {
+    background: var(--rose-dark);
+    transform: rotate(45deg) scale(1.09);
+}
+
+.videoCardPlay svg {
+    width: 52%;
+    height: 52%;
+    fill: var(--on-accent);
+    /* Stand the triangle back up inside the tilted badge. */
+    transform: rotate(-45deg) translateX(4%);
+}
+
+.videoCardPlayer {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* A file plays in the browser's own player; letterboxing beats cropping the
+   knitting out of frame. */
+video.videoCardPlayer {
+    object-fit: contain;
+}
+
+/* --- What the card says --------------------------------------------------- */
+
+.videoCardBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+.videoCardTag {
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: var(--radius-btn);
+    padding: 0.32rem 0.7rem;
+    color: var(--rose-dark);
+    background: var(--blush);
+}
+
+/* One tint per channel, so a glance sorts the crochet from the two-needle
+   work. A tag matching neither keeps a neutral ground. */
+.videoCardTag.tone1 {
+    color: var(--gold-deep);
+    background: var(--gold-soft);
+}
+
+.videoCardTag.toneNone {
+    color: var(--muted);
+    background: var(--paper-warm);
+}
+
+.videoCardTitle {
+    font-size: 1.12rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    margin: 0;
+    transition: color 0.3s var(--ease);
+}
+
+.videoCard:hover .videoCardTitle {
+    color: var(--rose-dark);
+}
+
+.videoCardNote {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* --- What is taught ------------------------------------------------------ */
+
+/* No fixed column count: auto-fit lays out as many boxes as fit and wraps the
+   rest, so the list grows with the JSON rather than with the CSS. */
+.playlistGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+    gap: 1rem;
+}
+
+.playlistCard {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.25rem 1.4rem;
+    border: var(--card-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius);
+    background: var(--card);
+    transition: border-color 0.4s var(--ease), background 0.4s var(--ease);
+}
+
+.playlistCard:hover {
+    border-color: var(--rose);
+    background: var(--blush-soft);
+}
+
+.playlistName {
+    font-family: var(--display);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.playlistNote {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* Two to a row on a phone. The 260px floor that lays these out on a desk turns
+   into a single column below about 590px, and these are the smallest things on
+   the site — a name and one line each — so six of them stacked made a long
+   scroll out of very little. Told to be two columns they stay cards rather than
+   becoming a list. */
+@media (max-width: 700px) {
+    .playlistGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+}
+
+/* At half of a phone the card is about 150px wide, and 1.6rem of padding on
+   each side was eating two thirds of it. */
+@media (max-width: 560px) {
+    .playlistGrid {
+        gap: 0.85rem;
+    }
+
+    .playlistCard {
+        padding: 1.1rem;
+    }
+
+    .playlistName {
+        font-size: 1.05rem;
+        line-height: 1.25;
+    }
+
+    .playlistNote {
+        font-size: 0.82rem;
+        line-height: 1.55;
+    }
+}
+
+/* --- The gallery of finished pieces ---------------------------------------
+   Hung from a line rather than set in a grid. A thread runs across the top of
+   each row and every piece drops from its own knot. The pieces keep their own
+   shapes, so they are not all the same height; they are centred against each
+   other rather than dropped from a common top edge, which puts the middle of
+   every photograph on one line and leaves the ragged edges shared out top and
+   bottom instead of piled at the bottom. */
+
+.galleryBand {
+    background: var(--paper-warm);
+}
+
+/* Every row centred, including the last one. A grid centres the block of
+   columns but still packs a short final row against the left, leaving a hole
+   on the right; a flex line centres itself, so two pieces left over sit in the
+   middle of the page where they belong.
+
+   The pieces neither grow nor shrink — `0 0` — because a shrinking piece would
+   stretch each row to the full width and there would be nothing left to
+   centre. That was the bug.
+
+   The column gap breaks the thread into stitches — a running stitch across the
+   page, which is the seam this whole design is named after. */
+.galleryLine {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Stretched, not top-aligned: every piece in a row takes the height of the
+       tallest, so the threads still run level across the top while each piece
+       centres its own photograph in the height it was given. */
+    align-items: stretch;
+    column-gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+/* Never one piece to a row. `min()` reads as: 260px where there is room for
+   it, and otherwise exactly half the line less its share of the gap — so the
+   clothesline holds two pieces on the narrowest phone and as many as fit on a
+   desk, with no width in between where a piece hangs on its own. The widest
+   gap is 2rem, and two halves less 1rem each leave exactly that.
+   This replaces a breakpoint, and is why there is no longer one here: a
+   fixed basis with a rule at 620px left a stretch of widths either side of it
+   where one piece sat alone in the middle of the page. */
+.galleryPiece {
+    flex: 0 0 min(260px, calc(50% - 1rem));
+    max-width: 100%;
+    position: relative;
+    border-top: 1px solid var(--line-strong);
+    padding-top: 2.2rem;
+    padding-bottom: clamp(2.25rem, 4vw, 3.25rem);
+
+    /* The photograph and its label as one block, centred in whatever height
+       the row came to. A short piece hangs a little lower and stops a little
+       higher than a tall one beside it, and both share a middle. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* The knot the piece hangs from. */
+.galleryPiece::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    margin-left: -4.5px;
+    border-radius: 999px;
+    background: var(--rose);
+    box-shadow: 0 0 0 3px var(--paper-warm);
+}
+
+/* Mounted rather than bare: a thin line and a margin of card paper around the
+   picture, the same way a recognition is framed on the biography page, so the
+   two walls of pictures on this site are framed the one way. The border warms
+   to rose on hover, with the tilt. */
+.galleryPhoto {
+    padding: 0.5rem;
+    background: var(--card);
+    border: var(--card-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    /* Swings from the knot, not from its middle. */
+    transform-origin: top center;
+    transition: transform 0.7s var(--ease), box-shadow 0.7s var(--ease),
+                border-color 0.7s var(--ease);
+}
+
+/* The picture keeps a radius of its own, small enough to read as a print sitting
+   inside the frame rather than as the frame's own rounded corner. */
+.galleryPhoto > .ph,
+.galleryPhoto > .figureImg {
+    border-radius: 3px;
+}
+
+/* See the note on the recognition frames: only the photograph wants this. */
+.galleryPhoto > .figureImg {
+    display: block;
+}
+
+@media (hover: hover) {
+    .galleryPiece:hover .galleryPhoto {
+        transform: rotate(-1.4deg);
+        border-color: var(--rose);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+.galleryLabel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding-top: 0.95rem;
+    text-align: center;
+}
+
+.galleryName {
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+}
+
+.galleryNote {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+@media (max-width: 560px) {
+    /* Hung from the thread rather than floated in the middle of the row. Across
+       four or five pieces the centring reads as a sway, which is the point of
+       it; across the two that fit on a phone it just reads as two photographs
+       that do not line up, with their labels landing at different heights. Held
+       to the top they hang from one line and run down to different lengths,
+       which is what a clothesline does anyway. */
+    .galleryPiece {
+        padding-top: 1.75rem;
+        justify-content: flex-start;
+    }
+}

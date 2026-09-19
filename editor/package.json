@@ -1,0 +1,57 @@
+{
+  "name": "marcia-editor",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "concurrently -n servidor,pantalla -c green,cyan \"node server.js\" \"vite\"",
+    "server": "node server.js",
+    "ui": "vite",
+    "preview-site": "cd .. && npm run build:preview",
+    "app": "npm run preview-site && vite build && electron .",
+    "package": "npm run preview-site && vite build && npm run prepack && electron-builder --mac --dir",
+    "dmg": "npm run preview-site && vite build && npm run prepack && electron-builder --mac",
+    "prepack": "node electron/write-default-site.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^8.2.2",
+    "vite": "^5.4.2",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8"
+  },
+  "main": "electron/main.js",
+  "build": {
+    "appId": "com.marciagomezcoello.editor",
+    "productName": "Sitio de Marcia",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "server.js",
+      "schema/**/*",
+      "dist/**/*",
+      "preview-site/**/*",
+      "package.json",
+      "!electron/write-default-site.js"
+    ],
+    "mac": {
+      "target": [
+        "dir"
+      ],
+      "category": "public.app-category.productivity",
+      "identity": null
+    }
+  },
+  "productName": "Sitio de Marcia",
+  "description": "Editor del sitio de la Dra. Marcia Gomezcoello",
+  "author": "Prince Avecillas"
+}

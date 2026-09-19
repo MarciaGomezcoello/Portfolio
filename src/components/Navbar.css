@@ -1,0 +1,519 @@
+/* ==========================================================================
+   Top bar
+   ========================================================================== */
+
+/* The edge is drawn from the first moment, not only once the page has moved.
+   A bar with no edge, on paper the same colour as the paper beneath it, is a
+   bar nobody can see — and at the top of a page, where a reader arrives, it was
+   in exactly that state. */
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    background: var(--nav-bg);
+    backdrop-filter: saturate(150%) blur(14px);
+    -webkit-backdrop-filter: saturate(150%) blur(14px);
+    border-bottom: 1px solid var(--nav-edge);
+    transition: border-color 0.4s var(--ease), background 0.4s var(--ease),
+                box-shadow 0.4s var(--ease);
+}
+
+/* With the page moving under it the bar goes opaque and lifts, so it reads as a
+   sheet held above the page rather than as a band printed on it. */
+.nav.isScrolled {
+    background: var(--nav-bg-solid);
+    box-shadow: var(--nav-shadow);
+}
+
+/* Cover page: lifted out of flow, so the hero's own band starts at the very top
+   of the screen and its top padding sits behind the bar rather than under it.
+
+   It used to be unpainted here as well, until the page moved — which left the
+   cover page as the one place the bar was still invisible on arrival, with only
+   the tabs floating over the artwork. It is painted from the start now, like
+   every other page; the positioning is the only thing the cover page still does
+   differently. */
+.nav.isHome {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav.isMenuOpen,
+.nav.isMenuOpen.isScrolled {
+    z-index: 1001;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom-color: transparent;
+    box-shadow: none;
+}
+
+.navInner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: var(--nav-pad) var(--gutter);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    transition: padding 0.4s var(--ease);
+}
+
+.nav.isScrolled .navInner {
+    padding-top: 0.95rem;
+    padding-bottom: 0.95rem;
+}
+
+/* --- The thread ----------------------------------------------------------
+   A single thread drawn across the top of the page as it is read: rose at the
+   start, thread-gold by the end. It is the site's one ornament put to work —
+   the same loose thread that drifts behind the hero, here saying how much of
+   the page is behind you.
+
+   No transition on the transform. This follows the scroll exactly, and easing
+   it would leave the thread trailing the page it is measuring. */
+.navThread {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    background: linear-gradient(to right, var(--rose), var(--gold));
+    transform: scaleX(0);
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+/* --- Name --------------------------------------------------------------- */
+
+.navBrand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    /* Her name takes the room it needs, and gives way only when there is not
+       enough: a much longer name ends in an ellipsis rather than pushing the
+       menu off the screen. */
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 26rem;
+}
+
+.navBrandHon {
+    flex-shrink: 0;
+    max-width: 6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    transition: color 0.3s var(--ease);
+}
+
+.navBrandName {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: var(--display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    transition: color 0.3s var(--ease), font-size 0.4s var(--ease);
+}
+
+.nav.isScrolled .navBrandName {
+    font-size: 1.3rem;
+}
+
+.navBrand:hover .navBrandName {
+    color: var(--rose-dark);
+}
+
+/* --- Tabs --------------------------------------------------------------- */
+
+.navTabs {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    /* Five short words fit with room to spare. If the menu grows longer, or a
+       word much longer, the row slides sideways inside the bar rather than
+       widening the page, with its ends faded so it reads as more to see. */
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 0.75rem, #000 calc(100% - 0.75rem), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 0.75rem, #000 calc(100% - 0.75rem), transparent 100%);
+    padding-inline: 0.75rem;
+}
+
+.navTabs::-webkit-scrollbar {
+    display: none;
+}
+
+.navTab {
+    position: relative;
+    flex-shrink: 0;
+    white-space: nowrap;
+    max-width: 16rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    transition: color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+/* The underline grows from the middle on hover and stays put once active. */
+.navTab::after {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    right: 0.9rem;
+    bottom: 0.35rem;
+    height: 2px;
+    background: var(--rose-deep);
+    transform: scaleX(0);
+    transition: transform 0.4s var(--ease);
+}
+
+.navTab:hover {
+    color: var(--ink);
+}
+
+.navTab:hover::after {
+    transform: scaleX(1);
+}
+
+.navTab.isActive {
+    color: var(--rose-dark);
+}
+
+.navTab.isActive::after {
+    transform: scaleX(1);
+}
+
+/* --- Burger ------------------------------------------------------------- */
+
+.navBurger {
+    display: none;
+    position: relative;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background: none;
+    border: 1px solid var(--line-strong);
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.navBurger:hover {
+    border-color: var(--rose);
+}
+
+.navBurger span {
+    position: absolute;
+    left: 50%;
+    width: 17px;
+    height: 1.6px;
+    margin-left: -8.5px;
+    background: var(--ink);
+    border-radius: 2px;
+    transition: transform 0.4s var(--ease), opacity 0.25s var(--ease);
+}
+
+.navBurger span:nth-child(1) { top: 18px; }
+.navBurger span:nth-child(2) { top: 24px; }
+
+.navBurger.isOpen span:nth-child(1) { transform: translateY(3px) rotate(45deg); }
+.navBurger.isOpen span:nth-child(2) { transform: translateY(-3px) rotate(-45deg); }
+
+/* --- Drawer ------------------------------------------------------------- */
+
+.navDrawer {
+    position: fixed;
+    overflow-x: hidden;
+    inset: 0;
+    /* Dynamic viewport height, so the drawer still covers the screen when a
+       mobile browser's chrome expands or collapses. */
+    height: 100dvh;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    /* The bar's own band, reserved and never written into. The drawer used to
+       pad this away with a number of its own and scroll behind the bar, so on
+       a short screen the sections slid up under her name and the close button.
+       The band is now the bar's real height, and the drawer itself does not
+       scroll at all — the sheet inside it does, within what is left. */
+    padding-top: calc(var(--nav-h) + env(safe-area-inset-top));
+    overflow: hidden;
+    background: var(--paper-warm);
+    /* A faint thread grid, echoing the placeholder frames. */
+    background-image:
+        repeating-linear-gradient(45deg,
+            var(--weave-faint) 0 1px, transparent 1px 16px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    /* visibility flips only after the fade finishes, so the drawer both
+       animates out and leaves the tab order once it is gone. */
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease),
+                visibility 0s linear 0.35s;
+}
+
+.navDrawer.isOpen {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease),
+                visibility 0s;
+}
+
+/* Everything the drawer holds, in the room left below the bar. The sheet is
+   the scroller, so content can never appear above its own top edge however
+   long the list grows or however short the screen is. The drawer used to be
+   the scroller itself, which is how the sections came to slide up behind her
+   name on a phone held sideways.
+
+   `min-height: 0` is what makes that true: a flex item's floor is the height
+   of its content, so without it the sheet would grow past the drawer instead
+   of scrolling inside it — the same overflow, moved one element along. */
+.navDrawerSheet {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Auto margins on the children centre the group but still let it scroll
+       when the list is taller than the sheet — `justify-content: center` would
+       clip the top links out of reach on a short viewport. */
+    gap: 1.5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 0 var(--gutter) calc(2.5rem + env(safe-area-inset-bottom));
+}
+
+/* --- The index of leaves -------------------------------------------------
+
+   The list used to be five lines of type with nothing but their own line boxes
+   to be pressed — 39px tall with 4.8px between them, under the 44px a finger
+   needs, and each one sliding 14px upward as it faded in. A press during that
+   first second landed on a neighbour. So the rows are now leaves of paper: each
+   one runs the full width of the screen, is 64px deep, and does not move.
+
+   A thread runs down the margin of the whole index with a knot at the section
+   you are in — the site's own way of marking a place, rather than the coloured
+   bar every application uses for the same job. */
+.navDrawerLinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    /* Out past the drawer's gutter, so a leaf is the whole width of the screen
+       and there is no dead margin beside it to press by mistake. The type is
+       set back in by each leaf's own padding. */
+    width: calc(100% + var(--gutter) * 2);
+    margin-inline: calc(var(--gutter) * -1);
+
+    /* A ruled margin down the left of the index, the way a notebook has one.
+       The page gutter alone is 18px on a phone, which is not enough to hang a
+       thread in — the thread and its knot ran off the edge of the screen — so
+       the type is set in far enough to leave the thread a column of its own. */
+    --leaf-margin: calc(var(--gutter) + 1.5rem);
+    --thread-x: calc(var(--gutter) + 0.6rem);
+}
+
+/* The thread down the margin. It stops short of the first and last leaf so it
+   reads as a length of thread laid on the page rather than as a rule. */
+.navDrawerLinks::before {
+    content: "";
+    position: absolute;
+    top: 0.9rem;
+    bottom: 0.9rem;
+    left: var(--thread-x);
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--line-strong) 12%,
+        var(--line-strong) 88%,
+        transparent
+    );
+    pointer-events: none;
+}
+
+.navDrawerLink {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 64px;
+    padding: 0.7rem var(--gutter) 0.7rem var(--leaf-margin);
+    font-family: var(--display);
+    font-size: clamp(1.7rem, 7.4vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    /* No double-tap-zoom delay, and the browser's own grey flash is replaced
+       by the wash below, which covers the whole leaf. */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    transition: color 0.25s var(--ease), background 0.2s var(--ease);
+}
+
+/* The fold between two leaves, fading out as it crosses the page so it reads as
+   a crease rather than as the rule of a table. */
+.navDrawerLink + .navDrawerLink::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: var(--leaf-margin);
+    right: var(--gutter);
+    height: 1px;
+    background: linear-gradient(to right, var(--line-strong), transparent 78%);
+}
+
+/* The knot on the thread, at the section being read. */
+.navDrawerLink.isActive::after {
+    content: "";
+    position: absolute;
+    /* Centred on the thread: half the knot back from the 1px line. */
+    left: calc(var(--thread-x) - 3.5px);
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px;
+    border-radius: 50%;
+    background: var(--rose-deep);
+    box-shadow: 0 0 0 4px var(--paper-warm);
+}
+
+.navDrawerLink.isActive,
+.navDrawerLink:hover {
+    color: var(--rose-dark);
+}
+
+/* The leaf answers the finger the moment it is touched. Without this a press
+   that missed was invisible until the wrong page arrived, which is most of what
+   made the menu feel unreliable. */
+.navDrawerLink:active {
+    background: rgba(var(--rose-deep-rgb), 0.09);
+}
+
+/* The ink is what arrives, one leaf after another; the leaf itself is laid out
+   and still. See the note in Navbar.js — the transform used to be on the link,
+   and carried its hit box with it. */
+.navDrawerLinkInk {
+    display: block;
+    /* A long label wraps inside the leaf. Unwrapped, even the closed drawer
+       made the page as wide as its longest word. */
+    min-width: 0;
+    overflow-wrap: anywhere;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.42s var(--ease), transform 0.42s var(--ease);
+}
+
+.navDrawer.isOpen .navDrawerLinkInk {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navDrawerLinkInk {
+        transition: none;
+    }
+}
+
+.navDrawerTagline {
+    margin: 0 0 auto;
+    padding-top: 1.4rem;
+    max-width: 34ch;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+@media (max-width: 900px) {
+    .navTabs { display: none; }
+    .navBurger { display: block; }
+}
+
+/* Her name is long, and beside a 44px burger on a 360px screen it was wider
+   than the bar. The bar cannot scroll and the name cannot be shortened, so the
+   type comes down instead — the one measurement on this site that is set by
+   what has to fit rather than by what looks best on a desk. */
+@media (max-width: 560px) {
+    /* The vertical padding comes from --nav-pad in tokens.css, so the bar and
+       the room the drawer reserves for it cannot drift apart. */
+    .navInner {
+        gap: 1rem;
+    }
+
+    .navBrandName { font-size: 1.2rem; }
+    .nav.isScrolled .navBrandName { font-size: 1.1rem; }
+    .navBrandHon { font-size: 0.62rem; }
+}
+
+@media (max-width: 400px) {
+    .navBrandName,
+    .nav.isScrolled .navBrandName { font-size: 1.05rem; }
+    .navBrandHon { font-size: 0.58rem; }
+    /* The drawn circle comes down, the target does not: the button keeps its
+       44px and the border is inset instead. */
+    .navBurger { width: 44px; height: 44px; border-color: transparent; }
+    .navBurger::before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border: 1px solid var(--line-strong);
+        border-radius: 999px;
+        transition: border-color 0.3s var(--ease);
+    }
+    .navBurger:hover::before { border-color: var(--rose); }
+    .navBurger span:nth-child(1) { top: 18px; }
+    .navBurger span:nth-child(2) { top: 24px; }
+}
+
+@media (max-height: 520px) {
+    .navDrawerSheet {
+        gap: 0.75rem;
+        padding-bottom: calc(1.2rem + env(safe-area-inset-bottom));
+    }
+
+    /* The tagline is hidden here, and with only one auto margin left the whole
+       index fell to the bottom of the screen. A margin at both ends splits the
+       free room instead, so it sits centred in the band below the bar. When
+       there is no free room the autos resolve to zero and it scrolls from the
+       top as before. */
+    .navDrawerLinks {
+        margin-block: auto;
+    }
+
+    /* The leaf comes down with the type but never below the 46px a finger
+       needs — this is the one measurement here set by the hand, not the eye. */
+    .navDrawerLink {
+        min-height: 46px;
+        padding-block: 0.35rem;
+        font-size: clamp(1.25rem, 5.5vh, 1.7rem);
+        line-height: 1.2;
+    }
+
+    .navDrawerTagline {
+        display: none;
+    }
+}

@@ -1,0 +1,166 @@
+{
+    "_guia": "La biografía. 'body' acepta varios párrafos: una línea en blanco separa un párrafo del siguiente. La cronología es una lista libre en 'timeline'.",
+
+    "kicker": "Quién es",
+    "title": "Biografía",
+
+    "_guiaRetrato": "El retrato de arriba. 'portraitShape' es su forma: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta).",
+    "portrait": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+    "portraitAlt": "Retrato de Marcia Gomezcoello",
+    "portraitShape": "alto",
+
+    "lede": "Marcia Gomezcoello González nació en Azogues, Ecuador, y vive en Estados Unidos. Es doctora de profesión y escritora desde mucho antes de serlo en papel.",
+
+    "body": "Se graduó de Doctora en Medicina y Cirugía en la Universidad Estatal de Cuenca, y más tarde estudió cuidado del adulto mayor en CUNY, ya en Nueva York.\n\nEscribió su primer cuento a los once años. Desde entonces no ha parado: tiene más de una docena de libros publicados entre novela, cuentos ilustrados para niños y poesía, y otros terminados esperando turno. Tiene además más de cien canciones inéditas con letra y música propias; una de ellas, «Corazón Valiente», fue grabada y arreglada en los estudios Opus Ethica y circula en YouTube. La compuso para una entrega de prendas tejidas a crochet destinadas a niños enfermos.\n\nEs también diseñadora gráfica, creadora y productora de video, cantante, compositora y promotora cultural. Da talleres de crochet y tejido como voluntaria, y de esos talleres nacieron sus dos canales de YouTube, donde enseña crochet y tejido con palillos.\n\nEn enero de 2019 fundó las Tardes Literarias y Artísticas — TARLITEART — un encuentro mensual sin fines de lucro en la Biblioteca de Corona, en Queens, donde presenta y apoya a artistas, escritores y poetas. No ha faltado un solo mes desde entonces.",
+
+    "_guiaAlbum": "EL ÁLBUM: las fotos de su vida. Cada bloque de 'items' es una foto pegada en la hoja del álbum, sujeta por cuatro esquineros de papel. Para añadir una, copiar un bloque entero y cambiarle los valores: no hay tope, y el orden de la lista es el orden en la hoja — conviene ponerlas de la más antigua a la más reciente. 'photo' es el nombre del archivo puesto en public/content/; 'pie' es la línea que va debajo (dónde fue, quiénes salen) y puede quedar vacía; 'year' es el año, que sale en dorado sobre el pie y también puede quedar vacío. 'shape' es la forma de la foto —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta)—, las mismas tres de todo el sitio: aquí todas las fotos salen del mismo alto y cada una ocupa el ancho que le toca por su forma, así que mezclarlas es justamente lo que hace que la hoja se vea armada a mano. Para quitar la sección entera, dejar 'items': []",
+
+    "album": {
+        "kicker": "Álbum",
+        "title": "Su vida en fotos",
+        "lead": "De Azogues a Queens: lo que fue quedando por el camino.",
+
+        "_nota": "MUESTRA — las seis fotos están vacías a propósito, para ver cómo queda la hoja antes de tener las fotos. Se van llenando una por una, y la que sobre se borra entera.",
+        "items": [
+            {
+                "photo": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "year": "Azogues",
+                "pie": "De niña, en la casa de la provincia del Cañar."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "year": "Cuenca",
+                "pie": "El día del grado, Universidad Estatal de Cuenca."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "year": "",
+                "pie": "Una foto sin año sale igual: el dorado no aparece y ya."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "year": "2019",
+                "pie": "La primera Tarde Literaria en la Biblioteca de Corona."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "year": "",
+                "pie": ""
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "year": "Queens",
+                "pie": "Un taller de tejido, de los que empezaron todo."
+            }
+        ]
+    },
+
+    "roles": [
+        "Doctora y cirujana",
+        "Escritora",
+        "Poeta",
+        "Compositora y cantante",
+        "Diseñadora gráfica",
+        "Productora de video",
+        "Promotora cultural",
+        "Instructora de tejido"
+    ],
+
+    "formacion": {
+        "_guia": "La formación médica: su título de doctora, presentado como un certificado. 'degree' es el título obtenido, 'place' la institución y 'detail' la ciudad o una nota corta. 'photo' puede ser el diploma o una foto suya de esa época. Si se vacía 'degree', la sección desaparece.",
+
+        "kicker": "Formación",
+        "title": "Doctora y cirujana",
+        "lead": "Antes de publicar un solo libro ya ejercía la medicina. Es la formación que ordena todo lo demás: la paciencia para explicar y el hábito de atender a quien tiene enfrente.",
+
+        "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+        "photoAlt": "Diploma de Doctora en Medicina y Cirugía",
+        "shape": "ancho",
+
+        "degree": "Doctora en Medicina y Cirugía",
+
+        "place": "Universidad Estatal de Cuenca",
+
+        "detail": "Cuenca, Ecuador"
+    },
+
+    "timeline": {
+        "kicker": "Paso a paso",
+        "title": "Cronología",
+        "items": [
+            { "year": "Azogues", "title": "Nace en Azogues", "text": "Provincia de Cañar, Ecuador." },
+            { "year": "11 años", "title": "El primer cuento", "text": "Escribe su primer relato. No deja de escribir desde entonces." },
+            { "year": "Cuenca", "title": "Doctora en Medicina y Cirugía", "text": "Se gradúa en la Universidad Estatal de Cuenca." },
+            { "year": "Nueva York", "title": "Cuidado del adulto mayor", "text": "Estudios en CUNY, ya radicada en Estados Unidos." },
+            { "year": "2011", "title": "Premio de cuento", "text": "Gana el concurso de cuento de LAIA Internacional con el tema «Viajes». Su relato entra en una antología." },
+            { "year": "2019", "title": "Nace TARLITEART", "text": "Funda las Tardes Literarias y Artísticas en la Biblioteca de Corona, Queens. El último sábado de cada mes." },
+            { "year": "2020", "title": "«El ojo de la muerte»", "text": "Publica su primera novela: drama y suspenso, 348 páginas." },
+            { "year": "2021", "title": "«La reliquia: Invasión mortal»", "text": "Segunda novela, de fantasía y suspenso." },
+            { "year": "2024", "title": "«Sueños de mi Niñez»", "text": "Libro de poemas para niños." }
+        ]
+    },
+
+    "recognition": {
+        "_guia": "Premios, menciones y participaciones. Cada bloque lleva 'year', 'title', 'text', 'photo' y 'shape' — la foto puede ser el diploma, la placa o una foto de la entrega, y 'shape' es la forma del marco: 'cuadrado', 'alto' (más alto que ancho) o 'ancho' (más ancho que alto) — las mismas tres formas que se usan en todo el sitio. La foto de arriba, la del diploma, también lleva su 'shape'. Sin foto sale un marco de reserva. Para añadir otro, copiar un bloque entero.",
+
+        "kicker": "Premios",
+        "title": "Reconocimientos",
+        "lead": "Premios, menciones y participaciones.",
+
+        "_nota": "SOLO EL PRIMERO ES REAL. Los cuatro bloques siguientes están vacíos a propósito, para que ella escriba encima los reconocimientos que faltan; el que no se use se borra entero y la pared se acomoda sola.",
+        "items": [
+            {
+                "year": "2011",
+                "title": "Concurso de cuento LAIA Internacional",
+                "text": "Ganadora, tema «Viajes». Relato incluido en antología.",
+                "shape": "ancho",
+                "photo": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2013",
+                "title": "Segundo reconocimiento",
+                "text": "Aquí va de qué se trata: quién lo entregó, por qué obra y en qué ciudad.",
+                "shape": "alto",
+                "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2016",
+                "title": "Tercer reconocimiento",
+                "text": "En 'year' va el año, y sale en el sello dorado de la esquina. Si se deja vacío, el sello no aparece.",
+                "shape": "cuadrado",
+                "photo": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2019",
+                "title": "Cuarto reconocimiento",
+                "text": "En 'photo' va el nombre del archivo del diploma o de la foto de la entrega, puesto en public/content/.",
+                "shape": "ancho",
+                "photo": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2022",
+                "title": "Quinto reconocimiento",
+                "text": "Para añadir otro, copiar un bloque entero y cambiarle los valores. No hay límite.",
+                "shape": "alto",
+                "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "photoAlt": ""
+            }
+        ]
+    }
+}

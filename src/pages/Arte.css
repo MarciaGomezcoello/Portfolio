@@ -1,0 +1,417 @@
+/* This band opens the page — there is no masthead above it — so it keeps the
+   full band of padding that every other page gets under its heading. */
+
+/* ==========================================================================
+   Poemas — the index, set as a book's contents page
+
+   A single vertical run rather than a grid: hairline-divided entries, numbered
+   in order, with the illustration alternating sides down the page. Deliberately
+   unlike the shelf on the Libros page — books stand in a rack, poems follow one
+   another as leaves.
+   ========================================================================== */
+
+/* Two entries to a row, dropping to one as the screen narrows. No row gap:
+   the rule between rows and the entry's own padding set the rhythm, the way a
+   contents page is spaced. */
+.poemIndex {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.poemIndexRow {
+    border-top: 1px solid var(--line);
+}
+
+/* The section heading closes the top of the run, so the first row across
+   carries no rule of its own. */
+.poemIndexRow:nth-child(-n + 2) {
+    border-top: none;
+}
+
+/* The picture takes a share of whatever width the cell has rather than a fixed
+   size, so the same entry works at half width and at full width without a
+   second set of rules. */
+.poemEntry {
+    display: grid;
+    grid-template-columns: clamp(130px, 28%, 170px) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+    padding: clamp(1.75rem, 3vw, 2.5rem) 0;
+}
+
+.poemEntryArt {
+    grid-column: 1;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.55s var(--ease), box-shadow 0.55s var(--ease);
+}
+
+.poemEntryText {
+    grid-column: 2;
+}
+
+/* The picture rises without tilting: the shelf tilts its covers, and the two
+   pages should not share a gesture. */
+.poemEntry:hover .poemEntryArt {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- The entry ------------------------------------------------------------ */
+
+.poemEntryNum {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-family: var(--display);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--rose);
+}
+
+.poemEntryTitle {
+    font-size: clamp(1.35rem, 2vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 0;
+    transition: color 0.3s var(--ease);
+}
+
+.poemEntry:hover .poemEntryTitle {
+    color: var(--rose-dark);
+}
+
+.poemEntrySource {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* The opening line or two, set as verse behind a short rose rule — an epigraph
+   rather than a truncated poem. Nothing is cut off mid-line and there is no
+   ellipsis; the rest is a click away. */
+.poemEntryOpening {
+    position: relative;
+    max-width: 46ch;
+    margin-top: 1.1rem;
+    padding-top: 1.1rem;
+}
+
+.poemEntryOpening::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2px;
+    background: var(--rose);
+}
+
+.poemEntryLine {
+    font-family: var(--display);
+    font-size: clamp(1rem, 1.4vw, 1.12rem);
+    font-style: italic;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.poemEntryCta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    transition: transform 0.3s var(--ease);
+}
+
+.poemEntry:hover .poemEntryCta {
+    transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+    .poemIndex {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Only the first entry is on the first row now. */
+    .poemIndexRow:nth-child(-n + 2) {
+        border-top: 1px solid var(--line);
+    }
+
+    .poemIndexRow:first-child {
+        border-top: none;
+    }
+
+    .poemEntry {
+        grid-template-columns: clamp(180px, 30%, 260px) minmax(0, 1fr);
+        gap: clamp(1.75rem, 4.5vw, 4rem);
+    }
+
+    .poemEntryTitle {
+        font-size: clamp(1.5rem, 3vw, 2.15rem);
+    }
+}
+
+/* Below this the two columns of a single entry would each be too narrow to
+   hold their own, so it stacks: picture first, text under it.
+
+   Both children have to be put back into column 1. Setting only the rows left
+   `grid-column: 2` standing on the text, and a grid told to place something in
+   a column it does not have makes one — so the entry stayed two columns wide,
+   with the picture squeezed into whatever the first of them came to. It came
+   to about 96px, which is smaller than the word printed inside it. */
+@media (max-width: 560px) {
+    .poemEntry {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .poemEntryArt {
+        grid-column: 1;
+        grid-row: 1;
+        max-width: 230px;
+        margin-inline: auto;
+    }
+
+    .poemEntryText {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+/* ==========================================================================
+   Canciones — a wall of sleeves
+
+   Squares, the shape a record comes in and the shape that tiles best. The
+   knitting videos are wide cards and fit three across at most; these fit five
+   on a desk and two on a phone, which is what lets a collection grow from one
+   song to fifty and still read as a wall rather than a column.
+
+   Gold throughout rather than rose: rose is the knitting, and a song should
+   not be mistaken for a tutorial.
+   ========================================================================== */
+
+.songsBand {
+    background: var(--paper-deep);
+}
+
+/* `min(220px, 46%)` rather than a flat minimum: on a desk the track floor is
+   220px and the wall fills with five or so; on a phone 46% wins, which is what
+   keeps it two across there instead of collapsing to one tall column. */
+.songWall {
+    display: grid;
+    /* The same floor the knitting grid uses, and for the same reason: below
+       about 300px a video's own controls start crowding the picture. Songs are
+       many and will only get more, so this wraps to new rows rather than
+       squeezing more into one. */
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: clamp(1.6rem, 3vw, 2.4rem) clamp(1.25rem, 2.5vw, 2rem);
+    align-items: start;
+}
+
+.songSleeve {
+    /* The width of the mat around the picture. Named once because three rules
+       below have to agree with it exactly. */
+    --mat: 0.45rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* The mat: card paper with a gold hairline, the picture inset inside it the way
+   a record sits in its sleeve. The knitting cards are closed boxes with the
+   photograph bled to the edge; this one is open and matted, which is most of
+   what keeps the two sections from reading as the same grid twice. */
+.songSleeveMat {
+    position: relative;
+    /* content-box, so the 16:9 is the *hole* rather than the outer edge of the
+       mat. Measured the usual way, the mat and its border eat into the shape
+       and leave a hole slightly wider than a video, which the player then fills
+       with a sliver of black down each side. */
+    box-sizing: content-box;
+    /* A little taller than the video itself. At 16:9 the player's own furniture
+       — its title bar and controls — ate into the picture; the extra height is
+       given back to the frame rather than taken out of the photograph. */
+    aspect-ratio: 16 / 10.6;
+    padding: var(--mat);
+    background: var(--card);
+    border: 1px solid var(--gold-soft);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease),
+                border-color 0.45s var(--ease);
+}
+
+/* A touch screen has no pointer to hover with: `:hover` latches on when the
+   card is tapped and stays until something else is, so a card that lifts is
+   left hanging in its raised state — and these are the cards that stay on
+   screen after the tap rather than navigating away from it. */
+@media (hover: hover) {
+    .songSleeve:has(.songSleeveOpen:hover) .songSleeveMat,
+    .songSleeve:has(.songSleeveOpen:focus-visible) .songSleeveMat {
+        transform: translateY(-5px);
+        border-color: var(--gold);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* Both the poster and the player sit in the same hole in the mat.
+   
+   The sizes are spelled out rather than left to `auto`: an absolutely
+   positioned *replaced* element — an iframe or a video — reads `width: auto` as
+   its intrinsic size and ignores the far inset, so the player came out at the
+   iframe default of 300 by 150 and sat in the corner of a frame several times
+   its size. Percentages here resolve against the mat's padding box, which is
+   why both mat widths come back off. */
+.songSleeveOpen,
+.songVideo {
+    position: absolute;
+    inset: var(--mat);
+    width: calc(100% - var(--mat) * 2);
+    height: calc(100% - var(--mat) * 2);
+}
+
+.songSleeveOpen {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+/* A sleeve with nothing to play is a picture, not a button. */
+.songSleeveMat > span.songSleeveOpen {
+    cursor: default;
+}
+
+.songSleeveMedia {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+/* The mat keeps its shape whatever shape the file is, and the picture is
+   fitted inside it rather than cropped to fill it. */
+.songSleeveMedia img,
+.songSleeveMedia .ph {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    transition: transform 0.7s var(--ease);
+}
+
+.songSleeveOpen:hover .songSleeveMedia img,
+.songSleeveOpen:hover .songSleeveMedia .ph {
+    transform: scale(1.05);
+}
+
+/* The record. Gold, where the knitting badge is rose, and round where that one
+   is stood on its corner — two marks nobody would mistake for each other. */
+.songSleevePlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: -1.7rem 0 0 -1.7rem;
+    pointer-events: none;
+    filter: drop-shadow(var(--shadow-drop));
+    transition: transform 0.4s var(--ease);
+}
+
+.songSleeveOpen:hover .songSleevePlay,
+.songSleeveOpen:focus-visible .songSleevePlay {
+    transform: scale(1.09);
+}
+
+.songSleevePlay svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.songSleeveDisc {
+    fill: var(--gold);
+}
+
+/* The label ring, and the hole through the middle of it — drawn as a thick
+   stroke rather than a fill so the disc shows through as the label. */
+.songSleeveGroove {
+    fill: none;
+    stroke: var(--tape);
+    stroke-width: 0.9;
+}
+
+.songSleeveArrow {
+    fill: var(--paper);
+}
+
+.songVideo {
+    display: block;
+    border: 0;
+    border-radius: 3px;
+    background: var(--letterbox);
+}
+
+/* A file plays in the browser's own player; letterboxing beats cropping. */
+video.songVideo {
+    object-fit: contain;
+}
+
+/* --- The words under the sleeve ------------------------------------------- */
+
+.songSleeveText {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.songSleeveTitle {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--ink);
+    transition: color 0.3s var(--ease);
+}
+
+.songSleeve:not(.isSilent):hover .songSleeveTitle {
+    color: var(--gold-deep);
+}
+
+.songSleeveYear {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.songSleeveNote {
+    margin: 0.15rem 0 0;
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--muted);
+}
+
+/* A song with no recording yet keeps its sleeve, one shade back, with nothing
+   to press. */
+.songSleeve.isSilent .songSleeveMat {
+    border-style: dashed;
+}
+
+.songSleeve.isSilent .songSleeveTitle {
+    color: var(--ink-soft);
+}

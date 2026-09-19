@@ -1,0 +1,101 @@
+{
+    "_guia": "Lo que aparece en TODAS las páginas: el nombre y el pie de página. Las pestañas del menú de arriba vienen fijas con el sitio y no se editan. Para el contenido de cada página, ver el archivo con el nombre de esa página.",
+
+    "name": "Marcia Gomezcoello",
+
+    "honorific": "Dr.",
+
+    "tagline": "Doctor, writer, poet and knitter — from Azogues to New York",
+
+    "_guiaTema": "Los colores del sitio. Una de estas palabras: 'papel' (el de siempre, crema y rosa), 'salvia' (verde), 'lavanda' (lila), 'mar' (azul), 'terracota' (barro), 'noche' (oscuro), 'durazno' (coral), 'vino' (burdeos), 'girasol' (amarillo y azul), 'cielo' (azul claro), 'grafito' (blanco y negro) o 'medianoche' (azul oscuro con dorado). Para las fiestas: 'navidad', 'halloween', 'sanvalentin', 'pascua', 'gracias' (Acción de Gracias), 'anonuevo' (Año Nuevo), 'muertos' (Día de Muertos) y 'madre' (Día de la Madre). Una palabra que no sea ninguna de estas deja el de siempre. Solo cambia los colores: nada de lo escrito ni de las fotos.",
+
+    "theme": "papel",
+    "_guiaLetras": "Las letras del sitio. 'fontTitles' es la de los títulos grandes y 'fontText' la del texto; las dos se eligen de la misma lista: 'fraunces', 'playfair', 'cormorant', 'lora', 'merriweather', 'baskerville', 'sourceserif', 'dmserif', 'abril', 'inter', 'montserrat', 'poppins', 'raleway', 'lato', 'nunito', 'worksans', 'dancing', 'greatvibes', 'satisfy', 'pacifico', 'caveat', 'kalam'. Las de siempre son 'fraunces' para los títulos e 'inter' para el texto. Una palabra que no esté en la lista deja la de siempre. 'holidayExtras' enciende (true) o apaga (false) los adornos que trae cada tema: un ovillo, ramitas, girasoles, nubes… y en las fiestas gorros, nieve, guirnaldas y lo demás.",
+    "fontTitles": "fraunces",
+    "fontText": "inter",
+    "holidayExtras": true,
+
+    "footer": {
+        "_guia": "El pie de página. Va en dos partes: su nombre con una línea debajo, y las redes, cada una como un botoncito con su dibujito. No lleva menú: el de arriba ya está en todas las páginas. El título de las redes se cambia en 'socialTitle'; si se deja vacío, no sale. En 'social', dejar 'url' en \"\" mientras no haya cuenta: el nombre sale igual, en gris y sin enlace, hasta que la haya. 'icon' es el dibujito que va al lado del nombre, y es una de estas palabras: 'youtube', 'facebook', 'instagram', 'x', 'linkedin', 'amazon' o 'globe'. Si se escribe otra cosa, o se deja vacío, sale el mundito ('globe') y el enlace funciona igual. El sitio no muestra correos: el contacto es por estas redes.",
+        "note": "She writes, knits and teaches from Queens, New York. She was born in Azogues, Ecuador.",
+        "socialTitle": "Where to find her",
+        "social": [
+            {
+                "label": "YouTube · Crochet",
+                "icon": "youtube",
+                "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ"
+            },
+            {
+                "label": "YouTube · Knitting",
+                "icon": "youtube",
+                "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ"
+            },
+            {
+                "label": "Facebook",
+                "icon": "facebook",
+                "url": "https://www.facebook.com/MarciaGomezcoelloCreations/"
+            },
+            {
+                "label": "Instagram",
+                "icon": "instagram",
+                "url": "https://www.instagram.com/marciagomezcoellocreations/"
+            },
+            {
+                "label": "X",
+                "icon": "x",
+                "url": "https://twitter.com/MaGomezcoello1"
+            },
+            {
+                "label": "LinkedIn",
+                "icon": "linkedin",
+                "url": "https://www.linkedin.com/in/marcia-gomezcoello-b17312181/"
+            },
+            {
+                "label": "Amazon",
+                "icon": "amazon",
+                "url": "https://www.amazon.com/stores/Marcia-Gomezcoello/author/B09HGGKHMP"
+            }
+        ]
+    },
+
+    "_guiaUi": "Palabras sueltas que no pertenecen a ninguna página: el rótulo de un marco sin foto ('posterFrame', 'coverFrame'…), el botón de cerrar la foto grande, las páginas de 'no encontrado'. Casi nunca se ven, pero existen en los dos idiomas.",
+
+    "ui": {
+        "skipLink": "Skip to content",
+        "home": "Home",
+        "sections": "Sections",
+        "close": "Close",
+        "language": "Language",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "readPoem": "Read the poem →",
+        "seeBook": "See the book →",
+        "seeChannel": "See the channel",
+        "reserved": "Space reserved for a photograph",
+        "filterBooks": "Filter by genre",
+        "all": "All",
+        "newBook": "New",
+        "filterEvents": "Kinds of gathering",
+        "morePoems": "More poems",
+        "posterFrame": "Poster",
+        "coverFrame": "Cover",
+        "portraitFrame": "Portrait",
+        "photoFrame": "Photograph",
+        "illustration": "Illustration",
+        "knit": "Knitwork",
+        "knitPhoto": "Photo of the piece",
+        "diploma": "Diploma",
+        "award": "Award",
+        "missingKicker": "Not found",
+        "missingText": "The link may be mistyped, or it may have moved.",
+        "bookMissing": "That book isn't here",
+        "allBooks": "See all the books",
+        "poemMissing": "That poem isn't here",
+        "allPoems": "See all the poems",
+        "eventMissing": "That gathering isn't here",
+        "notFoundKicker": "Page not found",
+        "notFoundTitle": "That thread came loose",
+        "notFoundText": "The address you were looking for doesn't exist — or it has moved. From here you can reach everything else.",
+        "notFoundHome": "Go to the home page"
+    }
+}

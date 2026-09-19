@@ -1,0 +1,315 @@
+/* ==========================================================================
+   Fiesta — the holiday extras. See Fiesta.js.
+
+   Colours are the holiday theme's own: --fiesta-a … --fiesta-e and
+   --fiesta-sky, set in styles/themes-fiestas.css. Nothing here writes one.
+   ========================================================================== */
+
+/* --- Paint ---------------------------------------------------------------- */
+
+.adorno svg,
+.fiestaGarland svg,
+.fiestaSky svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.fa { fill: var(--fiesta-a); }
+.fb { fill: var(--fiesta-b); }
+.fc { fill: var(--fiesta-c); }
+.fd { fill: var(--fiesta-d); }
+/* White snow and ears would vanish on cream without an edge. */
+.adorno .fd { stroke: var(--line-strong); stroke-width: 2; }
+.fe { fill: var(--fiesta-e); }
+.fshine { fill: var(--paper); opacity: 0.55; }
+.fcut { fill: var(--paper); }
+.fline { fill: none; stroke: var(--fiesta-e); stroke-width: 2; stroke-linecap: round; opacity: 0.5; }
+.fwire { fill: none; stroke: var(--fiesta-e); stroke-width: 1.5; }
+.fstroke { fill: none; stroke: var(--fiesta-e); stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+.fstrokeB { fill: none; stroke: var(--fiesta-b); stroke-width: 8; stroke-linecap: round; }
+.fstrokeD { fill: none; stroke: var(--fiesta-d); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.fsnow { fill: none; stroke: var(--fiesta-sky); stroke-width: 2.2; stroke-linecap: round; }
+.fbat { fill: var(--fiesta-sky); }
+/* Bone and the dark of an eye. Light themes need neither set: bone is only
+   drawn at the Day of the Dead, and a pupil falls back to the ink. */
+.fbone { fill: var(--fiesta-bone, var(--paper)); }
+.fhollow { fill: var(--fiesta-hollow, var(--ink)); }
+.fteeth { fill: none; stroke: var(--fiesta-hollow, var(--ink)); stroke-width: 3; stroke-linecap: round; }
+.fdots { fill: none; stroke: var(--fiesta-e); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 0.1 7; }
+.fedge { fill: none; stroke: var(--fiesta-e); stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+/* An edge for a shape that could share its colour with the band behind it. */
+.foutline { stroke: var(--fiesta-e); stroke-width: 3; stroke-linejoin: round; }
+.fstem { fill: none; stroke: var(--fiesta-e); stroke-width: 4; stroke-linecap: round; }
+.fstrokeC { fill: none; stroke: var(--fiesta-c); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* The everyday themes' drawings (Temas.js). */
+.fleaf { fill: var(--fiesta-leaf); }
+.fstemLeaf { fill: none; stroke: var(--fiesta-leaf); stroke-width: 2.5; stroke-linecap: round; }
+.fwrap { fill: none; stroke: var(--fiesta-a); stroke-width: 2.2; stroke-linecap: round; opacity: 0.55; }
+.fthread { fill: none; stroke: var(--fiesta-a); stroke-width: 2.5; stroke-linecap: round; }
+.fthreadThin { fill: none; stroke: var(--fiesta-a); stroke-width: 1.4; }
+.fneedle { fill: none; stroke: var(--fiesta-c); stroke-width: 5; stroke-linecap: round; }
+.fstrokeGold { fill: none; stroke: var(--fiesta-c); stroke-width: 3; stroke-linecap: round; }
+.fstrokeA { fill: none; stroke: var(--fiesta-a); stroke-width: 7; stroke-linecap: round; }
+.fbird { fill: none; stroke: var(--fiesta-e); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+.fray { fill: none; stroke: var(--fiesta-c); stroke-width: 5; stroke-linecap: round; }
+.fglow { fill: var(--fiesta-c); opacity: 0.22; }
+.fpage { fill: none; stroke: var(--fiesta-d); stroke-width: 1.5; opacity: 0.6; }
+.fzig { fill: none; stroke: var(--fiesta-d); stroke-width: 3; stroke-linejoin: round; }
+.fweave { fill: none; stroke: var(--fiesta-e); stroke-width: 1.5; opacity: 0.35; }
+.fquill { fill: none; stroke: var(--fiesta-a); stroke-width: 2.5; stroke-linecap: round; }
+.fseed { fill: var(--fiesta-a); opacity: 0.55; }
+.fcloud { fill: var(--fiesta-d); stroke: var(--line-strong); stroke-width: 2; }
+.fcrop { fill: none; stroke: var(--fiesta-e); stroke-width: 2.5; stroke-linecap: square; }
+.fcutLine { fill: none; stroke: var(--paper); stroke-width: 2; }
+.fconst { fill: none; stroke: var(--fiesta-c); stroke-width: 2.5; opacity: 0.7; }
+.fwave { fill: none; stroke: var(--fiesta-a); stroke-width: 3; stroke-linecap: round; }
+.fwaveB { fill: none; stroke: var(--fiesta-b); stroke-width: 3; stroke-linecap: round; }
+.fruler { fill: none; stroke: var(--fiesta-e); stroke-width: 1.5; }
+.fbubble { fill: none; stroke: var(--fiesta-sky); stroke-width: 1.6; }
+.fwing { fill: var(--fiesta-d); stroke: var(--fiesta-e); stroke-width: 1; opacity: 0.85; }
+.fbeeStripe { fill: none; stroke: var(--fiesta-e); stroke-width: 2.5; }
+
+/* --- On the portrait -------------------------------------------------------
+   Placed over the portrait's own box (.heroPortrait is positioned), above the
+   photograph and its colour block. Each holiday sits where it looks worn. */
+
+.adorno {
+    position: absolute;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.adorno-portrait { top: 0; }
+
+/* Antlers and bunny ears rise out of the top edge, centred. */
+.adorno-portrait.is-navidad { left: 50%; width: 66%; transform: translate(-50%, -80%); }
+.adorno-portrait.is-pascua { left: 50%; width: 46%; transform: translate(-50%, -84%); }
+
+/* Hats sit tipped on a corner. */
+.adorno-portrait.is-halloween { left: -7%; width: 40%; transform: translateY(-60%) rotate(-14deg); }
+.adorno-portrait.is-anonuevo { right: -3%; width: 26%; transform: translateY(-72%) rotate(16deg); }
+
+/* A heart pinned, leaves and flowers tucked over a corner. */
+.adorno-portrait.is-sanvalentin { right: -8%; width: 30%; transform: translateY(-34%) rotate(12deg); }
+.adorno-portrait.is-gracias { left: -9%; width: 36%; transform: translateY(-30%); }
+.adorno-portrait.is-muertos { left: -7%; width: 50%; transform: translateY(-46%) rotate(-6deg); }
+.adorno-portrait.is-madre { right: -9%; width: 40%; transform: translateY(-36%) rotate(8deg); }
+
+/* The everyday themes. */
+.adorno-portrait.is-papel { right: -8%; width: 38%; transform: translateY(-58%); }
+.adorno-portrait.is-salvia { left: -10%; width: 38%; transform: translateY(-40%) scaleX(-1); }
+.adorno-portrait.is-lavanda { right: -10%; width: 34%; transform: translateY(-46%) scaleX(-1) rotate(-6deg); }
+.adorno-portrait.is-mar { right: 2%; width: 30%; transform: translateY(-150%); }
+.adorno-portrait.is-terracota { left: -12%; width: 30%; transform: translateY(-42%); }
+.adorno-portrait.is-noche { right: -8%; width: 32%; transform: translateY(-52%); }
+.adorno-portrait.is-durazno { left: -10%; width: 30%; transform: translateY(-36%) rotate(-12deg); }
+.adorno-portrait.is-vino { right: 14%; width: 9%; top: -2%; }
+.adorno-portrait.is-girasol { right: -10%; width: 32%; transform: translateY(-38%) rotate(10deg); }
+.adorno-portrait.is-cielo { left: -14%; width: 40%; transform: translateY(-48%); }
+.adorno-portrait.is-grafito { inset: -5%; top: -5%; width: auto; height: auto; }
+.adorno-portrait.is-grafito svg { width: 100%; height: 100%; }
+.adorno-portrait.is-medianoche { right: 10%; width: 19%; transform: translateY(-20%); }
+
+/* The companion stands at the lower left corner — the colour block runs out
+   to the lower right, so the two never cover each other. */
+.adorno-companion {
+    left: -11%;
+    bottom: 0;
+    width: 36%;
+    transform: translateY(38%) rotate(-4deg);
+}
+
+.adorno-companion.is-gracias,
+.adorno-companion.is-muertos { width: 42%; }
+
+
+/* --- On the mastheads -------------------------------------------------------
+   The same companion, at the right of the band where the title leaves room.
+   Only where there is width for it: under 1000px the standfirst reaches that
+   far and the drawing would sit on the words. */
+
+.adorno-masthead {
+    z-index: 1;
+    right: max(var(--gutter), calc((100% - var(--maxw)) / 2));
+    bottom: 1.75rem;
+    width: clamp(100px, 10vw, 140px);
+}
+
+@media (max-width: 1000px) {
+    .adorno-masthead { display: none; }
+}
+
+/* --- On her name in the bar ------------------------------------------------ */
+
+.navBrand { position: relative; }
+
+.adorno-brand {
+    left: -0.55rem;
+    top: -0.2rem;
+    width: 1.7rem;
+    transform: translateY(-45%) rotate(-16deg);
+}
+
+.adorno-brand.is-halloween { width: 2rem; }
+.adorno-brand.is-anonuevo { width: 1.1rem; left: -0.2rem; }
+.adorno-brand.is-gracias { width: 1.9rem; }
+.adorno-brand.is-muertos { width: 1.15rem; left: -1.5rem; top: 50%; transform: translateY(-50%) rotate(-10deg); }
+.adorno-brand.isTema,
+.adorno-brand.is-sanvalentin,
+.adorno-brand.is-pascua,
+.adorno-brand.is-madre {
+    width: 0.95rem;
+    left: -1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* A phone's gutter is narrower than the room the small mark takes beside her
+   name, so it comes in closer and smaller there, clear of the screen's edge. */
+@media (max-width: 700px) {
+    .adorno-brand.isTema,
+    .adorno-brand.is-sanvalentin,
+    .adorno-brand.is-pascua,
+    .adorno-brand.is-madre {
+        left: -1rem;
+        width: 0.8rem;
+    }
+}
+
+/* --- The garland along the top of the footer ------------------------------ */
+
+.siteFooter.hasFiesta {
+    padding-top: 3.4rem;
+}
+
+.fiestaGarland {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.fiestaGarlandItem {
+    flex: 0 0 40px;
+    transform-origin: 50% 0;
+}
+
+.fiestaGarland.is-navidad .fiestaGarlandItem:nth-child(3n) { animation: fiestaTwinkle 2.4s ease-in-out infinite; }
+.fiestaGarland.is-navidad .fiestaGarlandItem:nth-child(3n + 1) { animation: fiestaTwinkle 2.4s ease-in-out 0.8s infinite; }
+.fiestaGarland.is-noche .fiestaGarlandItem:nth-child(4n),
+.fiestaGarland.is-medianoche .fiestaGarlandItem:nth-child(4n) { animation: fiestaTwinkle 3.2s ease-in-out infinite; }
+.fiestaGarland.is-noche .fiestaGarlandItem:nth-child(4n + 2),
+.fiestaGarland.is-medianoche .fiestaGarlandItem:nth-child(4n + 2) { animation: fiestaTwinkle 3.2s ease-in-out 1.4s infinite; }
+
+@keyframes fiestaTwinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.45; }
+}
+
+/* --- Things falling through the hero and the mastheads --------------------- */
+
+.fiestaSky {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* What sits in front of the sky. The hero's own grid is already positioned. */
+.pageHead > .bandInner {
+    position: relative;
+    z-index: 1;
+}
+
+.heroInner {
+    z-index: 1;
+}
+
+.fiestaFlake {
+    position: absolute;
+    left: var(--x);
+    top: var(--rest);
+    width: var(--size);
+    opacity: 0.8;
+    animation: fiestaFall var(--dur) linear var(--delay) infinite;
+}
+
+@keyframes fiestaFall {
+    from { top: -8%; transform: translateX(0) rotate(0deg); }
+    to { top: 104%; transform: translateX(var(--drift)) rotate(var(--spin)); }
+}
+
+/* Bats and bees fly across rather than fall. */
+.fiestaSky.is-fly .fiestaFlake {
+    animation-name: fiestaFly;
+}
+
+/* Bubbles rise. */
+.fiestaSky.is-rise .fiestaFlake {
+    animation-name: fiestaRise;
+    animation-duration: calc(var(--dur) * 1.3);
+}
+
+@keyframes fiestaRise {
+    from { top: 104%; transform: translateX(0); }
+    to { top: -8%; transform: translateX(var(--drift)); }
+}
+
+/* Clouds drift across, slowly, and do not flap. */
+.fiestaSky.is-drift .fiestaFlake {
+    opacity: 0.55;
+    animation-name: fiestaDrift;
+    animation-duration: calc(var(--dur) * 4);
+}
+
+@keyframes fiestaDrift {
+    from { left: -16%; }
+    to { left: 104%; }
+}
+
+/* Stars stay where they are and twinkle. */
+.fiestaSky.is-still .fiestaFlake {
+    animation-name: fiestaTwinkle;
+    animation-duration: calc(var(--dur) / 3);
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes fiestaFly {
+    0% { left: -8%; transform: translateY(0) scaleY(1); }
+    25% { transform: translateY(-14px) scaleY(0.6); }
+    50% { transform: translateY(6px) scaleY(1); }
+    75% { transform: translateY(-10px) scaleY(0.6); }
+    100% { left: 104%; transform: translateY(0) scaleY(1); }
+}
+
+/* Less motion: everything stays where it was scattered. */
+@media (prefers-reduced-motion: reduce) {
+    .fiestaFlake,
+    .fiestaGarlandItem {
+        animation: none !important;
+    }
+}
+
+/* When the portrait leads the stacked hero, what it wears rises into the space
+   under the bar — so it is given room above it. */
+@media (max-width: 900px) {
+    .heroPortrait:has(.adorno-portrait) {
+        margin-top: 3.25rem;
+    }
+}
+
+/* A phone: a lighter sky. */
+@media (max-width: 560px) {
+    .fiestaFlake:nth-child(n + 11) {
+        display: none;
+    }
+}

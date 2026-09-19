@@ -1,0 +1,63 @@
+/* The masthead every inner page opens with, set on her deep rose with its type
+   in paper (see .bandStrong in tokens.css).
+
+   It was cream with a faint wash in one corner, and at 340px tall it was the
+   first thing on five pages and the emptiest: a black title on the same paper
+   as everything below it. Rose gives each page a front, and a stitched seam
+   along its lower edge — the same running stitch that opens the footer — joins
+   it to the page. Shorter too, so the page itself starts sooner — and shorter
+   again after the user found it too tall: tighter padding, a smaller title and
+   less air above the standfirst. The bottom keeps a little more than the top,
+   because the seam lives in it. */
+.pageHead {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(1.75rem, 2.5vw, 2rem);
+    padding-bottom: clamp(2.25rem, 2.8vw, 2.5rem);
+}
+
+.pageHead::after {
+    content: "";
+    position: absolute;
+    left: var(--gutter);
+    right: var(--gutter);
+    bottom: 0.9rem;
+    height: 2px;
+    border-radius: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--paper) 0 16px,
+        transparent 16px 26px
+    );
+    opacity: 0.35;
+}
+
+.pageTitle {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-size: calc(clamp(2.2rem, 3.4vw, 2.5rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--paper);
+    margin: 0;
+}
+
+.pageSubtitle {
+    font-family: var(--display);
+    font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--paper);
+    opacity: 0.85;
+    margin: 0.5rem 0 0;
+}
+
+.pageLead {
+    max-width: 62ch;
+    margin: 0.9rem 0 0;
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
+    line-height: 1.75;
+    color: var(--paper);
+    opacity: 0.92;
+}

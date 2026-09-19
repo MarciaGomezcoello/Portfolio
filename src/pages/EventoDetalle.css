@@ -1,0 +1,317 @@
+/* ============================================================================
+   One encounter, on its own page. Prints out of an envelope, then the account.
+   ============================================================================ */
+
+.eventDetail {
+    background: var(--paper);
+}
+
+.eventDetailBack {
+    display: inline-block;
+    margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.3s var(--ease);
+}
+
+.eventDetailBack:hover {
+    color: var(--rose-dark);
+}
+
+/* --- The name, over the pictures ------------------------------------------ */
+
+/* As wide as the pictures under it. At a 34ch measure a two-word title broke
+   after the first word while the carousel beneath it ran on for another 400px,
+   which reads as a column that ran out rather than as a title. It wraps at the
+   edge of the photographs now, or not at all. */
+.eventDetailHead {
+    max-width: min(100%, 820px);
+    margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.eventDetailTitle {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    margin: 0.5rem 0 0;
+    font-size: calc(clamp(2.1rem, 3.6vw, 2.6rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+}
+
+/* --- Everything else, under them ------------------------------------------ */
+
+.eventDetailWords {
+    max-width: 62ch;
+}
+
+.eventDetailWhen {
+    margin: 0;
+    font-family: var(--display);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--ink-soft);
+}
+
+/* --- The print that is face up -------------------------------------------- */
+
+/* Capped rather than let out to the full band. A 3:2 print across the whole
+   measure came out over 800px tall — taller than the screen, so the picture
+   could not be seen whole and the caption under it never arrived at the same
+   time as the photograph it belongs to. */
+/* Smaller than it was: at 820px the rail was the whole first screen and the
+   encounter's own words never appeared with it. */
+.eventGallery {
+    max-width: min(100%, 620px);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* The mount. One print at a time, laid on a sheet of the page's own warm paper
+   with the site's weave in it, a thread-gold hairline just inside the edge the
+   way the recognitions are framed, and a shadow deep enough to lift it off the
+   band. It used to be a rail that was dragged; the small prints in the tray
+   below are the way through the envelope now, so nothing in here scrolls,
+   captures a pointer or has to be held to one picture. */
+.eventPrintMat {
+    display: flex;
+    justify-content: center;
+    padding: clamp(0.8rem, 1.7vw, 1.15rem);
+    background: var(--paper-warm);
+    background-image:
+        repeating-linear-gradient(45deg,
+            var(--weave-faint) 0 1px, transparent 1px 16px);
+    border: 1px solid var(--gold-soft);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md), inset 0 0 0 1px rgba(var(--paper-rgb), 0.5);
+
+    /* The mount stands this tall whatever is on it, so it does not change shape
+       as the prints are changed — the print takes the height and its own shape
+       settles the width. */
+    --print-h: clamp(180px, min(44vw, 40vh), 330px);
+}
+
+/* The print's shape is set on the plate rather than left to the picture inside
+   it, so the mount can put a ceiling on how tall a print gets. A standing shape
+   across the full measure works out taller than the screen, so the photograph
+   could not be seen whole and its caption never arrived at the same time as the
+   picture it belongs to. Past the ceiling the picture is cropped rather than the
+   frame stretched, which is what event photographs do everywhere on this site. */
+.eventPrintPlate {
+    /* The height is set here; `aspect-ratio` is written on the element from the
+       photograph's own shape and settles the width. */
+    flex: 0 0 auto;
+    height: var(--print-h);
+    /* Safari does not derive this from aspect-ratio; see ratioStyle(). */
+    width: calc(var(--print-h) * var(--ratio, 1.5));
+    max-width: 100%;
+    /* The print is fitted rather than cropped, so some of the plate shows around
+       it — and what shows must be the quiet card of a photographic print, not
+       the mount's weave running on behind the picture. */
+    background: var(--card);
+    border-radius: 3px;
+    overflow: hidden;
+    /* A new print is laid rather than cut to: the element is keyed by position,
+       so changing the picture mounts a new one and this runs again. Short, and
+       only the picture — the mount underneath does not move. */
+    animation: eventPrintIn 0.42s var(--ease) both;
+}
+
+@keyframes eventPrintIn {
+    from { opacity: 0; transform: scale(1.012); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .eventPrintPlate {
+        animation: none;
+    }
+}
+
+/* `aspect-ratio: auto` because the plate is what carries the shape now.
+   `Figure` writes the ratio onto the picture as an inline style — right
+   everywhere else, where the picture is what reserves the space — and left
+   standing it would fight the plate's ceiling and push the picture past it. */
+.eventPrintMat .figureImg,
+.eventPrintMat .ph {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
+    border-radius: 0;
+}
+
+/* See the note on the recognition frames: only the photograph wants this. */
+.eventPrintMat .figureImg {
+    display: block;
+    object-fit: contain;
+}
+
+/* The plate number sits on its own line under the mount. Nothing is laid over
+   the photograph itself — a mark floated on an image belongs to a slideshow,
+   and these are prints. */
+.eventPrintLine {
+    display: flex;
+    align-items: baseline;
+    /* Only the plate number is left on this line, and it sits at the right
+       where it always did. */
+    justify-content: flex-end;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    margin-top: 0.95rem;
+}
+
+/* Numbered the way a plate is numbered in a book, not the way a slideshow
+   counts dots. */
+.eventPrintCount {
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
+}
+
+.eventPrintCountNow {
+    color: var(--gold-ink);
+}
+
+/* --- The rest of the envelope --------------------------------------------- */
+
+/* Sideways rather than wrapping: thirty photographs stay one strip under one
+   picture instead of becoming a second gallery. */
+/* The small prints lie in a tray rather than loose on the band — a contact
+   sheet, the sheet of proofs a photographer lays the frames out on. Before this
+   they floated on the page with nothing holding them, which read as unfinished
+   next to the mounted print above. The ground is the deep paper, a shade none
+   of this page's bands use, so the white prints sit on it and are clearly a set
+   of one thing. */
+.eventStripTray {
+    margin-top: clamp(1.1rem, 2.2vw, 1.6rem);
+    padding: 0.7rem 0.75rem 0.45rem;
+    background: var(--paper-deep);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    /* Recessed, so it reads as a tray the prints lie in rather than a card
+       floating over the page. */
+    box-shadow: inset 0 1px 3px rgba(var(--ink-rgb), 0.05);
+}
+
+.eventStrip {
+    /* Positioned, so it is the offsetParent of the small prints: bringing the
+       one that is up back into view is done from their `offsetLeft`, and left
+       static that is measured from an ancestor instead. */
+    position: relative;
+    display: flex;
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0 0 0.15rem;
+    list-style: none;
+    /* Centred while the prints do not fill the tray, so a short set reads as
+       laid out rather than pushed to one end. `safe` is what makes that
+       harmless: plain `center` in a scroll container puts the overflow beyond
+       the start edge where it can never be scrolled back to, and a long set
+       would have lost its first prints. Where it overflows this falls back to
+       ordinary start alignment. */
+    justify-content: safe center;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    cursor: grab;
+}
+
+.eventStrip::-webkit-scrollbar {
+    display: none;
+}
+
+.eventStrip.isDragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+/* Faded at both ends, but only when there is more strip than room for it — a
+   row that stops short of the edge is complete, and fading it would say the
+   opposite. The black in the gradient is a stencil, not a colour: in a mask it
+   means "keep this part", so it does not belong in the palette. */
+.eventStrip.spills {
+    -webkit-mask-image: linear-gradient(
+        to right, transparent 0, #000 3.5%, #000 96.5%, transparent 100%
+    );
+    mask-image: linear-gradient(
+        to right, transparent 0, #000 3.5%, #000 96.5%, transparent 100%
+    );
+}
+
+.eventStrip img {
+    -webkit-user-drag: none;
+}
+
+.eventStrip > li {
+    flex: 0 0 auto;
+}
+
+.eventStripFrame {
+    display: block;
+    /* Same rule as the rail above it, at a smaller size: one height, and the
+       width comes from the shape. */
+    --strip-h: clamp(54px, 7vw, 78px);
+    height: var(--strip-h);
+    /* Safari does not derive this from aspect-ratio; see ratioStyle(). */
+    width: calc(var(--strip-h) * var(--ratio, 1.5));
+    padding: 0.22rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.62;
+    transition: opacity 0.35s var(--ease), border-color 0.35s var(--ease),
+                transform 0.35s var(--ease);
+}
+
+.eventStripFrame:hover,
+.eventStripFrame:focus-visible {
+    opacity: 0.9;
+    transform: translateY(-3px);
+}
+
+/* The one that is face up, ringed in thread-gold. */
+.eventStripFrame.isUp {
+    opacity: 1;
+    border-color: var(--gold);
+    cursor: default;
+}
+
+.eventStripFrame .figureImg,
+.eventStripFrame .ph {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.eventStripFrame .figureImg {
+    display: block;
+    object-fit: contain;
+}
+
+.eventDetailBody {
+    margin-top: clamp(1.25rem, 2.5vw, 1.8rem);
+}
+
+.eventDetailBody p {
+    margin: 0 0 1.15rem;
+    font-size: clamp(1rem, 1.8vw, 1.08rem);
+    line-height: 1.85;
+    color: var(--ink-soft);
+}
+
+.eventDetailBody p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- A link that matches nothing ------------------------------------------ */
+
+.eventMissingCta {
+    margin-top: 1.75rem;
+}
+
+

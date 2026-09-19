@@ -1,0 +1,595 @@
+/* ==========================================================================
+   Holiday themes
+
+   Imported after tokens.css. Each is a theme like the everyday ones — colours
+   and flair — plus the paint for its holiday extras: while one of these is
+   the theme, components/common/Fiesta.js puts a few drawings on the page
+   (antlers on the portrait, a garland along the footer, snow in the hero…).
+   The extras can be switched off in site.json with "holidayExtras": false.
+   ========================================================================== */
+
+/* Navidad — red, pine and gold on cream, like wrapping paper. */
+:root[data-theme="navidad"] {
+    --paper: #fdfaf4;
+    --paper-warm: #f6efe2;
+    --paper-deep: #ece1cc;
+    --card: #fffdf8;
+    --ink: #1f1a17;
+    --ink-soft: #4a403a;
+    --muted: #837770;
+    --faint: #b7aca4;
+    --rose: #d9534f;
+    --rose-deep: #b3262e;
+    --rose-dark: #8a1c23;
+    --blush: #f6dcd8;
+    --blush-soft: #fbeeeb;
+    --gold: #c9982e;
+    --gold-soft: #f1e3c0;
+    --gold-ink: #96701c;
+    --gold-deep: #775814;
+    --ink-rgb: 31, 26, 23;
+    --paper-rgb: 253, 250, 244;
+    --rose-deep-rgb: 179, 38, 46;
+    --nav-rgb: 243, 236, 224;
+    --nav-edge: #e2d4bd;
+    --ph-book: #f6eee2;
+    --ph-video: #f2ede4;
+    --ph-yarn: #fbeeeb;
+    --ph-award: #f6eedb;
+    --ph-music: #f6eedb;
+    --footer-bg: #1f4a36;
+    --footer-ink: #f4efe3;
+    --footer-muted: #bcd0c3;
+    --footer-faint: #86a192;
+    --footer-rule: #2f6049;
+    --footer-accent: #e9c46a;
+    --line: #e9dfcf;
+    --line-strong: #d9ccb7;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 8px;
+    --radius: 12px;
+    --radius-lg: 18px;
+    --kicker-mark-w: 0.5rem;
+    --kicker-mark-h: 0.5rem;
+    --kicker-mark-turn: 45deg;
+    --strong-texture: repeating-linear-gradient(45deg, rgba(var(--paper-rgb), 0.09) 0 10px, transparent 10px 20px);
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Santa red, pine, gold, snow and antler brown; icy blue snowflakes. */
+    --fiesta-a: #c8232c;
+    --fiesta-b: #2f6b3a;
+    --fiesta-c: #e2b33c;
+    --fiesta-d: #ffffff;
+    --fiesta-e: #6b4226;
+    --fiesta-sky: #8fb4cc;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(45deg, rgba(var(--rose-deep-rgb), 0.03) 0 14px, transparent 14px 28px);
+    --band-texture-size: auto;
+    --band-seam: repeating-linear-gradient(45deg, var(--fiesta-a) 0 7px, var(--fiesta-d) 7px 14px);
+    --band-seam-size: auto 6px;
+    --title-mark: radial-gradient(circle, var(--fiesta-a) 3px, transparent 3.5px) 0 50% / 14px 100% repeat-x;
+    --title-mark-w: 42px;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Halloween — a night of pumpkins, with a purple moon. */
+:root[data-theme="halloween"] {
+    color-scheme: dark;
+    --paper: #15121a;
+    --paper-warm: #1c1822;
+    --paper-deep: #241f2c;
+    --card: #26202e;
+    --ink: #f3ede6;
+    --ink-soft: #cfc6bf;
+    --muted: #9c929f;
+    --faint: #665d6b;
+    --rose: #f08a24;
+    --rose-deep: #ff9636;
+    --rose-dark: #ffb56e;
+    --blush: #3a2a22;
+    --blush-soft: #221b24;
+    --gold: #9f6ce0;
+    --gold-soft: #302445;
+    --gold-ink: #b98cf0;
+    --gold-deep: #cfaef7;
+    --ink-rgb: 4, 3, 6;
+    --paper-rgb: 21, 18, 26;
+    --rose-deep-rgb: 255, 150, 54;
+    --on-accent: #15121a;
+    --on-accent-dim: rgba(21, 18, 26, 0.72);
+    --tape: rgba(242, 238, 232, 0.16);
+    --nav-rgb: 24, 20, 30;
+    --nav-edge: #342c3e;
+    --ph-book: #1f1a26;
+    --ph-video: #1e1a25;
+    --ph-yarn: #221b24;
+    --ph-award: #231c2c;
+    --ph-music: #231c2c;
+    --footer-bg: #0c0a0f;
+    --footer-ink: #efe7df;
+    --footer-muted: #a59aa7;
+    --footer-faint: #6a616e;
+    --footer-rule: #2d2635;
+    --footer-accent: #ff9636;
+    --line: #332b3b;
+    --line-strong: #443a4e;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 4px;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --kicker-mark-w: 0.55rem;
+    --kicker-mark-h: 0.55rem;
+    --kicker-mark-radius: 50%;
+    --strong-texture: repeating-radial-gradient(circle at 100% 0, transparent 0 46px, rgba(var(--paper-rgb), 0.07) 46px 47px), repeating-conic-gradient(from 180deg at 100% 0, rgba(var(--paper-rgb), 0.07) 0 0.4deg, transparent 0.4deg 15deg);
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Pumpkin orange, witch purple, a gold buckle; grey bats. */
+    --fiesta-a: #8e4fd6;
+    --fiesta-b: #ff8a1f;
+    --fiesta-c: #f2c14e;
+    --fiesta-d: #f3ede6;
+    --fiesta-e: #5b2a86;
+    --fiesta-sky: #a79bbd;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.12) 1.4px, transparent 1.9px);
+    --band-texture-size: 34px 34px;
+    --band-seam: repeating-linear-gradient(90deg, var(--fiesta-b) 0 14px, transparent 14px 20px, var(--fiesta-a) 20px 34px, transparent 34px 40px);
+    --band-seam-size: auto 3px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 3rem;
+    --title-mark-h: 5px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line-strong);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* San Valentín — valentine pink and a deep red heart. */
+:root[data-theme="sanvalentin"] {
+    --paper: #fffafb;
+    --paper-warm: #fdeff2;
+    --paper-deep: #f9dfe6;
+    --card: #ffffff;
+    --ink: #2a171c;
+    --ink-soft: #573e45;
+    --muted: #8f7479;
+    --faint: #c2a9af;
+    --rose: #f47c9b;
+    --rose-deep: #d6245a;
+    --rose-dark: #a3163f;
+    --blush: #fcdbe4;
+    --blush-soft: #fdeef2;
+    --gold: #d9a13c;
+    --gold-soft: #f5e4c6;
+    --gold-ink: #9c7022;
+    --gold-deep: #7b5617;
+    --ink-rgb: 42, 23, 28;
+    --paper-rgb: 255, 250, 251;
+    --rose-deep-rgb: 214, 36, 90;
+    --nav-rgb: 252, 234, 239;
+    --nav-edge: #f3cad6;
+    --ph-book: #fdeff2;
+    --ph-video: #fbeef3;
+    --ph-yarn: #fdeef2;
+    --ph-award: #fbf0e6;
+    --ph-music: #fbeef3;
+    --footer-bg: #f8cfdb;
+    --footer-ink: #4f1b2b;
+    --footer-muted: #94586a;
+    --footer-faint: #bf8b9b;
+    --footer-rule: #ecadc0;
+    --footer-accent: #a3163f;
+    --line: #f5dde4;
+    --line-strong: #ebc6d1;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 14px;
+    --radius: 20px;
+    --radius-lg: 30px;
+    --kicker-mark-w: 0.6rem;
+    --kicker-mark-h: 0.6rem;
+    --kicker-mark-radius: 50%;
+    --title-style: italic;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.18) 3px, transparent 3.6px) 0 0 / 26px 26px;
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Heart red and pink with a touch of gold. */
+    --fiesta-a: #e0245e;
+    --fiesta-b: #ff9bb8;
+    --fiesta-c: #d9a13c;
+    --fiesta-d: #ffffff;
+    --fiesta-e: #8e1d3f;
+    --fiesta-sky: #f07aa0;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.06) 3px, transparent 3.5px);
+    --band-texture-size: 28px 28px;
+    --band-seam: radial-gradient(circle at 50% 0, var(--fiesta-b) 0 8px, transparent 8.5px);
+    --band-seam-size: 20px 10px;
+    --title-mark: radial-gradient(circle, currentColor 3px, transparent 3.5px) 0 50% / 14px 100% repeat-x;
+    --title-mark-w: 42px;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: 2px solid var(--fiesta-b);
+    --photo-outline-offset: 4px;
+}
+
+/* Pascua — spring pastels: lilac, mint and butter yellow. */
+:root[data-theme="pascua"] {
+    --paper: #fdfcf8;
+    --paper-warm: #f4f7ef;
+    --paper-deep: #e8efe0;
+    --card: #ffffff;
+    --ink: #22222b;
+    --ink-soft: #484a57;
+    --muted: #7c7f8c;
+    --faint: #b0b3bd;
+    --rose: #b9a2e3;
+    --rose-deep: #7b5cc4;
+    --rose-dark: #5d4199;
+    --blush: #ece4f8;
+    --blush-soft: #f5f1fb;
+    --gold: #e3bf4a;
+    --gold-soft: #f8edc4;
+    --gold-ink: #98791c;
+    --gold-deep: #775e15;
+    --ink-rgb: 34, 34, 43;
+    --paper-rgb: 253, 252, 248;
+    --rose-deep-rgb: 123, 92, 196;
+    --nav-rgb: 240, 246, 236;
+    --nav-edge: #d6e3cd;
+    --ph-book: #f3f7ec;
+    --ph-video: #f1f0f8;
+    --ph-yarn: #f5f1fb;
+    --ph-award: #fbf5dd;
+    --ph-music: #eef6f0;
+    --footer-bg: #dcefe2;
+    --footer-ink: #2c3b33;
+    --footer-muted: #5f7568;
+    --footer-faint: #93a79b;
+    --footer-rule: #bcd9c6;
+    --footer-accent: #5d4199;
+    --line: #e6eadf;
+    --line-strong: #d3dacb;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 18px;
+    --radius: 26px;
+    --radius-lg: 38px;
+    --kicker-mark-w: 0.55rem;
+    --kicker-mark-h: 0.7rem;
+    --kicker-mark-radius: 50%;
+    --strong-texture: linear-gradient(135deg, rgba(var(--paper-rgb), 0.12) 25%, transparent 25%) -12px 0 / 24px 24px, linear-gradient(225deg, rgba(var(--paper-rgb), 0.12) 25%, transparent 25%) -12px 0 / 24px 24px;
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Pastel egg colours: pink, mint, yellow, white, lilac. */
+    --fiesta-a: #f6a8c4;
+    --fiesta-b: #9fd8b5;
+    --fiesta-c: #f6d86b;
+    --fiesta-d: #ffffff;
+    --fiesta-e: #7b5cc4;
+    --fiesta-sky: #b9a2e3;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.05) 3px, transparent 3.5px);
+    --band-texture-size: 36px 30px;
+    --band-seam: conic-gradient(from 135deg at 50% 0, var(--fiesta-b) 90deg, transparent 0);
+    --band-seam-size: 18px 9px;
+    --title-mark: repeating-linear-gradient(90deg, var(--fiesta-a) 0 12px, var(--fiesta-b) 12px 24px, var(--fiesta-c) 24px 36px) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 54px;
+    --title-mark-h: 6px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--line);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Acción de Gracias — autumn leaves, pumpkin and warm brown. */
+:root[data-theme="gracias"] {
+    --paper: #fcf7f0;
+    --paper-warm: #f5eadc;
+    --paper-deep: #ebd9c4;
+    --card: #fffcf7;
+    --ink: #2b1d14;
+    --ink-soft: #55433a;
+    --muted: #8b766a;
+    --faint: #bba795;
+    --rose: #e59346;
+    --rose-deep: #b8561c;
+    --rose-dark: #8c3f12;
+    --blush: #f5dfc9;
+    --blush-soft: #faefe3;
+    --gold: #b88a2a;
+    --gold-soft: #efdfbc;
+    --gold-ink: #8a661a;
+    --gold-deep: #6c4f13;
+    --ink-rgb: 43, 29, 20;
+    --paper-rgb: 252, 247, 240;
+    --rose-deep-rgb: 184, 86, 28;
+    --nav-rgb: 244, 232, 217;
+    --nav-edge: #e2cdb3;
+    --ph-book: #f6eadc;
+    --ph-video: #f4ebe0;
+    --ph-yarn: #faefe3;
+    --ph-award: #f5ecd8;
+    --ph-music: #f5ecd8;
+    --footer-bg: #4a2e1d;
+    --footer-ink: #f6eadc;
+    --footer-muted: #d0b49c;
+    --footer-faint: #9f8570;
+    --footer-rule: #65412b;
+    --footer-accent: #e59346;
+    --line: #eadbc9;
+    --line-strong: #dbc6af;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 5px;
+    --radius: 8px;
+    --radius-lg: 12px;
+    --kicker-mark-w: 1.2rem;
+    --kicker-mark-h: 4px;
+    --strong-texture: repeating-linear-gradient(0deg, rgba(var(--paper-rgb), 0.08) 0 3px, transparent 3px 22px), repeating-linear-gradient(90deg, rgba(var(--paper-rgb), 0.08) 0 3px, transparent 3px 22px);
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Autumn leaves: orange, rust, gold; bark brown. */
+    --fiesta-a: #e07a2e;
+    --fiesta-b: #a8431f;
+    --fiesta-c: #d9a53a;
+    --fiesta-d: #f5e6c8;
+    --fiesta-e: #6b3b1f;
+    --fiesta-sky: #e07a2e;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(0deg, rgba(var(--rose-deep-rgb), 0.035) 0 3px, transparent 3px 24px), repeating-linear-gradient(90deg, rgba(var(--rose-deep-rgb), 0.035) 0 3px, transparent 3px 24px);
+    --band-texture-size: auto;
+    --band-seam: repeating-linear-gradient(90deg, var(--fiesta-a) 0 10px, var(--fiesta-b) 10px 20px, var(--fiesta-c) 20px 30px);
+    --band-seam-size: auto 4px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 2.6rem;
+    --title-mark-h: 5px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--line-strong);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Año Nuevo — midnight black with champagne gold and silver. */
+:root[data-theme="anonuevo"] {
+    color-scheme: dark;
+    --paper: #121214;
+    --paper-warm: #19191c;
+    --paper-deep: #212125;
+    --card: #232327;
+    --ink: #f2f0ea;
+    --ink-soft: #cfccc4;
+    --muted: #9a978f;
+    --faint: #626058;
+    --rose: #c9cbd1;
+    --rose-deep: #e3c27a;
+    --rose-dark: #f1d9a2;
+    --blush: #2e2a22;
+    --blush-soft: #1d1c1f;
+    --gold: #e3c27a;
+    --gold-soft: #3a3326;
+    --gold-ink: #e8c885;
+    --gold-deep: #f2dba8;
+    --ink-rgb: 3, 3, 4;
+    --paper-rgb: 18, 18, 20;
+    --rose-deep-rgb: 227, 194, 122;
+    --on-accent: #121214;
+    --on-accent-dim: rgba(18, 18, 20, 0.72);
+    --tape: rgba(242, 238, 232, 0.16);
+    --nav-rgb: 22, 22, 25;
+    --nav-edge: #303035;
+    --ph-book: #1c1c1f;
+    --ph-video: #1b1b1e;
+    --ph-yarn: #1d1c1f;
+    --ph-award: #24211b;
+    --ph-music: #24211b;
+    --footer-bg: #09090a;
+    --footer-ink: #ecebe6;
+    --footer-muted: #a3a19a;
+    --footer-faint: #66645e;
+    --footer-rule: #2a2a2e;
+    --footer-accent: #e3c27a;
+    --line: #2e2e33;
+    --line-strong: #3d3d43;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 2px;
+    --radius: 4px;
+    --radius-lg: 6px;
+    --radius-btn: 4px;
+    --kicker-mark-w: 0.45rem;
+    --kicker-mark-h: 0.45rem;
+    --kicker-mark-turn: 45deg;
+    --title-style: italic;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.3) 1px, transparent 1.5px) 0 0 / 36px 36px, radial-gradient(rgba(var(--paper-rgb), 0.2) 1.5px, transparent 2px) 18px 22px / 60px 60px;
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Gold and silver, champagne for the pompom. */
+    --fiesta-a: #e3c27a;
+    --fiesta-b: #c9cbd1;
+    --fiesta-c: #f7e3a8;
+    --fiesta-d: #ffffff;
+    --fiesta-e: #8f8f96;
+    --fiesta-sky: #e3c27a;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(227, 194, 122, 0.18) 1.2px, transparent 1.7px), radial-gradient(rgba(201, 203, 209, 0.14) 1.5px, transparent 2px);
+    --band-texture-size: 50px 50px, 76px 76px;
+    --band-seam: linear-gradient(90deg, var(--fiesta-a), var(--fiesta-b), var(--fiesta-a));
+    --band-seam-size: auto 2px;
+    --title-mark: conic-gradient(from 45deg at 50% 50%, currentColor 90deg, transparent 0) 0 50% / 10px 10px repeat-x;
+    --title-mark-w: 40px;
+    --title-mark-h: 10px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line-strong);
+    --photo-outline: 1px solid var(--fiesta-a);
+    --photo-outline-offset: 5px;
+}
+
+/* Día de Muertos — marigold and magenta, papel picado on a dark night. */
+:root[data-theme="muertos"] {
+    color-scheme: dark;
+    --paper: #1a1220;
+    --paper-warm: #221828;
+    --paper-deep: #2b1f33;
+    --card: #2c2034;
+    --ink: #fbefe4;
+    --ink-soft: #dcc9c0;
+    --muted: #a8929e;
+    --faint: #6d5a67;
+    --rose: #ff9f1c;
+    --rose-deep: #ffab3d;
+    --rose-dark: #ffc97a;
+    --blush: #43223e;
+    --blush-soft: #26192c;
+    --gold: #e8378f;
+    --gold-soft: #40203a;
+    --gold-ink: #f36aa9;
+    --gold-deep: #f89bc4;
+    --ink-rgb: 5, 3, 6;
+    --paper-rgb: 26, 18, 32;
+    --rose-deep-rgb: 255, 171, 61;
+    --on-accent: #1a1220;
+    --on-accent-dim: rgba(26, 18, 32, 0.72);
+    --tape: rgba(242, 238, 232, 0.16);
+    --nav-rgb: 30, 21, 36;
+    --nav-edge: #3e2c46;
+    --ph-book: #231a2a;
+    --ph-video: #221a29;
+    --ph-yarn: #26192c;
+    --ph-award: #2e1d2c;
+    --ph-music: #2e1d2c;
+    --footer-bg: #0f0a13;
+    --footer-ink: #f6e9df;
+    --footer-muted: #b39fa8;
+    --footer-faint: #76626d;
+    --footer-rule: #3a2942;
+    --footer-accent: #e8378f;
+    --line: #3a2b41;
+    --line-strong: #4b3953;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --kicker-mark-w: 0.5rem;
+    --kicker-mark-h: 0.5rem;
+    --kicker-mark-turn: 45deg;
+    --strong-texture: linear-gradient(45deg, rgba(var(--paper-rgb), 0.11) 25%, transparent 25%, transparent 75%, rgba(var(--paper-rgb), 0.11) 75%) 0 0 / 22px 22px;
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Cempasúchil orange, magenta, green, violet and turquoise papel picado. */
+    --fiesta-a: #ff9f1c;
+    --fiesta-b: #e8378f;
+    --fiesta-c: #3fae6a;
+    --fiesta-d: #7a5cff;
+    --fiesta-e: #1fb5c4;
+    --fiesta-sky: #ff9f1c;
+    /* The skulls: bone in the cream ink, eyes in the night of the page. */
+    --fiesta-bone: var(--ink);
+    --fiesta-hollow: var(--paper);
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(232, 55, 143, 0.1) 1.6px, transparent 2px);
+    --band-texture-size: 30px 30px;
+    --band-seam: repeating-linear-gradient(90deg, var(--fiesta-a) 0 26px, var(--fiesta-b) 26px 52px, var(--fiesta-c) 52px 78px, var(--fiesta-d) 78px 104px, var(--fiesta-e) 104px 130px);
+    --band-seam-size: auto 5px;
+    --title-mark: radial-gradient(circle, var(--fiesta-a) 4px, transparent 4.5px) 0 50% / 16px 100% repeat-x;
+    --title-mark-w: 48px;
+    --title-mark-h: 10px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line-strong);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Día de la Madre — soft rose and lilac, like a bouquet. */
+:root[data-theme="madre"] {
+    --paper: #fffafc;
+    --paper-warm: #fbf0f5;
+    --paper-deep: #f4e2ec;
+    --card: #ffffff;
+    --ink: #2a1d25;
+    --ink-soft: #56444f;
+    --muted: #8d7885;
+    --faint: #c0adb8;
+    --rose: #e79bbd;
+    --rose-deep: #c2548a;
+    --rose-dark: #963c69;
+    --blush: #f8e0ec;
+    --blush-soft: #fcf0f6;
+    --gold: #c79ad6;
+    --gold-soft: #eee1f3;
+    --gold-ink: #8d5ea0;
+    --gold-deep: #704a80;
+    --ink-rgb: 42, 29, 37;
+    --paper-rgb: 255, 250, 252;
+    --rose-deep-rgb: 194, 84, 138;
+    --nav-rgb: 250, 235, 243;
+    --nav-edge: #efd1e0;
+    --ph-book: #fbf0f5;
+    --ph-video: #f7eff7;
+    --ph-yarn: #fcf0f6;
+    --ph-award: #f6eef8;
+    --ph-music: #f6eef8;
+    --footer-bg: #f2d9e6;
+    --footer-ink: #4a2a3b;
+    --footer-muted: #8d6679;
+    --footer-faint: #b996a8;
+    --footer-rule: #e3bcd0;
+    --footer-accent: #963c69;
+    --line: #f1e1ea;
+    --line-strong: #e5cfdb;
+
+    /* Flair, as in the everyday themes. */
+    --radius-sm: 14px;
+    --radius: 20px;
+    --radius-lg: 28px;
+    --kicker-mark-w: 0.7rem;
+    --kicker-mark-h: 0.7rem;
+    --kicker-mark-radius: 0 70%;
+    --title-style: italic;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.16) 2px, transparent 2.6px) 0 0 / 20px 20px;
+
+    /* The holiday extras' paint (see components/common/Fiesta.css): Roses, lilac and leaves; pale pink hearts. */
+    --fiesta-a: #e46a9c;
+    --fiesta-b: #b58ad8;
+    --fiesta-c: #5f9e6e;
+    --fiesta-d: #ffc2da;
+    --fiesta-e: #963c69;
+    --fiesta-sky: #e79bbd;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.06) 2.4px, transparent 2.9px);
+    --band-texture-size: 24px 24px;
+    --band-seam: radial-gradient(circle at 50% 0, var(--fiesta-d) 0 10px, transparent 10.5px);
+    --band-seam-size: 24px 12px;
+    --title-mark: radial-gradient(circle, currentColor 3px, transparent 3.5px) 0 50% / 14px 100% repeat-x;
+    --title-mark-w: 42px;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: 1px solid var(--rose);
+    --photo-outline-offset: 5px;
+}

@@ -1,0 +1,749 @@
+/* --- Portrait + prose ---------------------------------------------------- */
+
+.bioGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr);
+    align-items: start;
+    gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+.bioPortrait > .ph,
+.bioPortrait > .figureImg {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+}
+
+.bioRoles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.6rem;
+}
+
+.bioRole {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+    background: var(--blush);
+    border-radius: var(--radius-btn);
+    padding: 0.36rem 0.75rem;
+}
+
+.bioPara {
+    max-width: 66ch;
+    margin: 0 0 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--ink-soft);
+}
+
+/* The opening paragraph gets a raised initial, the way a chapter does. */
+.bioPara:first-child::first-letter {
+    float: left;
+    font-family: var(--display);
+    font-size: 3.4em;
+    line-height: 0.78;
+    font-weight: 600;
+    color: var(--rose-dark);
+    padding: 0.08em 0.09em 0 0;
+}
+
+/* --- Timeline ------------------------------------------------------------ */
+
+.timelineBand {
+    background: var(--paper-warm);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+/* The spine the dots hang from. */
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    left: 0;
+    width: 1px;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--line-strong) 8%,
+        var(--line-strong) 92%,
+        transparent
+    );
+}
+
+.timelineItem {
+    position: relative;
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.4rem 0;
+}
+
+.timelineDot {
+    position: absolute;
+    top: 2rem;
+    left: -1.5rem;
+    width: 9px;
+    height: 9px;
+    margin-left: -4px;
+    border-radius: 999px;
+    background: var(--paper-warm);
+    box-shadow: 0 0 0 1.5px var(--rose);
+    transition: background 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.timelineItem:hover .timelineDot {
+    background: var(--rose);
+    transform: scale(1.35);
+}
+
+.timelineYear {
+    font-family: var(--display);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--rose-dark);
+}
+
+.timelineTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 0.4rem;
+}
+
+.timelineText {
+    max-width: 60ch;
+    margin: 0;
+    font-size: 0.96rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+/* --- Formación: the medical degree ----------------------------------------
+   The biggest thing on the page, and presented as one. The band takes the
+   theme's strong ground, like the mastheads, and on it lies a certificate: a
+   paper card with a double gold rule inside its edge and a gold mark at each
+   corner, her laurel medal with the rod of Asclepius, the degree in the
+   largest type below the page title, and the diploma matted beside it. The
+   user asked for the doctorate to have "the biggest impact"; the recognitions
+   below share its gold at a smaller voice, each year on a plain gold circle. */
+
+.credsHead {
+    max-width: 54rem;
+    margin: 0 auto clamp(1.75rem, 4vh, 2.5rem);
+    text-align: center;
+}
+
+.credsHead .kicker { justify-content: center; }
+.credsHead .bandLead { margin-inline: auto; }
+
+.credsCert {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    padding: clamp(1.9rem, 3.5vh, 2.6rem) clamp(2rem, 4.5vw, 3.75rem);
+    background:
+        radial-gradient(ellipse at 25% 28%, var(--gold-soft), transparent 55%),
+        var(--paper);
+    color: var(--ink);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 30px 60px -24px rgba(var(--ink-rgb), 0.5), var(--shadow-lg);
+}
+
+/* The double rule, inside the card's edge. */
+.credsCert::before,
+.credsCert::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: calc(var(--radius-lg) * 0.6);
+}
+
+.credsCert::before {
+    inset: 0.85rem;
+    border: 1.5px solid var(--gold);
+}
+
+.credsCert::after {
+    inset: 1.25rem;
+    border: 1px solid var(--gold-soft);
+}
+
+/* A gold bracket at each corner, over the rules. */
+.credsCorner {
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 3px solid var(--gold);
+    pointer-events: none;
+}
+
+.credsCorner.isTL { top: 0.5rem; left: 0.5rem; border-right: 0; border-bottom: 0; }
+.credsCorner.isTR { top: 0.5rem; right: 0.5rem; border-left: 0; border-bottom: 0; }
+.credsCorner.isBL { bottom: 0.5rem; left: 0.5rem; border-right: 0; border-top: 0; }
+.credsCorner.isBR { bottom: 0.5rem; right: 0.5rem; border-left: 0; border-top: 0; }
+
+.credsCertText {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* --- The medal --- */
+
+.credsMedal {
+    width: clamp(64px, 9vh, 100px);
+    height: auto;
+    margin-bottom: 0.8rem;
+    overflow: visible;
+    filter: drop-shadow(0 6px 10px rgba(var(--ink-rgb), 0.18));
+}
+
+.medalHalo { fill: var(--gold-soft); opacity: 0.55; }
+.medalLaurel { fill: var(--gold); }
+.medalTie { fill: none; stroke: var(--gold-ink); stroke-width: 2.4; stroke-linecap: round; }
+.medalDisc { fill: var(--gold); }
+.medalRing { fill: none; stroke: var(--paper); stroke-width: 1.2; opacity: 0.7; }
+.medalRod { fill: none; stroke: var(--paper); stroke-width: 3.2; stroke-linecap: round; }
+.medalSnake { fill: none; stroke: var(--paper); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.medalKnob { fill: var(--paper); }
+
+/* It is pinned on as the certificate arrives: a turn and a settle, then a
+   single glint crosses it. */
+.credsCert .credsMedal {
+    transform: rotate(-35deg) scale(0.6);
+    opacity: 0;
+    transition: transform 1.1s cubic-bezier(0.2, 1.4, 0.4, 1) 0.45s, opacity 0.6s ease 0.45s;
+}
+
+.credsCert.isShown .credsMedal {
+    transform: none;
+    opacity: 1;
+}
+
+.credsDegree {
+    margin: 0;
+    max-width: 16ch;
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-weight: var(--title-weight);
+    font-size: calc(clamp(1.8rem, 2.6vw, 2.1rem) * var(--title-scale));
+    line-height: 1.08;
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    text-wrap: balance;
+}
+
+/* Two gold lines meeting at a diamond. Also under each recognition. */
+.goldRule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 1rem 0 0.9rem;
+}
+
+.goldRule::before,
+.goldRule::after {
+    content: "";
+    width: 3.5rem;
+    height: 1.5px;
+    background: var(--gold);
+}
+
+.goldRule i {
+    width: 8px;
+    height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+}
+
+.credsPlace {
+    display: block;
+    font-family: var(--display);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.7vw, 1.25rem);
+    line-height: 1.4;
+    color: var(--ink-soft);
+}
+
+.credsDetail {
+    display: block;
+    margin-top: 0.55rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold-ink);
+}
+
+/* --- The diploma, matted --- */
+
+.credsPhoto {
+    position: relative;
+    z-index: 1;
+    justify-self: center;
+    width: 100%;
+    max-width: 460px;
+}
+
+.credsMat {
+    padding: clamp(0.7rem, 1.4vw, 1rem);
+    background: var(--card);
+    border: 1px solid var(--gold-soft);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    transform: rotate(1.6deg);
+    transition: transform 0.6s var(--ease);
+}
+
+@media (hover: hover) {
+    .credsPhoto:hover .credsMat { transform: rotate(0deg) translateY(-4px); }
+}
+
+.credsMat > .ph,
+.credsMat > .figureImg {
+    border-radius: 2px;
+}
+
+.credsMat > .figureImg { display: block; }
+
+/* The diploma is held to the screen's height, so the whole certificate fits
+   on a laptop: its height is set and its width follows the file. */
+@media (min-width: 901px) {
+    .credsPhoto { width: fit-content; max-width: 100%; }
+    .credsMat { width: fit-content; max-width: 100%; }
+    .credsMat > .figureImg { width: auto; height: min(31vh, 320px); max-width: 100%; }
+    .credsMat > .ph { width: min(31vh, 320px); max-width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .credsCert .credsMedal {
+        transition: none;
+    }
+}
+
+/* --- Recognitions ---------------------------------------------------------
+   Hung like framed certificates: a mat and a thin gold line around each
+   picture, with the year on a seal in the corner. Centred, because there are
+   few of them and a row of two trailing off to the left looks like a mistake
+   rather than a wall. */
+
+/* A wall of framed pictures. The frames come in three shapes and so are not the
+   same height, and the words under them run to different lengths — which is why
+   this is a grid of two rows rather than a stack per card. Every card borrows
+   the wall's own rows (`subgrid`): the first row is as tall as the tallest frame
+   on the line and the second starts wherever that row ends, so every title
+   begins on one line no matter how long the title above or the text below runs.
+
+   Stacking each card independently cannot do this. Whatever fills the leftover
+   height pushes the words either to the bottom of the card or away from the
+   frame, and a card with a two-line title lands off the line the others share.
+   That was the bug. */
+.awardWall {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 230px));
+    justify-content: center;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.awardCard {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 2;
+}
+
+/* The frame floats in the middle of the height its row came to, so frames of
+   different shapes are centred against each other. */
+.awardSlot {
+    display: flex;
+    align-items: center;
+}
+
+.awardSlot > .awardFrame {
+    width: 100%;
+}
+
+.awardFrame {
+    position: relative;
+    padding: 0.7rem;
+    background: var(--card);
+    border: 1px solid var(--gold-soft);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease),
+                border-color 0.5s var(--ease);
+}
+
+/* A touch screen has no pointer to hover with: `:hover` latches on when the
+   card is tapped and stays until something else is, so a card that lifts is
+   left hanging in its raised state — and these are the cards that stay on
+   screen after the tap rather than navigating away from it. */
+@media (hover: hover) {
+    .awardCard:hover .awardFrame {
+        transform: translateY(-5px);
+        border-color: var(--gold);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+/* `display: block` belongs to the photograph alone. It is there to drop the
+   baseline gap under an `<img>`; the reserved frame is a `<div>` that was
+   block-level already, and setting it here took the frame out of flex layout —
+   which is how it centres its glyph and its word, so both ended up stacked in
+   its top-left corner. */
+.awardFrame > .ph,
+.awardFrame > .figureImg {
+    border-radius: 2px;
+}
+
+.awardFrame > .figureImg {
+    display: block;
+}
+
+/* A second, inner gold line, the way a certificate is mounted. */
+.awardFrame::after {
+    content: "";
+    position: absolute;
+    inset: 0.32rem;
+    border: 1px solid var(--gold-soft);
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+/* The year on a small gold circle, pinned to the corner. */
+.awardSeal {
+    position: absolute;
+    z-index: 1;
+    right: -0.6rem;
+    bottom: -0.6rem;
+    display: grid;
+    place-items: center;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 999px;
+    /* The deeper gold: the year in paper on plain --gold was under 3:1 in
+       every light theme. On --gold-ink it passes in all of them. */
+    background: var(--gold-ink);
+    color: var(--paper);
+    font-family: var(--display);
+    font-size: 0.86rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 0 0 4px var(--paper);
+}
+
+.awardBody {
+    padding: 1.3rem 0.2rem 0;
+}
+
+.awardBody .goldRule {
+    justify-content: flex-start;
+    margin: 0 0 0.8rem;
+}
+
+.goldRule.isSmall::before { width: 1.4rem; }
+.goldRule.isSmall::after { width: 2.4rem; }
+.goldRule.isSmall i { width: 6px; height: 6px; }
+
+.awardTitle {
+    font-size: 1.18rem;
+    line-height: 1.3;
+    margin: 0 0 0.5rem;
+    color: var(--ink);
+}
+
+.awardText {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+}
+
+@supports not (grid-template-rows: subgrid) {
+    .awardCard {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* --- The album -------------------------------------------------------------
+   A leaf out of a photograph album. The one wall of pictures on this site
+   where the picture has no frame at all: bare prints, held to the paper by
+   four paper corners, sitting slightly out of true.
+
+   It sits between the recognitions on plain paper and the chronology on warm
+   paper, so it takes the deep ground: the page runs paper / deep / paper /
+   deep / warm, and no two neighbouring bands share a colour. */
+
+.albumBand {
+    background: var(--paper-deep);
+}
+
+/* Centred, so a row with two prints left over sits in the middle of the leaf
+   rather than packed against the left — the same rule the clothesline needed,
+   and for the same reason. `flex-start` up the cross axis so every print hangs
+   from one line and the notes underneath fall where the print ends. */
+.albumLeaf {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(2rem, 4vw, 3.25rem) clamp(1.1rem, 2.5vw, 2rem);
+}
+
+.albumMount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+/* Every print is the same height and takes whatever width its shape gives it —
+   the ratio is set from the JSON on the element itself, so the width follows.
+   That is the inversion this section is built on: everywhere else on the site
+   a wall of pictures shares a width and comes out uneven at the bottom.
+
+   The height leads with `vw` so the prints grow with the page and a phone gets
+   three small ones to a line rather than one large one. */
+.albumShot {
+    position: relative;
+    --shot-h: clamp(130px, 24vw, 250px);
+    height: var(--shot-h);
+    /* Safari does not derive this from aspect-ratio; see ratioStyle(). */
+    width: calc(var(--shot-h) * var(--ratio, 1));
+    overflow: hidden;
+    max-width: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.6s var(--ease), box-shadow 0.6s var(--ease);
+}
+
+ /* The wrapper already carries the shape and has been given a height, so the
+    picture inside it only has to fill it. `Figure` writes the ratio onto the
+    element as an inline style — right everywhere else on the site, where the
+    picture is what reserves the space — and an inline style is only reachable
+    from a stylesheet with `!important`. Left standing it fought the height and
+    pushed a reserved frame out past its own corners. */
+.albumShot > .ph,
+.albumShot > .figureImg {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto !important;
+    border-radius: 0;
+}
+
+/* Only the photograph. `display: block` here as well would take the reserved
+   frame out of flex layout, and it centres its glyph and its word by being a
+   centred flex column — they ended up stacked in the top-left corner. */
+.albumShot > .figureImg {
+    display: block;
+    object-fit: contain;
+}
+
+/* Five angles taken in turn from the print's place in the list, so the leaf
+   reads as something assembled by hand and nothing has to be written into the
+   JSON to make it so. Adding a photograph re-deals them, which is fine — no
+   single print's tilt means anything. */
+.albumMount:nth-child(5n + 1) .albumShot { transform: rotate(-1.5deg); }
+.albumMount:nth-child(5n + 2) .albumShot { transform: rotate(1deg); }
+.albumMount:nth-child(5n + 3) .albumShot { transform: rotate(-0.6deg); }
+.albumMount:nth-child(5n + 4) .albumShot { transform: rotate(1.7deg); }
+.albumMount:nth-child(5n + 5) .albumShot { transform: rotate(-1.1deg); }
+
+/* Straightened and lifted a little when it is pointed at, the way you would
+   square up a print to look at it properly. */
+@media (hover: hover) {
+    .albumMount:hover .albumShot {
+        transform: rotate(0deg) translateY(-4px);
+        box-shadow: var(--shadow-md);
+        z-index: 1;
+    }
+}
+
+/* The corners. Opaque paper rather than a translucent film: a real corner
+   mount is a slip the print tucks behind, and a translucent one would
+   disappear against the reserved frame — which is what she will be looking at
+   until the photographs arrive. The gradient gives the slip a fold. */
+.albumCorner {
+    position: absolute;
+    width: clamp(0.7rem, 1.7vw, 1.15rem);
+    height: clamp(0.7rem, 1.7vw, 1.15rem);
+    background: linear-gradient(135deg, var(--paper) 0%, var(--paper-deep) 100%);
+    filter: drop-shadow(0 1px 1px var(--tape-shadow));
+    pointer-events: none;
+}
+
+.albumCornerTL { top: 0; left: 0; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.albumCornerTR { top: 0; right: 0; clip-path: polygon(100% 0, 100% 100%, 0 0); }
+.albumCornerBR { right: 0; bottom: 0; clip-path: polygon(100% 0, 100% 100%, 0 100%); }
+.albumCornerBL { bottom: 0; left: 0; clip-path: polygon(0 0, 0 100%, 100% 100%); }
+
+/* Written under the print, and exactly as wide as it.
+
+   `width: 0` is what makes that true. A flex column is as wide as its widest
+   child, so a caption left to size itself decided how much of the row its
+   print took — a 24ch note under a 106px standing print made every mount 242px
+   and put one print on a line where three would have fitted. At zero width the
+   note contributes nothing to that measurement, the print alone sets it, and
+   `min-width` then pours the note back out to fill it.
+
+   The 14ch floor is for the narrowest shape: a standing print at the smallest
+   height is about 110px, and a line of prose in less than that is a column of
+   single words. It is small enough never to decide a row on its own — it only
+   stops the very narrowest print from strangling its caption.
+
+   The font size belongs on this element rather than on the two lines inside
+   it, because `ch` is measured in the font of the element it is written on. Set
+   on the children instead, the floor was read at the inherited 1rem and came
+   out at 182px — wider than any print on a phone, so the caption went straight
+   back to deciding the row. */
+.albumNote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    width: 0;
+    min-width: max(100%, 14ch);
+    padding-top: 0.9rem;
+    font-size: 0.82rem;
+    text-align: center;
+}
+
+/* The date, in the hand the rest of the site writes dates in. It is not always
+   a year — "Azogues", "11 años" — for the same reason the chronology's is not. */
+.albumYear {
+    font-family: var(--display);
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--gold-ink);
+}
+
+.albumPie {
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+/* On a phone the leaf gives up the one rule it is built on, and has to.
+
+   Everywhere else a print keeps a common height and takes whatever width its
+   shape gives it, which is what makes the page read as snapshots laid out by
+   hand. That needs several prints on a line to read as anything at all. With
+   only two the widths stop packing: a lying print came out about six pixels too
+   broad to sit beside another one, so six photographs fell 2–1–2–1 down the
+   screen with half of every other row empty. It looked like a mistake because
+   at that count it is one.
+
+   So on a phone each print takes half the line and its shape sets its height
+   instead. The shapes are still doing the work — a lying print is short and
+   wide, a standing one tall and narrow — and the corners, the tilt and the
+   unframed print all stay; only the axis the shape drives has swapped.
+   `justify-content: center` on the leaf still centres a last row that has one
+   photograph in it. */
+@media (max-width: 560px) {
+    .albumMount {
+        /* Half the line, less its share of the 1.1rem gap between the two. */
+        flex: 0 0 calc(50% - 0.55rem);
+    }
+
+    .albumShot {
+        width: 100%;
+        height: auto;
+    }
+
+    /* The caption is the width of its column now, so it no longer has to be
+       measured out of the layout the way it is when the print sets the width. */
+    .albumNote {
+        width: auto;
+        min-width: 0;
+    }
+}
+
+/* Where subgrid is not supported the two rows the wall lends its cards do not
+   exist, so a card laid out to span them collapses. Falling back to an ordinary
+   stack costs only the shared line the titles start on. */
+
+@media (max-width: 900px) {
+    .bioGrid,
+    .credsCert {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* The cap goes on the picture, not on the block that holds it. The roles
+       underneath are a line of words and belong to the measure the prose has,
+       not to the width of a photograph — capping the whole block capped both,
+       and 300px broke them into a narrow stack of pills down one side while the
+       paragraph beside them ran the full width of the band. */
+    .bioPortrait {
+        max-width: none;
+    }
+
+    .bioPortrait > .ph,
+    .bioPortrait > .figureImg {
+        max-width: 300px;
+        margin-inline: auto;
+    }
+
+    /* On a narrow screen the certificate stacks: the medal and the degree
+       first, since they are what the band is about, then the diploma. */
+    .credsPhoto {
+        max-width: 420px;
+        margin: 0.5rem auto 1rem;
+    }
+
+    /* The year sits above its entry rather than in a column of its own: at
+       140px that column was mostly empty, and the words beside it had the
+       narrowest measure on the page. */
+    .timelineItem {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.5rem;
+    }
+
+    .timelineDot { top: 1.7rem; }
+}
+
+/* --- A phone -----------------------------------------------------------------
+   The diploma and each recognition ran the full width, so a standing frame was
+   taller than the screen. Held narrower and centred, a frame and its words fit
+   on one screen together. */
+@media (max-width: 560px) {
+    .credsPhoto {
+        max-width: min(66vw, 250px);
+    }
+
+    .credsCert {
+        padding: 2.6rem 1.6rem 3rem;
+    }
+
+    .credsCert::before { inset: 0.55rem; }
+    .credsCert::after { inset: 0.85rem; }
+    .credsCorner { width: 1.1rem; height: 1.1rem; border-width: 2.5px; }
+    .credsCorner.isTL, .credsCorner.isTR { top: 0.3rem; }
+    .credsCorner.isBL, .credsCorner.isBR { bottom: 0.3rem; }
+    .credsCorner.isTL, .credsCorner.isBL { left: 0.3rem; }
+    .credsCorner.isTR, .credsCorner.isBR { right: 0.3rem; }
+
+    .awardSlot {
+        justify-content: center;
+    }
+
+    .awardSlot > .awardFrame {
+        width: min(66vw, 240px);
+    }
+}

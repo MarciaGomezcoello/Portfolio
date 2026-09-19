@@ -1,0 +1,187 @@
+/* ==========================================================================
+   One poem
+   ========================================================================== */
+
+.poemPage {
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.poemPageBack {
+    display: inline-block;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    transition: color 0.28s var(--ease);
+}
+
+.poemPageBack:hover {
+    color: var(--ink);
+}
+
+/* The verse takes the remaining width and the picture sits out toward the
+   right margin, inset from it — the arrangement the poem band on the cover
+   page uses, at the scale of a whole page. */
+.poemPageGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    align-items: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    padding-right: clamp(0px, 5vw, 90px);
+}
+
+/* Centred as a block rather than ranged left, so it reads as a poem set on a
+   page. Capped, since a centred line running the full width of the band would
+   lose its shape. */
+.poemPageText {
+    max-width: 46ch;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* The kicker is an inline-flex row with its own leading dash, so it needs
+   centring in its own right rather than inheriting text-align. */
+.poemPageText .kicker {
+    justify-content: center;
+}
+
+.poemPageTitle {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-size: calc(clamp(1.9rem, 3.4vw, 2.5rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    margin: 0;
+}
+
+.poemPageVerse {
+    position: relative;
+    margin-top: 2rem;
+    padding-top: 2rem;
+}
+
+.poemPageVerse::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 2px;
+    margin-left: -1.25rem;
+    background: var(--rose);
+}
+
+.poemPageLine {
+    font-family: var(--display);
+    font-size: clamp(1rem, 1.5vw, 1.14rem);
+    font-weight: 400;
+    line-height: 1.85;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.poemPageGap {
+    display: block;
+    height: 1.15em;
+}
+
+.poemPageArt {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* --- Previous / next ------------------------------------------------------
+   Two ends of one row: the previous poem pinned left, the next pinned right,
+   so the pair reads as a way through the list rather than as buttons. */
+
+.poemPageNav {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: clamp(3.5rem, 7vw, 6rem);
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
+    border-top: 1px solid var(--line);
+}
+
+.poemPageStep {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-width: 22ch;
+    transition: transform 0.32s var(--ease);
+}
+
+.poemPageStep.isNext {
+    text-align: right;
+    margin-left: auto;
+}
+
+.poemPageStep:hover {
+    transform: translateY(-2px);
+}
+
+.poemPageStepLabel {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+}
+
+.poemPageStepTitle {
+    font-family: var(--display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--ink);
+    transition: color 0.28s var(--ease);
+}
+
+.poemPageStep:hover .poemPageStepTitle {
+    color: var(--rose-dark);
+}
+
+/* --- Not found ----------------------------------------------------------- */
+
+.poemMissing {
+    padding-top: clamp(3rem, 7vw, 6rem);
+    padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.poemMissingCta {
+    margin-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    /* The picture drops under the verse and stops being a column of its own,
+       so it never shrinks to a stamp beside the text. */
+    .poemPageGrid {
+        grid-template-columns: minmax(0, 1fr);
+        padding-right: 0;
+    }
+
+    .poemPageArt {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 560px) {
+    .poemPageNav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .poemPageStep,
+    .poemPageStep.isNext {
+        max-width: none;
+        text-align: left;
+        margin-left: 0;
+    }
+}

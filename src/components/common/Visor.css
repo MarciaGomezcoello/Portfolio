@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Visor — the picture, looked at properly
+   ========================================================================== */
+
+.visor {
+    position: fixed;
+    inset: 0;
+    /* Dynamic viewport height, so it still covers the screen when a mobile
+       browser's chrome expands or collapses. */
+    height: 100dvh;
+    z-index: 1100;
+    /* The print is held to the screen less the room the words normally need,
+       and if the words ever need more than that the whole viewer scrolls. The
+       words themselves are never trimmed: an earlier version kept the picture
+       whole by holding the caption to one line and hiding the note on a short
+       screen, which cut the very thing the reader opened the picture to read.
+       Scrolling a rare long caption is the better failure. */
+    --visorChrome: 10.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: clamp(3rem, 7vh, 5rem) clamp(1rem, 4vw, 3rem)
+             clamp(1.5rem, 4vh, 3rem);
+    background: var(--scrim);
+    animation: visorIn 0.28s var(--ease) both;
+}
+
+@keyframes visorIn {
+    from { opacity: 0; }
+}
+
+/* The bar is taken away while a picture is open. Its own background is lighter
+   than the scrim, so it stayed a readable band across the top of the print. */
+body.hasVisor .nav {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s var(--ease);
+}
+
+/* --- The mounted print ---------------------------------------------------
+   A slip of paper around the photograph, the way a print is matted, rather
+   than the picture floated on black. It is what keeps the viewer part of this
+   site instead of the void every gallery opens into.
+
+   `margin: auto 0` rather than `justify-content: center`: auto margins centre
+   the figure when there is room and collapse to nothing when there is not, so a
+   tall picture on a short screen scrolls from its top edge instead of having
+   its head pushed above the scroll container where it cannot be reached. */
+
+.visorFigure {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.7rem, 1.8vh, 1.1rem);
+    max-width: 100%;
+}
+
+.visorMat {
+    /* A narrow edge, not a mount: the picture is what was opened, and the paper
+       around it should read as an edge rather than as a border. */
+    padding: clamp(0.12rem, 0.32vw, 0.22rem);
+    /* And barely its own colour. Full paper made a white line drawn round the
+       photograph, which is the loudest thing on a dark ground; this is the same
+       paper at a sixth of its strength, so it lifts just enough off the scrim to
+       part the picture from it and otherwise merges with it. */
+    background: rgba(var(--paper-rgb), 0.16);
+    box-shadow: var(--shadow-lg);
+    /* The width is capped here rather than on the picture. Capped on the
+       picture, the mat — a flex item, free to shrink — could come out narrower
+       than the print it was supposed to be holding, and the paper ran out
+       before the photograph did. */
+    max-width: min(var(--visorWide, 92vw), 1100px);
+    line-height: 0;
+    animation: visorPrintIn 0.34s var(--ease) both;
+}
+
+@keyframes visorPrintIn {
+    from { opacity: 0; transform: scale(0.965); }
+}
+
+.visorPrint {
+    display: block;
+    max-width: 100%;
+    max-height: min(calc(100dvh - var(--visorChrome)), 900px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* --- What it says --------------------------------------------------------- */
+
+.visorSay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    max-width: min(60ch, 92vw);
+    text-align: center;
+}
+
+.visorCaption {
+    font-family: var(--display);
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+}
+
+.visorNote {
+    font-size: clamp(0.82rem, 2vw, 0.92rem);
+    line-height: 1.6;
+    color: rgba(var(--paper-rgb), 0.72);
+}
+
+/* --- Closing -------------------------------------------------------------- */
+
+.visorClose {
+    position: absolute;
+    top: clamp(0.8rem, 2.4vh, 1.5rem);
+    right: clamp(0.8rem, 3vw, 1.8rem);
+    /* 44px of target under a stroke that is drawn much smaller. */
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: rgba(var(--paper-rgb), 0.7);
+    transition: color 0.25s var(--ease);
+}
+
+.visorClose:hover {
+    color: var(--paper);
+}
+
+.visorClose svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+}
+
+/* --- What the page does to invite this ------------------------------------
+   A photograph that opens says so by lifting very slightly under the pointer.
+   Nothing heavier: these sit inside album corners, on a clothesline and in
+   frames, and a hover treatment loud enough to notice would fight all three. */
+
+.figureImg.canZoom {
+    cursor: zoom-in;
+    transition: filter 0.3s var(--ease);
+}
+
+.figureImg.canZoom:hover {
+    filter: brightness(1.04);
+}
+
+.figureImg.canZoom:focus-visible {
+    outline: 2px solid var(--rose);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visor,
+    .visorMat {
+        animation: none;
+    }
+
+    .figureImg.canZoom {
+        transition: none;
+    }
+}
+
+/* A short screen is nearly all landscape phone: the caption and the counter
+   would take a third of it, so the print keeps most and they close up. */
+@media (max-height: 520px) {
+    /* Sideways the words go beside the print, not under it. A landscape screen
+       has width to spare and no height at all, so a caption below was spending
+       the one measurement that was short — and the print had to shrink by every
+       line the words ran to. Alongside, the words cost the picture nothing but a
+       little width, and the print gets nearly the whole height back. */
+    .visor {
+        /* Only the two paddings now: the words take no height. */
+        --visorChrome: 4.2rem;
+        /* The print takes most of the width; the note is a margin note, not a
+           column of its own. Sideways the picture is the whole point and the
+           screen has width to spare. */
+        --visorWide: 70vw;
+        padding-top: 1.5rem;
+        padding-bottom: calc(1.2rem + env(safe-area-inset-bottom));
+    }
+
+    .visorFigure {
+        flex-direction: row;
+        align-items: center;
+        gap: clamp(0.9rem, 2.4vw, 1.6rem);
+    }
+
+    .visorMat {
+        min-width: 0;
+    }
+
+    /* Ranged left against the print, the way a note is written beside a
+       photograph rather than centred under it. */
+    .visorSay {
+        align-items: flex-start;
+        max-width: min(24ch, 26vw);
+        text-align: left;
+    }
+
+    .visorNote {
+        line-height: 1.45;
+    }
+}

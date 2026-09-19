@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Lo que viene — the poem band's arrangement, at a smaller scale.
+   ========================================================================== */
+
+.upcomingBand {
+    background: var(--paper-warm);
+    /* A short band: a few lines and one cover do not need the full height every
+       other band is given. */
+    padding-top: clamp(3rem, 5.5vw, 4.25rem);
+    padding-bottom: clamp(3rem, 5.5vw, 4.25rem);
+}
+
+.upcomingBand .bandHead {
+    margin-bottom: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.upcomingGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 190px);
+    align-items: center;
+    gap: clamp(1.75rem, 3.5vw, 3rem);
+    padding-right: clamp(0px, 7vw, 110px);
+}
+
+/* Centred as a block, the way the verse is, and capped so the lines keep
+   their shape rather than running the width of the band. */
+.upcomingText {
+    max-width: 46ch;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* The kicker is an inline-flex row with its own leading dash, so it needs
+   centring in its own right. */
+.upcomingText .kicker {
+    justify-content: center;
+}
+
+.upcomingBody {
+    position: relative;
+    padding-top: 1.1rem;
+}
+
+/* The short rose rule that sits above the verse. */
+.upcomingBody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 2px;
+    margin-left: -1.25rem;
+    background: var(--rose);
+}
+
+.upcomingPara {
+    margin: 0 0 1rem;
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+.upcomingPara:last-child {
+    margin-bottom: 0;
+}
+
+/* --- Cover --------------------------------------------------------------- */
+
+/* No shape of its own: the cover inside takes the picture's proportion, so
+   the column is exactly as tall as the cover and a square one leaves no gap. */
+.upcomingPhoto {
+    display: flex;
+}
+
+.upcomingCover {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    /* Not out yet: the cover sits a shade back from the published shelf. */
+    opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+    .upcomingGrid {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        padding-right: 0;
+    }
+
+    .upcomingPhoto {
+        max-width: 160px;
+        width: 100%;
+    }
+}
+
+/* On the strong rose ground (see .bandStrong in tokens.css). */
+.bandStrong .upcomingPara {
+    color: var(--paper);
+    opacity: 0.92;
+}
+
+.bandStrong .upcomingBody::before {
+    background: var(--paper);
+    opacity: 0.5;
+}
+
+.bandStrong .upcomingCover {
+    opacity: 1;
+    box-shadow: var(--shadow-md);
+}

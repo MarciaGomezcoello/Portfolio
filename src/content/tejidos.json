@@ -1,0 +1,238 @@
+{
+    "_guia": "La página de tejidos y los dos canales de YouTube. Un video puede ser un enlace en formato 'embed' (https://www.youtube.com/embed/ID_DEL_VIDEO) o el nombre de un archivo puesto en public/content/, como 'clase.mp4'.",
+
+    "kicker": "Crochet y palillos",
+
+    "title": "Tejidos",
+
+    "lead": "Dos canales y una forma de enseñar que no tiene apuro: la puntada se muestra hasta que se entiende.",
+
+    "channelsKicker": "Sus canales",
+
+    "channelsTitle": "Dos canales de YouTube",
+
+    "_guiaCanales": "Los dos canales, tal como salen en esta página. 'logo' es la foto redonda de la tarjeta: es el nombre de un archivo puesto en public/content/. Si se deja \"\", la tarjeta sale sin foto, solo con el nombre y la descripción. El 'short' ('Crochet', 'Palillos') es además la palabra con la que se etiqueta cada video de abajo, así que si se cambia aquí conviene cambiarla también en los videos.",
+
+    "channels": [
+        {
+            "name": "Marcia Gomezcoello Creations",
+            "short": "Crochet",
+            "description": "Crochet paso a paso: puntadas, prendas y proyectos explicados con calma, para quien recién empieza y para quien ya lleva años con la aguja.",
+            "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ",
+            "logo": "canal-crochet.jpg",
+            "logoAlt": "Logo del canal Marcia Gomezcoello Creations"
+        },
+        {
+            "name": "Knitting with Marcia Gomezcoello",
+            "short": "Palillos",
+            "description": "Tejido con dos agujas: puntos, moldes y prendas completas, en tutoriales que se pueden seguir sin apuro.",
+            "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ",
+            "logo": "canal-palillos.jpg",
+            "logoAlt": "Logo del canal Knitting with Marcia Gomezcoello"
+        }
+    ],
+
+    "featured": {
+        "_guia": "Los videos escogidos. Cada bloque es una tarjeta: la foto arriba con el botón de play, debajo la etiqueta del canal, el título y la nota. 'photo' es la imagen que se ve antes de tocar el video — conviene una foto bonita de la prenda terminada. Al tocarla, el video se abre ahí mismo. En 'video' va o el enlace de un video de internet en formato 'embed' (YouTube, Vimeo), o el nombre de un archivo de video puesto en public/content/ — por ejemplo 'clase.mp4' — que se ve con el reproductor del propio sitio. 'channel' es de cuál de los dos canales sale: escribir 'Crochet' o 'Palillos', igual que en site.json. Se pueden poner los que haga falta; las tarjetas se acomodan solas.",
+        "kicker": "Lo mejor de los canales",
+        "title": "Los mejores videos",
+        "lead": "Una selección de los cientos que hay en los dos canales.",
+        "_nota": "Estos son videos reales de sus dos canales, escogidos al azar para que la sección se vea llena. Ella puede cambiar cuáles salen, en qué orden, y poner sus propias fotos en 'photo' en lugar de la miniatura de YouTube.",
+        "items": [
+            {
+                "title": "Suéter muy fácil",
+                "note": "Un suéter entero, de principio a fin, sin molde complicado.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/s7t2KEfRs6Y/hqdefault.jpg",
+                "photoAlt": "Suéter muy fácil",
+                "video": "https://www.youtube.com/embed/s7t2KEfRs6Y"
+            },
+            {
+                "title": "Suéter de cintura (parte 1)",
+                "note": "Un top corto explicado por partes, con las medidas al empezar.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/cr_4aWkEfWk/hqdefault.jpg",
+                "photoAlt": "Suéter de cintura (parte 1)",
+                "video": "https://www.youtube.com/embed/cr_4aWkEfWk"
+            },
+            {
+                "title": "Puntada mariposa, para mantas",
+                "note": "Una puntada que luce sola: sirve para una manta entera.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/jn788apYpg8/hqdefault.jpg",
+                "photoAlt": "Puntada mariposa, para mantas",
+                "video": "https://www.youtube.com/embed/jn788apYpg8"
+            },
+            {
+                "title": "Margaritas pequeñas",
+                "note": "Flores chiquitas para aplicar sobre cualquier prenda.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/GeRNC_89304/hqdefault.jpg",
+                "photoAlt": "Margaritas pequeñas",
+                "video": "https://www.youtube.com/embed/GeRNC_89304"
+            },
+            {
+                "title": "Flores a crochet",
+                "note": "Pétalo por pétalo, de cerca y despacio.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/UWOURi5odJY/hqdefault.jpg",
+                "photoAlt": "Flores a crochet",
+                "video": "https://www.youtube.com/embed/UWOURi5odJY"
+            },
+            {
+                "title": "Fresas a crochet",
+                "note": "Una fruta pequeña que sale en una tarde.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/eGAGz0DwGPU/hqdefault.jpg",
+                "photoAlt": "Fresas a crochet",
+                "video": "https://www.youtube.com/embed/eGAGz0DwGPU"
+            },
+            {
+                "title": "Gatito llavero",
+                "note": "Un muñeco entero, del hocico a la cola.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/7e_FOvFGDSY/hqdefault.jpg",
+                "photoAlt": "Gatito llavero",
+                "video": "https://www.youtube.com/embed/7e_FOvFGDSY"
+            },
+            {
+                "title": "Borde o puntilla con flores",
+                "note": "El remate que cambia una prenda sencilla.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/SEyxAWP__js/hqdefault.jpg",
+                "photoAlt": "Borde o puntilla con flores",
+                "video": "https://www.youtube.com/embed/SEyxAWP__js"
+            },
+            {
+                "title": "Puntada puff",
+                "note": "Relieve con dos agujas, punto por punto.",
+                "channel": "Palillos",
+                "photo": "https://i.ytimg.com/vi/OVyWrnsp3fA/hqdefault.jpg",
+                "photoAlt": "Puntada puff",
+                "video": "https://www.youtube.com/embed/OVyWrnsp3fA"
+            },
+            {
+                "title": "Punto nube",
+                "note": "Una puntada suave y esponjosa para suéteres.",
+                "channel": "Palillos",
+                "photo": "https://i.ytimg.com/vi/Tp-Yo4jQ01g/hqdefault.jpg",
+                "photoAlt": "Punto nube",
+                "video": "https://www.youtube.com/embed/Tp-Yo4jQ01g"
+            },
+            {
+                "title": "Puntada de árboles",
+                "note": "Un dibujo de arbolitos que se repite a lo largo del tejido.",
+                "channel": "Palillos",
+                "photo": "https://i.ytimg.com/vi/GZWJo45W2QI/hqdefault.jpg",
+                "photoAlt": "Puntada de árboles",
+                "video": "https://www.youtube.com/embed/GZWJo45W2QI"
+            },
+            {
+                "title": "Puntada de rosas",
+                "note": "Rosas en relieve, de las puntadas más pedidas del canal.",
+                "channel": "Palillos",
+                "photo": "https://i.ytimg.com/vi/Yghs3m-6_1U/hqdefault.jpg",
+                "photoAlt": "Puntada de rosas",
+                "video": "https://www.youtube.com/embed/Yghs3m-6_1U"
+            }
+        ]
+    },
+
+    "gallery": {
+        "_guia": "La galería de trabajos terminados. Cada bloque es una pieza colgada del hilo: 'photo' es la foto, 'title' el nombre de la prenda, 'note' una línea corta debajo (el material, el punto, para quién fue) y 'shape' la forma de la foto: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta) — las mismas tres formas que se usan en todo el sitio. Se pueden poner las que haga falta — las piezas se acomodan solas en las filas que hagan falta, y aunque tengan formas distintas quedan centradas unas con otras. Para que no salga la sección, dejar 'items' así: []",
+        "kicker": "Galería",
+        "title": "Lo que sale de sus manos",
+        "lead": "Prendas terminadas, tejidas una por una. Ninguna es igual a la anterior.",
+        "_nota": "Las fotos de ahora son imágenes tomadas de sus propios videos, puestas para que la galería no salga vacía. Lo ideal es reemplazarlas por fotos de las prendas terminadas: se copian a public/content/ y se escribe el nombre del archivo en 'photo'.",
+        "items": [
+            {
+                "title": "Cerezas a crochet",
+                "shape": "ancho",
+                "note": "Crochet · hilo de algodón",
+                "photo": "https://i.ytimg.com/vi/Qzt5caU_uzs/maxresdefault.jpg",
+                "photoAlt": "Cerezas a crochet"
+            },
+            {
+                "title": "Elefante tejido",
+                "shape": "cuadrado",
+                "note": "Palillos · muñeco de dos agujas",
+                "photo": "https://i.ytimg.com/vi/2a2MH9069Wo/maxresdefault.jpg",
+                "photoAlt": "Elefante tejido"
+            },
+            {
+                "title": "Cisne",
+                "shape": "alto",
+                "note": "Crochet · pieza de adorno",
+                "photo": "https://i.ytimg.com/vi/YEe4xAW9Uqo/maxresdefault.jpg",
+                "photoAlt": "Cisne"
+            },
+            {
+                "title": "Colibrí llavero",
+                "shape": "alto",
+                "note": "Crochet · hilo fino",
+                "photo": "https://i.ytimg.com/vi/ifAnpWYkd54/maxresdefault.jpg",
+                "photoAlt": "Colibrí llavero"
+            },
+            {
+                "title": "Super Mario llavero",
+                "shape": "ancho",
+                "note": "Crochet · amigurumi pequeño",
+                "photo": "https://i.ytimg.com/vi/n7pNgenGK_c/maxresdefault.jpg",
+                "photoAlt": "Super Mario llavero"
+            },
+            {
+                "title": "Puntada de rombos",
+                "shape": "cuadrado",
+                "note": "Palillos · para suéteres",
+                "photo": "https://i.ytimg.com/vi/VZ7hsIUR_Xc/maxresdefault.jpg",
+                "photoAlt": "Puntada de rombos"
+            },
+            {
+                "title": "Hojas de doble corazón",
+                "shape": "ancho",
+                "note": "Palillos · puntada calada",
+                "photo": "https://i.ytimg.com/vi/wkGH87AYOaU/maxresdefault.jpg",
+                "photoAlt": "Hojas de doble corazón"
+            },
+            {
+                "title": "Hoja élfica",
+                "shape": "cuadrado",
+                "note": "Palillos · punto en relieve",
+                "photo": "https://i.ytimg.com/vi/F3F-SbWR1Bk/maxresdefault.jpg",
+                "photoAlt": "Hoja élfica"
+            }
+        ]
+    },
+
+    "playlists": {
+        "kicker": "Los temas",
+        "title": "Lo que se enseña",
+        "_nota": "Lista libre — añadir o quitar bloques. Las cajas se acomodan solas.",
+        "items": [
+            {
+                "name": "Puntadas básicas",
+                "note": "Para empezar de cero, sin saber nada."
+            },
+            {
+                "name": "Prendas completas",
+                "note": "Chalecos, gorros, mantas, de principio a fin."
+            },
+            {
+                "name": "Bebés y niños",
+                "note": "Ajuares, zapatitos, mantas pequeñas."
+            },
+            {
+                "name": "Palillos paso a paso",
+                "note": "Tejido con dos agujas, punto por punto."
+            },
+            {
+                "name": "Mantas y cobijas",
+                "note": "Proyectos largos, explicados por partes."
+            },
+            {
+                "name": "Gorros y bufandas",
+                "note": "Lo que más se teje cuando llega el frío."
+            }
+        ]
+    }
+}

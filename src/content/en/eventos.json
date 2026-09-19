@@ -1,0 +1,266 @@
+{
+    "_guia": "La página de eventos. Arriba va SIEMPRE UNO SOLO: el próximo, con su afiche. Abajo va el archivo de los que ya pasaron. Para añadir un encuentro pasado, copiar un bloque de 'past' y cambiarle los valores.",
+
+    "kicker": "Gatherings",
+
+    "title": "Events",
+
+    "subtitle": "",
+
+    "lead": "Literary salons, recitals and presentations — the ones she hosts and the ones she is invited to.",
+
+    "upcomingKicker": "Coming up",
+
+    "upcomingTitle": "The next gathering",
+
+    "upcoming": {
+        "_guia": "EL PRÓXIMO ENCUENTRO. Uno solo: cuando pase, se le cambian los valores por los del siguiente. Si no hay ninguno confirmado, dejar 'date' y 'title' vacíos y esta franja entera desaparece sola — la página empieza directamente por el archivo, sin dejar un hueco. 'rol' es la palabra que sale arriba y dice qué papel tiene ella: 'Organiza' si el encuentro es suyo, 'Invitada' o 'Se presenta' si va a uno ajeno; se escribe como se quiera. Cada foto de 'fotos' puede llevar su propia 'shape'; si no la lleva, usa la del encuentro. 'poster' es el afiche: el archivo se pone en public/content/ y aquí se escribe su nombre. El afiche sale entero, nunca recortado, sea cual sea su forma; si no hay ninguno todavía, sale un marco de reserva. 'shape' es la forma de las fotos del encuentro: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta). 'posterShape' es la forma del AFICHE, que suele ser otra cosa —un afiche casi siempre es alto y las fotos de la tarde son anchas—: si se deja vacío, el afiche usa la misma forma que las fotos. El afiche igual sale entero y sin recortar, así que esta forma solo reserva el espacio donde va. 'linkUrl' y 'linkLabel' son opcionales: si se dejan vacíos, no sale ningún botón.",
+        "_guiaPagina": "El próximo encuentro también puede tener su propia página, igual que los del archivo: se abre sola en cuanto se le escriba el 'body' o se le carguen 'fotos', y desde la portada aparece entonces el enlace para entrar. Sin ninguna de las dos cosas no hay página y no sale el enlace, que es lo correcto para un encuentro que todavía no ha pasado. El afiche encabeza la galería solo.",
+        "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con el afiche al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
+        "slug": "tertulia-de-septiembre",
+        "rol": "Host",
+        "categoria": "",
+        "date": "Saturday, September 27",
+        "time": "3:00 pm",
+        "year": "",
+        "title": "September Literary Salon",
+        "venue": "Corona Library",
+        "city": "Queens, New York",
+        "note": "As on the last Saturday of every month. Free and open to all: come along, listen, and anyone who wants to read, reads.",
+        "poster": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+        "posterAlt": "Poster for the September literary salon",
+        "posterShape": "alto",
+        "photo": "",
+        "photoAlt": "",
+        "shape": "ancho",
+        "linkLabel": "",
+        "linkUrl": "",
+        "body": "Here goes whatever you'd like to share ahead of time: who will be reading, what will be presented, whether to bring anything. A blank line separates one paragraph from the next.",
+        "fotos": [
+            {
+                "src": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "alt": "",
+                "shape": "ancho"
+            },
+            {
+                "src": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "alt": "",
+                "shape": "alto"
+            },
+            {
+                "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                "alt": "",
+                "shape": "cuadrado"
+            },
+            {
+                "src": "marcia.jpg",
+                "alt": "",
+                "shape": "ancho"
+            }
+        ]
+    },
+
+    "past": {
+        "_guia": "El archivo de encuentros. Cada bloque de 'items' es uno. Un encuentro que tenga 'body' (el relato) o 'fotos' se vuelve clickeable en el archivo y gana su propia página, con las fotos arriba y el relato debajo; el que no tenga ni lo uno ni lo otro sale igual en el archivo, pero sin enlace — así no se llega nunca a una página vacía. Para darle página a un encuentro, basta con escribirle el relato o cargarle fotos. En 'fotos' cada bloque es una imagen: 'src' es el nombre del archivo puesto en public/content/ y 'alt' lo que se describe para quien no la ve. 'photo' sigue siendo la que se ve en el archivo, y encabeza la galería. Cada foto puede llevar además su propia 'shape' —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta), las mismas tres de todo el sitio—: si se deja vacía o no se pone, esa foto usa la 'shape' del encuentro, que es la de más abajo y la que se ve en el archivo. En el carrusel todas salen de la misma altura y cada una toma el ancho que le pida su forma, así que la fila nunca salta al pasarlas y de una foto alta, por ser más angosta, se asoman más las de al lado. Las tres formas quedan parecidas de tamaño a propósito, para que una tarjeta del archivo no salga del doble de alto que la de al lado. 'categoria' es la clase de encuentro, y es una de las clases de la lista 'categorias' de más abajo, escrita igual: cada clase de esa lista tiene su pestaña en el archivador, en ese orden, en cuanto algún encuentro la use. Si se deja vacía, el encuentro sale igual pero solo en 'Todos'. Las pestañas no salen mientras haya una sola clase. Cada clase de la lista puede llevar además una línea de presentación.",
+        "kicker": "Past gatherings",
+        "title": "From the archive",
+        "lead": "Seven years of Saturdays. What follows is part of everything that has passed through the Corona Library since 2019.",
+        "_nota": "MUESTRA — reemplazar con encuentros reales y sus fotos.",
+        "items": [
+            {
+                "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con la foto de portada al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
+                "slug": "tertulia-de-aniversario",
+                "rol": "",
+                "categoria": "Literary salon",
+                "date": "September 28, 2024",
+                "time": "",
+                "year": "2024",
+                "title": "Anniversary Literary Salon",
+                "venue": "Corona Library",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "The story of the gathering goes here: who read, what was presented, how the afternoon went.\n\nA blank line separates one paragraph from the next, just like everywhere else on the site. It can be as long or as short as it needs to be.",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            },
+            {
+                "slug": "recital-de-poesia",
+                "rol": "",
+                "categoria": "Recital",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Poetry recital",
+                "venue": "Corona Library",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "A gathering with a story but no photos still shows up: the page is built from whatever there is.",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "marcia.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            },
+            {
+                "slug": "encuentro-de-escritoras",
+                "rol": "",
+                "categoria": "Gathering",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Women Writers' Gathering",
+                "venue": "Corona Library",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    }
+                ]
+            },
+            {
+                "slug": "primera-tarde-literaria",
+                "rol": "",
+                "categoria": "Literary salon",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "First Literary Afternoon",
+                "venue": "Corona Library",
+                "city": "Queens, NY",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "linkLabel": "",
+                "linkUrl": "",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "cuadrado"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                        "alt": "",
+                        "shape": "ancho"
+                    },
+                    {
+                        "src": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                        "alt": "",
+                        "shape": "alto"
+                    }
+                ]
+            }
+        ],
+        "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
+        "detalle": {
+            "_guia": "Las palabras de la página de cada encuentro. Nada de esto cambia el contenido, solo cómo se llaman las cosas.",
+            "backLabel": "All gatherings",
+            "detalleLabel": "See the gathering",
+            "galleryLabel": "Photos from the gathering"
+        },
+        "categorias": [
+            {
+                "nombre": "Literary salon",
+                "texto": "The way it has always been: reading, listening and conversation, on the last Saturday of the month."
+            },
+            {
+                "nombre": "Recital",
+                "texto": "Afternoons when poetry is spoken aloud, which is how it was written."
+            },
+            {
+                "nombre": "Gathering",
+                "texto": "When the afternoon is built around a group — women writers, musicians, people who work together."
+            }
+        ]
+    }
+}

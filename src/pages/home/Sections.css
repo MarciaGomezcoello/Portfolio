@@ -1,0 +1,661 @@
+/* ==========================================================================
+   Home page bands
+   ========================================================================== */
+
+/* --- Books --------------------------------------------------------------- */
+
+.booksBand {
+    background: var(--paper-warm);
+}
+
+/* Three across where there is room, wrapping to two and then one as the screen
+   narrows — better than three columns squeezed to a hundred pixels each. The
+   245px cap keeps a cover reading as a book rather than a poster; the min()
+   guard stops a single column overflowing a very narrow screen. */
+/* One shelf, one height. Every cover is given the same height and takes
+   whatever width its shape asks for, so a square book comes out wider than a
+   standing one instead of shorter than it — the inversion the album leaf on
+   Biografía already uses. A flex line rather than a grid, because the columns
+   are no longer all one width. */
+.bookRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.5rem 2rem;
+    /* Also held to the screen's height, so the row and its titles fit on a laptop. */
+    --book-h: clamp(200px, min(22vw, 28vh), 280px);
+}
+
+.bookCard {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.bookCardLink {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    width: fit-content;
+}
+
+/* The slot reserves the height of the tallest shape a cover can take. Covers
+   are anchored to its bottom edge, so a square, a lying and a standing cover
+   all stand on one shelf line and their titles below still line up. */
+.bookCardSlot {
+    display: flex;
+    align-items: flex-end;
+    /* The height is set; `aspect-ratio` comes from the book's own shape and
+       decides the width. Not stretched to the card — see the note on the
+       meta below. */
+    align-self: flex-start;
+    height: var(--book-h);
+    /* Written out as well as implied by aspect-ratio: Safari does not derive a
+       flex item's width from its height. See ratioStyle() in naturalRatio.js. */
+    width: calc(var(--book-h) * var(--ratio, 0.667));
+    max-width: 100%;
+}
+
+/* The shelf the covers stand on. The slot already anchors every cover to its
+   bottom edge so a square and a standing one share a line; this draws that
+   line — a hairline running a little past the cover at either end and fading
+   out, so it reads as a board rather than as a rule under a picture. It is the
+   reason the mixed shapes work, made visible. */
+.bookCardSlot {
+    position: relative;
+    --shelf-out: calc(2rem / 2 - 0.35rem);
+}
+
+/* The board reaches out to within a few pixels of its neighbour, so a row of
+   covers stands on what reads as one shelf broken by short gaps rather than on
+   a rule drawn under each picture separately. `--shelf-out` is half the gap
+   between the columns, set by whichever grid this slot is in — it is the only
+   number here that cannot be worked out locally. */
+.bookCardSlot::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--shelf-out, 0.6rem));
+    right: calc(-1 * var(--shelf-out, 0.6rem));
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 0,
+        var(--line-strong) 0.5rem,
+        var(--line-strong) calc(100% - 0.5rem),
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+
+.bookCardCover {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.55s var(--ease), box-shadow 0.55s var(--ease);
+}
+
+.bookCardLink:hover .bookCardCover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: var(--shadow-md);
+}
+
+/* The bound edge, so a placeholder still reads as a book. */
+.bookSpine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        var(--spine),
+        var(--spine-soft) 60%,
+        transparent
+    );
+    pointer-events: none;
+}
+
+/* The cover sets the width of the card and the words underneath take
+   whatever that comes to. `width: 0` with `min-width: 100%` is what keeps the
+   title out of the measurement — a flex column is as wide as its widest child,
+   so a long title was deciding how wide the card was and stretching the cover
+   slot to match, which threw away the shape's own width. The same trick the
+   album's captions use. */
+.bookCardMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+    width: 0;
+    min-width: 100%;
+}
+
+.bookCardTitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--ink);
+    margin: 0;
+    transition: color 0.3s var(--ease);
+}
+
+.bookCardLink:hover .bookCardTitle {
+    color: var(--rose-dark);
+}
+
+.bookCardYear {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+/* --- Poem ---------------------------------------------------------------- */
+
+/* The verse sits against the left margin and the picture out to the right, the
+   way a spread opens. The picture stops short of the right margin rather than
+   running all the way out to it — pinned to the edge, the space beside short
+   verse lines opened up too far. The inset is what closes that distance; the
+   gap alone cannot, since the text column absorbs whatever is left over. */
+.poemGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3.5rem);
+    padding-right: clamp(0px, 9vw, 150px);
+}
+
+/* The verse is centred as a block rather than ranged left, so it reads as a
+   poem set on a page. Capped and centred inside its column, since a centred
+   line running the full width of the band would lose its shape. */
+.poemText {
+    min-width: 0;
+    max-width: 42ch;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* The kicker is an inline-flex row with its own leading dash — it needs
+   centring in its own right, not just inherited text-align. */
+.poemText .kicker {
+    justify-content: center;
+}
+
+.poemTitle {
+    font-size: clamp(1.45rem, 2.6vw, 1.95rem);
+    font-weight: 500;
+    font-style: italic;
+    color: var(--ink);
+    margin: 0 0 1.4rem;
+}
+
+.poemBody {
+    position: relative;
+    padding-top: 1.5rem;
+}
+
+.poemBody::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2.5rem;
+    height: 2px;
+    margin-left: -1.25rem;
+    background: var(--rose);
+}
+
+.poemLine {
+    font-family: var(--display);
+    font-size: clamp(0.92rem, 1.3vw, 1.05rem);
+    font-weight: 400;
+    line-height: 1.72;
+    color: var(--ink-soft);
+    margin: 0;
+}
+
+.poemGap {
+    display: block;
+    height: 1.1em;
+}
+
+.poemAttribution {
+    margin: 1.8rem 0 1.6rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+/* About four fifths of the width it used to take, and centred in the space it
+   leaves: beside a short verse the full-width picture was the loudest thing in
+   the band. */
+.poemPhoto {
+    width: 80%;
+    margin-inline: auto;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* --- Tejidos ------------------------------------------------------------- */
+
+.tejidosBand {
+    background: var(--paper-warm);
+}
+
+.tejidosGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.channelList {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    margin-top: 2.2rem;
+}
+
+.channelCard {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1.1rem 1.4rem;
+    background: var(--card);
+    border: var(--card-border);
+    box-shadow: var(--shadow-sm);
+    border-radius: var(--radius);
+    transition: border-color 0.35s var(--ease), transform 0.35s var(--ease),
+                box-shadow 0.35s var(--ease);
+}
+
+.channelCard:hover {
+    border-color: var(--rose);
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+}
+
+/* The channel's own picture, in the same round slot the play mark uses, so a
+   channel with a logo and one without line up exactly the same way. */
+.channelLogo {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--paper-warm);
+    box-shadow: 0 0 0 1px var(--line);
+}
+
+.channelPlay {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    background: var(--blush);
+    color: var(--rose-dark);
+    font-size: 0.72rem;
+    padding-left: 2px;
+}
+
+.channelBody {
+    min-width: 0;
+}
+
+.channelName {
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.channelArrow {
+    margin-left: auto;
+    color: var(--rose);
+    transition: transform 0.35s var(--ease);
+}
+
+.channelCard:hover .channelArrow {
+    transform: translateX(4px);
+}
+
+.tejidosMore {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.tejidosMedia,
+.tejidosMedia > .ph {
+    border-radius: var(--radius);
+}
+
+/* Held under a laptop screen's reach: at the column's full width the video
+   alone was 366px tall. */
+.tejidosMedia {
+    width: 100%;
+    max-width: 500px;
+    justify-self: center;
+}
+
+.videoFrame {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: var(--ink);
+}
+
+.videoFrame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- The next encounter --------------------------------------------------- */
+
+/* A rose ground rather than another beige: the hero above and the books below
+   are both warm paper, and this strip has to part from both. The tint also says
+   what it is — the one band on the cover page that expires. */
+.homeNextBand {
+    background: var(--blush-soft);
+    /* Hairlines top and bottom. The rose tint is light enough to sit close to
+       the warm paper on either side, and a strip this short needs its edges
+       stated rather than implied — the same treatment the events page gives the
+       band this one previews. */
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding-top: clamp(2.5rem, 4vw, 3.1rem);
+    padding-bottom: clamp(2.5rem, 4vw, 3.1rem);
+}
+
+.homeNextStrip {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(1.4rem, 3vw, 2.5rem);
+}
+
+/* The handbill: the same flyer the events page tapes up, here an inch or two
+   across and laid down rather than pinned. Still out of true, still its own
+   object — just glanced at. */
+.homeNextHandbill {
+    flex: 0 0 auto;
+    /* Big enough to read as a poster. At around 100px it was the size of a
+       stamp beside a 2rem title, which made the strip look like it had lost an
+       image rather than like it was showing a small one. */
+    width: clamp(180px, min(22vw, 28vh), 260px);
+    padding: 0.4rem;
+    background: var(--card);
+    box-shadow: var(--shadow-sm);
+    transform: rotate(-2.2deg);
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+
+/* A touch screen has no pointer to hover with: `:hover` latches on when the
+   card is tapped and stays until something else is, so a card that lifts is
+   left hanging in its raised state — and these are the cards that stay on
+   screen after the tap rather than navigating away from it. */
+@media (hover: hover) {
+    /* The flyer straightens when the flyer is pointed at — not when anything
+       in the strip is. Hung off the strip it twitched while the reader was
+       only passing over the words beside it, which reads as the page being
+       nervous rather than as an object being handled. */
+    .homeNextHandbill:hover {
+        transform: rotate(0deg);
+        box-shadow: var(--shadow-md);
+    }
+}
+
+.homeNextHandbill .figureImg,
+.homeNextHandbill .ph {
+    width: 100%;
+    height: auto;
+}
+
+/* See the note on the recognition frames: only the photograph wants this. */
+.homeNextHandbill .figureImg {
+    display: block;
+    object-fit: contain;
+}
+
+.homeNextWords {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.12rem;
+    min-width: 0;
+}
+
+.homeNextKicker {
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+}
+
+/* Her part in it, kept on the kicker line so the strip stays four lines deep. */
+.homeNextRole {
+    color: var(--muted);
+}
+
+.homeNextWhen {
+    margin-top: 0.45rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-variant-numeric: tabular-nums;
+    color: var(--gold-ink);
+}
+
+.homeNextTitle {
+    margin: 0.25rem 0 0;
+    font-size: clamp(1.7rem, 3vw, 2.15rem);
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.homeNextWhere {
+    margin: 0.45rem 0 0;
+    font-size: 1rem;
+    color: var(--ink-soft);
+}
+
+.homeNextDetail {
+    margin-top: 1rem;
+}
+
+.homeNextLink {
+    flex: 0 0 auto;
+    align-self: flex-end;
+}
+
+/* The words claim a reading measure before they claim a place on the line. At
+   a basis of 16rem the strip stays one row for as long as there is room for a
+   handbill and a readable column beside it, and the words drop under the
+   handbill the moment there is not — which on a phone is what happens, and is
+   better than a 180px flyer squeezing the title into 130px and two words to a
+   line. There is no rung for this: where it wraps depends on how wide the
+   handbill has grown, so it is left to the line itself to decide. */
+.homeNextWords {
+    flex: 1 1 16rem;
+}
+
+/* On a phone the handbill sits above the words and is centred over them.
+
+   A column rather than a wrapping row, because a wrapping row cannot be told to
+   centre one item and not the others: `margin-inline: auto` on a flex item that
+   still shares its line eats the free space and shoves its neighbours along.
+   Stacked, `align-self` centres the handbill on its own and leaves the words
+   ranged left, which is what they want to be. */
+@media (max-width: 560px) {
+    .homeNextStrip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.1rem;
+    }
+
+    .homeNextHandbill {
+        align-self: center;
+        width: min(190px, 58%);
+        /* The flyer hangs a couple of degrees out of true, so its lower corner
+           reaches further down than its box does and the gap on its own left it
+           sitting on the kicker underneath. */
+        margin-bottom: 0.7rem;
+    }
+
+    /* In a column the basis is a height, and 16rem of it would have been a
+       height. The words simply take the width of the strip here. */
+    .homeNextWords {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+/* --- Quote --------------------------------------------------------------- */
+
+/* The one strong band on the cover page: her deep rose, with the words in
+   paper (see .bandStrong in tokens.css). It closes the page, so it is the last
+   thing seen before the footer's lighter rose, and a line in her own voice is
+   worth stopping on. */
+.quoteBand {
+    text-align: center;
+    padding-top: clamp(2.25rem, 4.5vw, 3.25rem);
+    padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+/* Compact: the heading sits close over the quote, and the mark alone opens
+   it — the short rule that also stood above it was a second opening. */
+.quoteBand .bandHead {
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Stacked on a phone, the heading and the opening mark met with no room
+   between them. */
+@media (max-width: 900px) {
+    .quoteBand .bandHead {
+        margin-bottom: 1.75rem;
+    }
+}
+
+.quoteInner {
+    position: relative;
+    margin: 0 auto;
+    max-width: 44ch;
+}
+
+.quoteMark {
+    display: block;
+    font-family: var(--display);
+    font-size: 3.6rem;
+    line-height: 0.6;
+    color: var(--paper);
+    opacity: 0.5;
+    margin-bottom: 0.6rem;
+}
+
+.quoteText {
+    font-family: var(--display);
+    font-size: clamp(1.3rem, 2.2vw, 1.5rem);
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--paper);
+    margin: 0;
+}
+
+.quoteSource {
+    display: block;
+    margin-top: 1.1rem;
+    font-family: var(--body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper);
+    opacity: 0.8;
+}
+
+/* --- Narrow ------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .tejidosGrid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .poemGrid {
+        /* minmax(0, …): a bare 1fr is never narrower than its longest word, so
+           one very long word in the poem widened the column past the screen. */
+        grid-template-columns: minmax(0, 1fr);
+        padding-right: 0;
+    }
+    /* Centred under the verse, which is itself a centred block. */
+    .poemPhoto {
+        max-width: 300px;
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .bookRow {
+        gap: 2rem 1.2rem;
+    }
+
+    .bookCardSlot {
+        --shelf-out: calc(1.2rem / 2 - 0.2rem);
+    }
+
+    .bookCardTitle {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+}
+
+/* Two to a row on a phone. The row is a centred flex line at every width now,
+   so the only thing left to say here is how tall a book may be — and on a phone
+   that is set by what has to fit rather than by what looks best: a square cover
+   is as wide as it is tall, so holding the height under half the screen is what
+   keeps two of them side by side. A standing cover is narrower still and has
+   room to spare. */
+@media (max-width: 560px) {
+    .bookRow {
+        --book-h: min(calc(50vw - 2.6rem), 230px);
+        gap: 1.75rem 1.2rem;
+    }
+}
+
+/* --- When a band is switched off -------------------------------------------
+   Every band on the cover page can be switched off from the editor, and the
+   bands either side of it then meet. Where they share a ground they would run
+   together into one long band with a doubled gap in the middle, so a hairline
+   states the seam. Only joins that cannot happen with every band on are
+   listed, so the page as designed is unchanged. Grounds: hero, books and
+   tejidos are warm paper; the poem sits on plain paper and the quote on rose. */
+.hero + .booksBand,
+.hero + .tejidosBand,
+.booksBand + .tejidosBand {
+    border-top: 1px solid var(--line);
+}
+
+/* A phone: the picture beside the poem is an accompaniment, not the band. At
+   300px it was taller than the verse it illustrates. */
+@media (max-width: 560px) {
+    .poemPhoto {
+        max-width: min(56vw, 210px);
+    }
+}
+
+/* The quote itself is centred; its heading is not. It reads left like every
+   other band's heading, so the page keeps one line down its left edge. */
+.quoteHead {
+    text-align: left;
+}

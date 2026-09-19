@@ -1,0 +1,98 @@
+{
+    "_guia": "La página de Arte: la cabecera de arriba ('kicker', 'title' y 'lead'), luego los poemas y las canciones debajo. 'poems' y 'songs' llevan además su propio título cada una. Si se deja 'title' vacío, la página empieza directamente por los poemas.",
+
+    "kicker": "Words and music",
+    "title": "Art",
+    "lead": "What she writes and what she sings: poems, some published and some not yet, and songs with her own lyrics and music.",
+
+    "poems": {
+        "_guia": "Los poemas. Cada uno es un bloque de 'items' y tiene su propia página. Para añadir uno, copiar un bloque entero y cambiarle los valores; el orden de la lista es el orden en que salen. 'body' es el poema completo y 'preview' las pocas líneas que salen en la lista (vacío, salen los primeros versos). El texto respeta los saltos de línea; una línea en blanco abre una estrofa nueva. 'shape' es la forma de la ilustración que va al lado: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta) — las mismas tres formas que se usan en todo el sitio. TODOS LOS TEXTOS DE ABAJO SON DE MUESTRA — hay que reemplazarlos con los poemas reales.",
+        "kicker": "Poems",
+        "title": "Poems",
+        "lead": "Poems written and recited. They don't all come from the same book: some are published and others not yet.",
+        "detail": {
+            "_guia": "Los rótulos de la página de cada poema.",
+            "backLabel": "All the poems",
+            "prevLabel": "Previous",
+            "nextLabel": "Next"
+        },
+        "_nota": "MUESTRA — reemplazar el texto de cada poema.",
+        "items": [
+            {
+                "slug": "titulo-del-poema",
+                "title": "Title of the poem",
+                "source": "from «Sueños de mi Niñez»",
+                "year": "2024",
+                "photo": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "preview": "Here goes the first line,\nand the second one below.",
+                "body": "Here goes the first line,\nand the second one below.\nLine breaks are kept just as they are.\n\nA blank line\nopens a new stanza,\nand the poem can be\nas long as it needs to be."
+            },
+            {
+                "slug": "segundo-poema",
+                "title": "Second poem",
+                "source": "from «Sueños de mi Niñez»",
+                "year": "2024",
+                "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "preview": "A short poem\nlooks just as good:",
+                "body": "A short poem\nlooks just as good:\nthe box adjusts itself\nto the length of the text."
+            },
+            {
+                "slug": "tercer-poema",
+                "title": "Third poem",
+                "source": "Unpublished",
+                "year": "",
+                "photo": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "preview": "To add another poem,\ncopy this whole block",
+                "body": "To add another poem,\ncopy this whole block\nand change its title,\nits source and its body."
+            }
+        ]
+    },
+
+    "songs": {
+        "_guia": "Las canciones, en una pared de cuadraditos: cada bloque de 'items' es uno, y al tocarlo el video se abre ahí mismo, dentro de su marco. Para añadir una, copiar un bloque entero y cambiarle los valores; el orden de la lista es el orden en la pared, y no hay tope — se acomodan solas en las filas que hagan falta. 'photo' es la imagen cuadrada que se ve antes de tocar el video: conviene una imagen bonita, y si se deja vacía sale un marco de reserva. En 'video' va o el enlace de un video de internet en formato 'embed' (https://www.youtube.com/embed/ID_DEL_VIDEO), o el nombre de un archivo de video puesto en public/content/. Una canción sin 'video' sale igual, con su cuadradito y su título, sin botón — y el día que se grabe, basta con pegar el enlace y gana el botón sola.",
+        "kicker": "Songs",
+        "title": "Her own words and music",
+        "lead": "More than a hundred songs written by hand, both the lyrics and the music. Here are the ones that already have a video.",
+        "_nota": "SOLO «CORAZÓN VALIENTE» ES REAL. Los bloques de abajo están en blanco a propósito, para escribir encima los títulos de las demás; el que no se use se borra entero.",
+        "items": [
+            {
+                "title": "Corazón Valiente",
+                "year": "",
+                "note": "Written for a donation of crocheted garments for sick children. Recorded and arranged at Opus Ethica studios.",
+                "photo": "https://i.ytimg.com/vi/Rky4Q4y63Gk/maxresdefault.jpg",
+                "photoAlt": "Corazón Valiente",
+                "video": "https://www.youtube.com/embed/Rky4Q4y63Gk"
+            },
+            {
+                "title": "Second song",
+                "year": "",
+                "note": "A line about the song goes here: what it's about, or who she wrote it for.",
+                "photo": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "photoAlt": "",
+                "video": ""
+            },
+            {
+                "title": "Third song",
+                "year": "",
+                "note": "Paste the link in 'video' and the song can be watched without leaving the page.",
+                "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "photoAlt": "",
+                "video": ""
+            },
+            {
+                "title": "Fourth song",
+                "year": "",
+                "note": "To add another, copy a whole block and change its values.",
+                "photo": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                "photoAlt": "",
+                "video": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,257 @@
+/* ==========================================================================
+   Footer — the seam that closes the page.
+
+   A dusty rose band rather than another sheet of the same cream: the page
+   needs a floor, and warm paper on warm paper does not give it one.
+   ========================================================================== */
+
+.siteFooter {
+    position: relative;
+    /* Flush against whatever band ends the page. The space sits inside the
+       footer, above its stitch, where it wears the footer's colour rather than
+       showing a stripe of the body's paper under a warm or deep band. */
+    padding: 1.4rem var(--gutter) 0.6rem;
+    background: var(--footer-bg);
+    color: var(--footer-ink);
+}
+
+/* --- Running stitch along the top edge -----------------------------------
+   Drawn as a repeating dash rather than a stretched drawing, so every stitch
+   is the same length whatever the width of the screen. */
+
+.siteFooterStitch {
+    display: block;
+    max-width: var(--maxw);
+    height: 2px;
+    margin: 0 auto 2.6rem;
+    border-radius: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--footer-rule) 0 16px,
+        transparent 16px 26px
+    );
+}
+
+/* --- Body: who she is, and where to find her ----------------------------- */
+
+.siteFooterInner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: 2.25rem 4rem;
+    align-items: start;
+}
+
+.siteFooterBrand {
+    display: flex;
+    flex-direction: column;
+}
+
+.siteFooterName {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-size: calc(clamp(1.6rem, 3vw, 2.15rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    letter-spacing: var(--title-tracking);
+    line-height: var(--title-leading);
+    color: var(--footer-ink);
+}
+
+.siteFooterHonorific {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--footer-accent);
+}
+
+/* The short line from the site file — the same one under her name in the
+   phone menu — set as a subtitle to the name. */
+.siteFooterTagline {
+    max-width: 40ch;
+    margin-top: 0.45rem;
+    font-family: var(--display);
+    font-size: 1.02rem;
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--footer-ink);
+}
+
+.siteFooterNote {
+    max-width: 36ch;
+    margin: 0.85rem 0 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--footer-muted);
+}
+
+.siteFooterSocial {
+    display: flex;
+    flex-direction: column;
+}
+
+.siteFooterTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--footer-accent);
+}
+
+/* The leading dash every kicker on the site carries. */
+.siteFooterTitle::before {
+    content: "";
+    width: 1.6rem;
+    height: 1px;
+    background: currentColor;
+}
+
+/* A line of names in ink, no boxes: each account its rose mark and its name,
+   held apart by space alone. The line wraps as accounts are added — which is
+   why there is no separator between them: one would begin every wrapped row. */
+.siteFooterChips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 1.9rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (max-width: 560px) {
+    .siteFooterChips {
+        gap: 0 1.4rem;
+    }
+}
+
+.siteFooterChip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    color: var(--footer-ink);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.35em;
+    transition: color 0.3s var(--ease), text-decoration-color 0.3s var(--ease);
+}
+
+.siteFooterChip .siteFooterIcon {
+    color: var(--footer-accent);
+}
+
+a.siteFooterChip:hover,
+a.siteFooterChip:focus-visible {
+    color: var(--footer-accent);
+    text-decoration-color: currentColor;
+}
+
+.siteFooterChip.isMuted {
+    color: var(--footer-faint);
+}
+
+.siteFooterChip.isMuted .siteFooterIcon {
+    color: inherit;
+}
+
+/* Thin line, no fill, and the colour of whatever it sits beside — so the mark
+   turns with the chip rather than staying a fixed colour. */
+.siteFooterIcon {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* --- Bottom line --------------------------------------------------------- */
+
+.siteFooterBottom {
+    max-width: var(--maxw);
+    margin: 2.6rem auto 0;
+    padding-top: 0.4rem;
+    border-top: 1px solid var(--footer-rule);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0 0.6rem;
+    font-size: 0.76rem;
+    color: var(--footer-muted);
+}
+
+/* The knot at the end of the seam. */
+.siteFooterDiamond {
+    width: 6px;
+    height: 6px;
+    flex-shrink: 0;
+    background: var(--footer-accent);
+    transform: rotate(45deg);
+}
+
+/* --- Language --------------------------------------------------------------
+   At the far end of the bottom line: the one control in the footer that is not
+   a link to somewhere, so it sits apart from the accounts. */
+
+.siteFooterLang {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.siteFooterLangItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.siteFooterLangSep { color: var(--footer-faint); }
+
+.siteFooterLangBtn {
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--footer-muted);
+    background: none;
+    border: 0;
+    padding: 0.35rem 0.1rem;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+.siteFooterLangBtn.isOn {
+    color: var(--footer-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.35em;
+}
+
+@media (hover: hover) {
+    .siteFooterLangBtn:not(.isOn):hover { color: var(--footer-ink); }
+}
+
+@media (max-width: 900px) {
+    .siteFooterInner {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+    .siteFooterStitch {
+        margin-bottom: 2rem;
+    }
+
+    .siteFooterBottom {
+        margin-top: 2rem;
+    }
+}

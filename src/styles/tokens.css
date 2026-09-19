@@ -1,0 +1,1637 @@
+/* ==========================================================================
+   Design tokens — "Papel y Hilo" (paper and thread)
+
+   One warm paper ground, one ink, her rose as the accent that ties every
+   page together, and a thread-gold used sparingly for emphasis.
+
+   EVERY colour and every typeface on this site comes from this file. Nothing
+   below `:root` in any other stylesheet writes a hex value, an `rgb(...)` or a
+   font name — so the whole site can be re-tuned by editing the handful of
+   values at the top of this block, and a new palette needs no search through
+   twenty stylesheets.
+
+   The rule that makes that work: where a colour is needed at partial opacity
+   (the bar, a woven ground, a shadow), it is NOT written out again with an alpha
+   — the base colour is kept once as an `-rgb` triplet and every translucent
+   shade is derived from it here, as its own named token. Change `--ink` and
+   `--ink-rgb` together and every shadow on the site moves with them.
+   ========================================================================== */
+
+:root {
+    /* --- Paper ------------------------------------------------------------ */
+    --paper: #fdfaf6;
+    --paper-warm: #f8f1e9;
+    --paper-deep: #f2e7dd;
+    --card: #ffffff;
+
+    /* --- Ink -------------------------------------------------------------- */
+    --ink: #1f1b1a;
+    --ink-soft: #4a4340;
+    /* Dark enough for the secondary lines under a title to read (5.7:1 on paper).
+       It was #857a75, 4.0:1, which left every date and place looking faded. */
+    --muted: #6e625d;
+    --faint: #b3a8a2;
+
+    /* --- Rose (hers) ------------------------------------------------------ */
+    --rose: #fe93a4;
+    /* Deep enough to be read as type on paper (4.9:1) and to carry white type
+       on a button (5.1:1). It was #d9647a, which gave 3.3:1 — every kicker,
+       link and button on the site sat below the line for small text. */
+    --rose-deep: #c0405e;
+    --rose-dark: #a8455a;
+    --blush: #fde8ec;
+    --blush-soft: #fdf3f4;
+
+    /* --- Thread gold ------------------------------------------------------ */
+    --gold: #c9922a;
+    --gold-soft: #f0e2c6;
+    /* Gold dark enough to be read as type on paper — the bright gold above is
+       a thread colour, not a text colour, and fails contrast at small sizes. */
+    --gold-ink: #a8781f;
+    --gold-deep: #8a6410;
+
+    /* --- The three base colours as RGB triplets ---------------------------
+       Only so the translucent shades below can be derived from them. These
+       must be kept in step with --ink, --paper and --rose-deep above; nothing
+       outside this file should ever need them. */
+    --ink-rgb: 31, 27, 26;
+    --paper-rgb: 253, 250, 246;
+    --rose-deep-rgb: 192, 64, 94;
+
+    /* --- Type laid over a colour ------------------------------------------ */
+    --on-accent: #ffffff;
+    --on-accent-dim: rgba(255, 255, 255, 0.72);
+
+    /* --- Derived translucents ---------------------------------------------
+       Every partial-opacity use of the three colours above, named once. */
+
+    /* The woven thread texture of a reserved picture frame. */
+    --weave: rgba(var(--rose-deep-rgb), 0.07);
+    --weave-line: rgba(var(--rose-deep-rgb), 0.16);
+    --weave-faint: rgba(var(--rose-deep-rgb), 0.05);
+
+    /* --- The bar over the page --------------------------------------------
+       Its own material rather than another sheet of the page's paper. It was
+       paper at 82% over paper with no edge at all until the page moved, so at
+       the top of any page it simply was not there — worst on a phone, where the
+       bar is the only navigation there is.
+
+       It takes the footer's family instead: a dusty rose the page's own bands
+       never use, so the site opens and closes on the same colour and the bar
+       stays legible over all three paper grounds. Retune the header from these
+       four values and nothing else. */
+    --nav-rgb: 247, 235, 233;
+    --nav-bg: rgba(var(--nav-rgb), 0.88);
+    --nav-bg-solid: rgba(var(--nav-rgb), 0.97);
+    --nav-edge: #e6d1cf;
+    --nav-shadow: 0 6px 22px rgba(var(--ink-rgb), 0.07);
+
+    /* Two strips of tape over the corners of a flyer. */
+    --tape: rgba(var(--paper-rgb), 0.55);
+    --tape-edge: rgba(var(--ink-rgb), 0.05);
+    --tape-shadow: rgba(var(--ink-rgb), 0.09);
+
+    /* The bound edge printed down the left of a cover. */
+    --spine: rgba(var(--ink-rgb), 0.16);
+    --spine-soft: rgba(var(--ink-rgb), 0.04);
+
+    /* The black a video letterboxes itself against. */
+    --letterbox: #000000;
+
+    /* --- Reserved-frame grounds -------------------------------------------
+       One tint per kind of picture, so a page of frames still reads as varied
+       rather than as one repeated tile. */
+    --ph-book: #fbf1ea;
+    --ph-video: #f7f0f4;
+    --ph-yarn: #fdf3f4;
+    --ph-award: #f9f2e8;
+    --ph-music: #f9f2e8;
+    --ph-portrait: var(--blush-soft);
+
+    /* --- Footer ----------------------------------------------------------
+       A dusty rose band, deeper than any page background, so the site closes
+       on a floor rather than trailing off into more cream. */
+    --footer-bg: #efdcdd;
+    --footer-ink: #4a2f34;
+    --footer-muted: #8a6a70;
+    --footer-faint: #b39aa0;
+    --footer-rule: #d9bcbf;
+    --footer-accent: #a8455a;
+
+    /* --- Scrim -----------------------------------------------------------
+       For text laid over a photograph. Warm rather than neutral black, so an
+       image sits in the same family as the paper around it. */
+    --scrim: rgba(var(--ink-rgb), 0.82);
+    --scrim-mid: rgba(var(--ink-rgb), 0.35);
+    --scrim-none: rgba(var(--ink-rgb), 0);
+
+    /* --- Structure -------------------------------------------------------- */
+    --line: #e8dcd3;
+    --line-strong: #d8c7bb;
+
+    /* Deep enough that a card or a cover sits ON the paper rather than being
+       printed into it — at half this strength the pictures read as flat. */
+    --shadow-sm: 0 1px 3px rgba(var(--ink-rgb), 0.07),
+                 0 8px 22px rgba(var(--ink-rgb), 0.08);
+    --shadow-md: 0 3px 8px rgba(var(--ink-rgb), 0.08),
+                 0 22px 48px rgba(var(--ink-rgb), 0.14);
+    --shadow-lg: 0 4px 10px rgba(var(--ink-rgb), 0.06),
+                 0 26px 60px rgba(var(--ink-rgb), 0.13);
+    --shadow-rose: 0 14px 38px rgba(var(--rose-deep-rgb), 0.22);
+    --shadow-drop: 0 6px 18px rgba(var(--ink-rgb), 0.28);
+
+    --radius-sm: 6px;
+    --radius: 12px;
+    --radius-lg: 20px;
+
+    /* --- Flair -------------------------------------------------------------
+       What a theme changes besides its colours, so that each one has a
+       character rather than being the same site recoloured: how round the
+       corners and buttons are (above and --radius-btn), the small mark before
+       every kicker, whether big titles lean, the pattern woven into the strong
+       rose bands, and a tilt on the colour block behind the hero portrait. The
+       themes below restate some of these; shadows may be restated too. */
+    --radius-btn: 999px;
+    --kicker-mark-w: 2rem;
+    --kicker-mark-h: 2px;
+    --kicker-mark-radius: 0;
+    --kicker-mark-turn: 0deg;
+    --title-style: normal;
+    --strong-texture: none;
+    --portrait-turn: 0deg;
+
+    /* The middle of the page. Everything here is `none` in the paper theme, so
+       the everyday site is untouched; each theme below fills some in. */
+    --band-texture: none;
+    --band-texture-size: auto;
+    --band-seam: none;
+    --band-seam-size: auto;
+    --title-mark: none;
+    --title-mark-w: 0;
+    --title-mark-h: 0;
+    --title-mark-space: 0;
+    --card-border: 1px solid var(--line);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+
+    /* --- Type ------------------------------------------------------------- */
+    --display: 'Fraunces', 'Playfair Display', Georgia, serif;
+    --body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* The big titles — a page's masthead, a section's heading, her name — have
+       a face of their own, chosen in site.json as "fontTitles" (see "Fonts"
+       below). A script face is only ever used here: it is beautiful at 3rem and
+       unreadable on a card title, so everything smaller stays in --display.
+       Weight, tracking, leading and a size factor travel with the face, because
+       a script run at the serif's -0.03em tracking and 1.0 leading collides. */
+    --title: var(--display);
+    --title-weight: 600;
+    --title-tracking: -0.03em;
+    --title-leading: 1.04;
+    --title-scale: 1;
+    --body-adjust: none;
+
+    /* --- The bar ----------------------------------------------------------
+       Its height is not a guess: the burger is 44px and the tallest thing in
+       the bar, and `.navInner` puts --nav-pad above and below it. The drawer
+       reserves --nav-h at its top so nothing can slide under the name or the
+       close button. The two used to be written out separately — 92px of bar
+       against 72px of reserved room — and in landscape the first section sat
+       behind her name. Change --nav-pad and both move together. */
+    --nav-pad: 1.15rem;
+    --nav-h: calc(var(--nav-pad) * 2 + 44px);
+
+    /* --- Rhythm ----------------------------------------------------------- */
+    --gutter: 7rem;
+    /* The space above and below a band follows the screen's height as well as
+       its width: the user found whole sections running off a 13-inch laptop,
+       and a 96px margin twice per band was a quarter of what that screen
+       shows. It is fluid, not a new rung. Brought down again (63px → 51px on
+       that laptop) when whole sections were still spilling past its fold. */
+    --band: clamp(2.75rem, 6.5vh, 4rem);
+    --maxw: 1240px;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ==========================================================================
+   Screen widths
+
+   Six rungs, and every stylesheet in this project uses one of them. Media
+   queries cannot read a custom property, so the numbers are written out — but
+   they are written out from this list and nowhere else, so a layout that
+   changes at 900px changes at the same 900px on every page.
+
+     1200px  a wide desktop narrowing to a laptop
+     1000px  a small laptop, or a tablet held sideways
+      900px  a tablet upright — where most two-column bands become one
+      700px  a large phone sideways, a small tablet
+      560px  a phone upright
+      400px  the smallest phone still in use
+
+   A rung is where a layout has to *change*. Everything between rungs is
+   handled by `clamp()` and by grids that wrap on their own, so the page is
+   never right at six sizes and wrong in between. Where a measurement has to
+   shrink continuously rather than at a threshold, it is written as a `clamp()`
+   or a `min()` and gets no rung at all — the clothesline's piece width and the
+   tape on the poster are both that.
+
+   One height rung as well: `max-height: 520px`, which is a phone held
+   sideways. The navigation uses it and nothing else does — it is the only
+   thing on the site tall enough to run off a short screen. There the bar
+   condenses too: 92px of masthead on a 340px screen is a quarter of it, and
+   the room it gives back is what lets the sections fit without scrolling.
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    :root { --gutter: 5rem; --band: clamp(2.75rem, 6.5vh, 3.75rem); }
+}
+@media (max-width: 1000px) {
+    :root { --gutter: 3rem; --band: clamp(2.6rem, 6.5vh, 3.4rem); }
+}
+@media (max-width: 700px) {
+    :root { --gutter: 1.5rem; --band: 3rem; }
+}
+@media (max-width: 560px) {
+    :root { --nav-pad: 1.1rem; }
+}
+@media (max-width: 400px) {
+    :root { --gutter: 1.15rem; --band: 2.5rem; }
+}
+
+/* The one height rung. Written last so it wins over the width rungs above on a
+   phone held sideways, which is wide as well as short. */
+@media (max-height: 520px) {
+    :root { --nav-pad: 0.8rem; }
+}
+
+/* ==========================================================================
+   Shared layout primitives
+   ========================================================================== */
+
+.band {
+    padding: var(--band) var(--gutter);
+}
+
+.bandInner {
+    max-width: var(--maxw);
+    margin: 0 auto;
+}
+
+/* Content is editor-supplied and unpredictable in length: let everything wrap
+   rather than ever forcing a horizontal scrollbar. `anywhere` rather than
+   `break-word` so a long unbroken address breaks inside a narrow column
+   instead of pushing the column wider than the screen. */
+.band h1, .band h2, .band h3, .band h4, .band p, .band li, .band a, .band span, .band td,
+.band cite, .band blockquote, .band figcaption, .band em, .band strong, .band small,
+.band time, .band button, .band label, .band dt, .band dd,
+.hero h1, .hero h2, .hero p, .hero a, .hero span,
+.siteFooter p, .siteFooter a, .siteFooter span, .siteFooter li {
+    overflow-wrap: anywhere;
+}
+
+/* --- Eyebrow / kicker ----------------------------------------------------- */
+.kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin: 0 0 1rem;
+}
+
+.kicker::before {
+    content: "";
+    flex-shrink: 0;
+    width: var(--kicker-mark-w);
+    height: var(--kicker-mark-h);
+    border-radius: var(--kicker-mark-radius);
+    transform: rotate(var(--kicker-mark-turn));
+    background: var(--rose-deep);
+}
+
+/* --- A strong band ---------------------------------------------------------
+   Every other band sits on one of three near-identical creams, which is calm
+   but leaves nothing on a page to stop the eye. A page may have one band set
+   on her deep rose with its type in paper instead. Both colours come from the
+   theme — paper on rose-dark clears 5.4:1 in every theme, light and dark — so
+   no theme has to restate anything for it. */
+.band.bandStrong {
+    /* The theme's pattern over the rose. `none` in the everyday paper theme. */
+    background: var(--strong-texture), var(--rose-dark);
+    color: var(--paper);
+    border-color: transparent;
+}
+
+/* The solid button turns over: paper with rose type, so it still reads as the
+   one thing to press rather than as a rose shape on a rose ground. */
+.bandStrong .btnSolid,
+.bandStrong .btnSolid:hover {
+    background: var(--paper);
+    color: var(--rose-dark);
+}
+
+.bandStrong .btnGhost {
+    color: var(--paper);
+    border-color: var(--paper);
+}
+
+.bandStrong .kicker,
+.bandStrong .bandTitle,
+.bandStrong .bandLead,
+.bandStrong .moreLink {
+    color: var(--paper);
+}
+
+.bandStrong .kicker::before,
+.bandStrong .moreLink::after {
+    background: var(--paper);
+}
+
+/* --- The theme in the middle of the page ----------------------------------
+   Every paper band wears the theme's pattern, with the theme's seam drawn
+   along its top edge — linen and a running stitch in Salvia, waves in Mar, a
+   zigzag in Terracota, a candy-cane stripe at Christmas. Both are `none` in
+   Papel. Written as background-image so each band keeps its own colour. */
+.band:not(.bandStrong) {
+    background-image: var(--band-seam), var(--band-texture);
+    background-repeat: repeat-x, repeat;
+    background-position: 0 0, 0 0;
+    background-size: var(--band-seam-size), var(--band-texture-size);
+}
+
+/* A photograph's frame line, in the themes that draw one. */
+.figureImg {
+    outline: var(--photo-outline);
+    outline-offset: var(--photo-outline-offset);
+}
+
+/* --- Section heading ------------------------------------------------------ */
+.bandHead {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: clamp(1.75rem, 4vh, 2.5rem);
+}
+
+.bandTitle {
+    font-family: var(--title);
+    font-size: calc(clamp(1.9rem, 3vw, 2.25rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    font-style: var(--title-style);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    margin: 0;
+}
+
+/* The theme's mark under a section title. It takes the title's own colour
+   unless it sits on paper, where it is the accent. */
+.bandTitle::after {
+    content: "";
+    display: block;
+    width: var(--title-mark-w);
+    height: var(--title-mark-h);
+    margin-top: var(--title-mark-space);
+    color: var(--rose-deep);
+    background: var(--title-mark);
+}
+
+.bandStrong .bandTitle::after {
+    color: var(--paper);
+}
+
+.bandLead {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin: 1.2rem 0 0;
+}
+
+/* Beside a heading the link gives way before the heading does. */
+.bandHead > .moreLink {
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+@media (max-width: 900px) {
+    .bandHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.9rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* --- Text link with a sliding rule ---------------------------------------- */
+.moreLink {
+    position: relative;
+    /* A block of its own on the line, so max-width and the ellipsis below can
+       hold it: an inline link that never wraps ignored both, and a long label
+       widened the whole column it sat in. */
+    display: inline-block;
+    vertical-align: bottom;
+    flex-shrink: 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    text-decoration: none;
+    padding-bottom: 0.35rem;
+    /* One line always; a label longer than its column is cut with an
+       ellipsis rather than running off the side of a phone. */
+    white-space: nowrap;
+    /* A fixed cap, not 100%: a percentage does not count when the column
+       works out how narrow it may be, so a long label still widened it. The
+       screen's own width less its gutters is not a percentage either, and on a
+       320px phone 19rem was 20px more than the room there is. */
+    max-width: min(19rem, calc(100vw - 2 * var(--gutter)));
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.moreLink::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: var(--rose-deep);
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: transform 0.45s var(--ease);
+}
+
+@media (hover: hover) {
+    .moreLink:hover { color: var(--ink); }
+    .moreLink:hover::after { transform-origin: left; transform: scaleX(0.35); }
+}
+
+/* --- Buttons -------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    font-family: var(--body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    /* Never narrower than a fingertip, and never wider than the screen. */
+    min-height: 44px;
+    max-width: 100%;
+    padding: 0.7rem 1.5rem;
+    border-radius: var(--radius-btn);
+    border: 1px solid transparent;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s var(--ease), background 0.3s var(--ease),
+                color 0.3s var(--ease), border-color 0.3s var(--ease),
+                box-shadow 0.3s var(--ease);
+}
+
+.btnSolid {
+    background: var(--rose-deep);
+    color: var(--on-accent);
+}
+
+.btnGhost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line-strong);
+}
+
+/* Lifts belong to a pointer that can hover. On a touch screen `:hover` sticks
+   after the tap and leaves the button hanging in its raised state. */
+@media (hover: hover) {
+    .btnSolid:hover {
+        background: var(--rose-dark);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-rose);
+        color: var(--on-accent);
+    }
+
+    .btnGhost:hover {
+        border-color: var(--rose);
+        color: var(--rose-dark);
+        transform: translateY(-2px);
+    }
+}
+
+/* --- Small meta tag ------------------------------------------------------- */
+/* A book's tags on a card: its genre and, for a book from this year, "Nuevo". */
+.bookTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+/* "Nuevo": not a second pill. A filled rose pill beside the genre shouted
+   over the cover, so it is set as a note instead — the same small capitals in
+   her deep rose, on no ground at all, behind a small dot. */
+.tag.tagNew {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding-inline: 0.2rem;
+    color: var(--rose-deep);
+    background: none;
+}
+
+.tag.tagNew::before {
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rose-dark);
+    background: var(--blush);
+    border-radius: var(--radius-btn);
+    padding: 0.32rem 0.7rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==========================================================================
+   Themes
+
+   `site.json` names one of these in "theme", and the site stamps it on the
+   root element as data-theme. Each theme restates the colour tokens and some
+   of the flair tokens (corners, the kicker's mark, the pattern on the strong
+   bands, shadows, leaning titles) — never a font, a size or a layout — so
+   switching one changes the site's character and nothing about how it is
+   built. Fonts are chosen separately; see "Fonts" at the end of this file. "papel" is the palette above
+   and needs no block of its own; a name this file does not know falls back to
+   it the same way.
+
+   The `-rgb` triplets must move with the colours they copy, exactly as in the
+   block above. In the dark theme --ink-rgb deliberately stays a near-black:
+   it is what shadows and photo scrims are made of, and a shadow cast in the
+   light ink colour would glow rather than fall.
+   ========================================================================== */
+
+/* Salvia — sage leaves on cream linen. */
+:root[data-theme="salvia"] {
+    --paper: #fbfaf5;
+    --paper-warm: #f3f2e8;
+    --paper-deep: #e8e8da;
+    --card: #ffffff;
+    --ink: #1d221d;
+    --ink-soft: #444b43;
+    --muted: #7a8276;
+    --faint: #adb3a8;
+    --rose: #9fbd98;
+    --rose-deep: #4d7c47;
+    --rose-dark: #466b42;
+    --blush: #e4efdf;
+    --blush-soft: #f1f6ee;
+    --gold: #c49a3c;
+    --gold-soft: #efe4c8;
+    --gold-ink: #93702a;
+    --gold-deep: #75581d;
+    --ink-rgb: 29, 34, 29;
+    --paper-rgb: 251, 250, 245;
+    --rose-deep-rgb: 77, 124, 71;
+    --nav-rgb: 236, 241, 230;
+    --nav-edge: #d5dfcd;
+    --ph-book: #f2f3e8;
+    --ph-video: #eef2ea;
+    --ph-yarn: #f1f6ee;
+    --ph-award: #f5f1e4;
+    --ph-music: #f5f1e4;
+    --footer-bg: #dde7d6;
+    --footer-ink: #2e3a2c;
+    --footer-muted: #637060;
+    --footer-faint: #97a292;
+    --footer-rule: #c2d0ba;
+    --footer-accent: #466b42;
+    --line: #e1e2d3;
+    --line-strong: #cfd1bd;
+
+    /* Flair: Linen weave; small, leaf-shaped marks; soft corners. */
+    --radius-sm: 4px;
+    --radius: 6px;
+    --radius-lg: 10px;
+    --radius-btn: 6px;
+    --kicker-mark-w: 0.7rem;
+    --kicker-mark-h: 0.7rem;
+    --kicker-mark-radius: 0 70%;
+    --strong-texture: repeating-linear-gradient(0deg, rgba(var(--paper-rgb), 0.07) 0 1px, transparent 1px 6px), repeating-linear-gradient(90deg, rgba(var(--paper-rgb), 0.05) 0 1px, transparent 1px 6px);
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(0deg, rgba(var(--rose-deep-rgb), 0.035) 0 1px, transparent 1px 7px), repeating-linear-gradient(90deg, rgba(var(--rose-deep-rgb), 0.025) 0 1px, transparent 1px 7px);
+    --band-texture-size: auto;
+    --band-seam: repeating-linear-gradient(90deg, rgba(var(--rose-deep-rgb), 0.4) 0 12px, transparent 12px 20px);
+    --band-seam-size: auto 2px;
+    --title-mark: repeating-linear-gradient(90deg, currentColor 0 8px, transparent 8px 13px) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 4.6rem;
+    --title-mark-h: 2px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px dashed var(--line-strong);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Lavanda — lilac and plum, like a spring poem. */
+:root[data-theme="lavanda"] {
+    --paper: #fcfafd;
+    --paper-warm: #f5f0f7;
+    --paper-deep: #ebe3f0;
+    --card: #ffffff;
+    --ink: #221c26;
+    --ink-soft: #4b4250;
+    --muted: #857a8b;
+    --faint: #b6acbb;
+    --rose: #c4a3db;
+    --rose-deep: #8a5fae;
+    --rose-dark: #6b4490;
+    --blush: #efe4f7;
+    --blush-soft: #f7f1fb;
+    --gold: #c9922a;
+    --gold-soft: #f0e2c6;
+    --gold-ink: #a8781f;
+    --gold-deep: #8a6410;
+    --ink-rgb: 34, 28, 38;
+    --paper-rgb: 252, 250, 253;
+    --rose-deep-rgb: 138, 95, 174;
+    --nav-rgb: 242, 235, 247;
+    --nav-edge: #ddcfe6;
+    --ph-book: #f6f0f8;
+    --ph-video: #f2eef7;
+    --ph-yarn: #f7f1fb;
+    --ph-award: #f8f2ea;
+    --ph-music: #f3eef8;
+    --footer-bg: #e6d9ef;
+    --footer-ink: #3a2c45;
+    --footer-muted: #76678a;
+    --footer-faint: #a898b6;
+    --footer-rule: #d0bede;
+    --footer-accent: #6b4490;
+    --line: #e7dfec;
+    --line-strong: #d6cbde;
+
+    /* Flair: Round and romantic: diamonds, dotted voile, titles that lean. */
+    --radius-sm: 12px;
+    --radius: 18px;
+    --radius-lg: 28px;
+    --kicker-mark-w: 0.5rem;
+    --kicker-mark-h: 0.5rem;
+    --kicker-mark-turn: 45deg;
+    --title-style: italic;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.16) 1.3px, transparent 1.8px) 0 0 / 18px 18px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.07) 1.2px, transparent 1.7px);
+    --band-texture-size: 16px 16px;
+    --band-seam: radial-gradient(circle at 50% 0, rgba(var(--rose-deep-rgb), 0.16) 0 9px, transparent 9.5px);
+    --band-seam-size: 22px 11px;
+    --title-mark: radial-gradient(circle, currentColor 2.6px, transparent 3.1px) 0 50% / 14px 100% repeat-x;
+    --title-mark-w: 42px;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: 1px solid var(--rose);
+    --photo-outline-offset: 5px;
+}
+
+/* Mar — the blue of a deep lake, on cool paper. */
+:root[data-theme="mar"] {
+    --paper: #f9fbfc;
+    --paper-warm: #eff4f6;
+    --paper-deep: #e1eaee;
+    --card: #ffffff;
+    --ink: #172026;
+    --ink-soft: #3d4a52;
+    --muted: #73838c;
+    --faint: #a7b4bb;
+    --rose: #86bccb;
+    --rose-deep: #2f7d95;
+    --rose-dark: #215f73;
+    --blush: #dcedf2;
+    --blush-soft: #eef6f8;
+    --gold: #d0a04a;
+    --gold-soft: #f1e6cf;
+    --gold-ink: #9a7426;
+    --gold-deep: #7b5c1a;
+    --ink-rgb: 23, 32, 38;
+    --paper-rgb: 249, 251, 252;
+    --rose-deep-rgb: 47, 125, 149;
+    --nav-rgb: 232, 240, 244;
+    --nav-edge: #cbdbe2;
+    --ph-book: #eef3f5;
+    --ph-video: #eaf1f4;
+    --ph-yarn: #eef6f8;
+    --ph-award: #f5f1e7;
+    --ph-music: #ecf2f6;
+    --footer-bg: #d5e5eb;
+    --footer-ink: #1f3640;
+    --footer-muted: #587380;
+    --footer-faint: #8ca3ad;
+    --footer-rule: #b7cfd8;
+    --footer-accent: #215f73;
+    --line: #dde6ea;
+    --line-strong: #c8d5db;
+
+    /* Flair: Waves on the bands and a long rounded mark, like a horizon. */
+    --radius-sm: 8px;
+    --radius: 14px;
+    --radius-lg: 22px;
+    --kicker-mark-w: 2.6rem;
+    --kicker-mark-h: 4px;
+    --kicker-mark-radius: 4px;
+    --strong-texture: repeating-radial-gradient(circle at 0 100%, transparent 0 13px, rgba(var(--paper-rgb), 0.09) 13px 15px) 0 0 / 44px 22px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(0deg, rgba(var(--rose-deep-rgb), 0.045) 0 1px, transparent 1px 16px);
+    --band-texture-size: auto;
+    --band-seam: radial-gradient(circle at 50% 100%, transparent 0 9px, rgba(var(--rose-deep-rgb), 0.3) 9px 11px, transparent 11.5px);
+    --band-seam-size: 28px 12px;
+    --title-mark: radial-gradient(circle at 50% 0, transparent 0 5px, currentColor 5px 7px, transparent 7.5px) 0 0 / 16px 100% repeat-x;
+    --title-mark-w: 4.8rem;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Terracota — clay and sand, warm as an Azogues afternoon. */
+:root[data-theme="terracota"] {
+    --paper: #fcf8f3;
+    --paper-warm: #f6ede2;
+    --paper-deep: #eddfcf;
+    --card: #fffdfa;
+    --ink: #2a1d17;
+    --ink-soft: #54423a;
+    --muted: #8c776c;
+    --faint: #bba89d;
+    --rose: #e3a07e;
+    --rose-deep: #b85a36;
+    --rose-dark: #8f4225;
+    --blush: #f6e1d4;
+    --blush-soft: #fbf0e8;
+    --gold: #c28a2e;
+    --gold-soft: #efdfc2;
+    --gold-ink: #97691c;
+    --gold-deep: #7a5314;
+    --ink-rgb: 42, 29, 23;
+    --paper-rgb: 252, 248, 243;
+    --rose-deep-rgb: 184, 90, 54;
+    --nav-rgb: 245, 232, 222;
+    --nav-edge: #e5cdbd;
+    --ph-book: #f8ebe0;
+    --ph-video: #f6ede6;
+    --ph-yarn: #fbf0e8;
+    --ph-award: #f7efe2;
+    --ph-music: #f7efe2;
+    --footer-bg: #ecd5c6;
+    --footer-ink: #472c20;
+    --footer-muted: #876656;
+    --footer-faint: #b39484;
+    --footer-rule: #dcbca8;
+    --footer-accent: #8f4225;
+    --line: #eadccf;
+    --line-strong: #dbc7b6;
+
+    /* Flair: Fired clay: square corners, hatched bands, a short heavy mark. */
+    --radius-sm: 2px;
+    --radius: 3px;
+    --radius-lg: 4px;
+    --radius-btn: 3px;
+    --kicker-mark-w: 1.1rem;
+    --kicker-mark-h: 5px;
+    --portrait-turn: -2.5deg;
+    --strong-texture: repeating-linear-gradient(45deg, rgba(var(--paper-rgb), 0.08) 0 2px, transparent 2px 12px);
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(45deg, rgba(var(--rose-deep-rgb), 0.045) 0 2px, transparent 2px 13px);
+    --band-texture-size: auto;
+    --band-seam: conic-gradient(from 135deg at 50% 0, rgba(var(--rose-deep-rgb), 0.35) 90deg, transparent 0);
+    --band-seam-size: 16px 8px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 2.4rem;
+    --title-mark-h: 6px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--line-strong);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Noche — the site after dark: warm charcoal, with her rose kept bright. */
+:root[data-theme="noche"] {
+    color-scheme: dark;
+    --paper: #1b1718;
+    --paper-warm: #221d1e;
+    --paper-deep: #2a2425;
+    --card: #2d2627;
+    --ink: #f4ece8;
+    --ink-soft: #d3c7c2;
+    --muted: #a3958f;
+    --faint: #6f635f;
+    --rose: #f08a9c;
+    --rose-deep: #f59aab;
+    --rose-dark: #ffb3c0;
+    --blush: #3d2a2f;
+    --blush-soft: #2c2124;
+    --gold: #d9a441;
+    --gold-soft: #3e3222;
+    --gold-ink: #e0b25c;
+    --gold-deep: #ecc57d;
+    --ink-rgb: 8, 6, 6;
+    --paper-rgb: 27, 23, 24;
+    --rose-deep-rgb: 245, 154, 171;
+    --on-accent: #1b1718;
+    --on-accent-dim: rgba(27, 23, 24, 0.72);
+    --nav-rgb: 36, 30, 31;
+    --nav-edge: #3a3132;
+    --tape: rgba(244, 236, 232, 0.18);
+    --ph-book: #262021;
+    --ph-video: #251f22;
+    --ph-yarn: #2c2124;
+    --ph-award: #29231d;
+    --ph-music: #29231d;
+    --footer-bg: #141112;
+    --footer-ink: #eaddd9;
+    --footer-muted: #a3928d;
+    --footer-faint: #6f615d;
+    --footer-rule: #342b2c;
+    --footer-accent: #f59aab;
+    --line: #372f30;
+    --line-strong: #473d3e;
+
+    /* Flair: A night sky: scattered stars on the bands and a star for a mark. */
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 24px;
+    --kicker-mark-w: 0.45rem;
+    --kicker-mark-h: 0.45rem;
+    --kicker-mark-radius: 50%;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.35) 1px, transparent 1.6px) 0 0 / 64px 64px, radial-gradient(rgba(var(--paper-rgb), 0.22) 1px, transparent 1.6px) 30px 40px / 96px 96px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.22) 1px, transparent 1.5px), radial-gradient(rgba(var(--rose-deep-rgb), 0.14) 1px, transparent 1.5px);
+    --band-texture-size: 90px 90px, 140px 140px;
+    --band-seam: radial-gradient(circle, rgba(var(--rose-deep-rgb), 0.55) 1.5px, transparent 2px);
+    --band-seam-size: 14px 6px;
+    --title-mark: radial-gradient(circle, currentColor 2px, transparent 2.5px) 0 50% / 12px 100% repeat-x;
+    --title-mark-w: 36px;
+    --title-mark-h: 6px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: 1px solid rgba(var(--rose-deep-rgb), 0.5);
+    --photo-outline-offset: 4px;
+}
+
+/* Durazno — peach and coral, a summer afternoon. */
+:root[data-theme="durazno"] {
+    --paper: #fffaf6;
+    --paper-warm: #fdf0e6;
+    --paper-deep: #f8e1d1;
+    --card: #ffffff;
+    --ink: #2b1f1a;
+    --ink-soft: #57463e;
+    --muted: #8f7a70;
+    --faint: #c0aca2;
+    --rose: #f7a98b;
+    --rose-deep: #b9502f;
+    --rose-dark: #a94a30;
+    --blush: #fde3d6;
+    --blush-soft: #fef1ea;
+    --gold: #d4a03a;
+    --gold-soft: #f4e5c4;
+    --gold-ink: #9b7222;
+    --gold-deep: #7c5a17;
+    --ink-rgb: 43, 31, 26;
+    --paper-rgb: 255, 250, 246;
+    --rose-deep-rgb: 185, 80, 47;
+    --nav-rgb: 252, 236, 226;
+    --nav-edge: #f0d2c2;
+    --ph-book: #fdefe5;
+    --ph-video: #fbefe9;
+    --ph-yarn: #fef1ea;
+    --ph-award: #fbf1e2;
+    --ph-music: #fbf1e2;
+    --footer-bg: #f6d8c9;
+    --footer-ink: #4d2e22;
+    --footer-muted: #8c6656;
+    --footer-faint: #b99585;
+    --footer-rule: #e8bfac;
+    --footer-accent: #a94a30;
+    --line: #f1dfd3;
+    --line-strong: #e3cbbd;
+
+    /* Flair: Playful: very round, big polka dots, the portrait block tipped. */
+    --radius-sm: 16px;
+    --radius: 24px;
+    --radius-lg: 34px;
+    --kicker-mark-w: 0.65rem;
+    --kicker-mark-h: 0.65rem;
+    --kicker-mark-radius: 50%;
+    --portrait-turn: 3deg;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.16) 4px, transparent 4.6px) 0 0 / 34px 34px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.055) 5px, transparent 5.6px);
+    --band-texture-size: 44px 44px;
+    --band-seam: radial-gradient(circle at 50% 0, rgba(var(--rose-deep-rgb), 0.2) 0 13px, transparent 13.5px);
+    --band-seam-size: 32px 14px;
+    --title-mark: radial-gradient(circle, currentColor 4.5px, transparent 5px) 0 50% / 18px 100% repeat-x;
+    --title-mark-w: 54px;
+    --title-mark-h: 10px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--line);
+    --photo-outline: none;
+    --photo-outline-offset: 0;
+}
+
+/* Vino — burgundy and cream, like a bound first edition. */
+:root[data-theme="vino"] {
+    --paper: #fcf9f4;
+    --paper-warm: #f5eee4;
+    --paper-deep: #ebe0d2;
+    --card: #fffdf9;
+    --ink: #241a1a;
+    --ink-soft: #4d3f3e;
+    --muted: #867673;
+    --faint: #b9aba6;
+    --rose: #c77a86;
+    --rose-deep: #8e2f43;
+    --rose-dark: #6d2032;
+    --blush: #f1dde0;
+    --blush-soft: #f8eeef;
+    --gold: #b98a3a;
+    --gold-soft: #ede0c6;
+    --gold-ink: #8e6824;
+    --gold-deep: #6f5019;
+    --ink-rgb: 36, 26, 26;
+    --paper-rgb: 252, 249, 244;
+    --rose-deep-rgb: 142, 47, 67;
+    --nav-rgb: 243, 232, 228;
+    --nav-edge: #e0cbc9;
+    --ph-book: #f5ece4;
+    --ph-video: #f4ecec;
+    --ph-yarn: #f8eeef;
+    --ph-award: #f5eee0;
+    --ph-music: #f5eee0;
+    --footer-bg: #5a1f2c;
+    --footer-ink: #f6e9e6;
+    --footer-muted: #d4b3b6;
+    --footer-faint: #a8848a;
+    --footer-rule: #7a3a48;
+    --footer-accent: #e8b4bd;
+    --line: #e9dfd5;
+    --line-strong: #d9cbbe;
+
+    /* Flair: Formal: sharp corners, pinstripes, diamond marks, leaning titles. */
+    --radius-sm: 0;
+    --radius: 0;
+    --radius-lg: 0;
+    --radius-btn: 0;
+    --kicker-mark-w: 0.45rem;
+    --kicker-mark-h: 0.45rem;
+    --kicker-mark-turn: 45deg;
+    --title-style: italic;
+    --strong-texture: repeating-linear-gradient(90deg, rgba(var(--paper-rgb), 0.07) 0 1px, transparent 1px 9px);
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: repeating-linear-gradient(90deg, rgba(var(--rose-deep-rgb), 0.04) 0 1px, transparent 1px 10px);
+    --band-texture-size: auto;
+    --band-seam: linear-gradient(rgba(var(--rose-deep-rgb), 0.55) 0 1px, transparent 1px 3px, rgba(var(--rose-deep-rgb), 0.55) 3px 4px);
+    --band-seam-size: auto 4px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 5rem;
+    --title-mark-h: 1px;
+    --title-mark-space: 0.55rem;
+    --card-border: 3px double var(--line-strong);
+    --photo-outline: 1px solid var(--gold);
+    --photo-outline-offset: 6px;
+}
+
+/* Girasol — sunflower yellow, with a deep blue to read it by. */
+:root[data-theme="girasol"] {
+    --paper: #fffdf5;
+    --paper-warm: #fdf6dc;
+    --paper-deep: #f8ecc0;
+    --card: #ffffff;
+    --ink: #1c2230;
+    --ink-soft: #414a5c;
+    --muted: #767d8c;
+    --faint: #aeb3be;
+    --rose: #f2c230;
+    --rose-deep: #2c4f86;
+    --rose-dark: #1f3a66;
+    --blush: #fbefc2;
+    --blush-soft: #fdf7df;
+    --gold: #e0a51c;
+    --gold-soft: #f7e7b8;
+    --gold-ink: #9a6d0a;
+    --gold-deep: #7a5507;
+    --ink-rgb: 28, 34, 48;
+    --paper-rgb: 255, 253, 245;
+    --rose-deep-rgb: 44, 79, 134;
+    --nav-rgb: 253, 243, 210;
+    --nav-edge: #f0dc9c;
+    --ph-book: #fdf5dc;
+    --ph-video: #f6f3e6;
+    --ph-yarn: #fdf7df;
+    --ph-award: #fbf1d6;
+    --ph-music: #f4f1e6;
+    --footer-bg: #203a63;
+    --footer-ink: #f5f1e3;
+    --footer-muted: #b9c3d6;
+    --footer-faint: #8491ab;
+    --footer-rule: #34527f;
+    --footer-accent: #f2c230;
+    --line: #efe5c6;
+    --line-strong: #e2d4a9;
+
+    /* Flair: Bold and sunny: sunburst rays, cut shadows, a tilted block. */
+    --radius-sm: 10px;
+    --radius: 14px;
+    --radius-lg: 20px;
+    --kicker-mark-w: 1.3rem;
+    --kicker-mark-h: 6px;
+    --kicker-mark-radius: 3px;
+    --portrait-turn: -3deg;
+    --shadow-sm: 4px 4px 0 rgba(var(--ink-rgb), 0.14);
+    --shadow-md: 7px 7px 0 rgba(var(--ink-rgb), 0.16);
+    --strong-texture: repeating-conic-gradient(from 0deg at 88% 120%, rgba(var(--paper-rgb), 0.09) 0 5deg, transparent 5deg 13deg);
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.07) 1.6px, transparent 2px);
+    --band-texture-size: 20px 20px;
+    --band-seam: repeating-linear-gradient(90deg, rgba(var(--rose-deep-rgb), 0.75) 0 20px, rgba(var(--ink-rgb), 0.8) 20px 40px);
+    --band-seam-size: auto 5px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 3.2rem;
+    --title-mark-h: 8px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--ink);
+    --photo-outline: 2px solid var(--ink);
+    --photo-outline-offset: 0;
+}
+
+/* Cielo — a pale morning sky, blue and soft. */
+:root[data-theme="cielo"] {
+    --paper: #f9fbfe;
+    --paper-warm: #eef4fb;
+    --paper-deep: #e0eaf6;
+    --card: #ffffff;
+    --ink: #1b2233;
+    --ink-soft: #414b60;
+    --muted: #768096;
+    --faint: #aab2c3;
+    --rose: #9dbbe8;
+    --rose-deep: #4a78c2;
+    --rose-dark: #345a9a;
+    --blush: #dfe9f8;
+    --blush-soft: #eef3fb;
+    --gold: #e0a35a;
+    --gold-soft: #f6e6d0;
+    --gold-ink: #9b6a2c;
+    --gold-deep: #7b521f;
+    --ink-rgb: 27, 34, 51;
+    --paper-rgb: 249, 251, 254;
+    --rose-deep-rgb: 74, 120, 194;
+    --nav-rgb: 234, 241, 250;
+    --nav-edge: #cfdcef;
+    --ph-book: #eef3fa;
+    --ph-video: #ecf1f9;
+    --ph-yarn: #eef3fb;
+    --ph-award: #f7f0e6;
+    --ph-music: #edf1f8;
+    --footer-bg: #d8e4f4;
+    --footer-ink: #22324d;
+    --footer-muted: #5b6d89;
+    --footer-faint: #8f9eb6;
+    --footer-rule: #b9cae3;
+    --footer-accent: #345a9a;
+    --line: #dde6f1;
+    --line-strong: #c9d5e5;
+
+    /* Flair: Airy: the roundest corners, a dotted sky, a round mark. */
+    --radius-sm: 18px;
+    --radius: 26px;
+    --radius-lg: 36px;
+    --kicker-mark-w: 0.55rem;
+    --kicker-mark-h: 0.55rem;
+    --kicker-mark-radius: 50%;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.2) 1.5px, transparent 2px) 0 0 / 22px 22px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.05) 7px, transparent 7.5px), radial-gradient(rgba(var(--rose-deep-rgb), 0.04) 4px, transparent 4.5px);
+    --band-texture-size: 70px 50px, 46px 38px;
+    --band-seam: radial-gradient(circle, rgba(var(--rose-deep-rgb), 0.35) 2px, transparent 2.5px);
+    --band-seam-size: 12px 7px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 3rem;
+    --title-mark-h: 6px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line);
+    --photo-outline: 4px solid var(--card);
+    --photo-outline-offset: 0;
+}
+
+/* Grafito — black ink on white paper, nothing else. */
+:root[data-theme="grafito"] {
+    --paper: #fbfbfa;
+    --paper-warm: #f2f2f0;
+    --paper-deep: #e6e6e3;
+    --card: #ffffff;
+    --ink: #161616;
+    --ink-soft: #3d3d3d;
+    --muted: #767676;
+    --faint: #adadad;
+    --rose: #8c8c8c;
+    --rose-deep: #262626;
+    --rose-dark: #000000;
+    --blush: #e9e9e7;
+    --blush-soft: #f3f3f1;
+    --gold: #9a8a6a;
+    --gold-soft: #e8e3d8;
+    --gold-ink: #6e6246;
+    --gold-deep: #544a34;
+    --ink-rgb: 22, 22, 22;
+    --paper-rgb: 251, 251, 250;
+    --rose-deep-rgb: 38, 38, 38;
+    --nav-rgb: 245, 245, 243;
+    --nav-edge: #dddddb;
+    --ph-book: #f1f1ef;
+    --ph-video: #efefed;
+    --ph-yarn: #f3f3f1;
+    --ph-award: #f0eee8;
+    --ph-music: #f0eee8;
+    --footer-bg: #1c1c1c;
+    --footer-ink: #f0f0ee;
+    --footer-muted: #b0b0ad;
+    --footer-faint: #7a7a78;
+    --footer-rule: #383838;
+    --footer-accent: #ffffff;
+    --line: #e3e3e0;
+    --line-strong: #cfcfcc;
+
+    /* Flair: Graphic and modern: no curves at all, a drafting grid, hard shadows. */
+    --radius-sm: 0;
+    --radius: 0;
+    --radius-lg: 0;
+    --radius-btn: 0;
+    --kicker-mark-w: 0.55rem;
+    --kicker-mark-h: 0.55rem;
+    --shadow-sm: 5px 5px 0 rgba(var(--ink-rgb), 0.16);
+    --shadow-md: 8px 8px 0 rgba(var(--ink-rgb), 0.2);
+    --strong-texture: linear-gradient(rgba(var(--paper-rgb), 0.08) 1px, transparent 1px) 0 0 / 28px 28px, linear-gradient(90deg, rgba(var(--paper-rgb), 0.08) 1px, transparent 1px) 0 0 / 28px 28px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: linear-gradient(rgba(var(--ink-rgb), 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--ink-rgb), 0.045) 1px, transparent 1px);
+    --band-texture-size: 26px 26px, 26px 26px;
+    --band-seam: linear-gradient(var(--ink), var(--ink));
+    --band-seam-size: auto 2px;
+    --title-mark: linear-gradient(currentColor, currentColor) 0 50% / 100% 100% no-repeat;
+    --title-mark-w: 14px;
+    --title-mark-h: 14px;
+    --title-mark-space: 0.55rem;
+    --card-border: 2px solid var(--ink);
+    --photo-outline: 2px solid var(--ink);
+    --photo-outline-offset: 0;
+}
+
+/* Medianoche — deep navy after dark, with thread-gold for the accent. */
+:root[data-theme="medianoche"] {
+    color-scheme: dark;
+    --paper: #111827;
+    --paper-warm: #172033;
+    --paper-deep: #1d283d;
+    --card: #1f2a40;
+    --ink: #eef1f7;
+    --ink-soft: #c7cedb;
+    --muted: #8f99ad;
+    --faint: #5d677b;
+    --rose: #d9ad5b;
+    --rose-deep: #e8bd6a;
+    --rose-dark: #f3d193;
+    --blush: #2b3348;
+    --blush-soft: #1b2436;
+    --gold: #e8bd6a;
+    --gold-soft: #3a3526;
+    --gold-ink: #eac47d;
+    --gold-deep: #f3d49a;
+    --ink-rgb: 3, 6, 12;
+    --paper-rgb: 17, 24, 39;
+    --rose-deep-rgb: 232, 189, 106;
+    --on-accent: #111827;
+    --on-accent-dim: rgba(17, 24, 39, 0.72);
+    --nav-rgb: 20, 28, 45;
+    --nav-edge: #2a3550;
+    --tape: rgba(238, 241, 247, 0.16);
+    --ph-book: #1a2336;
+    --ph-video: #192234;
+    --ph-yarn: #1b2436;
+    --ph-award: #221f1d;
+    --ph-music: #1c2233;
+    --footer-bg: #0b111d;
+    --footer-ink: #e6e9f0;
+    --footer-muted: #98a2b5;
+    --footer-faint: #5f6a7e;
+    --footer-rule: #253047;
+    --footer-accent: #e8bd6a;
+    --line: #28334a;
+    --line-strong: #36425b;
+
+    /* Flair: Navy and gold evening wear: fine stars, diamonds, leaning titles. */
+    --radius-sm: 4px;
+    --radius: 8px;
+    --radius-lg: 12px;
+    --kicker-mark-w: 0.45rem;
+    --kicker-mark-h: 0.45rem;
+    --kicker-mark-turn: 45deg;
+    --title-style: italic;
+    --strong-texture: radial-gradient(rgba(var(--paper-rgb), 0.3) 1px, transparent 1.5px) 0 0 / 40px 40px, radial-gradient(rgba(var(--paper-rgb), 0.18) 1px, transparent 1.5px) 20px 26px / 70px 70px;
+
+    /* Flair for the middle of the page: a pattern on the paper bands, a seam
+       where one band meets the next, a mark under each band's title, the
+       card border and a frame line round photographs. */
+    --band-texture: radial-gradient(rgba(var(--rose-deep-rgb), 0.2) 1px, transparent 1.5px), radial-gradient(rgba(var(--rose-deep-rgb), 0.12) 1px, transparent 1.5px);
+    --band-texture-size: 60px 60px, 104px 104px;
+    --band-seam: linear-gradient(rgba(var(--rose-deep-rgb), 0.5) 0 1px, transparent 1px 3px, rgba(var(--rose-deep-rgb), 0.5) 3px 4px);
+    --band-seam-size: auto 4px;
+    --title-mark: conic-gradient(from 45deg at 50% 50%, currentColor 90deg, transparent 0) 0 50% / 10px 10px repeat-x;
+    --title-mark-w: 40px;
+    --title-mark-h: 10px;
+    --title-mark-space: 0.55rem;
+    --card-border: 1px solid var(--line-strong);
+    --photo-outline: 1px solid rgba(var(--rose-deep-rgb), 0.55);
+    --photo-outline-offset: 5px;
+}
+
+/* ==========================================================================
+   Fonts
+
+   Two words in site.json, stamped on the root element as data-titles and
+   data-text. Both choose from the SAME list of faces — classic serifs, modern
+   sans, and handwriting — so any face can set the titles, the text, or both.
+   "fraunces" titles and "inter" text are the defaults above and need no block;
+   a word this file does not know falls back to them. Every family is also in
+   the @import at the top of index.css, and a browser downloads a font file
+   only once a page uses it.
+
+   A title block sets --title for the big titles and --display for the smaller
+   ones; a script or poster face keeps a readable companion in --display, so a
+   book's title on a card never turns into a scrawl.
+
+   A text block sets --body and, for the faces that run small on the eye —
+   handwriting above all — --body-adjust, which body uses as font-size-adjust:
+   the browser scales the face so its lowercase letters are as tall as Inter's,
+   and a paragraph in Caveat is as readable as one in Lato.
+   ========================================================================== */
+
+:root[data-titles="playfair"] {
+    --title: 'Playfair Display', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: -0.01em;
+    --title-leading: 1.08;
+    --title-scale: 1;
+}
+
+:root[data-titles="cormorant"] {
+    --title: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --display: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --title-weight: 600;
+    --title-tracking: -0.01em;
+    --title-leading: 1.02;
+    --title-scale: 1.12;
+}
+
+:root[data-titles="lora"] {
+    --title: 'Lora', Georgia, serif;
+    --display: 'Lora', Georgia, serif;
+    --title-weight: 600;
+    --title-tracking: -0.02em;
+    --title-leading: 1.08;
+    --title-scale: 1;
+}
+
+:root[data-titles="merriweather"] {
+    --title: 'Merriweather', Georgia, serif;
+    --display: 'Merriweather', Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: -0.02em;
+    --title-leading: 1.1;
+    --title-scale: 0.92;
+}
+
+:root[data-titles="baskerville"] {
+    --title: 'Libre Baskerville', Baskerville, Georgia, serif;
+    --display: 'Libre Baskerville', Baskerville, Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: -0.02em;
+    --title-leading: 1.1;
+    --title-scale: 0.92;
+}
+
+:root[data-titles="sourceserif"] {
+    --title: 'Source Serif 4', Georgia, serif;
+    --display: 'Source Serif 4', Georgia, serif;
+    --title-weight: 600;
+    --title-tracking: -0.02em;
+    --title-leading: 1.06;
+    --title-scale: 1;
+}
+
+:root[data-titles="dmserif"] {
+    --title: 'DM Serif Display', Georgia, serif;
+    --display: 'Fraunces', Georgia, serif;
+    --title-weight: 400;
+    --title-tracking: -0.01em;
+    --title-leading: 1.05;
+    --title-scale: 1;
+}
+
+:root[data-titles="abril"] {
+    --title: 'Abril Fatface', Georgia, serif;
+    --display: 'Playfair Display', Georgia, serif;
+    --title-weight: 400;
+    --title-tracking: 0;
+    --title-leading: 1.08;
+    --title-scale: 0.94;
+}
+
+:root[data-titles="inter"] {
+    --title: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Inter', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 700;
+    --title-tracking: -0.035em;
+    --title-leading: 1.04;
+    --title-scale: 0.92;
+}
+
+:root[data-titles="montserrat"] {
+    --title: 'Montserrat', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Montserrat', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 700;
+    --title-tracking: -0.02em;
+    --title-leading: 1.06;
+    --title-scale: 0.9;
+}
+
+:root[data-titles="poppins"] {
+    --title: 'Poppins', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Poppins', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 600;
+    --title-tracking: -0.02em;
+    --title-leading: 1.08;
+    --title-scale: 0.9;
+}
+
+:root[data-titles="raleway"] {
+    --title: 'Raleway', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Raleway', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 700;
+    --title-tracking: -0.01em;
+    --title-leading: 1.08;
+    --title-scale: 0.95;
+}
+
+:root[data-titles="lato"] {
+    --title: 'Lato', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Lato', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 700;
+    --title-tracking: -0.01em;
+    --title-leading: 1.08;
+    --title-scale: 0.98;
+}
+
+:root[data-titles="nunito"] {
+    --title: 'Nunito', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Nunito', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 800;
+    --title-tracking: -0.01em;
+    --title-leading: 1.08;
+    --title-scale: 0.98;
+}
+
+:root[data-titles="worksans"] {
+    --title: 'Work Sans', -apple-system, 'Segoe UI', sans-serif;
+    --display: 'Work Sans', -apple-system, 'Segoe UI', sans-serif;
+    --title-weight: 600;
+    --title-tracking: -0.02em;
+    --title-leading: 1.06;
+    --title-scale: 0.95;
+}
+
+:root[data-titles="dancing"] {
+    --title: 'Dancing Script', 'Brush Script MT', cursive;
+    --display: 'Fraunces', Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: 0;
+    --title-leading: 1.15;
+    --title-scale: 1.12;
+}
+
+:root[data-titles="greatvibes"] {
+    --title: 'Great Vibes', 'Brush Script MT', cursive;
+    --display: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --title-weight: 400;
+    --title-tracking: 0;
+    --title-leading: 1.22;
+    --title-scale: 1.3;
+}
+
+:root[data-titles="satisfy"] {
+    --title: 'Satisfy', 'Brush Script MT', cursive;
+    --display: 'Fraunces', Georgia, serif;
+    --title-weight: 400;
+    --title-tracking: 0;
+    --title-leading: 1.18;
+    --title-scale: 1.15;
+}
+
+:root[data-titles="pacifico"] {
+    --title: 'Pacifico', 'Brush Script MT', cursive;
+    --display: 'Nunito', -apple-system, sans-serif;
+    --title-weight: 400;
+    --title-tracking: 0;
+    --title-leading: 1.25;
+    --title-scale: 0.95;
+}
+
+:root[data-titles="caveat"] {
+    --title: 'Caveat', 'Bradley Hand', cursive;
+    --display: 'Fraunces', Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: 0;
+    --title-leading: 1.1;
+    --title-scale: 1.2;
+}
+
+:root[data-titles="kalam"] {
+    --title: 'Kalam', 'Bradley Hand', cursive;
+    --display: 'Fraunces', Georgia, serif;
+    --title-weight: 700;
+    --title-tracking: 0;
+    --title-leading: 1.12;
+    --title-scale: 1.02;
+}
+
+:root[data-text="fraunces"] {
+    --body: 'Fraunces', Georgia, serif;
+}
+
+:root[data-text="playfair"] {
+    --body: 'Playfair Display', Georgia, serif;
+}
+
+:root[data-text="cormorant"] {
+    --body: 'Cormorant Garamond', Garamond, Georgia, serif;
+    --body-adjust: 0.47;
+}
+
+:root[data-text="lora"] {
+    --body: 'Lora', Georgia, serif;
+}
+
+:root[data-text="merriweather"] {
+    --body: 'Merriweather', Georgia, serif;
+}
+
+:root[data-text="baskerville"] {
+    --body: 'Libre Baskerville', Baskerville, Georgia, serif;
+}
+
+:root[data-text="sourceserif"] {
+    --body: 'Source Serif 4', Georgia, serif;
+}
+
+:root[data-text="dmserif"] {
+    --body: 'DM Serif Display', Georgia, serif;
+}
+
+:root[data-text="abril"] {
+    --body: 'Abril Fatface', Georgia, serif;
+}
+
+:root[data-text="montserrat"] {
+    --body: 'Montserrat', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="poppins"] {
+    --body: 'Poppins', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="raleway"] {
+    --body: 'Raleway', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="lato"] {
+    --body: 'Lato', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="nunito"] {
+    --body: 'Nunito', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="worksans"] {
+    --body: 'Work Sans', -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root[data-text="dancing"] {
+    --body: 'Dancing Script', 'Brush Script MT', cursive;
+    --body-adjust: 0.5;
+}
+
+:root[data-text="greatvibes"] {
+    --body: 'Great Vibes', 'Brush Script MT', cursive;
+    --body-adjust: 0.56;
+}
+
+:root[data-text="satisfy"] {
+    --body: 'Satisfy', 'Brush Script MT', cursive;
+    --body-adjust: 0.52;
+}
+
+:root[data-text="pacifico"] {
+    --body: 'Pacifico', 'Brush Script MT', cursive;
+    --body-adjust: 0.48;
+}
+
+:root[data-text="caveat"] {
+    --body: 'Caveat', 'Bradley Hand', cursive;
+    --body-adjust: 0.52;
+}
+
+:root[data-text="kalam"] {
+    --body: 'Kalam', 'Bradley Hand', cursive;
+    --body-adjust: 0.5;
+}
+
+
+/* ==========================================================================
+   The themes' drawings (components/common/Fiesta.js and Temas.js).
+
+   Every theme draws in five colours and a leaf green. The everyday themes take
+   them from their own palette here; each holiday theme sets its own in
+   themes-fiestas.css, which wins because it names the theme.
+   ========================================================================== */
+
+:root {
+    --fiesta-a: var(--rose-deep);
+    --fiesta-b: var(--rose);
+    --fiesta-c: var(--gold);
+    --fiesta-d: var(--card);
+    --fiesta-e: var(--ink-soft);
+    --fiesta-sky: var(--rose);
+    --fiesta-leaf: #7f8f5b;
+}
+
+:root[data-theme="salvia"] { --fiesta-leaf: var(--rose-deep); --fiesta-sky: var(--rose-deep); }
+:root[data-theme="lavanda"] { --fiesta-leaf: #6f8a67; }
+:root[data-theme="mar"] { --fiesta-sky: var(--rose-deep); }
+:root[data-theme="durazno"] { --fiesta-leaf: #6f9a5c; }
+:root[data-theme="girasol"] { --fiesta-leaf: #4f7f3a; --fiesta-a: #7a4b1e; --fiesta-e: #3b2a1a; }
+/* On a dark page the light colour is the ink, not the card. */
+:root[data-theme="noche"],
+:root[data-theme="medianoche"] { --fiesta-d: var(--ink); }

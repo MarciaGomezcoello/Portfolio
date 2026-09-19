@@ -1,0 +1,198 @@
+{
+    "_guia": "La biografía. 'body' acepta varios párrafos: una línea en blanco separa un párrafo del siguiente. La cronología es una lista libre en 'timeline'.",
+
+    "kicker": "Who she is",
+
+    "title": "Biography",
+
+    "_guiaRetrato": "El retrato de arriba. 'portraitShape' es su forma: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta).",
+
+    "portrait": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+
+    "portraitAlt": "Portrait of Marcia Gomezcoello",
+
+    "portraitShape": "alto",
+
+    "lede": "Marcia Gomezcoello González was born in Azogues, Ecuador, and lives in the United States. She is a doctor by profession, and was a writer long before she was one on paper.",
+
+    "body": "She graduated as a Doctor of Medicine and Surgery from the State University of Cuenca, and later studied elder care at CUNY, by then in New York.\n\nShe wrote her first story at the age of eleven. She hasn't stopped since: she has more than a dozen published books, spanning novels, illustrated children's stories and poetry, with others finished and waiting their turn. She also has more than a hundred unreleased songs with her own lyrics and music; one of them, «Corazón Valiente», was recorded and arranged at Opus Ethica studios and is on YouTube. She wrote it for a donation of crocheted garments for sick children.\n\nShe is also a graphic designer, video creator and producer, singer, songwriter and cultural promoter. She teaches crochet and knitting workshops as a volunteer, and those workshops gave rise to her two YouTube channels, where she teaches crochet and needle knitting.\n\nIn January 2019 she founded the Literary and Artistic Afternoons — TARLITEART — a free monthly, non-profit gathering at the Corona Library in Queens, where she presents and supports artists, writers and poets. She hasn't missed a single month since.",
+
+    "_guiaAlbum": "EL ÁLBUM: las fotos de su vida. Cada bloque de 'items' es una foto pegada en la hoja del álbum, sujeta por cuatro esquineros de papel. Para añadir una, copiar un bloque entero y cambiarle los valores: no hay tope, y el orden de la lista es el orden en la hoja — conviene ponerlas de la más antigua a la más reciente. 'photo' es el nombre del archivo puesto en public/content/; 'pie' es la línea que va debajo (dónde fue, quiénes salen) y puede quedar vacía; 'year' es el año, que sale en dorado sobre el pie y también puede quedar vacío. 'shape' es la forma de la foto —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta)—, las mismas tres de todo el sitio: aquí todas las fotos salen del mismo alto y cada una ocupa el ancho que le toca por su forma, así que mezclarlas es justamente lo que hace que la hoja se vea armada a mano. Para quitar la sección entera, dejar 'items': []",
+
+    "album": {
+        "kicker": "Album",
+        "title": "Her life in photos",
+        "lead": "From Azogues to Queens: what was gathered along the way.",
+        "_nota": "MUESTRA — las seis fotos están vacías a propósito, para ver cómo queda la hoja antes de tener las fotos. Se van llenando una por una, y la que sobre se borra entera.",
+        "items": [
+            {
+                "photo": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "year": "Azogues",
+                "pie": "As a girl, at home in the province of Cañar."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "year": "Cuenca",
+                "pie": "Graduation day, State University of Cuenca."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "year": "",
+                "pie": "A photo without a year still shows: the gold simply doesn't appear."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                "photoAlt": "",
+                "shape": "ancho",
+                "year": "2019",
+                "pie": "The first Literary Afternoon at the Corona Library."
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "alto",
+                "year": "",
+                "pie": ""
+            },
+            {
+                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
+                "photoAlt": "",
+                "shape": "cuadrado",
+                "year": "Queens",
+                "pie": "A knitting workshop, one of those that started it all."
+            }
+        ]
+    },
+
+    "roles": [
+        "Doctor and surgeon",
+        "Writer",
+        "Poet",
+        "Songwriter and singer",
+        "Graphic designer",
+        "Video producer",
+        "Cultural promoter",
+        "Knitting instructor"
+    ],
+
+    "formacion": {
+        "_guia": "La formación médica: su título de doctora, presentado como un certificado. 'degree' es el título obtenido, 'place' la institución y 'detail' la ciudad o una nota corta. 'photo' puede ser el diploma o una foto suya de esa época. Si se vacía 'degree', la sección desaparece.",
+        "kicker": "Training",
+        "title": "Doctor and surgeon",
+        "lead": "She was practicing medicine before she published a single book. It is the training that shapes everything else: the patience to explain, and the habit of caring for whoever is in front of her.",
+        "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+        "photoAlt": "Diploma of Doctor of Medicine and Surgery",
+        "shape": "ancho",
+        "degree": "Doctor of Medicine and Surgery",
+        "place": "State University of Cuenca",
+        "detail": "Cuenca, Ecuador"
+    },
+
+    "timeline": {
+        "kicker": "Step by step",
+        "title": "Timeline",
+        "items": [
+            {
+                "year": "Azogues",
+                "title": "Born in Azogues",
+                "text": "Province of Cañar, Ecuador."
+            },
+            {
+                "year": "Age 11",
+                "title": "Her first story",
+                "text": "She writes her first story, and never stops writing after that."
+            },
+            {
+                "year": "Cuenca",
+                "title": "Doctor of Medicine and Surgery",
+                "text": "She graduates from the State University of Cuenca."
+            },
+            {
+                "year": "New York",
+                "title": "Elder care",
+                "text": "Studies at CUNY, by then settled in the United States."
+            },
+            {
+                "year": "2011",
+                "title": "Short story prize",
+                "text": "She wins the LAIA International short story contest on the theme «Travels». Her story is included in an anthology."
+            },
+            {
+                "year": "2019",
+                "title": "TARLITEART is born",
+                "text": "She founds the Literary and Artistic Afternoons at the Corona Library, Queens. On the last Saturday of every month."
+            },
+            {
+                "year": "2020",
+                "title": "«El ojo de la muerte»",
+                "text": "She publishes her first novel: drama and suspense, 348 pages."
+            },
+            {
+                "year": "2021",
+                "title": "«La reliquia: Invasión mortal»",
+                "text": "Her second novel, a fantasy and suspense story."
+            },
+            {
+                "year": "2024",
+                "title": "«Sueños de mi Niñez»",
+                "text": "A book of poems for children."
+            }
+        ]
+    },
+
+    "recognition": {
+        "_guia": "Premios, menciones y participaciones. Cada bloque lleva 'year', 'title', 'text', 'photo' y 'shape' — la foto puede ser el diploma, la placa o una foto de la entrega, y 'shape' es la forma del marco: 'cuadrado', 'alto' (más alto que ancho) o 'ancho' (más ancho que alto) — las mismas tres formas que se usan en todo el sitio. La foto de arriba, la del diploma, también lleva su 'shape'. Sin foto sale un marco de reserva. Para añadir otro, copiar un bloque entero.",
+        "kicker": "Awards",
+        "title": "Recognition",
+        "lead": "Awards, honors and appearances.",
+        "_nota": "SOLO EL PRIMERO ES REAL. Los cuatro bloques siguientes están vacíos a propósito, para que ella escriba encima los reconocimientos que faltan; el que no se use se borra entero y la pared se acomoda sola.",
+        "items": [
+            {
+                "year": "2011",
+                "title": "LAIA International short story contest",
+                "text": "Winner, theme «Travels». Story included in an anthology.",
+                "shape": "ancho",
+                "photo": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2013",
+                "title": "Second award",
+                "text": "What it was goes here: who presented it, for which work and in which city.",
+                "shape": "alto",
+                "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2016",
+                "title": "Third award",
+                "text": "The year goes in 'year', and it appears on the gold seal in the corner. If it is left empty, the seal doesn't appear.",
+                "shape": "cuadrado",
+                "photo": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2019",
+                "title": "Fourth award",
+                "text": "The name of the diploma file, or of the photo of the ceremony, goes in 'photo', placed in public/content/.",
+                "shape": "ancho",
+                "photo": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "year": "2022",
+                "title": "Fifth award",
+                "text": "To add another, copy a whole block and change its values. There is no limit.",
+                "shape": "alto",
+                "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "photoAlt": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,265 @@
+/* The masthead already draws a rule above these tabs. A second rule under
+   them boxed the row into a strip of its own, with a full band of padding
+   stranded above it — so the band opens tighter here and the tabs carry no
+   rule of their own. */
+.shelfBand {
+    padding-top: clamp(2rem, 4vw, 3rem);
+}
+
+/* ==========================================================================
+   Libros — the shelf and its tabs
+   ========================================================================== */
+
+/* --- Genre tabs ----------------------------------------------------------
+   Centred over the shelf, as a plain row of pills. The count sits beside each
+   label as a small number rather than in a badge — it is a detail, not a
+   second thing to read. */
+
+.shelfTabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.shelfTab {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.45rem;
+    padding: 0.62rem 1.3rem;
+    background: transparent;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-btn);
+    font-family: var(--body);
+    font-size: 0.83rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: background 0.28s var(--ease), color 0.28s var(--ease),
+                border-color 0.28s var(--ease);
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+.shelfTab:hover {
+    border-color: var(--rose);
+    color: var(--rose-dark);
+}
+
+.shelfTab.isActive {
+    background: var(--rose-deep);
+    border-color: var(--rose-deep);
+    color: var(--on-accent);
+    font-weight: 600;
+}
+
+.shelfTabCount {
+    font-size: 0.72rem;
+    font-variant-numeric: tabular-nums;
+    /* --muted, not --faint: at 2.2:1 the count could barely be read. */
+    color: var(--muted);
+    transition: color 0.28s var(--ease);
+}
+
+.shelfTab:hover .shelfTabCount {
+    color: var(--rose);
+}
+
+.shelfTab.isActive .shelfTabCount {
+    /* Full strength: the dimmed white fell under 3:1 on the Día de la Madre pill. */
+    color: var(--on-accent);
+}
+
+/* --- The shelf ----------------------------------------------------------- */
+
+/* No fixed column count: auto-fill lays out as many books as fit and wraps the
+   rest onto new rows, so the shelf grows with the list. Unlike the cover page,
+   which deliberately shows only three, this page has no cap. */
+/* Every cover the same height, its width given by its shape. A flex line, not
+   a grid: the columns are no longer one width. It stays as dynamic as the grid
+   was — there is no cap and no count written down anywhere, so the shelf simply
+   grows as books are added. */
+.shelfGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(3.5rem, 6vw, 5rem) clamp(2rem, 4vw, 3.25rem);
+    --book-h: clamp(210px, min(20vw, 34vh), 270px);
+}
+
+.shelfCard {
+    flex: 0 0 auto;
+    max-width: 100%;
+}
+
+.shelfCard {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: fit-content;
+}
+
+/* Covers of any of the three shapes stand on one line, as on the cover page:
+   the slot reserves the height of the tallest shape a cover can take and the
+   cover is anchored to its bottom edge. */
+.shelfSlot {
+    display: flex;
+    align-items: flex-end;
+    /* Not stretched to the card: the width is the aspect-ratio's to decide. */
+    align-self: flex-start;
+    height: var(--book-h);
+    /* Written out as well as implied by aspect-ratio: Safari does not derive a
+       flex item's width from its height. See ratioStyle() in naturalRatio.js. */
+    width: calc(var(--book-h) * var(--ratio, 0.667));
+    max-width: 100%;
+}
+
+/* The shelf the covers stand on. The slot already anchors every cover to its
+   bottom edge so a square and a standing one share a line; this draws that
+   line — a hairline running a little past the cover at either end and fading
+   out, so it reads as a board rather than as a rule under a picture. It is the
+   reason the mixed shapes work, made visible. */
+.shelfSlot {
+    position: relative;
+    --shelf-out: calc(clamp(2rem, 4vw, 3.25rem) / 2 - 0.35rem);
+}
+
+/* The board reaches out to within a few pixels of its neighbour, so a row of
+   covers stands on what reads as one shelf broken by short gaps rather than on
+   a rule drawn under each picture separately. `--shelf-out` is half the gap
+   between the columns, set by whichever grid this slot is in — it is the only
+   number here that cannot be worked out locally. */
+.shelfSlot::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--shelf-out, 0.6rem));
+    right: calc(-1 * var(--shelf-out, 0.6rem));
+    bottom: -1px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent 0,
+        var(--line-strong) 0.5rem,
+        var(--line-strong) calc(100% - 0.5rem),
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+
+.shelfCover {
+    position: relative;
+    width: 100%;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.55s var(--ease), box-shadow 0.55s var(--ease);
+}
+
+.shelfCard:hover .shelfCover {
+    transform: translateY(-8px) rotate(-1deg);
+    box-shadow: var(--shadow-md);
+}
+
+/* The cover sets the width of the card and the words underneath take
+   whatever that comes to. `width: 0` with `min-width: 100%` is what keeps the
+   title out of the measurement — a flex column is as wide as its widest child,
+   so a long title was deciding how wide the card was and stretching the cover
+   slot to match, which threw away the shape's own width. The same trick the
+   album's captions use. */
+.shelfMeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding-top: 1.3rem;
+    width: 0;
+    min-width: 100%;
+}
+
+.shelfTitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0;
+    transition: color 0.3s var(--ease);
+}
+
+.shelfCard:hover .shelfTitle {
+    color: var(--rose-dark);
+}
+
+.shelfYear {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+.shelfTagline {
+    max-width: 40ch;
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+}
+
+.shelfCta {
+    margin-top: auto;
+    padding-top: 0.9rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    transition: transform 0.3s var(--ease);
+}
+
+.shelfCard:hover .shelfCta {
+    transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+    .shelfTabs {
+        gap: 0.4rem;
+    }
+}
+
+/* Two covers to a row on a phone rather than one, which turns a shelf of
+   fifteen books into a column fifteen screens long. Now that a cover's width
+   comes from its shape, holding the height under half the screen is what keeps
+   two of them side by side — a square cover is as wide as it is tall. */
+@media (max-width: 560px) {
+    .shelfGrid {
+        --book-h: min(calc(50vw - 2.6rem), 210px);
+        gap: clamp(2.25rem, 7vw, 3rem) clamp(1rem, 3vw, 1.5rem);
+    }
+
+    /* Two to a row, always. Each card takes half the row and the cover keeps
+       the shelf's common height inside it. Sized by the cover alone, three
+       standing books fitted where a square one fitted two, so the rows went
+       2-3-2 and a 100px-wide card set its summary one word to a line. */
+    .shelfGrid > * {
+        flex: 0 0 calc(50% - clamp(1rem, 3vw, 1.5rem) / 2);
+        min-width: 0;
+    }
+
+    .shelfGrid .shelfCard {
+        width: auto;
+    }
+
+    .shelfSlot {
+        --shelf-out: calc(clamp(1rem, 3vw, 1.5rem) / 2 - 0.25rem);
+    }
+
+    .shelfTitle {
+        font-size: 1.1rem;
+    }
+
+    .shelfTagline {
+        font-size: 0.88rem;
+    }
+}

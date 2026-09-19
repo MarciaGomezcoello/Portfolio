@@ -1,0 +1,1052 @@
+/* ============================================================================
+   The editor's own skin — a plainer cousin of the site's "papel y hilo".
+   Large type, one column of fields, generous targets. She is not a power user
+   and this is not a developer tool.
+   ============================================================================ */
+
+:root {
+    --paper: #fdfaf6;
+    --card: #ffffff;
+    --ink: #1f1b1a;
+    --ink-soft: #4a4340;
+    --muted: #857a75;
+    --line: #e8dcd3;
+    --rose: #d9647a;
+    --rose-dark: #a8455a;
+    --blush: #fdf3f4;
+    --gold: #a8781f;
+    --ok: #2d6a4f;
+    --bad: #a8455a;
+    --radius: 10px;
+    --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    font-size: 15px;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+button, input, textarea { font: inherit; color: inherit; }
+
+.loading { padding: 3rem; color: var(--muted); }
+
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+/* --- The bar -------------------------------------------------------------- */
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    flex: 0 0 auto;
+}
+
+/* In the Mac app this bar IS the title bar: the window has none of its own.
+   It has to clear the three round buttons at the top left and be draggable,
+   while everything you can actually press opts back out of the drag. */
+.inApp .bar {
+    padding: 1rem 1.25rem 0.85rem 92px;
+    -webkit-app-region: drag;
+}
+.inApp .bar button,
+.inApp .bar .status,
+.inApp .bar .dirty {
+    -webkit-app-region: no-drag;
+}
+.barTitle { flex: none; font-weight: 600; letter-spacing: -0.01em; white-space: nowrap; }
+.barPage { color: var(--muted); font-weight: 400; }
+/* The bar is one line whatever it has to say: the words give way (ending in
+   "…", the whole of it on hover) and the buttons never do. */
+.barTools { margin-left: auto; display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+.barTools > button { flex: none; white-space: nowrap; }
+.dirty,
+.status {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dirty { color: var(--muted); font-size: 0.85rem; }
+
+.status { flex: 0 1 auto; font-size: 0.85rem; padding: 0.3rem 0.7rem; border-radius: 999px; }
+.status.ok { color: var(--ok); background: #eaf4ef; }
+.status.bad { color: var(--bad); background: var(--blush); }
+
+.btn {
+    border-radius: 999px;
+    padding: 0.55rem 1.3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn.solid { background: var(--rose-dark); color: #fff; }
+.btn.solid:hover:not(:disabled) { background: #8f3a4c; }
+.btn.ghost { background: transparent; border-color: var(--line); color: var(--ink-soft); }
+.btn.ghost:hover:not(:disabled) { border-color: var(--muted); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+
+/* --- Layout --------------------------------------------------------------- */
+
+/* The pages of the site, one row above the franjas. Pills rather than
+   underlines, so the two rows never read as one list. */
+.pageTabs {
+    display: flex;
+    gap: 0.35rem;
+    padding: 0.55rem 1rem;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+    flex: 0 0 auto;
+    scrollbar-width: none;
+}
+.pageTabs::-webkit-scrollbar { display: none; }
+.pageTab {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.95rem;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: none;
+    color: var(--ink-soft);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.pageTab:hover { background: var(--card); border-color: var(--line); color: var(--ink); }
+.pageTab.isOn { background: var(--card); border-color: var(--rose); color: var(--rose-dark); }
+
+.pageEmpty .formTitle { margin-bottom: 0.5rem; }
+.pageEmpty .formHelp { max-width: 32rem; }
+
+/* The franjas run along the top rather than down the side. A column of six
+   short words cost 220px of width for its whole height; a row costs one line
+   and gives the rest back to the form and the preview. */
+.tabs {
+    display: flex;
+    gap: 0.15rem;
+    padding: 0 1rem;
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+    overflow-x: auto;
+    flex: 0 0 auto;
+    scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+
+.tab {
+    position: relative;
+    flex: 0 0 auto;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    padding: 0.7rem 0.9rem 0.6rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+.tab:hover { color: var(--ink); }
+.tab.isOn { color: var(--rose-dark); border-bottom-color: var(--rose); }
+.tab.isOff { color: var(--muted); }
+.tabOff { font-size: 0.95rem; line-height: 1; opacity: 0.75; }
+
+.dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    vertical-align: middle;
+}
+
+.body { display: flex; flex: 1; min-height: 0; }
+
+/* --- The form ------------------------------------------------------------- */
+
+.form {
+    flex: 0 0 auto;
+    width: 0;      /* flex-basis carries the width; see the splitter */
+    padding: 1.5rem 1.5rem 4rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--line);
+}
+.formTitleRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.35rem;
+}
+.formTitle { margin: 0; font-size: 1.5rem; letter-spacing: -0.02em; }
+/* The switch and its word travel together, pushed to the right, and drop to
+   a line of their own when a narrow form cannot fit them beside the badges. */
+.switchPair { display: inline-flex; align-items: center; gap: 0.6rem; margin-left: auto; }
+.switchWord {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+    min-width: 3.9rem;
+}
+.formHelp { margin: 0 0 1.5rem; color: var(--muted); line-height: 1.55; font-size: 0.9rem; }
+.offNote {
+    background: var(--blush);
+    border-radius: var(--radius);
+    padding: 0.8rem 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--rose-dark);
+    margin: 0 0 1.5rem;
+}
+
+.row { display: block; position: relative; margin-bottom: 1.4rem; }
+.rowBody { display: block; }
+.rowHead { display: flex; align-items: center; gap: 0.4rem; min-height: 1.45rem; margin-bottom: 0.4rem; }
+/* Deshacer is a sibling of the label, not inside it, so it is placed over the
+   label's first line; the name keeps clear of it. */
+.row > .changed { position: absolute; top: 0; right: 0; }
+.row.isChanged > .rowBody > .rowHead { padding-right: 11rem; }
+.rowLabel { font-weight: 600; font-size: 0.88rem; }
+/* A chooser of cards (the theme, each font) holds several small group names
+   of its own, so its label is set as a heading above them — otherwise
+   "Letra del texto" read as one more group of the list before it. */
+.row.isChooser { margin-top: 0.6rem; }
+.row.isChooser .rowHead { margin-bottom: 0.4rem; padding-bottom: 0.45rem; border-bottom: 1px solid var(--line); }
+.row.isChooser .rowLabel { font-size: 1.2rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.rowHelp {
+    display: block;
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: var(--muted);
+}
+
+.row input[type="text"],
+.row textarea {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.row input:focus, .row textarea:focus {
+    outline: 2px solid var(--rose);
+    outline-offset: -1px;
+    border-color: transparent;
+}
+.row textarea { resize: vertical; line-height: 1.6; }
+.row textarea.poem { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.88rem; }
+
+/* --- What changed ----------------------------------------------------------
+   Anything that differs from the site carries a gold bar down its left edge
+   and, beside its name, the word "Cambiado" with a button that puts back just
+   that one thing. Gold, because rose already means "chosen" in this app. */
+
+.changed { display: inline-flex; align-items: center; gap: 0.35rem; margin-left: auto; }
+.changedTag {
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: #f6eddb;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+}
+.revert {
+    background: none;
+    border: 1px solid #ead9b6;
+    color: var(--gold);
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.revert:hover { background: #f6eddb; border-color: var(--gold); }
+
+.row.isChanged,
+.listField.isChanged { position: relative; }
+.row.isChanged::before,
+.listField.isChanged::before {
+    content: "";
+    position: absolute;
+    left: -0.8rem;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px;
+    background: var(--gold);
+}
+.card.isChanged { border-color: #e2c98f; }
+.card.isChanged.isOpen { border-color: var(--rose); }
+.cardHead .changed { flex: none; margin: 0 0.4rem 0 0; }
+.listHead .changed { margin: 0 0.6rem 0 0.6rem; }
+.formTitleRow .changed { margin-left: 0.4rem; }
+
+/* --- The question before Aplicar and Descartar ---------------------------- */
+
+.modalBack {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background: rgba(31, 27, 26, 0.32);
+}
+.modal {
+    width: min(440px, 100%);
+    background: var(--card);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem 1.2rem;
+    box-shadow: 0 24px 60px rgba(31, 27, 26, 0.22);
+}
+.modalTitle { margin: 0 0 0.7rem; font-size: 1.15rem; letter-spacing: -0.01em; }
+.modalBody { color: var(--ink-soft); font-size: 0.9rem; line-height: 1.55; }
+.modalBody p { margin: 0 0 0.6rem; }
+.modalBody ul { margin: 0 0 0.8rem; padding-left: 1.2rem; }
+.modalBody li { font-weight: 600; color: var(--ink); }
+.modalTools { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 1.1rem; }
+.btn.solid.danger { background: var(--bad); }
+
+.linkBtn {
+    background: none;
+    border: 0;
+    color: var(--rose-dark);
+    cursor: pointer;
+    padding: 0;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.urlRow { display: flex; gap: 0.5rem; align-items: center; }
+.urlRow input { flex: 1; }
+
+/* --- Words, one per line ------------------------------------------------- */
+
+.words {
+    list-style: none;
+    margin: 0 0 0.6rem;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    overflow: hidden;
+}
+.wordLine {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.4rem 0.3rem 0.5rem;
+    background: var(--card);
+}
+.wordLine + .wordLine { border-top: 1px solid var(--line); }
+.wordLine:hover { background: var(--blush); }
+.wordLine.isDragging { opacity: 0.35; }
+
+/* The drop line sits in the gap itself, over the border between two words. */
+.wordLine.dropBefore::before,
+.wordLine.dropAfter::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    right: 0.4rem;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--rose);
+    z-index: 1;
+}
+.wordLine.dropBefore::before { top: -2px; }
+.wordLine.dropAfter::after { bottom: -2px; }
+
+/* Cards stand apart, so their drop line sits halfway across the space between. */
+.card { position: relative; }
+.card.isDragging { opacity: 0.35; }
+.card.dropBefore::before,
+.card.dropAfter::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    right: 0.4rem;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--rose);
+    z-index: 1;
+}
+.card.dropBefore::before { top: calc(-0.25rem - 2px); }
+.card.dropAfter::after { bottom: calc(-0.25rem - 2px); }
+
+.wordGrip {
+    flex: 0 0 10px;
+    align-self: stretch;
+    cursor: grab;
+    opacity: 0.4;
+    background-image: radial-gradient(circle, var(--muted) 1.2px, transparent 1.3px);
+    background-size: 5px 5px;
+    background-position: center;
+    background-repeat: space;
+    margin: 0.35rem 0;
+}
+.wordGrip:active { cursor: grabbing; }
+.wordLine:hover .wordGrip { opacity: 1; }
+.cardGrip { margin: 0.55rem 0 0.55rem 0.55rem; }
+.cardHead:hover .cardGrip { opacity: 1; }
+
+.wordNum {
+    flex: 0 0 1.4rem;
+    text-align: right;
+    color: var(--muted);
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.row input[type="text"].wordText {
+    flex: 1;
+    min-width: 0;
+    padding: 0.35rem 0.5rem;
+    border-color: transparent;
+    background: transparent;
+}
+.row input[type="text"].wordText:hover { border-color: var(--line); background: var(--card); }
+.row input[type="text"].wordText:focus { background: var(--card); }
+
+.wordsEmpty { padding: 0.7rem 0.9rem; color: var(--muted); font-size: 0.85rem; }
+
+.wordAdd { display: flex; gap: 0.5rem; align-items: center; }
+.wordAdd input { flex: 1; }
+.wordAdd .addBtn { white-space: nowrap; }
+.wordAdd .addBtn:disabled { opacity: 0.4; cursor: default; }
+
+/* --- Pictures ------------------------------------------------------------- */
+
+.imageRow { margin-bottom: 1.6rem; }
+
+/* One card per picture: the photo, what it is, and the two things she can do
+   with it. The whole card is a drop target. */
+.pic {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.pic.isOver { border-color: var(--rose); background: var(--blush); }
+
+.picThumb {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 112px;
+    height: 112px;
+    padding: 0;
+    border: 0;
+    border-radius: 7px;
+    background: var(--paper);
+    cursor: pointer;
+    overflow: hidden;
+}
+.picThumb .picGlyph { color: var(--muted); }
+.picThumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.picThumb:hover { outline: 2px solid var(--rose); outline-offset: 1px; }
+
+.picInfo { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+.picName {
+    font-size: 0.88rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.picMeta { font-size: 0.78rem; color: var(--muted); }
+.picMetaNew { color: var(--gold); font-weight: 600; }
+.picMetaBad { color: var(--bad); font-weight: 600; }
+.picTools { display: flex; gap: 0.3rem; margin-top: 0.55rem; flex-wrap: wrap; }
+.picBtn {
+    background: var(--card);
+    border: 1px solid var(--line);
+    color: var(--ink-soft);
+    border-radius: 999px;
+    padding: 0.32rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.picBtn:hover { border-color: var(--muted); color: var(--ink); }
+.picBtn.isOn { border-color: var(--rose); color: var(--rose-dark); background: var(--blush); }
+.picBtn:disabled { opacity: 0.45; cursor: default; }
+.picBtn.quiet { border-color: transparent; color: var(--muted); }
+.picBtn.quiet:hover { background: var(--blush); color: var(--bad); }
+
+.picDropNote {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    background: rgba(253, 243, 244, 0.9);
+    color: var(--rose-dark);
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* No photo yet: one big place to drop or choose, and the reserved shape below. */
+.pic.isEmpty { flex-direction: column; align-items: stretch; gap: 0.8rem; }
+.picEmpty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 1.3rem 1rem;
+    border: 1.5px dashed var(--line);
+    border-radius: 8px;
+    background: var(--paper);
+    color: var(--muted);
+    cursor: pointer;
+}
+.picEmpty:hover, .pic.isOver .picEmpty { border-color: var(--rose); color: var(--rose-dark); }
+.picEmpty svg { margin-bottom: 0.25rem; }
+.picEmptyTitle { font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); }
+.picEmptyHint { font-size: 0.78rem; }
+/* The web address: a line across the whole card, under the photo. */
+.picLink { flex: 1 0 100%; display: flex; flex-direction: column; gap: 0.3rem; }
+.picLinkRow { display: flex; gap: 0.4rem; align-items: center; }
+.row .picLinkRow input[type="text"] { flex: 1; min-width: 0; padding: 0.45rem 0.65rem; font-size: 0.85rem; }
+.picOr {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.74rem;
+    color: var(--muted);
+}
+.picOr::before, .picOr::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+.picShapeLabel { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 0.4rem; }
+/* Inside the card the shape choice is secondary, so each option is one short
+   line — the little box beside its name — rather than a tall tile. */
+.picShape .shapeBtn {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.78rem;
+}
+.picShape .shapeBox { zoom: 0.6; }
+
+.shapes { display: flex; gap: 0.4rem; }
+.shapeBtn {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.2rem 0.4rem;
+    cursor: pointer;
+    font-size: 0.72rem;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+}
+.shapeBtn.isOn { border-color: var(--rose); color: var(--rose-dark); background: var(--blush); }
+.shapeBox { display: block; background: #ded2c8; border-radius: 2px; }
+.shapeBtn.isOn .shapeBox { background: var(--rose); }
+
+/* --- Lists ---------------------------------------------------------------- */
+
+.listField { margin-bottom: 1.6rem; }
+.listHead { display: flex; align-items: center; margin-bottom: 0.5rem; }
+.listHelp { margin: -0.2rem 0 0.6rem; }
+.addBtn {
+    margin-left: auto;
+    background: var(--blush);
+    border: 1px solid transparent;
+    color: var(--rose-dark);
+    border-radius: 999px;
+    padding: 0.32rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.empty { color: var(--muted); font-size: 0.85rem; font-style: italic; }
+.addBtn.listAdd {
+    display: block;
+    width: 100%;
+    margin: 0.1rem 0 0;
+    padding: 0.55rem 0.8rem;
+    border: 1px dashed var(--rose);
+    border-radius: var(--radius);
+    background: transparent;
+}
+.addBtn.listAdd:hover { background: var(--blush); }
+.listAdds { display: flex; gap: 0.5rem; margin-top: 0.1rem; }
+.listAdds .listAdd { flex: 1; margin: 0; }
+.addBtn.listAdd.isQuiet { flex: 0 0 auto; width: auto; border-color: var(--line); color: var(--muted); }
+
+.picker {
+    margin: 0.2rem 0 0.6rem;
+    border: 1px solid var(--rose);
+    border-radius: var(--radius);
+    background: var(--card);
+    overflow: hidden;
+}
+.pickerHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.4rem 0.5rem 0.8rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+}
+.pickerClose { background: none; border: 0; cursor: pointer; color: var(--muted); font-size: 1rem; padding: 0.2rem 0.5rem; border-radius: 6px; }
+.pickerClose:hover { background: var(--blush); color: var(--ink); }
+.pickerList { list-style: none; margin: 0; padding: 0; max-height: 22rem; overflow-y: auto; }
+.pickerList li + li { border-top: 1px solid var(--line); }
+.pickerItem {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0.45rem 0.8rem;
+    background: none;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    color: var(--ink);
+}
+.pickerItem:hover:not(:disabled) { background: var(--blush); }
+.pickerItem:disabled { cursor: default; opacity: 0.5; }
+.pickerThumb {
+    flex: 0 0 34px;
+    height: 46px;
+    display: grid;
+    place-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--blush);
+    color: var(--muted);
+}
+.pickerThumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pickerText { display: flex; flex-direction: column; min-width: 0; }
+.pickerTitle { font-weight: 500; font-size: 0.9rem; }
+.pickerNote { font-size: 0.75rem; color: var(--muted); }
+
+/* The photo library, under a picture field: every photo as a tile, shown whole
+   as the site shows it, newest first. */
+.library { margin: 0.5rem 0 0; }
+.library .empty { margin: 0; padding: 0.8rem; }
+.librarySearch {
+    display: block;
+    width: calc(100% - 1.2rem);
+    margin: 0.6rem 0.6rem 0;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+    font-size: 0.85rem;
+}
+.libraryGrid {
+    list-style: none;
+    margin: 0;
+    padding: 0.6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+    gap: 0.5rem;
+    max-height: 22rem;
+    overflow-y: auto;
+}
+/* A long file name would otherwise set the width of its tile, and push it into
+   the next one: the grid cell will not shrink below it, and a button does not
+   stretch what is inside it. */
+.libraryGrid > li { min-width: 0; position: relative; }
+/* Only on photos nothing uses. Beside the tile rather than inside it, since a
+   button cannot hold another. */
+.libraryDelete {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--card);
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.libraryDelete:hover { border-color: var(--bad); background: var(--bad); color: #fff; }
+.libraryItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    cursor: pointer;
+    font: inherit;
+    color: var(--ink);
+    text-align: left;
+}
+.libraryItem:hover { border-color: var(--rose); background: var(--blush); }
+.libraryItem.isOn { border-color: var(--rose); box-shadow: 0 0 0 1px var(--rose); }
+.libraryThumb {
+    aspect-ratio: 1;
+    border-radius: 6px;
+    background: var(--blush);
+    overflow: hidden;
+}
+.libraryThumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.libraryName {
+    max-width: 100%;
+    font-size: 0.72rem;
+    color: var(--muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.libraryTag {
+    position: absolute;
+    top: 0.45rem;
+    left: 0.45rem;
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    background: var(--rose-dark);
+    color: #fff;
+    font-size: 0.66rem;
+    font-weight: 700;
+}
+.libraryTag.isNew { background: #7a5a14; }
+.picLibraryBtn { align-self: center; }
+
+.card { border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 0.5rem; background: var(--card); }
+.card.isOpen { border-color: var(--rose); }
+.cardHead { display: flex; align-items: center; padding: 0.2rem 0.4rem 0.2rem 0; }
+.cardTitle {
+    flex: 1;
+    /* A title with no spaces in it (a pasted link) breaks where it must,
+       rather than pushing the delete button off the edge of the form. */
+    min-width: 0;
+    overflow-wrap: anywhere;
+    text-align: left;
+    background: none; border: 0; cursor: pointer;
+    padding: 0.6rem 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.caret { color: var(--muted); margin-right: 0.4rem; }
+.cardTools { display: flex; flex: none; gap: 0.15rem; }
+.cardTools button {
+    background: none; border: 0; cursor: pointer;
+    color: var(--muted);
+    padding: 0.3rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+.cardTools button:hover:not(:disabled) { background: var(--blush); color: var(--ink); }
+.cardTools button:disabled { opacity: 0.25; cursor: default; }
+.cardTools .danger:hover { background: var(--blush); color: var(--bad); }
+.cardBody { padding: 0.4rem 0.9rem 0.3rem; border-top: 1px solid var(--line); }
+
+/* A group is a card that folds, like a list item, with a little more room
+   below it because it stands on its own rather than in a stack. */
+.card.group { margin-bottom: 1.6rem; }
+.groupHelp { margin: 0.2rem 0 1rem; }
+
+.row select.choice {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    font: inherit;
+}
+.row select.choice:focus { outline: 2px solid var(--rose); outline-offset: -1px; border-color: transparent; }
+
+
+/* --- Preview -------------------------------------------------------------- */
+
+.switch {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 20px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #efe7e0;
+    cursor: pointer;
+    padding: 2px;
+}
+.switch span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s ease;
+}
+.switch.isOn { background: var(--rose); border-color: var(--rose); }
+.switch.isOn span { transform: translateX(14px); }
+
+.chipBtnEnd { margin-left: auto; }
+
+/* The handle between the words and the page. */
+.splitter {
+    flex: 0 0 10px;
+    cursor: col-resize;
+    background: var(--paper);
+    border-left: 1px solid var(--line);
+    border-right: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.splitter span {
+    display: block;
+    width: 2px;
+    height: 34px;
+    border-radius: 2px;
+    background: var(--line-strong, #d8c7bb);
+}
+.splitter:hover { background: var(--blush); }
+.splitter:hover span { background: var(--rose); }
+
+/* While dragging, nothing should select and the pointer must not flicker as it
+   crosses the iframe. */
+body.isDragging, body.isDragging * {
+    user-select: none !important;
+    cursor: col-resize !important;
+}
+body.isDragging iframe { pointer-events: none; }
+
+.preview { flex: 1; min-width: 0; display: flex; flex-direction: column; background: #efe7e0; }
+.previewBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--card);
+}
+.chipBtn {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+}
+.chipBtn.isOn { background: var(--blush); border-color: var(--rose); color: var(--rose-dark); }
+
+.previewStage { flex: 1; overflow: hidden; display: flex; justify-content: center; padding: 1rem; }
+.previewFit {
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+}
+.previewStage iframe { border: 0; display: block; background: #fff; }
+
+/* --- Ajustes: colours ----------------------------------------------------- */
+
+.themes { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 0.6rem; }
+.themeCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.55rem 0.6rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    cursor: pointer;
+    text-align: left;
+}
+.themeCard:hover { border-color: var(--muted); }
+.themeCard.isOn { border-color: var(--rose); box-shadow: 0 0 0 2px var(--blush); }
+.themeSwatches {
+    display: flex;
+    width: 100%;
+    height: 34px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+.themeSwatches span { flex: 1; }
+.themeName { font-weight: 600; font-size: 0.88rem; }
+.themeNote { font-size: 0.74rem; color: var(--muted); line-height: 1.35; }
+.themeCard.isOn .themeName { color: var(--rose-dark); }
+
+.onoff { display: inline-flex; align-items: center; gap: 0.6rem; }
+
+/* --- Ajustes: fonts ------------------------------------------------------- */
+
+.fonts { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.6rem; }
+.fontCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.7rem 0.75rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    cursor: pointer;
+    text-align: left;
+}
+.fontCard:hover { border-color: var(--muted); }
+.fontCard.isOn { border-color: var(--rose); box-shadow: 0 0 0 2px var(--blush); }
+.fontCard.isOn .themeName { color: var(--rose-dark); }
+.fontSample {
+    display: block;
+    min-height: 2.6rem;
+    margin-bottom: 0.35rem;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    color: var(--ink);
+}
+.fonts.isSmall .fontSample { font-size: 0.95rem; line-height: 1.45; }
+
+/* --- Ajustes: English ----------------------------------------------------- */
+
+.english { display: flex; flex-direction: column; gap: 1.1rem; }
+.englishStatus {
+    margin: 0;
+    padding: 0.7rem 0.9rem;
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+.englishStatus.isOk { background: #eaf4ef; color: var(--ok); }
+.englishStatus.isWarn { background: #f6eddb; color: #7a5a14; }
+.englishSteps { margin: 0; padding: 0; list-style: none; counter-reset: step; display: flex; flex-direction: column; gap: 0.6rem; }
+.englishStep {
+    counter-increment: step;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.8rem 0.9rem 0.9rem 2.9rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.englishStep::before {
+    content: counter(step);
+    position: absolute;
+    left: 0.85rem;
+    top: 0.75rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--blush);
+    color: var(--rose-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+.englishStepTitle { font-weight: 600; font-size: 0.9rem; }
+.englishStep .rowHelp { margin: 0; }
+.englishTools { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.2rem; }
+.englishPaste {
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.8rem;
+    resize: vertical;
+}
+.englishPaste:focus { outline: 2px solid var(--rose); outline-offset: -1px; border-color: transparent; }
+.englishResult { font-size: 0.82rem; font-weight: 600; line-height: 1.45; }
+.englishResult.is-ok { color: var(--ok); }
+.englishResult.is-warn { color: #7a5a14; }
+.englishResult.is-bad { color: var(--bad); }
+
+/* --- Ajustes: Publicar ---------------------------------------------------- */
+
+.publisher { display: flex; flex-direction: column; gap: 1.1rem; }
+.publishBox,
+.versions { display: flex; flex-direction: column; gap: 0.5rem; }
+.publishBox {
+    padding: 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.publishNote { display: flex; flex-direction: column; gap: 0.3rem; }
+.publishNote input {
+    padding: 0.5rem 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--paper);
+}
+.publishNote input:disabled { opacity: 0.5; }
+.versionsEmpty { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.85rem; }
+.versionList { margin: 0.2rem 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+.version {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.8rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+}
+.versionText { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.versionText .rowHelp { margin: 0; }
+.versionDate { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-weight: 600; font-size: 0.88rem; }
+.versionTag {
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    background: #eaf4ef;
+    color: var(--ok);
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.versionTag.isPending { background: #fbf1dc; color: #7a5a14; }
+.versionNote { font-size: 0.85rem; color: var(--ink-soft); }
+.version .picBtn { flex: none; }
+
+.previewLang { display: flex; gap: 0.3rem; margin-left: 0.6rem; padding-left: 0.6rem; border-left: 1px solid var(--line); }
+
+.themeGroup + .themeGroup { margin-top: 1.2rem; }
+.themeGroupName {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+}

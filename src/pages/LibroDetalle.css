@@ -1,0 +1,164 @@
+/* ==========================================================================
+   One book
+   ========================================================================== */
+
+.bookDetail {
+    padding-top: clamp(2.5rem, 4vw, 3rem);
+}
+
+.bookDetailGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 240px) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(2.5rem, 6vw, 5rem);
+}
+
+/* --- Cover column -------------------------------------------------------- */
+
+/* The cover scrolls with the words rather than pinning itself and following
+   them down. Sticky made the two columns move independently — the cover held
+   still while the synopsis ran past it — and a book and what is written about
+   it read as one thing, not as a picture watching its own text go by. */
+.bookDetailAside {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.bookDetailCover {
+    position: relative;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.bookDetailBuy {
+    justify-content: center;
+}
+
+/* --- Text column --------------------------------------------------------- */
+
+.bookDetailBack {
+    display: inline-block;
+    margin-bottom: 1.75rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    transition: color 0.28s var(--ease);
+}
+
+.bookDetailBack:hover {
+    color: var(--ink);
+}
+
+.bookDetailTags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.bookDetailYear {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+}
+
+.bookDetailTitle {
+    font-family: var(--title);
+    font-style: var(--title-style);
+    font-size: calc(clamp(2.1rem, 3.6vw, 2.6rem) * var(--title-scale));
+    font-weight: var(--title-weight);
+    line-height: var(--title-leading);
+    letter-spacing: var(--title-tracking);
+    color: var(--ink);
+    margin: 0;
+}
+
+.bookDetailTagline {
+    max-width: 46ch;
+    margin: 1.2rem 0 0;
+    font-family: var(--display);
+    font-size: clamp(1.1rem, 1.8vw, 1.2rem);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--rose-dark);
+}
+
+.bookDetailSection {
+    margin-top: 2.75rem;
+}
+
+.bookDetailLabel {
+    font-family: var(--body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rose-deep);
+    margin: 0 0 1.1rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.bookDetailPara {
+    max-width: 64ch;
+    margin: 0 0 1.3rem;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--ink-soft);
+}
+
+.bookDetailExcerpt {
+    max-width: 60ch;
+    margin: 0;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--rose);
+}
+
+.bookDetailExcerpt p {
+    margin: 0 0 0.6rem;
+    font-family: var(--display);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ink-soft);
+}
+
+/* --- Not found ----------------------------------------------------------- */
+
+.bookMissing {
+    padding-top: clamp(3rem, 7vw, 6rem);
+    padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.bookMissingCta {
+    margin-top: 2rem;
+}
+
+/* The cover narrows before it moves. Two columns hold well down to a phone —
+   a book and what is written about it belong side by side — so the tablet step
+   only takes width off the cover, and the stack waits for a screen that has no
+   room for two columns at all. */
+@media (max-width: 900px) {
+    .bookDetailGrid {
+        grid-template-columns: minmax(0, 215px) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .bookDetailGrid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Centred once it is stacked: capped at 260px it is much narrower than the
+       band, and left where the column started it reads as having slipped
+       rather than as having been placed. The buy button is in this block too
+       and follows it across. */
+    .bookDetailAside {
+        max-width: 260px;
+        margin-inline: auto;
+    }
+}

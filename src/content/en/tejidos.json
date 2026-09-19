@@ -1,0 +1,238 @@
+{
+    "_guia": "La página de tejidos y los dos canales de YouTube. Un video puede ser un enlace en formato 'embed' (https://www.youtube.com/embed/ID_DEL_VIDEO) o el nombre de un archivo puesto en public/content/, como 'clase.mp4'.",
+
+    "kicker": "Crochet and knitting",
+
+    "title": "Knitting",
+
+    "lead": "Two channels and a way of teaching that is never in a hurry: the stitch is shown until it makes sense.",
+
+    "channelsKicker": "Her channels",
+
+    "channelsTitle": "Two YouTube channels",
+
+    "_guiaCanales": "Los dos canales, tal como salen en esta página. 'logo' es la foto redonda de la tarjeta: es el nombre de un archivo puesto en public/content/. Si se deja \"\", la tarjeta sale sin foto, solo con el nombre y la descripción. El 'short' ('Crochet', 'Palillos') es además la palabra con la que se etiqueta cada video de abajo, así que si se cambia aquí conviene cambiarla también en los videos.",
+
+    "channels": [
+        {
+            "name": "Marcia Gomezcoello Creations",
+            "short": "Crochet",
+            "description": "Crochet step by step: stitches, garments and projects explained calmly, for complete beginners and for those who have been at it for years.",
+            "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ",
+            "logo": "canal-crochet.jpg",
+            "logoAlt": "Logo of the Marcia Gomezcoello Creations channel"
+        },
+        {
+            "name": "Knitting with Marcia Gomezcoello",
+            "short": "Knitting",
+            "description": "Knitting with two needles: stitches, patterns and complete garments, in tutorials you can follow at your own pace.",
+            "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ",
+            "logo": "canal-palillos.jpg",
+            "logoAlt": "Logo of the Knitting with Marcia Gomezcoello channel"
+        }
+    ],
+
+    "featured": {
+        "_guia": "Los videos escogidos. Cada bloque es una tarjeta: la foto arriba con el botón de play, debajo la etiqueta del canal, el título y la nota. 'photo' es la imagen que se ve antes de tocar el video — conviene una foto bonita de la prenda terminada. Al tocarla, el video se abre ahí mismo. En 'video' va o el enlace de un video de internet en formato 'embed' (YouTube, Vimeo), o el nombre de un archivo de video puesto en public/content/ — por ejemplo 'clase.mp4' — que se ve con el reproductor del propio sitio. 'channel' es de cuál de los dos canales sale: escribir 'Crochet' o 'Palillos', igual que en site.json. Se pueden poner los que haga falta; las tarjetas se acomodan solas.",
+        "kicker": "The best of the channels",
+        "title": "The best videos",
+        "lead": "A selection from the hundreds on the two channels.",
+        "_nota": "Estos son videos reales de sus dos canales, escogidos al azar para que la sección se vea llena. Ella puede cambiar cuáles salen, en qué orden, y poner sus propias fotos en 'photo' en lugar de la miniatura de YouTube.",
+        "items": [
+            {
+                "title": "A very easy sweater",
+                "note": "A whole sweater, from start to finish, with no complicated pattern.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/s7t2KEfRs6Y/hqdefault.jpg",
+                "photoAlt": "A very easy sweater",
+                "video": "https://www.youtube.com/embed/s7t2KEfRs6Y"
+            },
+            {
+                "title": "Cropped sweater (part 1)",
+                "note": "A short top explained in parts, with the measurements at the start.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/cr_4aWkEfWk/hqdefault.jpg",
+                "photoAlt": "Cropped sweater (part 1)",
+                "video": "https://www.youtube.com/embed/cr_4aWkEfWk"
+            },
+            {
+                "title": "Butterfly stitch, for blankets",
+                "note": "A stitch that shines on its own: enough for a whole blanket.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/jn788apYpg8/hqdefault.jpg",
+                "photoAlt": "Butterfly stitch, for blankets",
+                "video": "https://www.youtube.com/embed/jn788apYpg8"
+            },
+            {
+                "title": "Little daisies",
+                "note": "Tiny flowers to sew onto any garment.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/GeRNC_89304/hqdefault.jpg",
+                "photoAlt": "Little daisies",
+                "video": "https://www.youtube.com/embed/GeRNC_89304"
+            },
+            {
+                "title": "Crochet flowers",
+                "note": "Petal by petal, up close and slowly.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/UWOURi5odJY/hqdefault.jpg",
+                "photoAlt": "Crochet flowers",
+                "video": "https://www.youtube.com/embed/UWOURi5odJY"
+            },
+            {
+                "title": "Crochet strawberries",
+                "note": "A little fruit you can finish in an afternoon.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/eGAGz0DwGPU/hqdefault.jpg",
+                "photoAlt": "Crochet strawberries",
+                "video": "https://www.youtube.com/embed/eGAGz0DwGPU"
+            },
+            {
+                "title": "Kitten keychain",
+                "note": "A whole little doll, from snout to tail.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/7e_FOvFGDSY/hqdefault.jpg",
+                "photoAlt": "Kitten keychain",
+                "video": "https://www.youtube.com/embed/7e_FOvFGDSY"
+            },
+            {
+                "title": "Flower border or edging",
+                "note": "The finishing touch that transforms a simple garment.",
+                "channel": "Crochet",
+                "photo": "https://i.ytimg.com/vi/SEyxAWP__js/hqdefault.jpg",
+                "photoAlt": "Flower border or edging",
+                "video": "https://www.youtube.com/embed/SEyxAWP__js"
+            },
+            {
+                "title": "Puff stitch",
+                "note": "Texture with two needles, stitch by stitch.",
+                "channel": "Knitting",
+                "photo": "https://i.ytimg.com/vi/OVyWrnsp3fA/hqdefault.jpg",
+                "photoAlt": "Puff stitch",
+                "video": "https://www.youtube.com/embed/OVyWrnsp3fA"
+            },
+            {
+                "title": "Cloud stitch",
+                "note": "A soft, fluffy stitch for sweaters.",
+                "channel": "Knitting",
+                "photo": "https://i.ytimg.com/vi/Tp-Yo4jQ01g/hqdefault.jpg",
+                "photoAlt": "Cloud stitch",
+                "video": "https://www.youtube.com/embed/Tp-Yo4jQ01g"
+            },
+            {
+                "title": "Tree stitch",
+                "note": "A pattern of little trees repeated along the fabric.",
+                "channel": "Knitting",
+                "photo": "https://i.ytimg.com/vi/GZWJo45W2QI/hqdefault.jpg",
+                "photoAlt": "Tree stitch",
+                "video": "https://www.youtube.com/embed/GZWJo45W2QI"
+            },
+            {
+                "title": "Rose stitch",
+                "note": "Raised roses — one of the most requested stitches on the channel.",
+                "channel": "Knitting",
+                "photo": "https://i.ytimg.com/vi/Yghs3m-6_1U/hqdefault.jpg",
+                "photoAlt": "Rose stitch",
+                "video": "https://www.youtube.com/embed/Yghs3m-6_1U"
+            }
+        ]
+    },
+
+    "gallery": {
+        "_guia": "La galería de trabajos terminados. Cada bloque es una pieza colgada del hilo: 'photo' es la foto, 'title' el nombre de la prenda, 'note' una línea corta debajo (el material, el punto, para quién fue) y 'shape' la forma de la foto: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta) — las mismas tres formas que se usan en todo el sitio. Se pueden poner las que haga falta — las piezas se acomodan solas en las filas que hagan falta, y aunque tengan formas distintas quedan centradas unas con otras. Para que no salga la sección, dejar 'items' así: []",
+        "kicker": "Gallery",
+        "title": "What comes from her hands",
+        "lead": "Finished pieces, knitted one at a time. No two are alike.",
+        "_nota": "Las fotos de ahora son imágenes tomadas de sus propios videos, puestas para que la galería no salga vacía. Lo ideal es reemplazarlas por fotos de las prendas terminadas: se copian a public/content/ y se escribe el nombre del archivo en 'photo'.",
+        "items": [
+            {
+                "title": "Crochet cherries",
+                "shape": "ancho",
+                "note": "Crochet · cotton yarn",
+                "photo": "https://i.ytimg.com/vi/Qzt5caU_uzs/maxresdefault.jpg",
+                "photoAlt": "Crochet cherries"
+            },
+            {
+                "title": "Knitted elephant",
+                "shape": "cuadrado",
+                "note": "Knitting · a two-needle doll",
+                "photo": "https://i.ytimg.com/vi/2a2MH9069Wo/maxresdefault.jpg",
+                "photoAlt": "Knitted elephant"
+            },
+            {
+                "title": "Swan",
+                "shape": "alto",
+                "note": "Crochet · decorative piece",
+                "photo": "https://i.ytimg.com/vi/YEe4xAW9Uqo/maxresdefault.jpg",
+                "photoAlt": "Swan"
+            },
+            {
+                "title": "Hummingbird keychain",
+                "shape": "alto",
+                "note": "Crochet · fine yarn",
+                "photo": "https://i.ytimg.com/vi/ifAnpWYkd54/maxresdefault.jpg",
+                "photoAlt": "Hummingbird keychain"
+            },
+            {
+                "title": "Super Mario keychain",
+                "shape": "ancho",
+                "note": "Crochet · small amigurumi",
+                "photo": "https://i.ytimg.com/vi/n7pNgenGK_c/maxresdefault.jpg",
+                "photoAlt": "Super Mario keychain"
+            },
+            {
+                "title": "Diamond stitch",
+                "shape": "cuadrado",
+                "note": "Knitting · for sweaters",
+                "photo": "https://i.ytimg.com/vi/VZ7hsIUR_Xc/maxresdefault.jpg",
+                "photoAlt": "Diamond stitch"
+            },
+            {
+                "title": "Double-heart leaves",
+                "shape": "ancho",
+                "note": "Knitting · lace stitch",
+                "photo": "https://i.ytimg.com/vi/wkGH87AYOaU/maxresdefault.jpg",
+                "photoAlt": "Double-heart leaves"
+            },
+            {
+                "title": "Elven leaf",
+                "shape": "cuadrado",
+                "note": "Knitting · raised stitch",
+                "photo": "https://i.ytimg.com/vi/F3F-SbWR1Bk/maxresdefault.jpg",
+                "photoAlt": "Elven leaf"
+            }
+        ]
+    },
+
+    "playlists": {
+        "kicker": "The topics",
+        "title": "What she teaches",
+        "_nota": "Lista libre — añadir o quitar bloques. Las cajas se acomodan solas.",
+        "items": [
+            {
+                "name": "Basic stitches",
+                "note": "For starting from scratch, knowing nothing."
+            },
+            {
+                "name": "Complete garments",
+                "note": "Vests, hats, blankets, from start to finish."
+            },
+            {
+                "name": "Babies and children",
+                "note": "Layettes, booties, small blankets."
+            },
+            {
+                "name": "Knitting step by step",
+                "note": "Knitting with two needles, stitch by stitch."
+            },
+            {
+                "name": "Blankets and throws",
+                "note": "Long projects, explained in parts."
+            },
+            {
+                "name": "Hats and scarves",
+                "note": "What everyone knits when the cold arrives."
+            }
+        ]
+    }
+}
