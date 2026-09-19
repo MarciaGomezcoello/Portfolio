@@ -9,10 +9,14 @@
 
     "_guiaTema": "Los colores del sitio. Una de estas palabras: 'papel' (el de siempre, crema y rosa), 'salvia' (verde), 'lavanda' (lila), 'mar' (azul), 'terracota' (barro), 'noche' (oscuro), 'durazno' (coral), 'vino' (burdeos), 'girasol' (amarillo y azul), 'cielo' (azul claro), 'grafito' (blanco y negro) o 'medianoche' (azul oscuro con dorado). Para las fiestas: 'navidad', 'halloween', 'sanvalentin', 'pascua', 'gracias' (Acción de Gracias), 'anonuevo' (Año Nuevo), 'muertos' (Día de Muertos) y 'madre' (Día de la Madre). Una palabra que no sea ninguna de estas deja el de siempre. Solo cambia los colores: nada de lo escrito ni de las fotos.",
 
-    "theme": "papel",
+    "theme": "halloween",
+
     "_guiaLetras": "Las letras del sitio. 'fontTitles' es la de los títulos grandes y 'fontText' la del texto; las dos se eligen de la misma lista: 'fraunces', 'playfair', 'cormorant', 'lora', 'merriweather', 'baskerville', 'sourceserif', 'dmserif', 'abril', 'inter', 'montserrat', 'poppins', 'raleway', 'lato', 'nunito', 'worksans', 'dancing', 'greatvibes', 'satisfy', 'pacifico', 'caveat', 'kalam'. Las de siempre son 'fraunces' para los títulos e 'inter' para el texto. Una palabra que no esté en la lista deja la de siempre. 'holidayExtras' enciende (true) o apaga (false) los adornos que trae cada tema: un ovillo, ramitas, girasoles, nubes… y en las fiestas gorros, nieve, guirnaldas y lo demás.",
+
     "fontTitles": "fraunces",
+
     "fontText": "inter",
+
     "holidayExtras": true,
 
     "footer": {
