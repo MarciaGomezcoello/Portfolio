@@ -1,42 +1,42 @@
 {
     "_guia": "La página de tejidos y los dos canales de YouTube. Un video puede ser un enlace en formato 'embed' (https://www.youtube.com/embed/ID_DEL_VIDEO) o el nombre de un archivo puesto en public/content/, como 'clase.mp4'.",
 
-    "kicker": "Crochet y palillos",
+    "kicker": "Crochet y Dos agujas",
 
-    "title": "Tejidos",
+    "title": "Bienvenido a mi sección de tejidos",
 
-    "lead": "Dos canales y una forma de enseñar que no tiene apuro: la puntada se muestra hasta que se entiende.",
+    "lead": "En mis canales de crochet-ganchillo y en el de dos agujas, usted aprenderá el paso a paso de cada uno de mis trabajos y de las maravillosas puntadas que enseño, solo tiene que tener persistencia y paciencia. ¡LE INVITO A CREAR CONMIGO! ",
 
-    "channelsKicker": "Sus canales",
+    "channelsKicker": "Mis 2 Canales:",
 
-    "channelsTitle": "Dos canales de YouTube",
+    "channelsTitle": "Canal de Crochet - Canal a Dos Agujas",
 
     "_guiaCanales": "Los dos canales, tal como salen en esta página. 'logo' es la foto redonda de la tarjeta: es el nombre de un archivo puesto en public/content/. Si se deja \"\", la tarjeta sale sin foto, solo con el nombre y la descripción. El 'short' ('Crochet', 'Palillos') es además la palabra con la que se etiqueta cada video de abajo, así que si se cambia aquí conviene cambiarla también en los videos.",
 
     "channels": [
         {
             "name": "Marcia Gomezcoello Creations",
-            "short": "Crochet",
-            "description": "Crochet paso a paso: puntadas, prendas y proyectos explicados con calma, para quien recién empieza y para quien ya lleva años con la aguja.",
+            "short": "Crochet - Ganchillo",
+            "description": "Le invito a visitar mi canal donde usted va a encontrar hermosos y fáciles trabajos tejidos a crochet, desde puntadas, llaveros, muñecos hasta lindas prendas de vestir. ¡APRENDA LOS SECRETOS DEL CROCHET!",
             "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ",
-            "logo": "canal-crochet.jpg",
+            "logo": "img-7895.jpg",
             "logoAlt": "Logo del canal Marcia Gomezcoello Creations"
         },
         {
             "name": "Knitting with Marcia Gomezcoello",
-            "short": "Palillos",
-            "description": "Tejido con dos agujas: puntos, moldes y prendas completas, en tutoriales que se pueden seguir sin apuro.",
+            "short": "Dos Agujas",
+            "description": "En mi canal a dos agujas aprenderá a tejer de manera fácil y paso a paso todas las maravillosas puntadas que usted quiere aprender y aplicar para sus trabajos.",
             "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ",
-            "logo": "canal-palillos.jpg",
+            "logo": "img-6849-2.jpg",
             "logoAlt": "Logo del canal Knitting with Marcia Gomezcoello"
         }
     ],
 
     "featured": {
         "_guia": "Los videos escogidos. Cada bloque es una tarjeta: la foto arriba con el botón de play, debajo la etiqueta del canal, el título y la nota. 'photo' es la imagen que se ve antes de tocar el video — conviene una foto bonita de la prenda terminada. Al tocarla, el video se abre ahí mismo. En 'video' va o el enlace de un video de internet en formato 'embed' (YouTube, Vimeo), o el nombre de un archivo de video puesto en public/content/ — por ejemplo 'clase.mp4' — que se ve con el reproductor del propio sitio. 'channel' es de cuál de los dos canales sale: escribir 'Crochet' o 'Palillos', igual que en site.json. Se pueden poner los que haga falta; las tarjetas se acomodan solas.",
-        "kicker": "Lo mejor de los canales",
-        "title": "Los mejores videos",
-        "lead": "Una selección de los cientos que hay en los dos canales.",
+        "kicker": "Videos",
+        "title": "Algunos videos de crochet y dos agujas",
+        "lead": "Visite cualquiera de mis dos canales, Marcia Gomezcoello Creations y Knitting with Marcia Gomezcoello para encontrar muchos videos más con hermosos trabajos donde enseño el paso a paso. ",
         "_nota": "Estos son videos reales de sus dos canales, escogidos al azar para que la sección se vea llena. Ella puede cambiar cuáles salen, en qué orden, y poner sus propias fotos en 'photo' en lugar de la miniatura de YouTube.",
         "items": [
             {
@@ -141,97 +141,104 @@
     "gallery": {
         "_guia": "La galería de trabajos terminados. Cada bloque es una pieza colgada del hilo: 'photo' es la foto, 'title' el nombre de la prenda, 'note' una línea corta debajo (el material, el punto, para quién fue) y 'shape' la forma de la foto: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta) — las mismas tres formas que se usan en todo el sitio. Se pueden poner las que haga falta — las piezas se acomodan solas en las filas que hagan falta, y aunque tengan formas distintas quedan centradas unas con otras. Para que no salga la sección, dejar 'items' así: []",
         "kicker": "Galería",
-        "title": "Lo que sale de sus manos",
-        "lead": "Prendas terminadas, tejidas una por una. Ninguna es igual a la anterior.",
+        "title": "Algunos de mis trabajos",
+        "lead": "Visite mis canales para aprender lindos llaveros, amigurumis, puntadas y mucho más, comente y suscríbase a mis canales de YouTube. Gracias por visitarme.",
         "_nota": "Las fotos de ahora son imágenes tomadas de sus propios videos, puestas para que la galería no salga vacía. Lo ideal es reemplazarlas por fotos de las prendas terminadas: se copian a public/content/ y se escribe el nombre del archivo en 'photo'.",
         "items": [
             {
-                "title": "Cerezas a crochet",
+                "title": "Flor Gigante",
                 "shape": "ancho",
-                "note": "Crochet · hilo de algodón",
-                "photo": "https://i.ytimg.com/vi/Qzt5caU_uzs/maxresdefault.jpg",
+                "note": "Tejido a crochet",
+                "photo": "469645812-1689241558287852-6066658793421231671-n.jpg",
                 "photoAlt": "Cerezas a crochet"
             },
             {
-                "title": "Elefante tejido",
+                "title": "Flores",
                 "shape": "cuadrado",
-                "note": "Palillos · muñeco de dos agujas",
-                "photo": "https://i.ytimg.com/vi/2a2MH9069Wo/maxresdefault.jpg",
+                "note": "Tejido a crochet",
+                "photo": "493480688-1275535854575996-1218920121898869939-n.jpg",
                 "photoAlt": "Elefante tejido"
             },
             {
-                "title": "Cisne",
+                "title": "Hermoso Llavero Cisne",
                 "shape": "alto",
-                "note": "Crochet · pieza de adorno",
+                "note": "Tejido a crochet",
                 "photo": "https://i.ytimg.com/vi/YEe4xAW9Uqo/maxresdefault.jpg",
                 "photoAlt": "Cisne"
             },
             {
                 "title": "Colibrí llavero",
                 "shape": "alto",
-                "note": "Crochet · hilo fino",
+                "note": "Tejido a crochet",
                 "photo": "https://i.ytimg.com/vi/ifAnpWYkd54/maxresdefault.jpg",
                 "photoAlt": "Colibrí llavero"
             },
             {
                 "title": "Super Mario llavero",
                 "shape": "ancho",
-                "note": "Crochet · amigurumi pequeño",
+                "note": "Tejido a crochet",
                 "photo": "https://i.ytimg.com/vi/n7pNgenGK_c/maxresdefault.jpg",
                 "photoAlt": "Super Mario llavero"
             },
             {
-                "title": "Puntada de rombos",
+                "title": "Flores Alegrías",
                 "shape": "cuadrado",
-                "note": "Palillos · para suéteres",
-                "photo": "https://i.ytimg.com/vi/VZ7hsIUR_Xc/maxresdefault.jpg",
+                "note": "Tejido a crochet",
+                "photo": "15598470426470480411.jpeg",
                 "photoAlt": "Puntada de rombos"
             },
             {
-                "title": "Hojas de doble corazón",
+                "title": "Rombos Lineales.82",
                 "shape": "ancho",
-                "note": "Palillos · puntada calada",
-                "photo": "https://i.ytimg.com/vi/wkGH87AYOaU/maxresdefault.jpg",
+                "note": "Tejido a 2 agujas",
+                "photo": "95878344-668498367028848-4316294364130181120-n.jpg",
                 "photoAlt": "Hojas de doble corazón"
             },
             {
-                "title": "Hoja élfica",
+                "title": "Hoja élfica.137",
                 "shape": "cuadrado",
-                "note": "Palillos · punto en relieve",
+                "note": "Tejido a 2 agujas",
                 "photo": "https://i.ytimg.com/vi/F3F-SbWR1Bk/maxresdefault.jpg",
                 "photoAlt": "Hoja élfica"
+            },
+            {
+                "title": "Rectángulos Zigzag.111",
+                "note": "",
+                "photo": "469880448-1688389225039752-1045499006077755726-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
             }
         ]
     },
 
     "playlists": {
-        "kicker": "Los temas",
-        "title": "Lo que se enseña",
+        "kicker": "Qué encontrar en mis canales",
+        "title": "Canal de Crochet - Canal a Dos Agujas",
         "_nota": "Lista libre — añadir o quitar bloques. Las cajas se acomodan solas.",
         "items": [
             {
                 "name": "Puntadas básicas",
-                "note": "Para empezar de cero, sin saber nada."
+                "note": "En mis primeros videos encontrará las puntadas para empezar de cero, sin saber nada."
             },
             {
                 "name": "Prendas completas",
-                "note": "Chalecos, gorros, mantas, de principio a fin."
+                "note": "Aprenda el paso a paso de suéteres, gorras, bufandas, calcetines y mucho más"
             },
             {
-                "name": "Bebés y niños",
-                "note": "Ajuares, zapatitos, mantas pequeñas."
+                "name": "Amigurumis, Llaveros, Flores",
+                "note": "Realice conmigo amigurumis, lindos llaveros, heromosas flores."
             },
             {
-                "name": "Palillos paso a paso",
-                "note": "Tejido con dos agujas, punto por punto."
+                "name": "Dos Agujas para: Principiantes",
+                "note": "Aprenda desde cero, cómo montar puntos y cómo tejer puntadas básicas."
             },
             {
-                "name": "Mantas y cobijas",
-                "note": "Proyectos largos, explicados por partes."
+                "name": "Dos Agujas para: Intermedios",
+                "note": "Si usted ya sabe tejer, aquí le enseño hermosas puntadas muy fáciles de realizar."
             },
             {
-                "name": "Gorros y bufandas",
-                "note": "Lo que más se teje cuando llega el frío."
+                "name": "Dos Agujas para: Avanzados",
+                "note": " Aprenda esas lindas puntadas que parecen difíciles pero que en realidad no lo son."
             }
         ]
     }

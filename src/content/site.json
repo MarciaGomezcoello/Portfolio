@@ -5,7 +5,7 @@
 
     "honorific": "Dra.",
 
-    "tagline": "Doctora, escritora, poeta y tejedora — de Azogues a Nueva York",
+    "tagline": "Doctora, promotora cultural, escritora, poeta, compositora, creadora de videos, tallerista.",
 
     "_guiaTema": "Los colores del sitio. Una de estas palabras: 'papel' (el de siempre, crema y rosa), 'salvia' (verde), 'lavanda' (lila), 'mar' (azul), 'terracota' (barro), 'noche' (oscuro), 'durazno' (coral), 'vino' (burdeos), 'girasol' (amarillo y azul), 'cielo' (azul claro), 'grafito' (blanco y negro) o 'medianoche' (azul oscuro con dorado). Para las fiestas: 'navidad', 'halloween', 'sanvalentin', 'pascua', 'gracias' (Acción de Gracias), 'anonuevo' (Año Nuevo), 'muertos' (Día de Muertos) y 'madre' (Día de la Madre). Una palabra que no sea ninguna de estas deja el de siempre. Solo cambia los colores: nada de lo escrito ni de las fotos.",
 
@@ -21,41 +21,41 @@
 
     "footer": {
         "_guia": "El pie de página. Va en dos partes: su nombre con una línea debajo, y las redes, cada una como un botoncito con su dibujito. No lleva menú: el de arriba ya está en todas las páginas. El título de las redes se cambia en 'socialTitle'; si se deja vacío, no sale. En 'social', dejar 'url' en \"\" mientras no haya cuenta: el nombre sale igual, en gris y sin enlace, hasta que la haya. 'icon' es el dibujito que va al lado del nombre, y es una de estas palabras: 'youtube', 'facebook', 'instagram', 'x', 'linkedin', 'amazon' o 'globe'. Si se escribe otra cosa, o se deja vacío, sale el mundito ('globe') y el enlace funciona igual. El sitio no muestra correos: el contacto es por estas redes.",
-        "note": "Escribe, teje y enseña desde Queens, Nueva York. Nació en Azogues, Ecuador.",
-        "socialTitle": "Dónde encontrarla",
+        "note": "En esta página usted podrá encontrar de todo un poco, gracias por su visita, regrese pronto.",
+        "socialTitle": "Dónde encontrarme",
         "social": [
             {
-                "label": "YouTube · Crochet",
+                "label": "YouTube · Marcia Gomezcoello Creations",
                 "icon": "youtube",
                 "url": "https://www.youtube.com/channel/UCZmCQcXLyP5884aRjFDCYJQ"
             },
             {
-                "label": "YouTube · Palillos",
+                "label": "YouTube · Knitting with Marcia Gomezcoello",
                 "icon": "youtube",
                 "url": "https://www.youtube.com/channel/UCrnIBFUnJ4jQGj0nAL06oZQ"
             },
             {
-                "label": "Facebook",
+                "label": "F. Marcia Gomezcoello",
                 "icon": "facebook",
                 "url": "https://www.facebook.com/MarciaGomezcoelloCreations/"
             },
             {
-                "label": "Instagram",
+                "label": "IG. marciagomezcoello",
                 "icon": "instagram",
                 "url": "https://www.instagram.com/marciagomezcoellocreations/"
             },
             {
-                "label": "X",
+                "label": "X. Marcia Gomezcoello",
                 "icon": "x",
                 "url": "https://twitter.com/MaGomezcoello1"
             },
             {
-                "label": "LinkedIn",
+                "label": "in. Marcia Gomezcoello",
                 "icon": "linkedin",
                 "url": "https://www.linkedin.com/in/marcia-gomezcoello-b17312181/"
             },
             {
-                "label": "Amazon",
+                "label": "Amazon. Marcia Gomezcoello",
                 "icon": "amazon",
                 "url": "https://www.amazon.com/stores/Marcia-Gomezcoello/author/B09HGGKHMP"
             }

@@ -1,33 +1,33 @@
 {
     "_guia": "La página de eventos. Arriba va SIEMPRE UNO SOLO: el próximo, con su afiche. Abajo va el archivo de los que ya pasaron. Para añadir un encuentro pasado, copiar un bloque de 'past' y cambiarle los valores.",
 
-    "kicker": "Encuentros",
+    "kicker": " ",
 
     "title": "Eventos",
 
     "subtitle": "",
 
-    "lead": "Tertulias, recitales y presentaciones — las que ella organiza y las que la invitan.",
+    "lead": "Bienvenidos a esta ventana que fue creada con el afán de apoyar a los diferentes escritores, poetas y artistas de todas las nacionalidades, donde usted podrá mirar todo el trabajo literario y artístico que se realiza.  ",
 
-    "upcomingKicker": "Lo próximo",
+    "upcomingKicker": "Tardes literarias y artísticas",
 
-    "upcomingTitle": "El próximo encuentro",
+    "upcomingTitle": "Próximo Evento",
 
     "upcoming": {
         "_guia": "EL PRÓXIMO ENCUENTRO. Uno solo: cuando pase, se le cambian los valores por los del siguiente. Si no hay ninguno confirmado, dejar 'date' y 'title' vacíos y esta franja entera desaparece sola — la página empieza directamente por el archivo, sin dejar un hueco. 'rol' es la palabra que sale arriba y dice qué papel tiene ella: 'Organiza' si el encuentro es suyo, 'Invitada' o 'Se presenta' si va a uno ajeno; se escribe como se quiera. Cada foto de 'fotos' puede llevar su propia 'shape'; si no la lleva, usa la del encuentro. 'poster' es el afiche: el archivo se pone en public/content/ y aquí se escribe su nombre. El afiche sale entero, nunca recortado, sea cual sea su forma; si no hay ninguno todavía, sale un marco de reserva. 'shape' es la forma de las fotos del encuentro: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta). 'posterShape' es la forma del AFICHE, que suele ser otra cosa —un afiche casi siempre es alto y las fotos de la tarde son anchas—: si se deja vacío, el afiche usa la misma forma que las fotos. El afiche igual sale entero y sin recortar, así que esta forma solo reserva el espacio donde va. 'linkUrl' y 'linkLabel' son opcionales: si se dejan vacíos, no sale ningún botón.",
         "_guiaPagina": "El próximo encuentro también puede tener su propia página, igual que los del archivo: se abre sola en cuanto se le escriba el 'body' o se le carguen 'fotos', y desde la portada aparece entonces el enlace para entrar. Sin ninguna de las dos cosas no hay página y no sale el enlace, que es lo correcto para un encuentro que todavía no ha pasado. El afiche encabeza la galería solo.",
         "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con el afiche al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
         "slug": "tertulia-de-septiembre",
-        "rol": "Organiza",
+        "rol": "EVENTO",
         "categoria": "",
-        "date": "Sábado 27 de septiembre",
+        "date": "Octubre Sábado 10",
         "time": "3:00 pm",
         "year": "",
-        "title": "Tertulia de septiembre",
-        "venue": "Biblioteca de Corona",
+        "title": "Por la Herencia Hispana",
+        "venue": "Biblioteca Langston Hughes",
         "city": "Queens, Nueva York",
-        "note": "Como cada último sábado del mes. Entrada libre y gratuita: se llega, se escucha y el que quiera leer, lee.",
-        "poster": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+        "note": "100-01 Northern Blvd.  TREN 7: Parada 103",
+        "poster": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/807889704_1716486690479981_7825457609894193064_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1536&ctp=s2048x1536&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=2gzrBbFe6nsQ7kNvwH5Lfhz&_nc_oc=Adpxguin7-YaLi8cGgYqhOWFMR6-wJSZMd9EGMsJP5guLrmi2VDWUrDVQhObK0lPsl8&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=DZau3IX-nIB55C0FG1Io7w&_nc_ss=7b2a8&oh=00_AQIbSR0XCi6FmvIQzpeGYAnWbtCBPluR0m9n3dhXMp9ahw&oe=6AB64987",
         "posterAlt": "Afiche de la tertulia de septiembre",
         "posterShape": "alto",
         "photo": "",
@@ -35,210 +35,1599 @@
         "shape": "ancho",
         "linkLabel": "",
         "linkUrl": "",
-        "body": "Aquí va lo que se quiera contar de antemano: quiénes van a leer, qué se va a presentar, si hace falta llevar algo. Una línea en blanco separa un párrafo del siguiente.",
+        "body": "Evento que se llevará a cabo por la Herencia Hispana, en homenaje al Nobel de Literatura: Miguel  Angel Asturias, escritor de Guatemala. Las imágenes también están disponibles en la página de Facebook de Tardes Literarias y Artísticas NY.",
         "fotos": [
             {
-                "src": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "src": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/806280720_1716505137144803_249739174588474684_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x674&ctp=s1200x674&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=cdaEmVXho2gQ7kNvwHZwrQj&_nc_oc=Adqe--r2QbTvIS3iO_K6F88TFQzr35bxqBNUFBszRxM8oTBa5TN7CEWZyZpnM7xTji8&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=wAwaF0KzB_iciPNvBlGNOg&_nc_ss=7b2a8&oh=00_AQI14kvVZ4m26exXSuXIognpdIY2NyRXQS4wUk3mE7_RUA&oe=6AB66127",
                 "alt": "",
                 "shape": "ancho"
             },
             {
-                "src": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "src": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/806397503_1716650123796971_599015624488319634_n.jpg?stp=dst-jpg_tt6&cstp=mx1199x673&ctp=s1199x673&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=DJ4ey3qx69EQ7kNvwEH3XdY&_nc_oc=AdqGEFz9kxhENe85U-fFgRRnm_VmyMI7djqOyMDHaNdHI6A-FFhqH_qgPU4eOJ_l98I&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=mtDAVQt7AgDn1tCNYMLDjw&_nc_ss=7b2a8&oh=00_AQIPpsvEe9RtJY_Uj7IvPaAFYt4bx-JZNJG-JvEaeGT5iw&oe=6AB65E1B",
                 "alt": "",
                 "shape": "alto"
             },
             {
-                "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                "src": "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/806397518_1716504720478178_2765168303711214504_n.jpg?stp=dst-jpg_tt6&cstp=mx1202x675&ctp=s1202x675&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=l5Nxw0XeTOYQ7kNvwHbNVPB&_nc_oc=AdpthqQSV0VCTcAzycQfuOcNo4FLrTmsLzljTteEb2t6XA8ngsBE78l81MBWIkAEhyk&_nc_zt=23&_nc_ht=scontent-lga3-1.xx&_nc_gid=Kf9BvV2hmIceo48e8mrbpw&_nc_ss=7b2a8&oh=00_AQKVTapO0xJ8d6su38fY4KCqZiIO6YtxSNyLuhQcxznFcQ&oe=6AB648B1",
                 "alt": "",
                 "shape": "cuadrado"
             },
             {
-                "src": "marcia.jpg",
+                "src": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/807957049_1716504220478228_3247696178973980652_n.jpg?stp=dst-jpg_tt6&cstp=mx1200x674&ctp=s1200x674&_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=1jqTOWHtu9gQ7kNvwEcoX4K&_nc_oc=AdpefNw-h2teFWb4Yi1N2gQXh4F7JwKrY8JWA9iGrjewY_EXtaavGY5hxKYQsrxfPU4&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=ZwSvSHWXmt7WE8lugpL90g&_nc_ss=7b2a8&oh=00_AQI4p-2zIR3qY7k4RaYd1YSRQw55ICueiF-WTNZ6zG0Gjg&oe=6AB63C23",
                 "alt": "",
                 "shape": "ancho"
+            },
+            {
+                "src": "https://scontent-lga3-3.xx.fbcdn.net/v/t39.30808-6/806366302_1716503630478287_4576833152690866745_n.jpg?stp=dst-jpg_tt6&cstp=mx1201x674&ctp=s1201x674&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=PvPGhBpgSY0Q7kNvwEGD4Lw&_nc_oc=AdoeiGguFeviHy_ThUG7HDnLWwCz4zAR-1Vy5iqEndsWxgWR80uCOKiS7Ysfq6Q_Kpw&_nc_zt=23&_nc_ht=scontent-lga3-3.xx&_nc_gid=rRFfiVphZCZtYEFZKQx9qA&_nc_ss=7b2a8&oh=00_AQJp1GjJ-bj_8h-XRYeNNa-bHQUwLJYbal8yMjay-ml7UA&oe=6AB64FAB",
+                "shape": "alto",
+                "alt": ""
             }
         ]
     },
 
     "past": {
         "_guia": "El archivo de encuentros. Cada bloque de 'items' es uno. Un encuentro que tenga 'body' (el relato) o 'fotos' se vuelve clickeable en el archivo y gana su propia página, con las fotos arriba y el relato debajo; el que no tenga ni lo uno ni lo otro sale igual en el archivo, pero sin enlace — así no se llega nunca a una página vacía. Para darle página a un encuentro, basta con escribirle el relato o cargarle fotos. En 'fotos' cada bloque es una imagen: 'src' es el nombre del archivo puesto en public/content/ y 'alt' lo que se describe para quien no la ve. 'photo' sigue siendo la que se ve en el archivo, y encabeza la galería. Cada foto puede llevar además su propia 'shape' —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta), las mismas tres de todo el sitio—: si se deja vacía o no se pone, esa foto usa la 'shape' del encuentro, que es la de más abajo y la que se ve en el archivo. En el carrusel todas salen de la misma altura y cada una toma el ancho que le pida su forma, así que la fila nunca salta al pasarlas y de una foto alta, por ser más angosta, se asoman más las de al lado. Las tres formas quedan parecidas de tamaño a propósito, para que una tarjeta del archivo no salga del doble de alto que la de al lado. 'categoria' es la clase de encuentro, y es una de las clases de la lista 'categorias' de más abajo, escrita igual: cada clase de esa lista tiene su pestaña en el archivador, en ese orden, en cuanto algún encuentro la use. Si se deja vacía, el encuentro sale igual pero solo en 'Todos'. Las pestañas no salen mientras haya una sola clase. Cada clase de la lista puede llevar además una línea de presentación.",
-        "kicker": "Encuentros pasados",
-        "title": "Del archivo",
-        "lead": "Siete años de sábados. Lo que sigue es una parte de lo que ha pasado por la Biblioteca de Corona desde 2019.",
+        "kicker": "rincón artístico",
+        "title": "Bienvenidos a nuestros eventos pasados",
+        "lead": "Nuestros eventos de Tardes Literarias y Artísticas NY, tiene ya 7 años de apoyo incondicional y sin fines a lucro a escritores, poetas y artistas.",
         "_nota": "MUESTRA — reemplazar con encuentros reales y sus fotos.",
         "items": [
             {
                 "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con la foto de portada al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
                 "slug": "tertulia-de-aniversario",
                 "rol": "",
-                "categoria": "Tertulia",
-                "date": "28 de septiembre de 2024",
-                "time": "",
-                "year": "2024",
-                "title": "Tertulia de aniversario",
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "3:00pm",
+                "year": "2019 ",
+                "title": " Primer Evento - Enero",
                 "venue": "Biblioteca de Corona",
                 "city": "Queens, NY",
                 "note": "",
                 "poster": "",
                 "posterAlt": "",
                 "posterShape": "",
-                "photo": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+                "photo": "65375716-777361649325672-5824117039404417024-n-1.jpg",
                 "photoAlt": "",
                 "shape": "ancho",
                 "linkLabel": "",
                 "linkUrl": "",
-                "body": "Aquí va el relato del encuentro: quiénes leyeron, qué se presentó, cómo estuvo la tarde.\n\nUna línea en blanco separa un párrafo del siguiente, igual que en el resto del sitio. Puede ser tan largo o tan corto como haga falta.",
+                "body": "Primer evento realizado en la Biblioteca de Corona en Queens.\n ",
                 "fotos": [
                     {
-                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                        "src": "https://scontent-lga3-2.xx.fbcdn.net/v/t1.6435-9/65395610_777376555990848_6293836189271064576_n.jpg?stp=dst-jpg_tt6&cstp=mx960x652&ctp=s960x652&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WNrGPi-PnisQ7kNvwGjEE4r&_nc_oc=Adoom6vYjoukQ3_Ey5OMJiyPrqaSVW0yl0GjCz9SLYqEnvKm1xAgycYrvQDGntJuwXE&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=rYwdnM0GCvLlu47aDO8uQg&_nc_ss=7b2a8&oh=00_AQLPUjn6LeN6cz-iMojxyqFPxpOHjoDa172YHVIQ8lXDrQ&oe=6AD7FDB2",
                         "alt": "",
                         "shape": "cuadrado"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
-                        "alt": "",
-                        "shape": "ancho"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
-                        "alt": "",
-                        "shape": "alto"
                     }
                 ]
             },
             {
-                "slug": "recital-de-poesia",
-                "rol": "",
-                "categoria": "Recital",
-                "date": "",
-                "time": "",
-                "year": "2023",
-                "title": "Recital de poesía",
-                "venue": "Biblioteca de Corona",
-                "city": "Queens, NY",
-                "note": "",
-                "poster": "",
-                "posterAlt": "",
-                "posterShape": "",
-                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
-                "photoAlt": "",
-                "shape": "alto",
-                "linkLabel": "",
-                "linkUrl": "",
-                "body": "Un encuentro con relato pero sin fotos sale igual: la página se arma con lo que haya.",
-                "fotos": [
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "cuadrado"
-                    },
-                    {
-                        "src": "marcia.jpg",
-                        "alt": "",
-                        "shape": "ancho"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
-                        "alt": "",
-                        "shape": "cuadrado"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "alto"
-                    }
-                ]
-            },
-            {
-                "slug": "encuentro-de-escritoras",
-                "rol": "",
-                "categoria": "Encuentro",
-                "date": "",
-                "time": "",
-                "year": "2022",
-                "title": "Encuentro de escritoras",
-                "venue": "Biblioteca de Corona",
-                "city": "Queens, NY",
-                "note": "",
-                "poster": "",
-                "posterAlt": "",
-                "posterShape": "",
-                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
-                "photoAlt": "",
-                "shape": "cuadrado",
-                "linkLabel": "",
-                "linkUrl": "",
-                "body": "",
-                "fotos": [
-                    {
-                        "src": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "ancho"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
-                        "alt": "",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
-                        "alt": "",
-                        "shape": "cuadrado"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "ancho"
-                    }
-                ]
-            },
-            {
-                "slug": "primera-tarde-literaria",
-                "rol": "",
-                "categoria": "Tertulia",
+                "categoria": "Tardes Literarias y Artísticas",
                 "date": "",
                 "time": "",
                 "year": "2019",
-                "title": "Primera Tarde Literaria",
+                "title": "Evento de Febrero",
                 "venue": "Biblioteca de Corona",
                 "city": "Queens, NY",
+                "photo": "65316461-777392379322599-2468780513507147776-n-2.jpg",
+                "shape": "alto",
+                "body": "Evento de Febrero, sin fines de lucro con la presentación de distinguidos artistas, La Incomparable Jazmin, Escritor Martin Fascio, Artista Plástico Edwin Salgado.",
+                "fotos": [
+                    {
+                        "src": "65388105-777423159319521-5622313714624495616-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "62239366-777417322653438-7592012104849162240-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65307410-777418302653340-70700951308075008-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65306207-777421925986311-6267173414549585920-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65391125-777423879319449-5643033925350588416-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65663807-777417289320108-8364766327302258688-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65306222-777417272653443-3710431150481604608-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
                 "note": "",
                 "poster": "",
                 "posterAlt": "",
                 "posterShape": "",
-                "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
                 "photoAlt": "",
-                "shape": "ancho",
                 "linkLabel": "",
-                "linkUrl": "",
-                "body": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Marzo",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "65378264-777766729285164-3683561929567109120-n-1.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Marzo, con la presentación de la artista de danza Xochiltkuautil Campos, artista musical Pancho Gomez, escritor Edgar Smith, escritor Jorge Luis Seco. Eventos sin fines de lucro que apoya a todos los artistas.",
                 "fotos": [
                     {
-                        "src": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
-                        "alt": "",
-                        "shape": "cuadrado"
-                    },
-                    {
-                        "src": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
-                        "alt": "",
+                        "src": "65313253-777795432615627-1093008866901229568-n.jpg",
                         "shape": "alto"
                     },
                     {
-                        "src": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
-                        "alt": "",
-                        "shape": "ancho"
+                        "src": "65583361-777809539280883-4961709493520957440-n.jpg",
+                        "shape": "alto"
                     },
                     {
-                        "src": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
-                        "alt": "",
+                        "src": "64496919-777809545947549-1669146113677983744-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65595232-777798979281939-668706432094306304-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65644823-777798849281952-2817412767089164288-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65589586-777798915948612-6104007413701017600-n.jpg",
                         "shape": "alto"
                     }
-                ]
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Abril",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "58462809-2772225462817922-3420320304503717888-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Abril con la escritora Adriana Devers, la artista plástica Silvia Aviles Pazmiño, el músico y compositor Manuel Ciordia, la escritora y poeta Angela Soto.",
+                "fotos": [
+                    {
+                        "src": "58707950-2794777260562742-6727912590959181824-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "58639075-2791681717538963-6152636201657434112-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "58574569-2791681844205617-5459107787759943680-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "58462540-2791681860872282-728750384130031616-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "58462873-2791681767538958-2694575774710628352-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "59404494-2791681934205608-2830061888157515776-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Mayo",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "60810176-2850087058365095-3072901344823083008-n.jpg",
+                "shape": "alto",
+                "body": "Evento de Mayo con la escritora con la escritora Belkis M. Marte, la bailarina de Marinera Trish Huallpa, la artista plástica María D. Jimenez, Cantante Leslie Jamilett.  ",
+                "fotos": [
+                    {
+                        "src": "61332842-2859244657449335-1253433407304630272-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "61184785-2856085404431927-3971793735942930432-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "61232854-2856113894429078-3961573702348308480-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "61599369-2859244854115982-4663802663425540096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "61056301-2859245374115930-1782688002259025920-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Junio",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "62403212-2902164486490685-4874775919476080640-n.jpg",
+                "shape": "alto",
+                "body": "Evento del mes de Junio, con la presentación de la actriz, directora Lucía Taveras, la escritoras Niurka Hernández, artista plástico Fabian Tacuri, grupo de danza Mexicano Yaocihuatl, escritora Dana Morales Flores.  ",
+                "fotos": [
+                    {
+                        "src": "65815519-2948613671845766-3463750163397345280-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65287070-2948613661845767-4353997691588444160-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65798793-2948613761845757-4962414447978086400-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65286476-2948650595175407-1769041778763104256-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65829833-2948656378508162-5119277678809055232-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65906279-778596355868868-7126423201692778496-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "64787603-778611182534052-4883836393505161216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65606837-778589769202860-3845995007131516928-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "62237574-778589812536189-7420084980602109952-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65623604-778596372535533-8577666881207402496-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65887445-778584482536722-5273310165414707200-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "64213326-778611159200721-5767172675071901696-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65716148-778592895869214-2058779065665454080-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65421031-778589819202855-3965374314613571584-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "64661173-778592902535880-6590569745970364416-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "65445221-778589755869528-5026586567959904256-n-3.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Julio",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "67669031-793636824364821-5039515055176024064-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en Julio por la Independencia del Perú, con la participación del cantante profecional Mariano Cersa, la escritora Rina Soldevilla, el escritor y poeta Jaime Luis Pachas, la escritora Gabriela Rivera. Eventos sin fines de lucro para la comunidad.",
+                "fotos": [
+                    {
+                        "src": "67907601-796103430784827-350676146913804288-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67553723-796084510786719-1798996014556774400-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67332926-796070674121436-100327614241046528-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67565068-796084530786717-7543008022650421248-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67435177-796140874114416-9206526268881764352-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67402484-796140904114413-3030764326920126464-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67947592-796142817447555-6966248100105027584-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67416059-796103414118162-217335081868460032-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67734302-796140920781078-2696973843930546176-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67306984-796084564120047-2800227821253820416-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67470240-796143417447495-7821354360499077120-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67775412-796084590786711-3891259517140205568-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "67326172-796084637453373-9046921843893600256-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Agosto",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "69663099-811671549228015-2327768911749054464-n.jpg",
+                "shape": "alto",
+                "body": "Eventos realizados en Agosto con la presentación del escritor Samuel Acosta Ynoa, el cantante Octavio Borja, la artista plástica Mónica Holder, la escritora Marisol Hernández. Eventos completamente gratis, sin fines de lucro.",
+                "fotos": [
+                    {
+                        "src": "69779082-821395718255598-147129189965758464-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "68983630-811750715886765-3313568222346739712-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "69342865-811750782553425-6783979794120835072-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "69349040-811750772553426-8756783905262010368-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "69201674-811750649220105-1307107854120910848-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "68961873-811750692553434-7280080583034667008-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Septiembre",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "71100036-836755346719635-374796026118144000-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado con la participación del escritor Pedro Hernández Sánchez, La Diosa del Despecho Jessyka, el artista plástico Robert Paulino",
+                "fotos": [
+                    {
+                        "src": "71488097-836771060051397-5067557330443304960-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "72272090-836771063384730-8152163006608834560-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71275475-836771226718047-5232586221816905728-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71143841-836771230051380-8010154388322516992-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71678122-836771333384703-4762715627108433920-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71271288-836771326718037-101147643756937216-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71090724-836771353384701-4128580555010736128-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "71153730-838892309839272-486967137231962112-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "HERENCIA HISPANA",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens NY",
+                "photo": "72565029-851509238577579-6102833487469871104-n-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado para celebrar el mes de la Herencia Hispana con la participación de varios artistas, escritores y poetas. Se realizó una exposición de pintura de varios artistas de Projecting Art.",
+                "fotos": [
+                    {
+                        "src": "74533381-859407424454427-8461493148336521216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73523487-859446494450520-8916012902863863808-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73352255-859410637787439-895117870780907520-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73381338-859409047787598-7018019116199968768-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75246821-859410664454103-2836054505701769216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74685204-859456684449501-7178531969720909824-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74528108-859456784449491-2031921282248867840-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73065690-859456751116161-3863443032598642688-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73195768-859456774449492-7046298147244474368-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74285456-859407441121092-3235393319274020864-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75429577-859456561116180-8275181860787585024-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75543548-859454101116426-5739113138331058176-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75553027-859456624449507-4033929165253115904-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74155458-859410701120766-7642688956550610944-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75210874-859456601116176-6168990552357339136-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74269372-859410707787432-1072782680493391872-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "72727816-859450904450079-3589086161022222336-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74153856-859450921116744-8709665227806867456-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74670770-859450941116742-9069724198930219008-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73482595-859450987783404-794415761161453568-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75456707-859450971116739-4112117683372163072-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75481872-859451014450068-5701845569664712704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74329309-859451071116729-414582039052812288-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73099372-859451111116725-3995995322605109248-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73193624-859451157783387-2386997713351737344-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75456849-859446561117180-2216542650490683392-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73001135-859451181116718-7634701206438281216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74634635-859451204450049-8469566647470915584-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73221217-859451257783377-7389209452848611328-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75233808-859446537783849-2380521826087337984-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "73303302-859411004454069-3697160487515979776-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "74156578-859411397787363-1463927727257026560-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "72962904-859446667783836-2052088494460764160-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Noviembre",
+                "venue": "Biblioteca de Coroona",
+                "city": "Queens, NY",
+                "photo": "75114879-879648262430343-84603279408889856-n.jpg",
+                "shape": "alto",
+                "body": "Nuestro evento de Noviembre presentó al Duo de Guitarras BONA FIDE, a la escritora Jisell Novas-Hill, a la artista plástica Maribel Familia, a la escritora Erika Cañete, y a la artista de danza Gina Narcisa Vasquez. ",
+                "fotos": [
+                    {
+                        "src": "78320321-887572241637945-2016139038372659200-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "77274406-887572224971280-7066622215956987904-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78553772-887576628304173-7647945884851765248-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78405818-887576648304171-6668486311055196160-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78654178-887577578304078-8186796381638230016-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78215750-887577594970743-8887610322790121472-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "76714135-887577621637407-3720075967696207872-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "75424592-887577618304074-5905448429907083264-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "77094665-887577664970736-1248466161662689280-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "77025199-887572278304608-6731531169625538560-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78242033-887577651637404-8460970596845486080-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "77263681-887579014970601-2877432663013064704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "76918405-887578981637271-7239959154629017600-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "76188962-887579031637266-87282080576176128-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78179682-887584118303424-6278061624796381184-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "77353008-887578938303942-590683901576347648-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78262139-887578868303949-8273860479739232256-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "78166497-887578861637283-7718586783927107584-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "76759952-887578958303940-9007397188308828160-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Evento de Diciembre",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-3746.jpg",
+                "shape": "alto",
+                "body": "Nuestro evento de Navidad y fin de año estuvo cargado de alegría y confraternidad con la participación del escritor Ricardo Vacca-Rodríguez, la escritora Ysabel Fabré, a flautista Ashley Avecillas, el artista plástico Jairo Vizcaíno, el grupo de canto Opus Ethica, y el grupo de danza Vivredanse Studio.",
+                "fotos": [
+                    {
+                        "src": "80581342-913374359057733-8292000360013234176-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80511124-913375879057581-2224731761554751488-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80047993-913377389057430-2773976315420737536-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80748638-913378185724017-3697685641757196288-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80047993-913377389057430-2773976315420737536-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80006501-913381079057061-4567912373171519488-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "81387472-913381069057062-498592149118386176-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80551310-913378195724016-1878222055040614400-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80292768-913381132390389-6003273972295139328-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80126757-913381129057056-3268040499562283008-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80739178-913381142390388-7059794076949807104-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "81064114-913381119057057-4779759929944702976-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80401436-913377335724102-3062680512364544000-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80294280-913377329057436-7439734687909543936-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80497008-913382605723575-5577152283830910976-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "CEREMONIA DE PREMIACIÓN ANUAL",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "82818283-931719483889887-4095878158622916608-n.jpg",
+                "shape": "alto",
+                "body": "En la Ceremonia de Premiación Anual se entregó certificados a todos los artistas participantes durante el año 2019 además de placas a los escritores y artistas mas destacados. Los artistas participantes fueron: Cantante Mariano Cersa, músico y compositor Ramón Gomezcoello, cantante Pancho Gomez, cantante Ashley Avecillas, duo de guitarras Bona Fide, grupo de danza Yaocihuatl, grupo de danza Vivredanse Studio. ",
+                "fotos": [
+                    {
+                        "src": "82868248-940450606350108-7809128422558400512-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82775265-940350269693475-8535798109781884928-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83632056-940350419693460-5622497556404633600-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83712933-940349733026862-3769865835636588544-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83707103-940350013026834-6865642846293065728-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83933996-940349783026857-7897714438025773056-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82620149-940350153026820-109314927797207040-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82705149-940349849693517-9010981115179040768-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83714128-940350066360162-3684673832175534080-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82883537-940350219693480-8206440853380530176-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83641341-940350673026768-3813201828019961856-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82664020-940350579693444-6723556557818167296-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83872388-940349666360202-3842946027027955712-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83644345-940349979693504-2705891355678212096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83815691-940349933026842-8207869131869913088-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83885361-940349713026864-4382367565486227456-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83456188-940442546350914-6517550019128590336-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83588252-940350086360160-1464212316085026816-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83573052-940449756350193-5636417158863912960-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83180326-940349876360181-4744353589651046400-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82781868-940451436350025-1669426643761889280-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82905210-940350603026775-2460753747911901184-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83812421-940455586349610-2875761010201853952-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82837723-178151650221956-1483697277036920832-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82706891-178151600221961-7473460317305962496-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82784543-178151533555301-5853346782934728704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82640231-178151570221964-3058962698478813184-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83702643-940349776360191-2906869905003380736-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83833296-940350033026832-1559779710697734144-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82867467-178151683555286-7074636521852108800-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82902123-940435643018271-4378947216740450304-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83773235-940350169693485-6775450409977774080-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83993420-940350439693458-8917285600457916416-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83805847-940350263026809-5422308739896049664-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82822827-940350499693452-937152148771176448-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "84026727-940350653026770-8199318135451418624-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83380020-940448693016966-1480175957904982016-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83862982-940350203026815-7343828093959667712-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "84185141-940447163017119-5325837825898184704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82816579-940350516360117-2536119179732320256-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82786119-940446283017207-8796104094633689088-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83418705-940432909685211-9080880470970859520-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83784110-940444279684074-3796185270672424960-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83009250-940466166348552-8156882544306946048-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83942925-940462473015588-5651408411498119168-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82783836-940445619683940-5118815948349898752-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83917136-940469593014876-3868487570472042496-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82231232-940468596348309-1039876870159466496-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82711125-940466926348476-1590261252511236096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82817062-940464633015372-6223912429475069952-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "82767843-940467763015059-1435797151757107200-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83836248-940350743026761-1032309202208423936-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "84011464-940350723026763-8380540062848253952-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83946035-940350866360082-2296400283095269376-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83862021-940470226348146-1185104682398253056-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "83576349-940350826360086-7836976367735406592-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "80192191-913413482387154-5630988981626732544-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "2020",
+                "time": "",
+                "year": "2020",
+                "title": "Evento de Febrero ",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-3770.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en febrero con la presentación de la escritora Rev.Luz C. Pizarro, la escritora María Cristina González, el cantante La Compotta 67, la diseñadora de modas y artista plástica Maximina Vidals, la escritora y artista plástica Lidia Hunter, artista de danza Camila.",
+                "fotos": [
+                    {
+                        "src": "88279204-972496656478836-8135364564880457728-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "89113020-972499816478520-6555610666391044096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "89496241-972482263146942-6142960976074375168-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88273033-972667926461709-1547676514332442624-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88261112-972599413135227-6697504578985787392-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87797893-972599433135225-8242687916342509568-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87723396-972599459801889-6926894044916219904-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87281763-972609423134226-7859230384297345024-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87614089-972610649800770-2391930096744136704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88325754-972610623134106-4167064449825374208-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87156066-972607653134403-6956067803547828224-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88204954-972629529798882-4680419075849977856-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88135700-972631263132042-404769018033995776-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88320785-972629263132242-3405024049061953536-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88999786-972636199798215-8789364943053914112-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87323928-972642749797560-6338026450649612288-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87550451-972642829797552-3378536311437656064-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "84138432-972642756464226-4907178638815789056-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87452074-972640453131123-2448795639836835840-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87784137-972642836464218-6943235222951428096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87775495-972612813133887-4678199140398661632-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87017668-972621933132975-1483339085354369024-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "85098848-972621943132974-8907909751275257856-n-1.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88144282-972612789800556-1200895490439249920-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88996584-972655979796237-4100554372985913344-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87273821-972657043129464-7604981742146945024-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87158695-972655986462903-4933991483989557248-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88248292-972670513128117-8654516640840417280-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88163920-972648656463636-8828851648307658752-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87384871-972648649796970-7167197258968989696-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "84315871-972648696463632-7111479245238435840-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87472704-972648716463630-3568051567279996928-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87803671-972645739797261-2512336721748688896-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88248409-972673373127831-5355329751412113408-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87848174-972673339794501-7421500868110843904-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "88259141-972611496467352-614767518371807232-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "EVENTO VIRTUAL- Agosto",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-3772.jpg",
+                "shape": "alto",
+                "body": "Debido a la pandemia del covid 19, hice mis eventos virtualmente, presentando artistas a nivel internacional, en este mes se presentó: El escritor Esteban Escalona, el artista plástico Claudio Lopez, la arpista Kiara Zalazar.",
+                "fotos": [
+                    {
+                        "src": "img-3796.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3797.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3773.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3774.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3787.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3784.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3781.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3783.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3789.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3795-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3778.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3779.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "EVENTO VIRTUAL-Septiembre",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "119399334-1115974772131023-4195521096967942635-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado de forma virtual con la participación del compositor, cantante Juan David, escritora María Cristina González, compositor, poeta Fermín Ceballos, grupo de danza Perú Andino NY.",
+                "fotos": [
+                    {
+                        "src": "img-3827-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3811.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3809.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3810.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3808.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3805.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3806.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3801.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3800.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3798.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3799.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3825.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3822.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3823.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3823-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3813.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3820.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3821-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3814.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3817.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "HERENCIA HISPANA VIRTUAL",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "121254712-1143776859350814-4444272050621880245-n.jpg",
+                "shape": "alto",
+                "body": "Evento virtual realizado con motivo de la Herencia Hispana",
+                "fotos": [
+                    {
+                        "src": "img-3832.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3852-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3849-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3848-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3850-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3851-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3835-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3836-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3840-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3838-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3837-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3839-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3831.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3833.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3841-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3834.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3842.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3844.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3845.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3847.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3853.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "screenshot-2026-10-01-at-5.25.32-pm.png",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "screenshot-2026-10-01-at-5.30.57-pm.png",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3861.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
@@ -250,16 +1639,12 @@
         },
         "categorias": [
             {
-                "nombre": "Tertulia",
-                "texto": "La forma de siempre: se lee, se escucha y se conversa, el último sábado del mes."
+                "nombre": "Tardes Literarias y Artísticas",
+                "texto": "Este rincón artístico nace como un refugio de creación comunitaria, un espacio sin fines de lucro donde la poesía encuentra su voz, los escritores abren sus páginas y los artistas transforman el entorno. Aquí, la cultura deja de ser sun privilegio pra convertirse en un punto de encuentro abierto a cualquiera que desee sentir, escuchar y crear. Nuestros eventos son celebraciones al arte independiente. Reunimos letras, trazos, ideas, música, danza, etc., con un solo propósito: tejer comunidad a través de la belleza y la expresión libre. Cada cita es una invitación a descubrir el talento local, inspirar a nuevas mentes y recordad que el arte cobra verdadero sentido solo cuando se comparte."
             },
             {
-                "nombre": "Recital",
-                "texto": "Tardes en las que la poesía se dice en voz alta, que es como fue escrita."
-            },
-            {
-                "nombre": "Encuentro",
-                "texto": "Cuando la tarde se arma alrededor de un grupo — escritoras, músicos, gente que trabaja junta."
+                "nombre": "Ferias del Libro",
+                "texto": "En esta sección presento las ferias de libro en las que he participado"
             }
         ]
     }
