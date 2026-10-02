@@ -85,7 +85,7 @@
         "_guia": "La formación médica: su título de doctora, presentado como un certificado. 'degree' es el título obtenido, 'place' la institución y 'detail' la ciudad o una nota corta. 'photo' puede ser el diploma o una foto suya de esa época. Si se vacía 'degree', la sección desaparece.",
         "kicker": "Formación",
         "title": "Doctora en Medicina y Cirugía",
-        "lead": "prestó sus servicios como doctora en diferentes hospitales del Ecuador y en una clínica de USA en NY.",
+        "lead": "Graduada en la Facultad de Ciencias Medicas de la Universidad Estatal de Cuenca, Ecuador.\nPrestó sus servicios como doctora en diferentes hospitales del Ecuador y en una clínica de USA en NY.",
         "photo": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.30808-6/557607991_31781595431454206_3098364383384026252_n.jpg?stp=cp6_dst-jpg_tt6&cstp=mx1422x2048&ctp=s1422x2048&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FQiIlr7_ryAQ7kNvwEvlYf-&_nc_oc=AdpY0OCQ12K6NxSeeByMeWZeEbtdbCZ-al1aOdi6JYFDiSGr9UYBXni84ia--dRNtfM&_nc_zt=23&_nc_ht=scontent-lga3-2.xx&_nc_gid=k_2XnQdB-AXOY3StHxBc0A&_nc_ss=7b2a8&oh=00_AQLhCE5zhatRV7aZorBsdrYkuF4HuqYrlrmYGFvAcWfcDQ&oe=6AB66CD6",
         "photoAlt": "Diploma de Doctora en Medicina y Cirugía",
         "shape": "ancho",
@@ -143,49 +143,57 @@
 
     "recognition": {
         "_guia": "Premios, menciones y participaciones. Cada bloque lleva 'year', 'title', 'text', 'photo' y 'shape' — la foto puede ser el diploma, la placa o una foto de la entrega, y 'shape' es la forma del marco: 'cuadrado', 'alto' (más alto que ancho) o 'ancho' (más ancho que alto) — las mismas tres formas que se usan en todo el sitio. La foto de arriba, la del diploma, también lleva su 'shape'. Sin foto sale un marco de reserva. Para añadir otro, copiar un bloque entero.",
-        "kicker": "Premios",
+        "kicker": "Diplomas y trofeos",
         "title": "Reconocimientos",
-        "lead": "Premios, menciones y participaciones.",
+        "lead": " Les presento algunos de mis diplomas y reconocimientos obtenidos a lo largo de mi vida profesional.",
         "_nota": "SOLO EL PRIMERO ES REAL. Los cuatro bloques siguientes están vacíos a propósito, para que ella escriba encima los reconocimientos que faltan; el que no se use se borra entero y la pared se acomoda sola.",
         "items": [
             {
-                "year": "2011",
-                "title": "Concurso de cuento LAIA Internacional",
-                "text": "Ganadora, tema «Viajes». Relato incluido en antología.",
+                "year": "1989",
+                "title": "Tesis previo a mi doctorado",
+                "text": " Mi tesis realizada con dos colegas más la encontré en la biblioteca de la Facultad de Ciencias Medicas de Cuenca, Ecuador.",
                 "shape": "ancho",
-                "photo": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                "photo": "557607991-31781595431454206-3098364383384026252-n.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2013",
-                "title": "Segundo reconocimiento",
-                "text": "Aquí va de qué se trata: quién lo entregó, por qué obra y en qué ciudad.",
+                "year": "1992",
+                "title": "Diploma del Congreso de Gastroenterología",
+                "text": " Por participar en el Vll Congreso Internacional.",
                 "shape": "alto",
-                "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                "photo": "img-3871.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2016",
-                "title": "Tercer reconocimiento",
-                "text": "En 'year' va el año, y sale en el sello dorado de la esquina. Si se deja vacío, el sello no aparece.",
+                "year": "1993",
+                "title": "Diploma del Congreso de Cirugía",
+                "text": "Por participar en el XVll de Cirugía",
                 "shape": "cuadrado",
-                "photo": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+                "photo": "img-3872.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2019",
-                "title": "Cuarto reconocimiento",
-                "text": "En 'photo' va el nombre del archivo del diploma o de la foto de la entrega, puesto en public/content/.",
+                "year": "1993",
+                "title": "Diploma de Actualización Médica",
+                "text": " Por participar en el Curso de Actualización Médica.",
                 "shape": "ancho",
-                "photo": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "photo": "img-3873.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2022",
-                "title": "Quinto reconocimiento",
-                "text": "Para añadir otro, copiar un bloque entero y cambiarle los valores. No hay límite.",
+                "year": "2011",
+                "title": "Concurso LAIA Internacional",
+                "text": "Participación en el concurso de cuentos cortos realizado por LAIA",
                 "shape": "alto",
                 "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "photoAlt": ""
+            },
+            {
+                "title": "Walking",
+                "year": "2019",
+                "text": "",
+                "photo": "",
+                "shape": "alto",
                 "photoAlt": ""
             }
         ]
