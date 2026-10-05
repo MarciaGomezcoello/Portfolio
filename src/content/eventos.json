@@ -74,14 +74,14 @@
         "_guia": "El archivo de encuentros. Cada bloque de 'items' es uno. Un encuentro que tenga 'body' (el relato) o 'fotos' se vuelve clickeable en el archivo y gana su propia página, con las fotos arriba y el relato debajo; el que no tenga ni lo uno ni lo otro sale igual en el archivo, pero sin enlace — así no se llega nunca a una página vacía. Para darle página a un encuentro, basta con escribirle el relato o cargarle fotos. En 'fotos' cada bloque es una imagen: 'src' es el nombre del archivo puesto en public/content/ y 'alt' lo que se describe para quien no la ve. 'photo' sigue siendo la que se ve en el archivo, y encabeza la galería. Cada foto puede llevar además su propia 'shape' —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta), las mismas tres de todo el sitio—: si se deja vacía o no se pone, esa foto usa la 'shape' del encuentro, que es la de más abajo y la que se ve en el archivo. En el carrusel todas salen de la misma altura y cada una toma el ancho que le pida su forma, así que la fila nunca salta al pasarlas y de una foto alta, por ser más angosta, se asoman más las de al lado. Las tres formas quedan parecidas de tamaño a propósito, para que una tarjeta del archivo no salga del doble de alto que la de al lado. 'categoria' es la clase de encuentro, y es una de las clases de la lista 'categorias' de más abajo, escrita igual: cada clase de esa lista tiene su pestaña en el archivador, en ese orden, en cuanto algún encuentro la use. Si se deja vacía, el encuentro sale igual pero solo en 'Todos'. Las pestañas no salen mientras haya una sola clase. Cada clase de la lista puede llevar además una línea de presentación.",
         "kicker": "rincón artístico",
         "title": "Bienvenidos a nuestros eventos pasados",
-        "lead": "Nuestros eventos de Tardes Literarias y Artísticas NY, tiene ya 7 años de apoyo incondicional y sin fines a lucro a escritores, poetas y artistas.",
+        "lead": "Nuestros eventos han sido creados para la comunidad y para dar un apoyo incondicional y sin fines a lucro a escritores, poetas y artistas.",
         "_nota": "MUESTRA — reemplazar con encuentros reales y sus fotos.",
         "items": [
             {
                 "_notaFotos": "MUESTRA — cuatro fotos de muestra para ver cómo queda la galería. Con la foto de portada al frente son cinco. Borrar los que sobren, o dejarlos e ir llenándolos.",
                 "slug": "tertulia-de-aniversario",
                 "rol": "",
-                "categoria": "Ferias del Libro",
+                "categoria": "Tardes Literarias y Artísticas",
                 "date": "",
                 "time": "3:00pm",
                 "year": "2019 ",
@@ -1633,13 +1633,562 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "IV Feria del Libro LACUHE",
+                "venue": " Facebook, Instagram",
+                "city": "Queens, NY",
+                "photo": "174105142-5504393396267768-9129733721366039869-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mis 2 novelas: \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto un una trama injusta e inhumana. \"La Reliquia Invación Mortal\" una novela de fantasía y acción donde una madre y sus dos hijos realizan un viaje fantástico e inesperado por la magia de un medallón.",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2011",
+                "title": "Concurso LAIA Internacional ",
+                "venue": "Queens Museum of Art",
+                "city": "Queens, NY",
+                "photo": "546615019-31481374724809613-8528790287563824563-n-1.jpg",
+                "shape": "alto",
+                "body": "Recibiendo el reconocimiento por haber ganado  el concurso de cuentos cortos de LAIA internacional.",
+                "fotos": [
+                    {
+                        "src": "545840750-31468414632772289-4212655518350265973-n-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "545572606-31468414559438963-246659914373812642-n-1-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "545695243-31468414716105614-5027837070181177591-n-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "545566701-31468416086105477-9055828903820734184-n-1-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "546614541-31468416029438816-1305277949472200307-n-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Eventos de Crochet",
+                "date": "",
+                "time": "",
+                "year": "2018",
+                "title": "Exhibición de Tejido y Bordado",
+                "venue": "Corona Plaza",
+                "city": "Queens, NY",
+                "photo": "42617345-2339901862716953-6445449299324043264-n.jpg",
+                "shape": "alto",
+                "body": "Celebración y exhibición de tejido y bordado por las señoras de la comunidad en Corona Plaza. Realicé flores gigantes a crochet para adornar la Plaza.",
+                "fotos": [
+                    {
+                        "src": "42780505-2343757455664727-7591110758717456384-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "42745769-2343754585665014-3562541124239228928-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "42742078-2343641132343026-2189012532893581312-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "51378270-2612377212136082-3072167867488141312-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Eventos de Crochet",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Talleres Gratuidos de Crochet",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "51828294-2630520600321743-2206852993817509888-n.jpg",
+                "shape": "alto",
+                "body": "Se brindó talleres gratuitos de crochet a las señoras de la comunidad de Queens, luego escribí una canción a los niños enfermos para donar las prendas tejidas. La canción la puede escuchar en esta pagina o en YouTube se titula \"Corazón Valiente\"",
+                "fotos": [
+                    {
+                        "src": "53551237-2670344396339363-2449784607596347392-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "53313384-2670525419654594-6246864459826987008-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "52890038-2655323607841442-5034107605451014144-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "53886039-2683699995003803-422349882544619520-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "54204342-2683707301669739-4546663705374359552-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "53712324-2698129506894185-3867793679850668032-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "55496011-2714521981921604-7032772380401336320-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "57221330-2746934198680382-4372568777989029888-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Eventos de Crochet",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Practicando la canción para donación",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "screenshot-2026-10-03-at-5.19.40-pm.png",
+                "shape": "alto",
+                "body": "Luego de haber terminado el taller de crochet, las prendas fueron donadas a los niños enfermos. Las señoras practicaron la canción \"Corazón Valiente\" para cantar a los niños. Después celebramos nosotras y me honraron con una hermosa tarjeta y un ramo de rosas, Gracias a todas siempre las guardo en mi corazón.",
+                "fotos": [
+                    {
+                        "src": "55439745-2714509891922813-924028773119033344-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "56384052-2730813293625806-6478680307401752576-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "57038305-2762244790482656-9145850325293334528-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "57486596-2762244820482653-1335967590513639424-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "57174939-2762244810482654-8725353927295369216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "57325289-2762509203789548-5332376475519680512-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "60354264-2827695097270958-1882180408569757696-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "60343492-2827695087270959-1646488335830482944-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "60706277-2827838070589994-2151020978770018304-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Reconocimiento ",
+                "venue": "Consulado Ecuatoriano",
+                "city": "Queens, NY",
+                "photo": "62105573-2891920074181793-2235097819742470144-n.jpg",
+                "shape": "alto",
+                "body": "Reconocimiento por parte de Walking Through Art en el Consulado Ecuatoriano, con la presencia de la cónsul y de algunos artistas destacados.",
+                "fotos": [
+                    {
+                        "src": "62435791-2894972620543205-8346580624022175744-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "62242476-2891920104181790-4198905662320672768-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "62070554-2891920244181776-581226813087285248-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2019",
+                "title": "Xll Encuentro Cultural Latinoamericano",
+                "venue": " ",
+                "city": "Manhattan, NY",
+                "photo": "79494831-3426240884083040-8243383997397204992-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación en el evento organizado por LACUHE.",
+                "fotos": [
+                    {
+                        "src": "78878007-3426266844080444-2247140826436075520-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "79028340-3426265450747250-5253921527694360576-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "79134414-3426262464080882-1836639762228707328-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Eventos de Crochet",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "Talleres de Crochet",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "87382409-3667691269937999-1328925351681720320-n.jpg",
+                "shape": "alto",
+                "body": "Talleres gratuitos de crochet brindados a las señoras de la Comunidad.",
+                "fotos": [
+                    {
+                        "src": "88213073-3710211922352600-2411467198599004160-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "87557781-3710211875685938-4917317922730278912-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "En el Mirador de América",
+                "venue": "New Jersey",
+                "city": "",
+                "photo": "130255725-4910860855621028-3779180351077535745-n.jpg",
+                "shape": "alto",
+                "body": "Entrevista con la Señora Nostalgia.",
+                "fotos": [
+                    {
+                        "src": "481659761-28885265584420553-2504492894889443161-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "1era Feria del Libro del Cusco Bicentenario",
+                "venue": "Facebook, Instagram",
+                "city": "Queens, NY",
+                "photo": "473685550-28399873666293083-9209092601139075755-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de forma virtual mi primer libro, \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto en una trama injusta e inhumana.",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "15a Feria del Libro Hispana/Latina",
+                "venue": "Renaissance Charter School",
+                "city": "Queens, NY",
+                "photo": "474548253-28460757046871411-2744790372877602444-n-4.31.38-pm-2.jpg",
+                "shape": "alto",
+                "body": "Presentación de mi primera novela: \"El Ojo de la Muerte\" de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto en una trama injusta e inhumana.",
+                "fotos": [
+                    {
+                        "src": "475428550-28514528284827620-649337379619392230-n-4.31.57-pm-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "475416654-28514528544827594-7066655095720643649-n-4.31.50-pm-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "475590892-28514547358159046-4013554275811360918-n-4.31.54-pm-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "475290886-28514528658160916-6317333461568830684-n-4.31.52-pm-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "475457518-28514547584825690-3290068347345210060-n-4.31.56-pm-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "Reconocimiento por el Día de la Mujer",
+                "venue": "Queens",
+                "city": "NY",
+                "photo": "img-6874.jpg",
+                "shape": "alto",
+                "body": "Reconocimiento por el Día de la Mujer por parte del Multicultural Poder Hispano INC.",
+                "fotos": [
+                    {
+                        "src": "img-2384.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3930.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "Placa por 100,000 Suscriptores",
+                "venue": "YouTube",
+                "city": "Queens, NY",
+                "photo": "img-3955.jpg",
+                "shape": "alto",
+                "body": "Gané una placa de YouTube en uno de mis canales, Marcia Gomezcoello Creations. Celebré el acontecimiento con un pastel muy especial hecho por mi querida hija.",
+                "fotos": [
+                    {
+                        "src": "img-3954.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3959-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-8711-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "Feria de las Flores",
+                "venue": "Queens",
+                "city": "NY",
+                "photo": "img-8634.jpg",
+                "shape": "alto",
+                "body": "Por invitación del Sr. Luis Eduardo Acosta, creador de la Feria de las Flores en Queens NY, participé con mis flores gigantes tejidas a crochet.",
+                "fotos": [
+                    {
+                        "src": "img-8629.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-8608.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-8609.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "Antología Serpientes y Escaleras",
+                "venue": "San Luis Potosí",
+                "city": "México ",
+                "photo": "482025802-28914809181466193-4914223110251825332-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación en la Antología Serpientes y Escaleras de la Academia de Literatura Latinoamericana de San Luis Potosí.",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
         "detalle": {
             "_guia": "Las palabras de la página de cada encuentro. Nada de esto cambia el contenido, solo cómo se llaman las cosas.",
             "backLabel": "Todos los encuentros",
-            "detalleLabel": "Ver el encuentro",
+            "detalleLabel": "",
             "galleryLabel": "Fotos del encuentro"
         },
         "categorias": [
@@ -1650,6 +2199,14 @@
             {
                 "nombre": "Ferias del Libro",
                 "texto": "En esta sección presento las ferias de libro en las que he participado"
+            },
+            {
+                "nombre": "Otros Eventos",
+                "texto": "En esta sección les comparto otros diferentes eventos en los que he participado. "
+            },
+            {
+                "nombre": "Eventos de Crochet",
+                "texto": "En esta sección pueden apreciar los talleres gratuitos dados a las señoras de la Comunidad de Queens."
             }
         ]
     }

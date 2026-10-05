@@ -183,16 +183,24 @@
             {
                 "year": "2011",
                 "title": "Concurso LAIA Internacional",
-                "text": "Participación en el concurso de cuentos cortos realizado por LAIA",
+                "text": "Participación en el concurso de cuentos cortos realizado por LAIA Internacional.",
                 "shape": "alto",
                 "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
                 "photoAlt": ""
             },
             {
-                "title": "Walking",
+                "title": "Walking Through Art",
                 "year": "2019",
-                "text": "",
-                "photo": "",
+                "text": "Reconocimiento recibido en el Consulado Ecuatoriano.",
+                "photo": "img-3874.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "XII Encuentro Cultural Latinoamericano",
+                "year": "2019",
+                "text": "Participación en el evento organizado por LACUHE.",
+                "photo": "79540678-3426312267409235-3357973884925116416-n.jpg",
                 "shape": "alto",
                 "photoAlt": ""
             }
