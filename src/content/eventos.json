@@ -1393,6 +1393,18 @@
                     {
                         "src": "img-3779.jpg",
                         "shape": "alto"
+                    },
+                    {
+                        "src": "img-3960.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3961.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3962.jpg",
+                        "shape": "alto"
                     }
                 ],
                 "_notaFotos": "",
@@ -1644,7 +1656,7 @@
                 "city": "Queens, NY",
                 "photo": "174105142-5504393396267768-9129733721366039869-n.jpg",
                 "shape": "alto",
-                "body": "Presentación de mis 2 novelas: \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto un una trama injusta e inhumana. \"La Reliquia Invación Mortal\" una novela de fantasía y acción donde una madre y sus dos hijos realizan un viaje fantástico e inesperado por la magia de un medallón.",
+                "body": "Presentación de mis 2 novelas: \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto un una trama injusta e inhumana. \"La Reliquia Invación Mortal\" una novela de fantasía y acción donde una madre y sus dos hijos realizan un viaje fantástico e inesperado por la magia de un medallón. La realización de esta feria fue de forma virtual.",
                 "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
@@ -2182,6 +2194,322 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "  II Congreso Internacional Mujeres Emprendimiento",
+                "venue": " ",
+                "city": "NY",
+                "photo": "img-3953-2.jpg",
+                "shape": "alto",
+                "body": " En este Congreso mi participación fue como expositora de mis experiencias vividas durante la pandemia. El evento fue organizado por REVIVE.",
+                "fotos": [
+                    {
+                        "src": "486663361-29106844245596018-5593813791478383934-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486546219-29106896628924113-7691276281507809636-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486299201-29098197343127375-3741978590996647814-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486734687-29106844108929365-1879597173869554788-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486553809-29106844248929351-9115264640333791589-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486026145-29112886618325114-5986533143593210473-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "485367121-29098195423127567-279361797324496605-n-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "V Feria Internacional del Libro LACUHE",
+                "venue": "Bronx",
+                "city": "NY",
+                "photo": "486851214-29116053618008414-8742926194516165471-n.jpg",
+                "shape": "alto",
+                "body": "En esta Feria presenté mi segunda Novela de fantasía, suspenso y acción: \"La Reliquia-Invasión Mortal.",
+                "fotos": [
+                    {
+                        "src": "487117943-29145735528373556-6326984960009371070-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486955679-29138325235781252-8779524288981687720-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487295628-29145700411710401-8538959856664577984-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486753570-29138327505781025-7349635628298589420-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486938785-29138356525778123-3281407384783586087-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487451098-29138325305781245-2634510416791686931-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487687186-29145682245045551-7895988666664776778-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487299672-29138356725778103-2280580366780543475-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486611430-29138356372444805-6768840223464196202-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486615834-29138325242447918-3924915928134834195-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487308838-29138352112445231-4539468124103014120-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487288353-29150165631263879-3943259309805200825-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "16a Feria del Libro Hispana/Latina",
+                "venue": "Renaissance Charter School",
+                "city": "Queens, NY",
+                "photo": "490270435-29319002387713535-8112963420383669123-n.jpg",
+                "shape": "alto",
+                "body": "En esta feria presenté mi segunda novela: \"La Reliquia-Invasión Mortal.",
+                "fotos": [
+                    {
+                        "src": "490023373-29323375290609578-2856064135604120178-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3968.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3967.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489822278-29321533844127056-4217470580221095988-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489821789-29321555330791574-8942515191031880202-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3965.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490135411-29323415807272193-7351701242508741406-n-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Feria Internacional del Libro y el Arte",
+                "venue": "Travers Park",
+                "city": "Queens, NY",
+                "photo": "490644024-29324308833849557-4340016130482585881-n.jpg",
+                "shape": "alto",
+                "body": "Esta feria se realizó con el apoyo del Festival Internacional de las Flores y de su creador Sr. Luis Eduardo Acosta, fue una feria abierta con la participación de artistas, escritores, poetas y el hermoso desfile de las flores.",
+                "fotos": [
+                    {
+                        "src": "490720036-29324324163848024-2970407873487991606-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490235585-29324324250514682-7954169219968086619-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490268981-29324324203848020-8611518743458101481-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490745092-29324341037179670-4852114031552913674-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490355434-29324341143846326-8035170612410989793-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490099784-29324324397181334-3312704975597054486-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490591530-29324341093846331-8628780435944572523-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490456926-29324324313848009-8362775448195732883-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490433174-29330541743226266-774334649974146992-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Nuestro Arte Abraza la Paz",
+                "venue": "Manhattan",
+                "city": "NY",
+                "photo": "img-3969.jpg",
+                "shape": "alto",
+                "body": "Hermosa actividad organizada por la escritora Jisell Novas-Hill con la presentación de diferentes escritores, poetas, artistas plásticos y músicos.",
+                "fotos": [
+                    {
+                        "src": "490456041-29332681216345652-7200749016792189371-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3966.png",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490100516-29332681179678989-4235000777689274804-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490293619-29332681116345662-6011832527892851704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490506181-29332680923012348-4933342797982848286-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Ecuador Ama lo Nuestro",
+                "venue": "Cuenca",
+                "city": "Ecuador",
+                "photo": "img-3974-2.jpg",
+                "shape": "alto",
+                "body": "Me ortogaron un título honorífico como Destacada, realizado en la ciudad de Cuenca, Ecuador.",
+                "fotos": [
+                    {
+                        "src": "img-3975-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3973.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491831911-29450443591236080-5415333884484611029-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
@@ -2194,7 +2522,7 @@
         "categorias": [
             {
                 "nombre": "Tardes Literarias y Artísticas",
-                "texto": "Este rincón artístico nace como un refugio de creación comunitaria, un espacio sin fines de lucro donde la poesía encuentra su voz, los escritores abren sus páginas y los artistas transforman el entorno. Aquí, la cultura deja de ser sun privilegio pra convertirse en un punto de encuentro abierto a cualquiera que desee sentir, escuchar y crear. Nuestros eventos son celebraciones al arte independiente. Reunimos letras, trazos, ideas, música, danza, etc., con un solo propósito: tejer comunidad a través de la belleza y la expresión libre. Cada cita es una invitación a descubrir el talento local, inspirar a nuevas mentes y recordad que el arte cobra verdadero sentido solo cuando se comparte."
+                "texto": "Tardes Literarias y Artísticas las he creado como un refugio de realización comunitaria, un espacio sin fines de lucro donde la poesía encuentra su voz, los escritores abren sus páginas y los artistas transforman el entorno. Aquí, la cultura deja de ser sun privilegio pra convertirse en un punto de encuentro abierto a cualquiera que desee sentir, escuchar y crear. Nuestros eventos son celebraciones al arte independiente. Reunimos letras, trazos, ideas, música, danza, etc., con un solo propósito: tejer comunidad a través de la belleza y la expresión libre. Cada cita es una invitación a descubrir el talento local, inspirar a nuevas mentes y recordad que el arte cobra verdadero sentido solo cuando se comparte."
             },
             {
                 "nombre": "Ferias del Libro",
@@ -2206,7 +2534,7 @@
             },
             {
                 "nombre": "Eventos de Crochet",
-                "texto": "En esta sección pueden apreciar los talleres gratuitos dados a las señoras de la Comunidad de Queens."
+                "texto": "En esta página pueden apreciar los talleres gratuitos dados a las señoras de la Comunidad de Queens."
             }
         ]
     }
