@@ -2011,7 +2011,7 @@
                 "city": "Queens, NY",
                 "photo": "473685550-28399873666293083-9209092601139075755-n.jpg",
                 "shape": "alto",
-                "body": "Presentación de forma virtual mi primer libro, \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto en una trama injusta e inhumana.",
+                "body": "Presentación de forma virtual mi primer libro, \"El Ojo de la Muerte\", novela de drama y suspenso a cerca del bulling, donde un jovencito se ve envuelto en una trama injusta e inhumana. Como presentador el profesor, escritor Yorman Mejías.",
                 "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
@@ -2462,6 +2462,10 @@
                     {
                         "src": "490506181-29332680923012348-4933342797982848286-n.jpg",
                         "shape": "alto"
+                    },
+                    {
+                        "src": "493277311-29450443474569425-7497996938048162122-n.jpg",
+                        "shape": "alto"
                     }
                 ],
                 "_notaFotos": "",
@@ -2497,6 +2501,242 @@
                     },
                     {
                         "src": "491831911-29450443591236080-5415333884484611029-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Eventos de Crochet",
+                "date": "",
+                "time": "",
+                "year": "",
+                "title": "Donación de prendas a crochet",
+                "venue": "Hospital Elmhurst ",
+                "city": "Queens, NY",
+                "photo": "492126442-29453261770954262-8437846384857820877-n.jpg",
+                "shape": "alto",
+                "body": "Se donaron algunas prendas tejidas a crochet por las señoras de la comunidad de Corona en Queens, NY",
+                "fotos": [
+                    {
+                        "src": "492255326-29453261800954259-3840234299265127350-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492007453-29453261594287613-5236615070870231577-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492698471-29453261747620931-655968390850216612-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491914102-29453261584287614-4359491937352712118-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492347454-29453261774287595-3082641330083251961-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "Enero",
+                "time": "",
+                "year": "2023",
+                "title": "Hasta que se Acabe el Café",
+                "venue": "Grupo Radial C.R.C.",
+                "city": "Queens, NY",
+                "photo": "493156421-29459181023695670-3050440912533584126-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mis obras literarias en la entrevista realizada por el Grupo Radial C.R.C.",
+                "fotos": [
+                    {
+                        "src": "492529139-29461018590178580-6411378664625092061-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492002073-29461018746845231-1028900977184175554-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492133646-29461018456845260-5690839513619399211-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "492568555-29461018546845251-3782140867088900489-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "VI Feria Internacional del libro LACUHE",
+                "venue": "Bronx",
+                "city": "NY",
+                "photo": "493586931-29506483468965425-8219763399241407512-n.jpg",
+                "shape": "alto",
+                "body": "En esta feria presenté mi tercera novela: \"¡Yo Exterminé al Último Hombre!\" un tema muy interesante de acción, suspenso y ciencia ficción a cerca de un virus que afecta solo a los hombres y donde una cruel mujer se hace del poder.",
+                "fotos": [
+                    {
+                        "src": "493826400-29530419133238525-4426331176143227001-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493288237-29532220836391688-576063966662300122-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493950572-29525573597056412-5751353949495393554-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494075434-29527926896821082-4456591084491599831-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494075680-29527926830154422-1175687280155131277-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494007581-29527926870154418-2347686275138019719-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493471357-29527926776821094-8020096576732536092-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493485396-29527926876821084-2311606962983694061-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493933683-29527926853487753-3886993433573686105-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494245409-29527926833487755-606442570718931670-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494077171-29532220963058342-7722661837209409055-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493810191-29532220709725034-708248868677562305-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "494012149-29527926773487761-3169613518811835333-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "493982191-29527926793487759-1103127578285693310-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "17a Feria del Libro Hispana/Latina ",
+                "venue": "Renaissance Charter School",
+                "city": "Queens, NY",
+                "photo": "497517787-29741164078830695-2177988903862005446-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mi tercera novela: \"¡Yo Exterminé el Último Hombre\", ya está disponible para chequearlo en esta página o en Amazon.",
+                "fotos": [
+                    {
+                        "src": "496507728-29758645020415934-7936340879280525387-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497854232-29758644840415952-2572643634751842042-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "496717068-29758644917082611-3177596152251644521-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "496801008-29758645013749268-4050511575853376402-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "496950247-29757879270492509-6108282590185031901-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497097986-29757835847163518-7720399573672217736-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "496767718-29757835840496852-3715597828660858795-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497565508-29757835893830180-5858984575208388280-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497525768-29757835887163514-3264281996461436521-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497561940-29757835883830181-1075807859707172914-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "497497232-29758644863749283-3560917875475780744-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "496625028-29747252094888560-2436131597986239592-n.jpg",
                         "shape": "alto"
                     }
                 ],
