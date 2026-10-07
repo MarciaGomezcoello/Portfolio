@@ -2234,6 +2234,10 @@
                     {
                         "src": "485367121-29098195423127567-279361797324496605-n-2.jpg",
                         "shape": "alto"
+                    },
+                    {
+                        "src": "img-0082.jpg",
+                        "shape": "alto"
                     }
                 ],
                 "_notaFotos": "",
@@ -2489,18 +2493,22 @@
                 "city": "Ecuador",
                 "photo": "img-3974-2.jpg",
                 "shape": "alto",
-                "body": "Me ortogaron un título honorífico como Destacada, realizado en la ciudad de Cuenca, Ecuador.",
+                "body": "Me otorgaron un título honorífico como Destacada Gestora Cultural Ecuatoriana, realizado en la ciudad de Cuenca, Ecuador.",
                 "fotos": [
                     {
-                        "src": "img-3975-2.jpg",
+                        "src": "img-6216.jpg",
                         "shape": "alto"
                     },
                     {
-                        "src": "img-3973.jpg",
+                        "src": "img-3975-2-2.jpg",
                         "shape": "alto"
                     },
                     {
-                        "src": "491831911-29450443591236080-5415333884484611029-n.jpg",
+                        "src": "img-3973-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491831911-29450443591236080-5415333884484611029-n-2.jpg",
                         "shape": "alto"
                     }
                 ],
@@ -2740,6 +2748,29 @@
                         "shape": "alto"
                     }
                 ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "I Feria Internacional del Libro REVIVE",
+                "venue": "Virtual",
+                "city": "NY",
+                "photo": "499260450-29820578030889299-8959487227608296059-n.jpg",
+                "shape": "alto",
+                "body": "Feria virtual en la que participé con mi tercera novela: \"Yo Exterminé al Último Hombre\".",
+                "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
