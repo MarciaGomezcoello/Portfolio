@@ -2781,6 +2781,161 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "Coloquio Internacional Virtual de Mujeres Escritoras",
+                "venue": "Virtual",
+                "city": "NY",
+                "photo": "img-0084.jpg",
+                "shape": "alto",
+                "body": "Mi participación en este coloquio organizado por la Dra. Odette Méndez presidenta de la Academia de Literatura Latinoamericana.",
+                "fotos": [
+                    {
+                        "src": "499148640-29826894496924319-1569222209657377378-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "EVENTO VIRTUAL- Noviembre",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "124376349-1168946336833866-3210852027256122488-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado virtualmente con la presentación de Pregoneros de Paz Poponte César, la escritora Brissa Ochoa, el artista plástico CesART Chox, la escritora Ángeles Casasola.",
+                "fotos": [
+                    {
+                        "src": "img-4110.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0248.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "cc73c681-48dc-426a-ad34-630c12a21c02.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "0dd68c28-3831-433f-bedc-10b9d26d1e59.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "19e1bbb6-904f-43e3-b275-1ccb3ae16065.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "fece65e2-1c55-4fa6-aa3f-d1c2a21a06e7.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4109.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4111.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0247.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0246.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0240.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0241.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0243.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0242.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4072.png",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0238.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0239.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4092.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4094.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4096.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2020",
+                "title": "EVENTO VIRTUAL-Diciembre",
+                "venue": "Fecebook, Instagram . NY",
+                "city": "",
+                "photo": "img-0254.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
