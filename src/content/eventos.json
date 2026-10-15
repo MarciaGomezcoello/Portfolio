@@ -2924,8 +2924,77 @@
                 "city": "",
                 "photo": "img-0254.jpg",
                 "shape": "alto",
-                "body": "",
-                "fotos": [],
+                "body": "Evento realizado virtualmente, celebrando las Navidades, con la participación de: Rosangel Conde, Stefano Herrera, Ángel Conde, la escritora Wendy Cruz, el escritor Anthony Jáuregui. ",
+                "fotos": [
+                    {
+                        "src": "img-0265.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0264.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0268.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0269.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0280.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0281.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0282.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0272.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0273.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0275.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0279.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0292.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0293.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0291.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0290.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0288.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0287.jpg",
+                        "shape": "alto"
+                    }
+                ],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
