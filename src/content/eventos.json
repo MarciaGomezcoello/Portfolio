@@ -3132,6 +3132,186 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Febrero",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "img-0323-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado de forma virtual, con la participación de la artista multidiciplinar Nelba Zaruma, poeta Domingo Burgos, cantante Celinda Vera Voz y Encanto del Perú. ",
+                "fotos": [
+                    {
+                        "src": "img-0334.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0325.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0329.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0330.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0326.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0333.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0335.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0336.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0338.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0339.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0340.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Marzo",
+                "venue": " Facebook, Instagram . NY",
+                "city": "",
+                "photo": "img-0341.jpg",
+                "shape": "alto",
+                "body": "Evento realizado virtualmente con la participación del escritor Pedro Santana, artista visual Eilis Soto, escritora Mary Woss, artista visual Marco Pillco (UCUCHA), artistas de danza, los niños Mia Solis y Leonardo Martínez.",
+                "fotos": [
+                    {
+                        "src": "img-0344.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0359.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0361.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0362.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0363.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0348.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0350.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0351.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0342.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0345.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0346.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0347.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0352.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0355.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0354.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0357.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0358.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0364.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0365.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0366.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0367.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0368.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
