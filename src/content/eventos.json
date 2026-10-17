@@ -3005,6 +3005,133 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "II CEREMONIA ANUAL VIRTUAL",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "img-0299.jpg",
+                "shape": "alto",
+                "body": "Se realizó la II Ceremonia Anual de Premiación a todos los artistas que han participado de forma virtual. Debido a la pandemia del covid 19 se realizó el evento de forma virtual con la participación de Celinda Vera y Voces del Perú, la cantante Ashley, la artista de danza Camila Noguera, el músico Prince, el organizador comunitario Sandro Stefano Navarro.",
+                "fotos": [
+                    {
+                        "src": "139520451-5086068984766880-5334206613943179929-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0301.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0321.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0320.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0306.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0304.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0302.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0303.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0314.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0313.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0307.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0308.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0309.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0315.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0310.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0311.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0312.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0317.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0318.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0322.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL",
+                "venue": "Facebook, Instagram . NY",
+                "city": "",
+                "photo": "img-0323.jpg",
+                "shape": "alto",
+                "body": "Evento realizado de manera virtual, con la participación de la artista multidiciplinar Nelba Zaruma, el escritor Domingo Burgos, la cantante Voz y Encanto del Perú Celinta Vera.",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
