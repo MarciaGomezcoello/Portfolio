@@ -1424,8 +1424,8 @@
                 "time": "",
                 "year": "2020",
                 "title": "EVENTO VIRTUAL-Septiembre",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
                 "photo": "119399334-1115974772131023-4195521096967942635-n.jpg",
                 "shape": "alto",
                 "body": "Evento realizado de forma virtual con la participación del compositor, cantante Juan David, escritora María Cristina González, compositor, poeta Fermín Ceballos, grupo de danza Perú Andino NY.",
@@ -1532,11 +1532,11 @@
                 "time": "",
                 "year": "2020",
                 "title": "HERENCIA HISPANA VIRTUAL",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
+                "venue": "Facebook, Instagram ",
+                "city": "NY",
                 "photo": "121254712-1143776859350814-4444272050621880245-n.jpg",
                 "shape": "alto",
-                "body": "Evento virtual realizado con motivo de la Herencia Hispana",
+                "body": "Evento virtual realizado con motivo de la Herencia Hispana con la participación de la guitarrista clásica Irene Gomez, el grupo de danza Arte Andino Rimay Llakta, el escritor Giovanni Esquivel, el escritor Yorman Mejias, La artista multidiciplinar Nelba Zaruma.",
                 "fotos": [
                     {
                         "src": "img-3832.jpg",
@@ -2816,8 +2816,8 @@
                 "time": "",
                 "year": "2020",
                 "title": "EVENTO VIRTUAL- Noviembre",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
+                "venue": "Facebook, Instagram ",
+                "city": "NY",
                 "photo": "124376349-1168946336833866-3210852027256122488-n.jpg",
                 "shape": "alto",
                 "body": "Evento realizado virtualmente con la presentación de Pregoneros de Paz Poponte César, la escritora Brissa Ochoa, el artista plástico CesART Chox, la escritora Ángeles Casasola.",
@@ -2920,8 +2920,8 @@
                 "time": "",
                 "year": "2020",
                 "title": "EVENTO VIRTUAL-Diciembre",
-                "venue": "Fecebook, Instagram . NY",
-                "city": "",
+                "venue": "Fecebook, Instagram ",
+                "city": "NY",
                 "photo": "img-0254.jpg",
                 "shape": "alto",
                 "body": "Evento realizado virtualmente, celebrando las Navidades, con la participación de: Rosangel Conde, Stefano Herrera, Ángel Conde, la escritora Wendy Cruz, el escritor Anthony Jáuregui. ",
@@ -3012,8 +3012,8 @@
                 "time": "",
                 "year": "2021",
                 "title": "II CEREMONIA ANUAL VIRTUAL",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
+                "venue": "Facebook, Instagram ",
+                "city": "NY",
                 "photo": "img-0299.jpg",
                 "shape": "alto",
                 "body": "Se realizó la II Ceremonia Anual de Premiación a todos los artistas que han participado de forma virtual. Debido a la pandemia del covid 19 se realizó el evento de forma virtual con la participación de Celinda Vera y Voces del Perú, la cantante Ashley, la artista de danza Camila Noguera, el músico Prince, el organizador comunitario Sandro Stefano Navarro.",
@@ -3111,36 +3111,13 @@
                 "linkUrl": ""
             },
             {
-                "categoria": "",
-                "date": "",
-                "time": "",
-                "year": "2021",
-                "title": "EVENTO VIRTUAL",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
-                "photo": "img-0323.jpg",
-                "shape": "alto",
-                "body": "Evento realizado de manera virtual, con la participación de la artista multidiciplinar Nelba Zaruma, el escritor Domingo Burgos, la cantante Voz y Encanto del Perú Celinta Vera.",
-                "fotos": [],
-                "_notaFotos": "",
-                "slug": "",
-                "rol": "",
-                "note": "",
-                "poster": "",
-                "posterAlt": "",
-                "posterShape": "",
-                "photoAlt": "",
-                "linkLabel": "",
-                "linkUrl": ""
-            },
-            {
                 "categoria": "Tardes Literarias y Artísticas",
                 "date": "",
                 "time": "",
                 "year": "2021",
                 "title": "EVENTO VIRTUAL-Febrero",
-                "venue": "Facebook, Instagram . NY",
-                "city": "",
+                "venue": "Facebook, Instagram ",
+                "city": "NY",
                 "photo": "img-0323-2.jpg",
                 "shape": "alto",
                 "body": "Evento realizado de forma virtual, con la participación de la artista multidiciplinar Nelba Zaruma, poeta Domingo Burgos, cantante Celinda Vera Voz y Encanto del Perú. ",
@@ -3207,8 +3184,8 @@
                 "time": "",
                 "year": "2021",
                 "title": "EVENTO VIRTUAL-Marzo",
-                "venue": " Facebook, Instagram . NY",
-                "city": "",
+                "venue": " Facebook, Instagram ",
+                "city": "NY",
                 "photo": "img-0341.jpg",
                 "shape": "alto",
                 "body": "Evento realizado virtualmente con la participación del escritor Pedro Santana, artista visual Eilis Soto, escritora Mary Woss, artista visual Marco Pillco (UCUCHA), artistas de danza, los niños Mia Solis y Leonardo Martínez.",
@@ -3302,6 +3279,137 @@
                         "shape": "alto"
                     }
                 ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Abril",
+                "venue": "Facebook, Instagram ",
+                "city": "NY",
+                "photo": "img-0370.jpg",
+                "shape": "alto",
+                "body": "Evento realizado virtualmente con la presentación del grupo de danza Yaociguatl, el escritor Augusto Rufino, la escritora Lariza Fuentes, la artista plástica Maritza Zúñiga. Celebramos: el Día de la Tierra.",
+                "fotos": [
+                    {
+                        "src": "img-0372.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0390.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0393.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0393-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0395.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0394.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0392.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0396.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0397.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0385.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0386.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0387.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0371.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0375.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0377.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0378.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0380.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0381.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0379.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0382.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0384.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Mayo",
+                "venue": "Facebook, Instatram ",
+                "city": "NY",
+                "photo": "img-0398.jpg",
+                "shape": "alto",
+                "body": "Evento realizado virtualmente con la participación de la escritora Diana Herrera, el escritor Rafael Antonio Badia, el artista visual Andres Leon, el compositor Carlos Lora Falquez, el guitarrista Luis Leite, el guitarrista Fernando Lepri. Celebrando a las Madres.",
+                "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
