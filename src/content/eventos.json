@@ -74,7 +74,7 @@
         "_guia": "El archivo de encuentros. Cada bloque de 'items' es uno. Un encuentro que tenga 'body' (el relato) o 'fotos' se vuelve clickeable en el archivo y gana su propia página, con las fotos arriba y el relato debajo; el que no tenga ni lo uno ni lo otro sale igual en el archivo, pero sin enlace — así no se llega nunca a una página vacía. Para darle página a un encuentro, basta con escribirle el relato o cargarle fotos. En 'fotos' cada bloque es una imagen: 'src' es el nombre del archivo puesto en public/content/ y 'alt' lo que se describe para quien no la ve. 'photo' sigue siendo la que se ve en el archivo, y encabeza la galería. Cada foto puede llevar además su propia 'shape' —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta), las mismas tres de todo el sitio—: si se deja vacía o no se pone, esa foto usa la 'shape' del encuentro, que es la de más abajo y la que se ve en el archivo. En el carrusel todas salen de la misma altura y cada una toma el ancho que le pida su forma, así que la fila nunca salta al pasarlas y de una foto alta, por ser más angosta, se asoman más las de al lado. Las tres formas quedan parecidas de tamaño a propósito, para que una tarjeta del archivo no salga del doble de alto que la de al lado. 'categoria' es la clase de encuentro, y es una de las clases de la lista 'categorias' de más abajo, escrita igual: cada clase de esa lista tiene su pestaña en el archivador, en ese orden, en cuanto algún encuentro la use. Si se deja vacía, el encuentro sale igual pero solo en 'Todos'. Las pestañas no salen mientras haya una sola clase. Cada clase de la lista puede llevar además una línea de presentación.",
         "kicker": "rincón artístico",
         "title": "Bienvenidos a nuestros eventos pasados",
-        "lead": "Nuestros eventos han sido creados para la comunidad y para dar un apoyo incondicional y sin fines a lucro a escritores, poetas y artistas.",
+        "lead": "Nuestros eventos han sido creados para la comunidad y para dar un apoyo incondicional y sin fines a lucro a escritores, poetas y artistas.  ",
         "_nota": "MUESTRA — reemplazar con encuentros reales y sus fotos.",
         "items": [
             {
@@ -3409,6 +3409,346 @@
                 "photo": "img-0398.jpg",
                 "shape": "alto",
                 "body": "Evento realizado virtualmente con la participación de la escritora Diana Herrera, el escritor Rafael Antonio Badia, el artista visual Andres Leon, el compositor Carlos Lora Falquez, el guitarrista Luis Leite, el guitarrista Fernando Lepri. Celebrando a las Madres.",
+                "fotos": [
+                    {
+                        "src": "img-0405.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0404.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0408.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0407.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0409.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0412.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0413.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0415.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0417.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0418.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0419-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0423.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0420.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0421.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0424.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0425.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0426.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0427-3.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0428-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0430.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0429.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Junio",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-0432.jpg",
+                "shape": "alto",
+                "body": "Evento virtual realizado en el mes de Junio con la participación de el grupo folklorico del Cento Paraguayo de NY, la artistas plástica Eli Art, la escritora Antonia María Chico Lobato, la escritora Cruz Patiño. Celebrando a Papá.",
+                "fotos": [
+                    {
+                        "src": "img-0434.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0443.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0444.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0444-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0448.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0440.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0441.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0439.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0442.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0433.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0436.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0437.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0449.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0451.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0486.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0483.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "8f045208-2e89-49dd-b0ed-094e913d7ea1.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Julio",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-0475.jpg",
+                "shape": "alto",
+                "body": "Evento virtual celebrado en el mes de Julio con motivo de la Independencia, con la participación del ballet folklórico Xiomara Cabrera, el artista de artes visuales Juan Enrique Togra, escritora Mirna Álvarez, escritora Victoria Oliveros.",
+                "fotos": [
+                    {
+                        "src": "img-4200-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4201-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4202.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4205.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4214.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4217.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4220-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4221-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4236.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4240.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4239.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4237.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4241.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4232-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4233-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4235-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4234-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4228-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4230.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4230-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4231.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4208.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4209.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4210-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4211.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4222.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4223.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4224-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4225-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Agosto",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "",
+                "shape": "alto",
+                "body": "",
                 "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
@@ -3432,7 +3772,7 @@
         "categorias": [
             {
                 "nombre": "Tardes Literarias y Artísticas",
-                "texto": "Tardes Literarias y Artísticas las he creado como un refugio de realización comunitaria, un espacio sin fines de lucro donde la poesía encuentra su voz, los escritores abren sus páginas y los artistas transforman el entorno. Aquí, la cultura deja de ser sun privilegio pra convertirse en un punto de encuentro abierto a cualquiera que desee sentir, escuchar y crear. Nuestros eventos son celebraciones al arte independiente. Reunimos letras, trazos, ideas, música, danza, etc., con un solo propósito: tejer comunidad a través de la belleza y la expresión libre. Cada cita es una invitación a descubrir el talento local, inspirar a nuevas mentes y recordad que el arte cobra verdadero sentido solo cuando se comparte."
+                "texto": "Tardes Literarias y Artísticas las he creado como un refugio de realización comunitaria, un espacio sin fines de lucro donde la poesía encuentra su voz, los escritores abren sus páginas y los artistas transforman el entorno. Aquí, la cultura deja de ser un privilegio para convertirse en un punto de encuentro abierto a cualquiera que desee sentir, escuchar y crear. Nuestros eventos son celebraciones al arte independiente. Reunimos letras, trazos, ideas, música, danza, etc., con un solo propósito: tejer comunidad a través de la belleza y la expresión libre. Cada cita es una invitación a descubrir el talento local, inspirar a nuevas mentes y recordar que el arte cobra verdadero sentido solo cuando se comparte. Cada uno de los eventos está disponible también en la página oficial de Facebook: Tardes Literarias y Artísticas NY, en Instagram: marciagomezcoello(TARLITEART)."
             },
             {
                 "nombre": "Ferias del Libro",
