@@ -3781,6 +3781,94 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2021",
+                "title": "EVENTO VIRTUAL-Septiembre",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-4242.jpg",
+                "shape": "alto",
+                "body": "Evento realizado de manera virtual, en homenaje a las víctimas del 911, con la participación de la escritora Jeanette Rodriguez, la escritora Mariesther Muñoz, el escritor Arnoldo Sagastizado, el artista plástico Genaro Phillips.",
+                "fotos": [
+                    {
+                        "src": "img-4250.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4249.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4253.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4251.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4255.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4260.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4259.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4261.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4262.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4263-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4264.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4267.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4268-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4269.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4270.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4272.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
