@@ -3643,58 +3643,6 @@
                         "shape": "alto"
                     },
                     {
-                        "src": "img-4236.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4240.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4239.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4237.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4241.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4232-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4233-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4235-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4234-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4228-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4230.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4230-2.jpg",
-                        "shape": "alto"
-                    },
-                    {
-                        "src": "img-4231.jpg",
-                        "shape": "alto"
-                    },
-                    {
                         "src": "img-4208.jpg",
                         "shape": "alto"
                     },
@@ -3746,10 +3694,83 @@
                 "title": "EVENTO VIRTUAL-Agosto",
                 "venue": "Facebook, Instagram",
                 "city": "NY",
-                "photo": "",
+                "photo": "img-4226-copy.jpg",
                 "shape": "alto",
-                "body": "",
-                "fotos": [],
+                "body": "Evento virtual realizado en Agosto con la participación de la niña violinista Isabella J. Franco, el escritor Juan Matos, la escritora Juana Morales, el artista visual Alejandro Condo. ",
+                "fotos": [
+                    {
+                        "src": "img-4227-3-copy.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4232-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4233-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4234-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4235-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4236-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4239-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4240-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4237-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4241-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4244.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4247.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4246.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4248.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4228-2-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4229.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4230-3.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4231-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
