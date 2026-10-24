@@ -36,7 +36,7 @@
         "_guia": "Los videos escogidos. Cada bloque es una tarjeta: la foto arriba con el botón de play, debajo la etiqueta del canal, el título y la nota. 'photo' es la imagen que se ve antes de tocar el video — conviene una foto bonita de la prenda terminada. Al tocarla, el video se abre ahí mismo. En 'video' va o el enlace de un video de internet en formato 'embed' (YouTube, Vimeo), o el nombre de un archivo de video puesto en public/content/ — por ejemplo 'clase.mp4' — que se ve con el reproductor del propio sitio. 'channel' es de cuál de los dos canales sale: escribir 'Crochet' o 'Palillos', igual que en site.json. Se pueden poner los que haga falta; las tarjetas se acomodan solas.",
         "kicker": "Videos",
         "title": "Algunos videos de crochet y dos agujas",
-        "lead": "Visite cualquiera de mis dos canales, Marcia Gomezcoello Creations y Knitting with Marcia Gomezcoello para encontrar muchos videos más con hermosos trabajos donde enseño el paso a paso. ",
+        "lead": "Visite cualquiera de mis 2 canales, \"Marcia Gomezcoello Creations\" y \"Knitting with Marcia Gomezcoello\", para encontrar muchos videos más con hermosos trabajos donde enseño el paso a paso. ",
         "_nota": "Estos son videos reales de sus dos canales, escogidos al azar para que la sección se vea llena. Ella puede cambiar cuáles salen, en qué orden, y poner sus propias fotos en 'photo' en lugar de la miniatura de YouTube.",
         "items": [
             {
