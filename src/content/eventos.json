@@ -4160,8 +4160,89 @@
                 "city": "NY",
                 "photo": "img-4340.jpg",
                 "shape": "alto",
-                "body": "Evento realizado de forma virtual en el mes de Diciembre, con la participación de ",
-                "fotos": [],
+                "body": "Evento realizado de forma virtual en el mes de Diciembre, con la participación de la escritora Vilma Daza, la cantante Ashley, la escritora Lidia Saravia, el artista visual Eugenio Montenegro, el grupo musical Ñukanchik Llakta Wawakuna.",
+                "fotos": [
+                    {
+                        "src": "img-4425.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4437.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4439.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4438.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4441-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4423.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4430.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4432.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4436.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4453.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4454.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4456-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4458.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4459-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4442-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4452.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4444.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4447.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4445.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4449.jpg",
+                        "shape": "alto"
+                    }
+                ],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
