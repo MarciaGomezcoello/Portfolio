@@ -4410,7 +4410,7 @@
                 "categoria": "Tardes Literarias y Artísticas",
                 "date": "",
                 "time": "",
-                "year": "",
+                "year": "2022",
                 "title": "EVENTO VIRTUAL-Marzo",
                 "venue": "Facebook, Instagram",
                 "city": "NY",
@@ -4483,6 +4483,153 @@
                         "shape": "alto"
                     }
                 ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "EVENTO VIRTUAL-Abril",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-4344-2.jpg",
+                "shape": "alto",
+                "body": "Evento virtual realizado en el mes de Abril, celebrando el Día de la Tierra, con la participación del escritor Carlos Clará, el escritor Orlando Carvajal.",
+                "fotos": [
+                    {
+                        "src": "img-4525.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4526-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4530.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4531.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4527.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4520-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4521.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4523.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4533.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4532.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "EVENTO VIRTUAL-Mayo",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-4345.jpg",
+                "shape": "alto",
+                "body": "Eventos realizado de forma virtual en homenaje a Mamá con la participación del escritor Claudio Lopez, la cantante Ashley, el escritor Ricardo Vacca-Rodriguez.",
+                "fotos": [
+                    {
+                        "src": "img-0497.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0500.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0501.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0495.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0499.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4535-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4536-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0490.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0493.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "",
+                "venue": "",
+                "city": "",
+                "photo": "",
+                "shape": "alto",
+                "body": "",
+                "fotos": [],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
