@@ -4623,10 +4623,174 @@
                 "date": "",
                 "time": "",
                 "year": "2022",
-                "title": "",
+                "title": "EVENTO VIRTUAL-Junio",
+                "venue": "Facebook, Instagram",
+                "city": "NY",
+                "photo": "img-4346.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Junio de manera virtual, celebrando a Papá, con la participación de la poeta Jeanette Rodríguez, la escritora Yarimar Marrero. ",
+                "fotos": [
+                    {
+                        "src": "img-4538.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4539-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4544.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4545.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4546.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4547.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4548-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4549-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "EVENTO VIRTUAL-Julio",
                 "venue": "",
                 "city": "",
-                "photo": "",
+                "photo": "img-4347-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en Julio por la Independencia de USA, con la participación de la escritora Belkis Marte, el poeta Rigoberto Cairo, las niñas de ballet Amy Saori, Valeria Luna, Leah Zeceña.",
+                "fotos": [
+                    {
+                        "src": "img-4553.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4554.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4557-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4555.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4558.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4571.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4575.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4572.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4573.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4567.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4570.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4568.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4569.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4563.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "56db4278-9322-49d6-a4ae-ee81ba6b3be7.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4584.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4582.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4577.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4580.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4561.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4579.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2022",
+                "title": "Evento de Octubre",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4348.jpg",
                 "shape": "alto",
                 "body": "",
                 "fotos": [],
