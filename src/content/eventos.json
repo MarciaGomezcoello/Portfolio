@@ -4792,8 +4792,69 @@
                 "city": "Queens, NY",
                 "photo": "img-4348.jpg",
                 "shape": "alto",
-                "body": "",
-                "fotos": [],
+                "body": "Primer evento presencial realizado después de la pandemia del covid 19, celebramos la Herencia Hispana con la presentación de la escritora Blanca García, Andrés Cárdenas, grupo Mburukuyá de Paraguay, ballet floklorico Xiomara Cabrera.  ",
+                "fotos": [
+                    {
+                        "src": "484088997-1210818304380158-1020930364706065993-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484977026-1210818614380127-3171863502451646656-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4605.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4603-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484532253-1210819171046738-5120832093462339742-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484140217-1210818544380134-6012454595189119683-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4608.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484180282-1210818577713464-2339210028888511532-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484086727-1210818547713467-8667779953205760308-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484622611-1210818607713461-6315870459632634118-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "484180282-1210818577713464-2339210028888511532-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4612.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4596.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4590.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-4592.jpg",
+                        "shape": "alto"
+                    }
+                ],
                 "_notaFotos": "",
                 "slug": "",
                 "rol": "",
