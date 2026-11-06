@@ -5421,6 +5421,70 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Febrero",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "486604160-1219426113519377-6739193927441310999-n.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en Febrero, celebrando el Amor y la Amistad, con la participación de la escritora Flor de María Zaky, La escritora Diana Murgas.",
+                "fotos": [
+                    {
+                        "src": "486465388-1219544933507495-6299907508202027966-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486466670-1219545233507465-1823185721888931821-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "485961510-1219545003507488-1717094182241329077-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486486915-1219545253507463-8973327888698328604-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486334116-1219545033507485-7029158657362773060-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486532117-1219545236840798-8786601562125177330-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486575304-1219545340174121-854710098903448799-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486574399-1219544943507494-454453482500109418-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486634566-1219544996840822-1665649142985312568-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486487601-1219545246840797-3640957854827086149-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
