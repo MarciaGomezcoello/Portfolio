@@ -5485,6 +5485,145 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Marzo",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-0519.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Marzo, celebramos a la Mujer, con la participación del Centro Paraguayo de NY, el escritor Julio Jesús Zelaya, la escritora Gladys Montolio",
+                "fotos": [
+                    {
+                        "src": "486189186-1221245676670754-7673644451364173984-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486956081-1221245690004086-6664420263206908326-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486955380-1221245666670755-4532953766504846860-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0523.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0524.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486479730-1221245883337400-3391550338714063923-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487323133-1221245876670734-4523354747409931841-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487085247-1221245880004067-3179139064744587560-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486282258-1221245656670756-5647265008720359633-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0528.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486285216-1221245460004109-1580086110233544709-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486349045-1221245606670761-6357972085324491781-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486244971-1221245750004080-6418755074892584070-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486322513-1221245593337429-5126405492608486175-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486444626-1221245543337434-3176678068690661185-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486479730-1221245836670738-4527209158385434614-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486356043-1221245720004083-6303837117404671978-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486315030-1221245663337422-8176786834233507233-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486149014-1221245483337440-3041655672256817683-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486710301-1221245673337421-4506690043491766710-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486811477-1221245706670751-7129944710587661198-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486328069-1221245533337435-6780505829386715385-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "486186649-1221245753337413-4202441042701584370-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Abril",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-0522.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
