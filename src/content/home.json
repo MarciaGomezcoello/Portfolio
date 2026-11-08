@@ -53,27 +53,37 @@
             "shape": "ancho",
             "linkLabel": "",
             "linkUrl": "",
-            "body": "Aquí va lo que se quiera contar de antemano: quiénes van a leer, qué se va a presentar, si hace falta llevar algo. Una línea en blanco separa un párrafo del siguiente.",
+            "body": "Evento a realizarse en la biblioteca de Langston Hughes en homenaje al Nobel Guatemalteco Miguel Angel Asturias, \"El olvidado\" como lo llaman, ya que muy pocos lo conocen.",
             "fotos": [
                 {
-                    "src": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                    "src": "screenshot-2026-09-12-at-8.04.18-pm-2.png",
                     "alt": "",
                     "shape": "ancho"
                 },
                 {
-                    "src": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                    "src": "screenshot-2026-09-13-at-12.08.54-am-2.png",
                     "alt": "",
                     "shape": "alto"
                 },
                 {
-                    "src": "https://m.media-amazon.com/images/I/71dhb7IgXJL._SL1499_.jpg",
+                    "src": "screenshot-2026-09-12-at-7.35.12-pm-2.png",
                     "alt": "",
                     "shape": "cuadrado"
                 },
                 {
-                    "src": "marcia.jpg",
+                    "src": "screenshot-2026-09-12-at-8.10.27-pm-2.png",
                     "alt": "",
                     "shape": "ancho"
+                },
+                {
+                    "src": "screenshot-2026-09-12-at-8.07.10-pm-2.png",
+                    "shape": "alto",
+                    "alt": ""
+                },
+                {
+                    "src": "screenshot-2026-09-12-at-7.51.23-pm-2.png",
+                    "shape": "alto",
+                    "alt": ""
                 }
             ]
         }
