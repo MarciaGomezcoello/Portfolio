@@ -6041,6 +6041,150 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Julio",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4652-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en Julio, celebrando la Independencia de USA, con la participación de el grupo Renacer de Argentina, la escritora Juana Vasquez, el escritor Juan de Jesús Burgos.",
+                "fotos": [
+                    {
+                        "src": "488661427-1229062739222381-2626085957792629599-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488848003-1229062859222369-1999792247383093805-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488756580-1229062629222392-8201898739228837926-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488080738-1229062979222357-8894875675662528401-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488884684-1229062975889024-9188495784308652135-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488652963-1229062972555691-2551820823890169128-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488679256-1229061515889170-3098698919457806308-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488543215-1229061472555841-212588150090689120-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488216547-1229061699222485-450960561763685698-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488178439-1229061692555819-5262217309600857959-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488711496-1229062695889052-2552519351027920764-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487986769-1229062782555710-7468647421965931187-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488547235-1229062775889044-854869802058347676-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488147623-1229062852555703-2210669933912177668-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488273807-1229062815889040-1167427916451419846-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488189058-1229062789222376-4194721374092958738-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488677358-1229062942555694-3517118264565918049-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488198055-1229062729222382-6105931975243836332-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488657740-1229061645889157-4963180275305756147-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488253757-1229061729222482-7399341341104148327-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488599594-1229061662555822-267684297003650130-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489145070-1229061705889151-8790026121677587244-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488767469-1229061382555850-7616825536476635283-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488908365-1229061725889149-4696357487307808197-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488576744-1229061625889159-5412771969121126565-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488932344-1229061642555824-8180722055095134704-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488215467-1229061279222527-963397009853981195-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488719165-1229061355889186-5539040094614990706-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488186430-1229061362555852-8013016518296216150-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488030223-1229061605889161-5476164403574386196-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
