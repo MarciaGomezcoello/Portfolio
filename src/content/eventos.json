@@ -6321,6 +6321,86 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Septiembre",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4655.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en homenaje a los héroes del 911, con la participación de el niño cantante Jonathan Pereira, el presentador y conductor Cesar Velazquez, el escritor Rafael Reyes.",
+                "fotos": [
+                    {
+                        "src": "490362634-1234415075353814-4338569166443021140-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489528666-1234415158687139-3583328435571043640-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489340130-1234415448687110-1362690278434914008-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489920701-1234391478689507-4263335532269944364-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489606504-1234391715356150-2218486826175841579-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489419412-1234391425356179-2163901213079366978-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489699393-1234391708689484-8660107799515787627-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489423943-1234415165353805-8861070824560473465-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490019393-1234391485356173-5251507761479131158-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489401765-1234391455356176-7533376006350977853-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489407414-1234391442022844-6302023256315307159-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489678984-1234415228687132-2124514648337772326-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490139982-1234391718689483-5126819851418040648-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489751746-1234391472022841-7690892924656126185-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
