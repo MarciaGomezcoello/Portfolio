@@ -5924,8 +5924,8 @@
                 "time": "",
                 "year": "2023",
                 "title": "Evento de Junio",
-                "venue": "",
-                "city": "",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
                 "photo": "img-4651.jpg",
                 "shape": "alto",
                 "body": "Evento realizado en el mes de Junio, celebrando a Papá, con la participación de la Escuela Paraguaya de NY, la escritora Aida Moreno, el escritor Esteban Escalona.",
@@ -6172,6 +6172,142 @@
                     },
                     {
                         "src": "488030223-1229061605889161-5476164403574386196-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Agosto",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4654-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en homenaje a la familia, con la participación del grupo Panambí Verá de Parguay, la escritora Erika Cañete, el escritor Samuel Acosta.",
+                "fotos": [
+                    {
+                        "src": "488656550-1230725822389406-1947324591142753197-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488651497-1230725829056072-45005377025299175-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488459364-1230725579056097-86063405379565748-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488482419-1230725735722748-2343404434009407357-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488603637-1230725722389416-8358930894603783450-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488495265-1230725875722734-3461682828751100508-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488412122-1230724335722888-7471604630782072450-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488587466-1230725972389391-4175896298927013623-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488889935-1230724382389550-8361230819789543831-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488245200-1230724299056225-881715283361624015-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488889935-1230724382389550-8361230819789543831-n-1.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488532669-1230725842389404-6258089627806407382-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488546829-1230725939056061-4954481201015110048-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488484714-1230725769056078-7264172040386775680-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488491579-1230725565722765-5262390459390248014-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488263694-1230723862389602-3974507759643290588-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488445942-1230725975722724-2146314573085895886-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488491291-1230723855722936-4834852173891644749-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488418463-1230723839056271-6069085899982683393-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488654698-1230723822389606-3550190202303297995-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488558959-1230723809056274-9051657270215341068-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488502930-1230723849056270-42883942664013074-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488507769-1230723795722942-1063587583063528136-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488387236-1230723915722930-4371397362791074723-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488985798-1230723645722957-2784862245258821353-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488522039-1230723945722927-1497923536770982668-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488255617-1230723899056265-4322961540573890995-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "488239511-1230723852389603-8973719489902659457-n.jpg",
                         "shape": "alto"
                     }
                 ],
