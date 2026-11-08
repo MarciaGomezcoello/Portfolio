@@ -311,6 +311,54 @@
                 "photo": "img-0533.jpg",
                 "shape": "alto",
                 "photoAlt": ""
+            },
+            {
+                "title": "Confederación Nacional de Periodistas del Ecuador Capítulo NY",
+                "year": "2026",
+                "text": "Otorgado por la CNPENY.",
+                "photo": "img-3923-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "AR. GLOBAL PRODUCTIONS COMPANY NY ",
+                "year": "2026",
+                "text": "Otorgado por haber sido nombrada como Lady Power (Mujer Poderosa).",
+                "photo": "img-2186.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "AR. GLOBAL PRODUCTIONS COMPANY NEW YORK",
+                "year": "2026",
+                "text": "Trofeo otorgado por haber sido nombrada Lady Power 2026.",
+                "photo": "img-2188.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Grito de Mujer 2026",
+                "year": "2026",
+                "text": "Participación en los eventos de Grito de Mujer.",
+                "photo": "img-3925-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "IX Feria Internacional del Libro Lacuhe",
+                "year": "2026",
+                "text": "Participación en la Feria del Libro.",
+                "photo": "img-2639.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "X Feria Internacional del Libro New Jersey",
+                "year": "2026",
+                "text": "Participación en la Feria del Libro de New Jersey.",
+                "photo": "img-3926-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
             }
         ]
     }
