@@ -85,7 +85,7 @@
         "_guia": "La formación médica: su título de doctora, presentado como un certificado. 'degree' es el título obtenido, 'place' la institución y 'detail' la ciudad o una nota corta. 'photo' puede ser el diploma o una foto suya de esa época. Si se vacía 'degree', la sección desaparece.",
         "kicker": "Formación",
         "title": "Doctora en Medicina y Cirugía",
-        "lead": "Graduada en la Facultad de Ciencias Medicas de la Universidad Estatal de Cuenca, Ecuador.\nPrestó sus servicios como doctora en diferentes hospitales del Ecuador y en una clínica de USA en NY.",
+        "lead": "Graduada en la Facultad de Ciencias Medicas de la Universidad Estatal de Cuenca, Ecuador.\nPrestó sus servicios como doctora en diferentes hospitales del Ecuador y en USA en NY.",
         "photo": "http://127.0.0.1:49258/content/53c2fa45-7e57-4a32-ab1b-ee8bd2576da0.webp",
         "photoAlt": "Diploma de Doctora en Medicina y Cirugía",
         "shape": "ancho",
@@ -225,7 +225,7 @@
                 "photoAlt": ""
             },
             {
-                "title": "Multicultural Poder Hispano INC,",
+                "title": "Multicultural Poder Hispano INC.",
                 "year": "2021",
                 "text": "Certificado otorgado por el Día de la Mujer.",
                 "photo": "img-3930-2.jpg",
@@ -269,6 +269,14 @@
                 "year": "2022",
                 "text": "Certificado otorgado por le Asambleista Manny De Los Santos.",
                 "photo": "492353013-29450443711236068-5665186126506864521-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Ciudades Didácticas",
+                "year": "2022",
+                "text": "Otorgado por mi trabajo como Gestora Cultural Ecuatoriana.",
+                "photo": "491831911-29450443591236080-5415333884484611029-n-3.jpg",
                 "shape": "alto",
                 "photoAlt": ""
             },
