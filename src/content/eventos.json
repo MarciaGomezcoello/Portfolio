@@ -5777,6 +5777,101 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Mayo",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4650.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Mayo en homenaje a todas las madres del mundo, con la participación de la poeta Janety Gallego, el escritor Leo Castillo, el grupo de danza de Paraguay Mburukuya.",
+                "fotos": [
+                    {
+                        "src": "487787649-1224115496383772-9103967844697442336-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487405864-1224115486383773-3650984857014685621-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487408098-1224115426383779-360150197906717827-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487490624-1224115293050459-2841827124304146400-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487004638-1224115283050460-1203531117178471715-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487213176-1224115406383781-2258559151761470154-n-1.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487329093-1224115353050453-8243770189427904396-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487217675-1224115269717128-4001105037746916940-n-1.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487067975-1224115289717126-7311402652543330671-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487343529-1224115306383791-4543771328308670760-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487791352-1224115326383789-5174290858955859492-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "487204186-1224115273050461-4897887092454753003-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Junio",
+                "venue": "",
+                "city": "",
+                "photo": "screenshot-2026-11-07-at-6.23.38-pm.png",
+                "shape": "alto",
+                "body": "",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
