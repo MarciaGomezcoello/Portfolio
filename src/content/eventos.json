@@ -6401,6 +6401,98 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2023",
+                "title": "Evento de Octubre",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4656-2.jpg",
+                "shape": "alto",
+                "body": "Evento realizado en el mes de Octubre por la Herencia Hispana, con la participación de la escritora Margarita Zayas, el cantante Tonny Cronielle, la escritora Diana Cárdenas.",
+                "fotos": [
+                    {
+                        "src": "489894129-1236252178503437-5585299972998439322-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489887155-1236252308503424-5488317845597596181-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490508915-1236252041836784-4140527566281394151-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490060762-1236252111836777-6523880754769436824-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490533723-1236252221836766-4352970467906458585-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489923317-1236252021836786-3522633569908069800-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490116998-1236252131836775-2052505327341138229-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490366261-1236252235170098-8520976921448480930-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489788888-1236252088503446-4686439371675915839-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490160396-1236252151836773-4972543440143589161-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489894132-1236252228503432-4225032816081794683-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490091280-1236252025170119-2151046137757216342-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490152834-1236252188503436-3244634434554858126-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490446605-1236252201836768-9187048854829918909-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "489925126-1236252141836774-282623705640032390-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490353838-1236252371836751-8606540714088234512-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490268838-1236252191836769-1877168108840669198-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
