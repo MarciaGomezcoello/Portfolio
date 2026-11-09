@@ -919,7 +919,7 @@
                 "date": "",
                 "time": "",
                 "year": "2020",
-                "title": "CEREMONIA DE PREMIACIÓN ANUAL",
+                "title": "CEREMONIA DE PREMIACIÓN ANUAL 2020",
                 "venue": "Biblioteca de Corona",
                 "city": "Queens, NY",
                 "photo": "82818283-931719483889887-4095878158622916608-n.jpg",
@@ -3011,7 +3011,7 @@
                 "date": "",
                 "time": "",
                 "year": "2021",
-                "title": "II CEREMONIA ANUAL VIRTUAL",
+                "title": "CEREMONIA ANUAL VIRTUAL 2021",
                 "venue": "Facebook, Instagram ",
                 "city": "NY",
                 "photo": "img-0299.jpg",
@@ -6493,6 +6493,86 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Tardes Literarias y Artísticas",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "CEREMONIA DE PREMIACIÓN ANUAL 2024",
+                "venue": "Biblioteca de Corona",
+                "city": "Queens, NY",
+                "photo": "img-4659.jpg",
+                "shape": "alto",
+                "body": "Ceremonia de Premiación anual luego de cumplir 5 años de Tardes Literarias y Artísticas NY, donde se ha apoyado de forma gratuita a todos los artistas que han pasado por estos eventos. ",
+                "fotos": [
+                    {
+                        "src": "490677548-1239764398152215-3102061388703519236-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491836235-1239764414818880-7668574285634079390-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490470422-1239764194818902-5044646981445694011-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491575097-1239764421485546-8029593099558969953-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "491621472-1239764358152219-6696904372752684635-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490524929-1239764314818890-1543014255110131686-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490515358-1239764134818908-301727480451369457-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "ec86bbf2-822a-4f1b-b1ed-661d0c380e3f.webp",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "3cf64c23-c8ed-401e-8f4a-20b6d0e8a003.webp",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "072fb62a-13c3-4d38-af1d-8672211b7680.webp",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "490309386-1239764304818891-8358067632496135397-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "ca74ba06-4e5d-40b2-8f93-939aacac5857.webp",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "810d7b96-aa75-4785-8eea-6512ef730897.webp",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "d1040736-5c8b-48cd-92c1-dc21fbae103d.webp",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
@@ -6513,7 +6593,7 @@
             },
             {
                 "nombre": "Otros Eventos",
-                "texto": "En esta sección les comparto otros diferentes eventos en los que he participado. "
+                "texto": "En esta sección les comparto diferentes eventos en los que he participado. "
             },
             {
                 "nombre": "Eventos de Crochet",
