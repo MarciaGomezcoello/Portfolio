@@ -7417,6 +7417,62 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "Tu MEJOR VERSIÓN, 2do Congreso Internacional",
+                "venue": "Brentwood",
+                "city": "",
+                "photo": "img-4663.jpg",
+                "shape": "alto",
+                "body": "Invitación y participación en el 2do Congreso Internacional.",
+                "fotos": [
+                    {
+                        "src": "499758105-29834418299505272-3909792019381901358-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499915548-29834418339505268-300767165246415552-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499200070-29834418282838607-8197743345612929608-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499524498-29834418002838635-8972313912705596664-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7370.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499860830-29834430642837371-8677319248337418115-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499930990-29834430986170670-528592916573247961-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499582355-29836274292653006-5762736278265450936-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
