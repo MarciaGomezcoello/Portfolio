@@ -86,7 +86,7 @@
         "kicker": "Formación",
         "title": "Doctora en Medicina y Cirugía",
         "lead": "Graduada en la Facultad de Ciencias Medicas de la Universidad Estatal de Cuenca, Ecuador.\nPrestó sus servicios como doctora en diferentes hospitales del Ecuador y en USA en NY.",
-        "photo": "http://127.0.0.1:49258/content/53c2fa45-7e57-4a32-ab1b-ee8bd2576da0.webp",
+        "photo": "53c2fa45-7e57-4a32-ab1b-ee8bd2576da0-2.webp",
         "photoAlt": "Diploma de Doctora en Medicina y Cirugía",
         "shape": "ancho",
         "degree": "Doctora en Medicina y Cirugía",
@@ -165,7 +165,7 @@
         "_guia": "Premios, menciones y participaciones. Cada bloque lleva 'year', 'title', 'text', 'photo' y 'shape' — la foto puede ser el diploma, la placa o una foto de la entrega, y 'shape' es la forma del marco: 'cuadrado', 'alto' (más alto que ancho) o 'ancho' (más ancho que alto) — las mismas tres formas que se usan en todo el sitio. La foto de arriba, la del diploma, también lleva su 'shape'. Sin foto sale un marco de reserva. Para añadir otro, copiar un bloque entero.",
         "kicker": "Diplomas y trofeos",
         "title": "Reconocimientos",
-        "lead": " Les presento algunos de mis diplomas y reconocimientos obtenidos a lo largo de mi vida profesional.",
+        "lead": "Les presento algunos de mis diplomas y reconocimientos obtenidos a lo largo de mi vida profesional.",
         "_nota": "SOLO EL PRIMERO ES REAL. Los cuatro bloques siguientes están vacíos a propósito, para que ella escriba encima los reconocimientos que faltan; el que no se use se borra entero y la pared se acomoda sola.",
         "items": [
             {
