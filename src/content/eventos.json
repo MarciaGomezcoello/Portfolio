@@ -7709,6 +7709,90 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "EnAmorArte",
+                "venue": "WPAT 930AM",
+                "city": "Manhattan, NY",
+                "photo": "img-0548.jpg",
+                "shape": "alto",
+                "body": "Entrevista en el programa EnAmorArte NY.",
+                "fotos": [
+                    {
+                        "src": "503487612-30025116640435436-7995701053131391211-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "503430975-30025116540435446-3766440091252955620-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "503377959-30025116557102111-4278475026404440639-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "FELIJE ",
+                "venue": "Lehman College",
+                "city": "Bronx, NY",
+                "photo": "536271925-31210362695244152-6077458049777967190-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación en la Fiesta de escritores de literatura infantil y juvenil en español.",
+                "fotos": [
+                    {
+                        "src": "539047720-31216729197940835-9094047363196910478-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "538412029-31216729324607489-1236078006570289355-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "536275015-31216729167940838-7715182254659863894-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "539262524-31216729451274143-533823565581826766-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "539452542-31216726061274482-8753188749603327415-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "538278968-31216729314607490-5763132197553299996-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
