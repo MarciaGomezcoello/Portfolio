@@ -7967,11 +7967,11 @@
                         "shape": "alto"
                     },
                     {
-                        "src": "555961267-31790355793911503-8722412982553431860-n.jpg",
+                        "src": "img-9585.jpg",
                         "shape": "alto"
                     },
                     {
-                        "src": "",
+                        "src": "img-9659.jpg",
                         "shape": "alto"
                     },
                     {
@@ -8036,6 +8036,38 @@
                     },
                     {
                         "src": "557271377-31792782787002137-6419018551164460033-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2025",
+                "title": "Mes de la Herencia Hispana",
+                "venue": "Biblioteca Langston Hughes",
+                "city": "Queens, NY",
+                "photo": "558325558-31947220211558393-5709857551671622200-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mi primer libro infantil de poemas: \"Sueños de mi Niñez\".",
+                "fotos": [
+                    {
+                        "src": "561347479-32040314102249003-3324736337759757624-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558973480-32040222435591503-5104573028056393164-n.jpg",
                         "shape": "alto"
                     }
                 ],
