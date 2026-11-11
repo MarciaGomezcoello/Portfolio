@@ -8161,6 +8161,42 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2025",
+                "title": "CNPENY",
+                "venue": "Queens",
+                "city": "NY",
+                "photo": "588430580-32759390267008046-571482135376679220-n.jpg",
+                "shape": "alto",
+                "body": "Reconocimiento por parte de la CNPENY por ser socio activo en la Confederación.",
+                "fotos": [
+                    {
+                        "src": "588991887-32759390697008003-1431957975660373644-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "589341626-32759612810319125-4975862426194664999-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "588428055-32759390303674709-6155320304974173152-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
