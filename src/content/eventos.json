@@ -7473,6 +7473,74 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "Confederación Nacional de Periodistas del Ecuador en NY",
+                "venue": "Consulado del Ecuador",
+                "city": "Queens, NY",
+                "photo": "img-1785.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "img-7452.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7458.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7488.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7466.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7467.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7461.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7473.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7474.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7476.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7494.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-7484.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
