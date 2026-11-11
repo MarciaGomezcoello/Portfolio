@@ -7869,6 +7869,66 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": " Presentación de mi Primera Novela",
+                "venue": "Casa de la Cultura \"Benjamín Carrión\" Núcleo del Cañar",
+                "city": "Azogues, Ecuador",
+                "photo": "555981753-31779193075027775-8120507276305558992-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mi primera novela: \"El Ojo de la Muerte\", que abarca la temática del bulling y sus consecuencias, una novela que te pondrá a reflexionar y te enseñará a perdonar.",
+                "fotos": [
+                    {
+                        "src": "555830310-31781279124819170-348356537658171904-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "555830300-31781278851485864-5915555014217172872-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558048747-31781279121485837-4582649323053768990-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557623865-31781278968152519-8350024113542004629-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556248860-31781279178152498-8540927903060063767-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556686659-31781279141485835-4759112958194769350-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556883574-31781278828152533-7808295434073452923-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556228189-31781278964819186-5507838809499946243-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556541809-31781279001485849-3062568082345459603-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
