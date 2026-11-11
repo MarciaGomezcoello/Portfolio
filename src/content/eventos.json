@@ -7134,9 +7134,9 @@
                 "title": "HERENCIA HISPANA 2025",
                 "venue": "Biblioteca Langston Hughes",
                 "city": "Corona, NY",
-                "photo": "547643132-1376316324497021-9088636688137557076-n.jpg",
+                "photo": "img-0543.jpg",
                 "shape": "alto",
-                "body": "",
+                "body": "Evento celebrado en Octubre en homenaje a Mario Vargas Llosa, en le mes de la Herencia Hispana, con la participación de Mburukuya de Paraguay, el escritor Julio Zelaya, la escritora Elizabeth Cabral, la escritora Erika Cañete, la escritora Flor de Maria Zaky, el escritor Samuel Acosta, la cantante Ashley.",
                 "fotos": [
                     {
                         "src": "557607026-1397928032335850-6927425943485239252-n.jpg",
@@ -7423,9 +7423,9 @@
                 "date": "",
                 "time": "",
                 "year": "2024",
-                "title": "Tu MEJOR VERSIÓN, 2do Congreso Internacional",
+                "title": "TU MEJOR VERSIÓN, 2do Congreso Internacional",
                 "venue": "Brentwood",
-                "city": "",
+                "city": "NY",
                 "photo": "img-4663.jpg",
                 "shape": "alto",
                 "body": "Invitación y participación en el 2do Congreso Internacional.",
@@ -7628,6 +7628,74 @@
                     },
                     {
                         "src": "501135267-29957834623830305-4660122927339310299-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "Feria Internacional del Libro de New Jersey",
+                "venue": "",
+                "city": "New Jersey",
+                "photo": "502510165-30000240446256389-1355884673033441452-n.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "502663531-30010523328561434-3262138642942150644-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "502549087-30011905718423195-7292378795363809867-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "503124316-30010506678563099-2985612644703010454-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501791190-30010523025228131-5038265581716151724-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "502522611-30010523371894763-2616092088815742110-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "503281330-30010525628561204-794513057822938096-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "502587763-30010523091894791-4956328905570082493-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501792336-30010523191894781-2680628125987513310-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501571611-30010523201894780-8971421432460770807-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "502532969-30010506858563081-6677235108247322246-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "503287191-30010506985229735-3192444589178435810-n.jpg",
                         "shape": "alto"
                     }
                 ],
