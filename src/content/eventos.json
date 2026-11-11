@@ -8081,6 +8081,86 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2025",
+                "title": "19a Feria del Libro Hispana/Latina de Queens NY",
+                "venue": "Rnaissence Charter School",
+                "city": "Queens, NY",
+                "photo": "571191776-32246418158305262-4631304882049935967-n.jpg",
+                "shape": "alto",
+                "body": "Participación en esta feria con mis 3 libros infantiles.",
+                "fotos": [
+                    {
+                        "src": "560614523-32006201918993555-58807652143454054-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558979886-32021588204121593-3261264003560881216-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "560622024-32021588700788210-2016871539162034111-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "563447288-32021605097453237-348293192883957462-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558741198-32021606730786407-5260256160060529935-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "565153126-32059390493674697-8325135943191938507-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "559689277-32057557807191299-2646668209709163442-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "561316339-32057557787191301-7786629291316505346-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558633854-32022963787317368-7673349033299744714-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "559529135-32022963730650707-8656662051298876247-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "559519570-32059390533674693-383848676172952048-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "561403844-32059391187007961-1578940696235870399-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "560772742-32057202660560147-8795318479843783918-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "560183306-32006201872326893-5317772063322625404-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
