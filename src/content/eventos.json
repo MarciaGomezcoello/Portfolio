@@ -8005,6 +8005,50 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2025",
+                "title": "FELIJE",
+                "venue": "Lehman College",
+                "city": "Bronx, NY",
+                "photo": "555683562-31792304247049991-1645191801738138218-n.jpg",
+                "shape": "alto",
+                "body": "Participando en la feria infantil y juvenil con mis libros infantiles.",
+                "fotos": [
+                    {
+                        "src": "557591074-31792906816989734-8474108750747686745-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556602163-31792782840335465-9133577487825890502-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556119546-31792906896989726-5623864725491901652-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557559628-31792906796989736-5888105591707942412-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557271377-31792782787002137-6419018551164460033-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
