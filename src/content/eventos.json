@@ -8197,6 +8197,62 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Día Mudial de Leer",
+                "venue": "Bushwick",
+                "city": "Brooklyn, NY",
+                "photo": "dd8a89d6-35ae-436b-9911-38b02fdd4c0c.webp",
+                "shape": "alto",
+                "body": "Llevando mi literatura infantil a Bushwick.",
+                "fotos": [
+                    {
+                        "src": "652293997-34621867770760277-1078160704365419927-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "655979118-34655660367381017-4467061615797234076-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-2091.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-2104.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-2105-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-2106.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "654257673-34657619940518393-6934573758038827711-n-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656726166-34692745680339152-1159438662066852141-n-2.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
