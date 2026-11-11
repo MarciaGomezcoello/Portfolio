@@ -7545,6 +7545,102 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2024",
+                "title": "VII Feria Internacional del Libro LACUHE",
+                "venue": "Dirección de Cultura Dominicana en el Exterior",
+                "city": "Bronx, NY",
+                "photo": "img-0542.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "499934107-29957834730496961-2511633287406385929-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501113928-29960012600279174-8965750645287817730-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "500288613-29961003163513451-8162285158458156479-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499930097-29957848350495599-1828192923108575396-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499931824-29957848347162266-1043470830745676820-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499931833-29957848153828952-2602911977728211599-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501282014-29957848243828943-6727901369158747155-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "500314163-29957843890496045-215736853969681953-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "500315518-29957834810496953-2578340521800035890-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499929638-29957843880496046-4514870909730355187-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499925591-29957843933829374-2915063808831699022-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499926083-29957843897162711-2111506555772183113-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499918123-29957848163828951-3257742592823030007-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499932435-29957843893829378-1490824694821780927-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499925862-29957843867162714-1207821127847847687-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "499928183-29957859897161111-5291311052995814289-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501387934-29957834570496977-2617361924022351173-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "501135267-29957834623830305-4660122927339310299-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
