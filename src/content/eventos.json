@@ -7929,6 +7929,82 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2025",
+                "title": "VIII Feria Internacional del Libro LACUHE 2025",
+                "venue": "Dirección de Cultura Dominicana en el Exterior",
+                "city": "Bronx, NY",
+                "photo": "556469790-31787319960881753-4949710326079179801-n.jpg",
+                "shape": "alto",
+                "body": "En esta feria presenté mi primer Libro de Poemas.",
+                "fotos": [
+                    {
+                        "src": "img-0550.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557877164-31790391943907888-4177419861596341243-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556035699-31790385573908525-2550527842951846246-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "555658826-31790391997241216-7310982454128797005-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "555557761-31790349997245416-1032549999264197625-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "556010265-31790391970574552-613411083100221919-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "555961267-31790355793911503-8722412982553431860-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557823294-31790355813911501-6873892372171587746-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-0551.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "558148519-31792211843725898-7468977703904224714-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "555555583-31790391643907918-8139231732283847410-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "557089452-31790391650574584-4233223630002655402-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
