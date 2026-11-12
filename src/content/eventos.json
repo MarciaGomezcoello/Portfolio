@@ -8377,6 +8377,178 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "IX Feria Internacional del Libro LACUHE",
+                "venue": "Bronx",
+                "city": "NY",
+                "photo": "651236618-34561476983466023-8209946146922566899-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación en la feria LACUHE, presentando mi novela \"Secretos tras los Muros\".",
+                "fotos": [
+                    {
+                        "src": "677172031-35302758592671188-3162371413441901996-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "682714944-35510178478595864-2146966450505169859-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "675544766-35294594190154295-3791840171553520995-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "674282061-35294593773487670-3122312031199088082-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "673168080-35252105277736520-2915243884990717597-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "674376067-35294647620148952-3469053750069789009-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "674915829-35294593370154377-3497304386737740547-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "674344789-35248628418084206-87388082377670145-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "673210170-35248560478091000-6414455122729639328-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "673721068-35294593306821050-3326397014749708383-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "670779284-35259928640287517-8616547390620525649-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "685711478-35510178605262518-4746452724959081420-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "684382331-35510179361929109-1626669747409033127-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "673512540-35248560648090983-2812308094591471264-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "675322898-35294647690148945-9116461695761843979-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "673422097-35294648566815524-4442363545763464971-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "674359977-35294648040148910-7055514155608984584-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "X Feria Internacional del Libro de New Jersey",
+                "venue": "Union City",
+                "city": "NJ",
+                "photo": "img-4668.jpg",
+                "shape": "alto",
+                "body": "",
+                "fotos": [
+                    {
+                        "src": "719109756-36397027503244286-2806593104063214036-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "719939777-36397027526577617-5837198637284341631-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "717339917-36426654340281602-2921946127363559177-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "719900332-36426382046975498-1279825280277162189-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "720146012-36424314943848875-3054589547932889633-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "720020030-36426202940326742-1062837425551095746-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "720138805-36426203000326736-5961641053845322955-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "719912229-36426203163660053-6813896679803087595-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "715670770-36424314700515566-393978128870021373-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "717154394-36424314653848904-8300580421824218237-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "718897715-36394735153473521-4009169730758051379-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "718728926-36380768194870217-751618875152921101-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "719225639-36399751079638595-6193443024387259150-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "718870126-36399751089638594-5349172946321603846-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
