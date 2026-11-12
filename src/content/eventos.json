@@ -8337,6 +8337,46 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Poesía y Arte, Grito de Mujer",
+                "venue": "Paterson",
+                "city": "NJ",
+                "photo": "658195695-34856274583986260-8918971377367765213-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación en Grito de Mujer, leyendo uno de mis poemas.",
+                "fotos": [
+                    {
+                        "src": "657478963-34855446140735771-8314130626151090684-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656876880-34855446670735718-2915835533821572914-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657084757-34855446960735689-8137168495827068020-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "660450698-34855446190735766-6238348913585407833-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
