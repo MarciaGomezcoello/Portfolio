@@ -8553,6 +8553,50 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Festival del Libro y la Cultura Dominicana",
+                "venue": "George Washington Educacional Campus",
+                "city": "Bronx, NY",
+                "photo": "741447041-37120410794239283-4922654386103487303-n.jpg",
+                "shape": "alto",
+                "body": "Participación en el Festival del Libro y la Cultura Dominicana.",
+                "fotos": [
+                    {
+                        "src": "746842844-37190942163852812-1925123500287052610-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "745476990-37190942570519438-1456104899648782559-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "744597753-37190942233852805-243393299844015220-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "745282926-37190932537187108-1067820645549834559-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "741402792-37158836463730049-4158199174830477200-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
