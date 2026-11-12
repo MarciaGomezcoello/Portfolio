@@ -8253,6 +8253,82 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Lady Power Awards 2026 NY",
+                "venue": "World Fair Marina Banquet",
+                "city": "Queens, NY",
+                "photo": "657857154-34753948944218825-1703321507330264884-n.jpg",
+                "shape": "alto",
+                "body": "Agradezco a AR. GLOBAL PRODUCTIONS COMPANY, por otorgarme el reconocimiento de Lady Power 2026 (Mujer Poderosa 2026), a la Dra. Ana Rivilla y a la Sra. Marlen Castro.",
+                "fotos": [
+                    {
+                        "src": "657045236-34753948934218826-8036627499551682987-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656186177-34724870137126706-6325434142662301517-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656250423-34720917884188598-5510080250522687243-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656008413-34720969657516754-4464861010225780314-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657106721-34720997450847308-8178672115453024003-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657676182-34724854880461565-1238480504820972788-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656869150-34724869800460073-7766763238805401433-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "655862186-34753924410887945-1467757827997271740-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657301096-34724854733794913-6047717014156396910-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656162029-34724854057128314-7129463114127333004-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657346602-34724853240461729-1487493540792640035-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "657036104-34724854283794958-1897451486106078434-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "656746182-34724853213795065-4728548425702771891-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
