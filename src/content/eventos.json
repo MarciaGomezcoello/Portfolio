@@ -8206,6 +8206,29 @@
                 "categoria": "Otros Eventos",
                 "date": "",
                 "time": "",
+                "year": "2025",
+                "title": "Antología Internacional Hipanoamérica Escribe a India",
+                "venue": "Asociación Mundial de Escritores Latinoamericanos",
+                "city": "",
+                "photo": "img-0545.jpg",
+                "shape": "alto",
+                "body": "Mi participación en esta importante antología compilada por la Dra. Gladys Mercedes Acevedo de Argentina.",
+                "fotos": [],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
                 "year": "2026",
                 "title": "Día Mudial de Leer",
                 "venue": "Bushwick",
@@ -8684,6 +8707,54 @@
                     },
                     {
                         "src": "847763804-39399987392948267-8952456504652903679-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Un Día de Libros y Cultura",
+                "venue": "Biblioteca Criolla",
+                "city": "Jersey City, NJ",
+                "photo": "856693120-39667514229528914-2209512257147515098-n.jpg",
+                "shape": "alto",
+                "body": "Participación en un importante día de Libros y cultura, realizado en la Biblioteca Criolla.",
+                "fotos": [
+                    {
+                        "src": "864830536-39736567949290208-2455955463809130460-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "864830570-39736567455956924-1190903633698870032-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "863102321-39736567382623598-1268435986351640976-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "863354431-39736566852623651-4757724963068908479-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "864856116-39736567779290225-8981469499693896987-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "863369716-39736566932623643-394568403430053273-n.jpg",
                         "shape": "alto"
                     }
                 ],
