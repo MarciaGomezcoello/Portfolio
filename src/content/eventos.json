@@ -8597,6 +8597,106 @@
                 "photoAlt": "",
                 "linkLabel": "",
                 "linkUrl": ""
+            },
+            {
+                "categoria": "Otros Eventos",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "Herencia Hispana",
+                "venue": "Biblioteca Langston Hughes",
+                "city": "Queens, NY",
+                "photo": "793203999-38461084603505222-7218678203253388095-n.jpg",
+                "shape": "alto",
+                "body": "Mi participación por la Herencia Hispana, presentando mi libro infantil: \"Sueños y Fantasías\".",
+                "fotos": [
+                    {
+                        "src": "img-4445-2.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "img-3656.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
+            },
+            {
+                "categoria": "Ferias del Libro",
+                "date": "",
+                "time": "",
+                "year": "2026",
+                "title": "20a Feria del Libro Hispana/Latina en Queens NY",
+                "venue": "Renaissance Charter School",
+                "city": "Queens, NY",
+                "photo": "830468273-39119155647698111-1907291692111307291-n.jpg",
+                "shape": "alto",
+                "body": "Presentación de mi quinta novela: \"New York Casi Devora a mis Abuelos\".",
+                "fotos": [
+                    {
+                        "src": "846536495-39399911752955831-4393944500398366274-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "843354275-39399987352948271-2230815525517214613-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "843405609-39400148966265443-2862969795584927763-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "846229029-39399911786289161-4584292944555082629-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "845363609-39399912112955795-8853006119369139464-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "844322053-39400320549581618-2982024056180923868-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "843461341-39400320179581655-2456702078979196819-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "844302695-39399988169614856-2500128849934860574-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "843890089-39399912089622464-2922265446943882000-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "845802331-39400320142914992-7010423877919648304-n.jpg",
+                        "shape": "alto"
+                    },
+                    {
+                        "src": "847763804-39399987392948267-8952456504652903679-n.jpg",
+                        "shape": "alto"
+                    }
+                ],
+                "_notaFotos": "",
+                "slug": "",
+                "rol": "",
+                "note": "",
+                "poster": "",
+                "posterAlt": "",
+                "posterShape": "",
+                "photoAlt": "",
+                "linkLabel": "",
+                "linkUrl": ""
             }
         ],
         "_guiaCategorias": "Opcional: una línea de presentación para cada clase de encuentro. 'nombre' tiene que estar escrito igual que en la 'categoria' de los encuentros de arriba — si no coincide, no pasa nada malo, simplemente esa clase sale sin línea. No hace falta ponerlas todas, ni en ningún orden: el orden de las palabras lo siguen mandando los encuentros. La línea de 'Todos' es el 'lead' de más arriba.",
