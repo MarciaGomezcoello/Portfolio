@@ -26,46 +26,39 @@
         "_nota": "MUESTRA — las seis fotos están vacías a propósito, para ver cómo queda la hoja antes de tener las fotos. Se van llenando una por una, y la que sobre se borra entera.",
         "items": [
             {
-                "photo": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                "photo": "img-4680.jpg",
                 "photoAlt": "",
                 "shape": "cuadrado",
                 "year": "Azogues",
-                "pie": "De niña, en la casa de la provincia del Cañar."
+                "pie": "De niña, estoy bailando en un programa de la escuela."
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                "photo": "photofix-20-13-30.jpeg",
                 "photoAlt": "",
                 "shape": "alto",
                 "year": "Cuenca",
-                "pie": "El día del grado, Universidad Estatal de Cuenca."
+                "pie": "Estoy paseando por Times Square, NY"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                "photo": "watermarked-img-9656467710990427692.webp",
                 "photoAlt": "",
                 "shape": "ancho",
                 "year": "",
-                "pie": "Una foto sin año sale igual: el dorado no aparece y ya."
+                "pie": "Sentada un rato en el Bryant Park, NY"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                "photo": "img-7157.jpg",
                 "photoAlt": "",
                 "shape": "ancho",
                 "year": "2019",
-                "pie": "La primera Tarde Literaria en la Biblioteca de Corona."
+                "pie": "Estoy en un Fashion Week de NY"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photo": "img-5166.jpg",
                 "photoAlt": "",
                 "shape": "alto",
                 "year": "",
-                "pie": ""
-            },
-            {
-                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
-                "photoAlt": "",
-                "shape": "cuadrado",
-                "year": "Queens",
-                "pie": "Un taller de tejido, de los que empezaron todo."
+                "pie": "Estoy en una Feria de Libro con compañeros escritores Ecuatorianos."
             }
         ]
     },
