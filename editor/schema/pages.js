@@ -29,10 +29,10 @@ import { AJUSTES } from "./ajustes.js";
 
 export const PAGES = [
     { key: "home", path: "/", form: HOME },
-    { key: "tejidos", path: "/tejidos", form: TEJIDOS },
     { key: "libros", path: "/libros", form: LIBROS },
     { key: "arte", path: "/arte", form: ARTE },
     { key: "eventos", path: "/eventos", form: EVENTOS },
+    { key: "tejidos", path: "/tejidos", form: TEJIDOS },
     { key: "biografia", path: "/biografia", form: BIOGRAFIA },
     { key: "ajustes", path: "/", form: AJUSTES },
 ];
