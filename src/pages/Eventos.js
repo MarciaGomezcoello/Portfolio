@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useWords } from "../components/common/Words";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
     hasItems, hasText, eventCategories, eventSlug, eventHasPage,
     shapeRatio, partOn, sectionOn,
@@ -24,6 +24,31 @@ import "./Eventos.css";
    ============================================================================ */
 
 /* ----------------------------------------------------------------------------
+   Coming back.
+
+   Returning to Eventos from an encounter puts the archive back on the word that
+   was being read, with that encounter's card in view, rather than at the top of
+   a page she may have scrolled a long way down.
+
+   The place is written into the history entry itself — `volver`, the card, and
+   `categoria`, the word (null for Todos) — not kept anywhere on the side, so it
+   is still there however many times she goes back and forward over it. Opening
+   a card writes it into the entry being left; the encounter page's own back
+   link carries it forward, and from a shared link or a bookmark it still knows
+   its own card. The next encounter names no word, so the archive under it
+   opens as it would on a fresh visit. A visit that names nothing starts at the
+   top, as before.
+   ---------------------------------------------------------------------------- */
+function useMarkOpened() {
+    const navigate = useNavigate();
+    const location = useLocation();
+    return (place) => {
+        const { volver, categoria, ...rest } = location.state || {};
+        navigate(location, { replace: true, state: { ...rest, ...place } });
+    };
+}
+
+/* ----------------------------------------------------------------------------
    The next one.
 
    An event announces itself with a poster, so the poster is the object: taped up
@@ -43,6 +68,7 @@ import "./Eventos.css";
    ---------------------------------------------------------------------------- */
 
 function UpcomingEvent({ event, labels, kicker, title }) {
+    const markOpened = useMarkOpened();
     const where = [event.venue, event.city].filter(Boolean).join(" · ");
     const when = [event.date, event.time].filter(Boolean).join(" · ");
 
@@ -107,7 +133,9 @@ function UpcomingEvent({ event, labels, kicker, title }) {
                             <Link
                                 className="btn btnSolid nextCta"
                                 to={`/eventos/${eventSlug(event)}`}
-                                state={{ evento: event }}
+                                state={{ evento: event, proximo: true }}
+                                data-volver={eventSlug(event)}
+                                onClick={() => markOpened({ volver: eventSlug(event) })}
                             >
                                 {labels.detalleLabel || "Ver el encuentro"}
                             </Link>
@@ -178,7 +206,8 @@ function InkRule() {
     );
 }
 
-function ArchiveEntry({ ev }) {
+function ArchiveEntry({ ev, category }) {
+    const markOpened = useMarkOpened();
     // An encounter with a page of its own is a doorway and stays one: the
     // photograph goes to that page, where the whole gallery is. One that has no
     // page has nowhere to send anybody, so there its photograph opens instead
@@ -224,18 +253,28 @@ function ArchiveEntry({ ev }) {
         <Link
             className="archiveEntry hasPage"
             to={`/eventos/${eventSlug(ev)}`}
-            state={{ evento: ev }}
+            state={{ evento: ev, categoria: category }}
+            data-volver={eventSlug(ev)}
+            onClick={() => markOpened({ volver: eventSlug(ev), categoria: category })}
         >
             {inside}
         </Link>
     );
 }
 
-function ArchiveIndex({ past, items }) {
+function ArchiveIndex({ past, items, returning }) {
     const words = useWords();
     const categories = eventCategories(items, past.categorias);
     const allLabel = words.all;
-    const [active, setActive] = useState(null);
+    // Back from an encounter, the word she was reading — Todos included — if
+    // it is still there; otherwise the first word, since the archive opens on
+    // one kind of encounter rather than on all of them at once. With a single
+    // kind there are no tabs, and so nothing to choose.
+    const [active, setActive] = useState(() => {
+        const back = returning?.categoria;
+        if (back === null || categories.includes(back)) return back;
+        return categories.length > 1 ? categories[0] : null;
+    });
 
     const shown = active
         ? items.filter((ev) => (ev.categoria || "").trim() === active)
@@ -306,8 +345,8 @@ function ArchiveIndex({ past, items }) {
                         role="tablist"
                         aria-label={words.filterEvents}
                     >
-                        {word(null, allLabel, items.length)}
                         {categories.map((name) => word(name, name, countFor(name)))}
+                        {word(null, allLabel, items.length)}
                     </Reveal>
                 )}
 
@@ -341,7 +380,7 @@ function ArchiveIndex({ past, items }) {
                             {/* An encounter with an account or photographs of
                                 its own opens; one with neither stays a card, so
                                 a link never leads to its own title repeated. */}
-                            <ArchiveEntry ev={ev} />
+                            <ArchiveEntry ev={ev} category={active} />
                         </Reveal>
                     ))}
                 </ul>
@@ -355,6 +394,26 @@ function Eventos({ eventos = {} }) {
     const showUpcoming = sectionOn(upcoming) && (hasText(upcoming.date) || hasText(upcoming.title));
     const past = eventos.past || {};
     const pastItems = hasItems(past.items) ? past.items : [];
+
+    // Where this visit should open, if the history entry names a card.
+    const { state } = useLocation();
+    const [returning] = useState(() =>
+        state?.volver ? { slug: state.volver, categoria: state.categoria } : null
+    );
+
+    // After ScrollToTop has had its jump: bring the card back into view.
+    useEffect(() => {
+        if (!returning) return undefined;
+        const frame = requestAnimationFrame(() => {
+            const card = Array.from(document.querySelectorAll("[data-volver]"))
+                .find((el) => el.dataset.volver === returning.slug);
+            if (!card) return;
+            const box = card.getBoundingClientRect();
+            const top = window.scrollY + box.top - (window.innerHeight - box.height) / 2;
+            window.scrollTo({ top: Math.max(0, top), left: 0, behavior: "instant" });
+        });
+        return () => cancelAnimationFrame(frame);
+    }, [returning]);
 
     return (
         <>
@@ -377,7 +436,7 @@ function Eventos({ eventos = {} }) {
             )}
 
             {sectionOn(past) && pastItems.length > 0 && (
-                <ArchiveIndex past={past} items={pastItems} />
+                <ArchiveIndex past={past} items={pastItems} returning={returning} />
             )}
         </>
     );

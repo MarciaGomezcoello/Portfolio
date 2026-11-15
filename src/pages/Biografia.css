@@ -1,10 +1,17 @@
 /* --- Portrait + prose ---------------------------------------------------- */
 
+/* The portrait stands at the left and the prose wraps around it, carrying on
+   at the full width of the band once it has passed the picture and the roles
+   beneath it, rather than running down a column of its own beside empty
+   paper. */
 .bioGrid {
-    display: grid;
-    grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.6fr);
-    align-items: start;
-    gap: clamp(2.5rem, 6vw, 5rem);
+    display: flow-root;
+}
+
+.bioPortrait {
+    float: left;
+    width: clamp(240px, 30%, 340px);
+    margin: 0.35rem clamp(2rem, 4vw, 3.5rem) 1.5rem 0;
 }
 
 .bioPortrait > .ph,
@@ -32,7 +39,6 @@
 }
 
 .bioPara {
-    max-width: 66ch;
     margin: 0 0 1.5rem;
     font-size: 1.05rem;
     line-height: 1.9;
@@ -680,7 +686,6 @@
    stack costs only the shared line the titles start on. */
 
 @media (max-width: 900px) {
-    .bioGrid,
     .credsCert {
         grid-template-columns: minmax(0, 1fr);
     }
@@ -691,7 +696,10 @@
        and 300px broke them into a narrow stack of pills down one side while the
        paragraph beside them ran the full width of the band. */
     .bioPortrait {
+        float: none;
+        width: auto;
         max-width: none;
+        margin: 0 0 2.5rem;
     }
 
     .bioPortrait > .ph,

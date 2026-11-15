@@ -1,6 +1,6 @@
 # Marcia Creations
 
-Personal website for **Dra. Marcia Gomezcoello** — médica, escritora, poeta,
+Personal website for **Dra. Marcia Gomezcoello** — doctora, escritora, poeta,
 compositora y tejedora. Born in Azogues, Ecuador; based in Queens, New York.
 
 ---

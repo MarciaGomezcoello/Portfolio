@@ -103,7 +103,7 @@
     position: relative;
     padding-bottom: 0.6rem;
     margin-bottom: 1.1rem;
-    font-size: 0.68rem;
+    font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -122,7 +122,7 @@
 }
 
 .nextWhen {
-    font-size: 0.86rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -333,7 +333,7 @@
    so it stays a sentence rather than stretching across the whole band. Keyed on
    the chosen word in the markup, so it fades in again each time it changes. */
 .archiveNote {
-    max-width: 56ch;
+    max-width: 92ch;
     margin-bottom: clamp(2.25rem, 4vw, 3rem);
 }
 

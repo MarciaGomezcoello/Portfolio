@@ -16,7 +16,7 @@
 
 .upcomingGrid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 190px);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 250px);
     align-items: center;
     gap: clamp(1.75rem, 3.5vw, 3rem);
     padding-right: clamp(0px, 7vw, 110px);
@@ -90,7 +90,7 @@
     }
 
     .upcomingPhoto {
-        max-width: 160px;
+        max-width: 210px;
         width: 100%;
     }
 }

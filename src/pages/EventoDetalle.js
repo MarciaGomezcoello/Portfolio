@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useWords } from "../components/common/Words";
 import { Link, useLocation, useParams } from "react-router-dom";
 import {
-    findEvent, hasItems, hasText, toLines, shapeRatio,
+    findEvent, eventSlug, eventCategories, hasItems, hasText, toLines, shapeRatio,
 } from "../content/site";
 import Figure from "../components/common/Figure";
 import { ratioStyle, useNaturalRatio } from "../components/common/naturalRatio";
@@ -59,6 +59,7 @@ function StripFrame({ frame, reserved, isUp, label, onChoose, hold }) {
 }
 
 function Gallery({ frames, label, shape }) {
+    const words = useWords();
     // Each photograph may name its own shape and falls back to the encounter's.
     // The print set, not the gentle one: one picture is shown at a time, so the
     // three shapes can be as different as they really are.
@@ -157,6 +158,10 @@ function Gallery({ frames, label, shape }) {
         setStripDragging(false);
     };
 
+    // A step either way from the print that is up, running on from the last
+    // into the first, so neither arrow is ever a dead end.
+    const step = (by) => setShown((at) => (at + by + count) % count);
+
     const goToFrame = (frame) => {
         if (swept.current) {
             swept.current = false;
@@ -204,6 +209,30 @@ function Gallery({ frames, label, shape }) {
                             }}
                         />
                     </div>
+
+                    {/* Big enough to hit without aiming, at either side of the
+                        mount: the small prints are the way to a particular
+                        picture, these are the way to simply see the next. */}
+                    {many && (
+                        <>
+                            <button
+                                type="button"
+                                className="eventPrintStep isPrev"
+                                aria-label={words.previousPhoto}
+                                onClick={() => step(-1)}
+                            >
+                                <span aria-hidden="true">‹</span>
+                            </button>
+                            <button
+                                type="button"
+                                className="eventPrintStep isNext"
+                                aria-label={words.nextPhoto}
+                                onClick={() => step(1)}
+                            >
+                                <span aria-hidden="true">›</span>
+                            </button>
+                        </>
+                    )}
                 </div>
 
                 {many && (
@@ -243,7 +272,7 @@ function Gallery({ frames, label, shape }) {
                         onPointerLeave={onStripUp}
                     >
                         {frames.map((f, i) => (
-                            <li key={i}>
+                            <li key={i} className={i === shown ? "isUp" : ""}>
                                 <StripFrame
                                     frame={f}
                                     reserved={ratioOf(f)}
@@ -254,6 +283,12 @@ function Gallery({ frames, label, shape }) {
                                         thumbs.current[i] = el;
                                     }}
                                 />
+                                {/* Its place in the envelope, so a print can be
+                                    found again by number — the count over the
+                                    mount says which one is up. */}
+                                <span className="eventStripNum" aria-hidden="true">
+                                    {i + 1}
+                                </span>
                             </li>
                         ))}
                     </ul>
@@ -286,7 +321,8 @@ function EventMissing({ labels = {} }) {
    Pure: it renders the encounter it is handed and looks nothing up. That is
    what lets the cover page pass its own copy of the next encounter, and what
    will let the editing app show an evening that is not on disk yet. */
-export function EventoPage({ event, labels = {} }) {
+export function EventoPage({ event, labels = {}, back = {} }) {
+    const words = useWords();
     // The cover leads the envelope, then every frame she has written, whether or
     // not the picture has been uploaded yet. Empty ones are kept on purpose: a
     // reserved frame is how the rest of this site shows a picture that is coming,
@@ -314,9 +350,20 @@ export function EventoPage({ event, labels = {} }) {
     return (
         <article className="band eventDetail">
             <div className="bandInner">
-                <Reveal>
-                    <Link className="eventDetailBack" to="/eventos">
-                        ← {labels.backLabel || "Todos los encuentros"}
+                <Reveal className="eventDetailBackRow">
+                    <Link
+                        className="eventDetailBack"
+                        to="/eventos"
+                        state={{
+                            volver: eventSlug(event),
+                            ...(back.categoria !== undefined && { categoria: back.categoria }),
+                        }}
+                    >
+                        ← {back.proximo
+                            ? words.backToEvents
+                            : back.categoria
+                                ? `${words.backTo} ${back.categoria}`
+                                : labels.backLabel || "Todos los encuentros"}
                     </Link>
                 </Reveal>
 
@@ -372,6 +419,23 @@ export function EventoPage({ event, labels = {} }) {
    the encounter hands it over; anyone arriving cold — a shared link, a
    bookmark, a new tab, where router state does not survive — is resolved from
    the address instead, so a link someone passed on never opens empty. */
+/* Where the back link goes, and so what it says. Opened from the archive, it
+   returns to the word that was being read (null is Todos). Opened from the next
+   encounter, it returns there, under an archive left to open as it does. From a
+   shared link or a bookmark there is no word to go by, so it takes the
+   encounter's own — the one tab it is certain to be under — or Todos when that
+   word has no tab of its own. */
+function backFor(eventos, event, state) {
+    if (state && "categoria" in state) return { categoria: state.categoria };
+    const past = eventos.past || {};
+    const items = hasItems(past.items) ? past.items : [];
+    const filed = items.some((e) => eventSlug(e) === eventSlug(event));
+    if (state?.proximo || !filed) return { proximo: true };
+    const categories = eventCategories(items, past.categorias);
+    const own = (event.categoria || "").trim();
+    return { categoria: categories.length > 1 && categories.includes(own) ? own : null };
+}
+
 function EventoDetalle({ eventos = {} }) {
     const { slug } = useParams();
     const { state } = useLocation();
@@ -380,7 +444,7 @@ function EventoDetalle({ eventos = {} }) {
 
     if (!event) return <EventMissing labels={labels} />;
 
-    return <EventoPage event={event} labels={labels} />;
+    return <EventoPage event={event} labels={labels} back={backFor(eventos, event, state)} />;
 }
 
 export default EventoDetalle;

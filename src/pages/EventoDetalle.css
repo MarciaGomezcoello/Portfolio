@@ -6,6 +6,18 @@
     background: var(--paper);
 }
 
+/* One centred column: the name, the pictures and the account stacked down the
+   middle of the band, each at its own width, rather than all pushed to the
+   left with the right half of the page left empty. */
+.eventDetail .bandInner > * {
+    margin-inline: auto;
+}
+
+/* The way back lines up with the left edge of the pictures under it. */
+.eventDetailBackRow {
+    max-width: min(100%, 620px);
+}
+
 .eventDetailBack {
     display: inline-block;
     margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
@@ -30,6 +42,21 @@
 .eventDetailHead {
     max-width: min(100%, 820px);
     margin-bottom: clamp(1.75rem, 3.5vw, 2.5rem);
+    text-align: center;
+}
+
+/* The kicker is an inline-flex row with its own leading mark, so it needs
+   centring in its own right. */
+.eventDetailHead .kicker {
+    justify-content: center;
+}
+
+/* On a phone a long kicker breaks onto two centred lines, and its mark was
+   left standing alone off to the side of them. */
+@media (max-width: 600px) {
+    .eventDetailHead .kicker::before {
+        display: none;
+    }
 }
 
 .eventDetailTitle {
@@ -45,8 +72,9 @@
 
 /* --- Everything else, under them ------------------------------------------ */
 
+/* As wide as the pictures over it, so the column keeps one edge. */
 .eventDetailWords {
-    max-width: 62ch;
+    max-width: min(100%, 620px);
 }
 
 .eventDetailWhen {
@@ -117,6 +145,68 @@
        so changing the picture mounts a new one and this runs again. Short, and
        only the picture — the mount underneath does not move. */
     animation: eventPrintIn 0.42s var(--ease) both;
+}
+
+/* Forward and back, on the mount's two edges and halfway down it. A round
+   of the paper over the picture, so it reads on a dark photograph and a pale
+   one alike, and large enough for a thumb. */
+.eventPrintMat {
+    position: relative;
+}
+
+.eventPrintStep {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 3.25rem;
+    height: 3.25rem;
+    padding: 0;
+    border: 1px solid var(--gold-soft);
+    border-radius: 50%;
+    background: rgba(var(--paper-rgb), 0.92);
+    box-shadow: var(--shadow-sm);
+    color: var(--ink);
+    font-family: var(--display);
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background 0.2s var(--ease), color 0.2s var(--ease), transform 0.2s var(--ease);
+}
+
+/* The chevrons sit a touch high and to their side in the font; nudged to the
+   middle of the round. */
+.eventPrintStep span {
+    margin-top: -0.12em;
+}
+
+.eventPrintStep.isPrev { left: clamp(0.5rem, 1.5vw, 1rem); }
+.eventPrintStep.isPrev span { margin-right: 0.08em; }
+.eventPrintStep.isNext { right: clamp(0.5rem, 1.5vw, 1rem); }
+.eventPrintStep.isNext span { margin-left: 0.08em; }
+
+.eventPrintStep:hover {
+    background: var(--rose-deep);
+    color: var(--paper);
+}
+
+.eventPrintStep:active {
+    transform: translateY(-50%) scale(0.94);
+}
+
+.eventPrintStep:focus-visible {
+    outline: 2px solid var(--rose-deep);
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .eventPrintStep {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.7rem;
+    }
 }
 
 @keyframes eventPrintIn {
@@ -248,6 +338,25 @@
 
 .eventStrip > li {
     flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Each small print's number in the envelope, under it. */
+.eventStripNum {
+    font-size: 0.72rem;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: var(--muted);
+}
+
+.eventStrip > li.isUp .eventStripNum {
+    font-weight: 700;
+    color: var(--gold-ink);
 }
 
 .eventStripFrame {

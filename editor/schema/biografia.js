@@ -32,7 +32,7 @@ export const BIOGRAFIA = {
             find: ".credsBand",
             toggle: true,
             label: "Formación",
-            help: "Su título de médica, presentado como un certificado.",
+            help: "Su título de doctora, presentado como un certificado.",
             fields: [
                 { name: "kicker", kind: "text", label: "La palabrita de arriba" },
                 { name: "title", kind: "text", label: "Título de la franja" },
