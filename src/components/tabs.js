@@ -5,10 +5,10 @@
    edit. The words come in both languages because the English site is built
    from the content files and these are not in them. */
 const TABS = [
-    { to: "/tejidos", es: "Tejidos", en: "Knitting" },
     { to: "/libros", es: "Libros", en: "Books" },
     { to: "/arte", es: "Arte", en: "Art" },
     { to: "/eventos", es: "Eventos", en: "Events" },
+    { to: "/tejidos", es: "Tejidos", en: "Knitting" },
     { to: "/biografia", es: "Biografía", en: "Biography" },
 ];
 
