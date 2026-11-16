@@ -141,8 +141,8 @@
     "gallery": {
         "_guia": "La galería de trabajos terminados. Cada bloque es una pieza colgada del hilo: 'photo' es la foto, 'title' el nombre de la prenda, 'note' una línea corta debajo (el material, el punto, para quién fue) y 'shape' la forma de la foto: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta) — las mismas tres formas que se usan en todo el sitio. Se pueden poner las que haga falta — las piezas se acomodan solas en las filas que hagan falta, y aunque tengan formas distintas quedan centradas unas con otras. Para que no salga la sección, dejar 'items' así: []",
         "kicker": "Galería",
-        "title": "Algunos de mis trabajos",
-        "lead": "Visite mis canales para aprender lindos llaveros, amigurumis, puntadas y mucho más, comente y suscríbase a mis canales de YouTube. Gracias por visitarme.",
+        "title": "Algunos de mis trabajos que Usted puede aprender.",
+        "lead": "Visite mis 2 canales en YouTube, aquí podrá aprender lindos llaveros, amigurumis, puntadas y mucho más. Le invito a  comentar, suscribirse y activar la campana para recibir nuevos videos. ¡Gracias por su generosa visita!  ",
         "_nota": "Las fotos de ahora son imágenes tomadas de sus propios videos, puestas para que la galería no salga vacía. Lo ideal es reemplazarlas por fotos de las prendas terminadas: se copian a public/content/ y se escribe el nombre del archivo en 'photo'.",
         "items": [
             {
