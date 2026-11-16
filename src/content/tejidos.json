@@ -9,7 +9,7 @@
 
     "channelsKicker": "Mis 2 Canales:",
 
-    "channelsTitle": "1-Canal de Crochet  y  2-Canal a Dos Agujas",
+    "channelsTitle": "1-Canal de Crochet,    2-Canal a Dos Agujas",
 
     "_guiaCanales": "Los dos canales, tal como salen en esta página. 'logo' es la foto redonda de la tarjeta: es el nombre de un archivo puesto en public/content/. Si se deja \"\", la tarjeta sale sin foto, solo con el nombre y la descripción. El 'short' ('Crochet', 'Palillos') es además la palabra con la que se etiqueta cada video de abajo, así que si se cambia aquí conviene cambiarla también en los videos.",
 
