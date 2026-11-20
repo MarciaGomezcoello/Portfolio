@@ -1,92 +1,85 @@
 {
     "_guia": "La biografía. 'body' acepta varios párrafos: una línea en blanco separa un párrafo del siguiente. La cronología es una lista libre en 'timeline'.",
 
-    "kicker": "Who she is",
+    "kicker": "About me",
 
     "title": "Biography",
 
     "_guiaRetrato": "El retrato de arriba. 'portraitShape' es su forma: 'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta).",
 
-    "portrait": "https://m.media-amazon.com/images/I/71ntBBOychL._SL1000_.jpg",
+    "portrait": "img-7895-3.jpg",
 
     "portraitAlt": "Portrait of Marcia Gomezcoello",
 
     "portraitShape": "alto",
 
-    "lede": "Marcia Gomezcoello González was born in Azogues, Ecuador, and lives in the United States. She is a doctor by profession, and was a writer long before she was one on paper.",
+    "lede": "Get to know a little about me and the work I do.",
 
-    "body": "She graduated as a Doctor of Medicine and Surgery from the State University of Cuenca, and later studied elder care at CUNY, by then in New York.\n\nShe wrote her first story at the age of eleven. She hasn't stopped since: she has more than a dozen published books, spanning novels, illustrated children's stories and poetry, with others finished and waiting their turn. She also has more than a hundred unreleased songs with her own lyrics and music; one of them, «Corazón Valiente», was recorded and arranged at Opus Ethica studios and is on YouTube. She wrote it for a donation of crocheted garments for sick children.\n\nShe is also a graphic designer, video creator and producer, singer, songwriter and cultural promoter. She teaches crochet and knitting workshops as a volunteer, and those workshops gave rise to her two YouTube channels, where she teaches crochet and needle knitting.\n\nIn January 2019 she founded the Literary and Artistic Afternoons — TARLITEART — a free monthly, non-profit gathering at the Corona Library in Queens, where she presents and supports artists, writers and poets. She hasn't missed a single month since.",
+    "body": "Marcia Gomezcoello González was born in the city of Azogues, Ecuador. She attended secondary school at the Colegio Manuela Garaicoa de Calderón in Cuenca, Ecuador, and completed her higher education at the State University of Cuenca, earning the degree of «Doctor of Medicine and Surgery». She also studied elder care.\nBorn into a family of artists, she inherited a passion for art, music and literature. She is a writer, poet, graphic designer, cultural promoter, volunteer crochet workshop instructor, video creator and producer, singer and composer.\nShe wrote her first short story at the age of eleven. She has written more than a hundred unpublished songs, both lyrics and music, five of which have been arranged and recorded. One of them was recorded at the Opus Ethica studios and can be heard today on YouTube under the title «Corazón Valiente» — a song created and dedicated to sick children when a donation of crocheted garments was made, after she gave free workshops to women of the Corona community in Queens, NY.\nShe is the founder, creator, organizer and promoter of Tardes Literarias y Artísticas NY (TARLITEART), and creates the videos and promotion for these events, which have been held from January 2019 to the present. They present, support and promote writers, poets, painters, singers, dancers and artists of every kind. The program takes place on the last Saturday of each month at the Corona Library in Queens, NY, as a non-profit event, where she works as a library volunteer.\nShe has two YouTube channels: a crochet channel, «Marcia Gomezcoello Creations», with more than 173,000 subscribers, for which she received a recognition plaque from YouTube.\nAnd a two-needle knitting channel, «Knitting with Marcia Gomezcoello», with more than 88,000 subscribers. She loves to make knitting a true art, and made giant flowers for the Queens Museum, NY, which have decorated several of its events, as well as for the flower festival held in Queens.\nShe is a member of the Confederation of Ecuadorian Journalists in NY.\nShe has taken part in many book fairs and literary events in New York City.\n",
 
     "_guiaAlbum": "EL ÁLBUM: las fotos de su vida. Cada bloque de 'items' es una foto pegada en la hoja del álbum, sujeta por cuatro esquineros de papel. Para añadir una, copiar un bloque entero y cambiarle los valores: no hay tope, y el orden de la lista es el orden en la hoja — conviene ponerlas de la más antigua a la más reciente. 'photo' es el nombre del archivo puesto en public/content/; 'pie' es la línea que va debajo (dónde fue, quiénes salen) y puede quedar vacía; 'year' es el año, que sale en dorado sobre el pie y también puede quedar vacío. 'shape' es la forma de la foto —'cuadrado', 'alto' (más alta que ancha) o 'ancho' (más ancha que alta)—, las mismas tres de todo el sitio: aquí todas las fotos salen del mismo alto y cada una ocupa el ancho que le toca por su forma, así que mezclarlas es justamente lo que hace que la hoja se vea armada a mano. Para quitar la sección entera, dejar 'items': []",
 
     "album": {
         "kicker": "Album",
-        "title": "Her life in photos",
-        "lead": "From Azogues to Queens: what was gathered along the way.",
+        "title": "My life in photos",
+        "lead": "Welcome — here is a little of my life.",
         "_nota": "MUESTRA — las seis fotos están vacías a propósito, para ver cómo queda la hoja antes de tener las fotos. Se van llenando una por una, y la que sobre se borra entera.",
         "items": [
             {
-                "photo": "https://m.media-amazon.com/images/I/71FchQGBZDL._SL1499_.jpg",
+                "photo": "292eeb42-abce-464e-9d7e-7c73aa1093f4.webp",
                 "photoAlt": "",
                 "shape": "cuadrado",
                 "year": "Azogues",
-                "pie": "As a girl, at home in the province of Cañar."
+                "pie": "As a little girl, dancing in a school show."
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/714V73h5z6L._SL1499_.jpg",
+                "photo": "photofix-20-13-30.jpg",
                 "photoAlt": "",
                 "shape": "alto",
-                "year": "Cuenca",
-                "pie": "Graduation day, State University of Cuenca."
+                "year": "New York",
+                "pie": "Strolling through Times Square, NY"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/71EHtV5Zv0L._SL1000_.jpg",
+                "photo": "watermarked-img-9656467710990427692.webp",
                 "photoAlt": "",
                 "shape": "ancho",
                 "year": "",
-                "pie": "A photo without a year still shows: the gold simply doesn't appear."
+                "pie": "Sitting for a while in Bryant Park, NY"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/71IqyYX9fqL._SL1000_.jpg",
+                "photo": "img-7157.jpg",
                 "photoAlt": "",
                 "shape": "ancho",
-                "year": "2019",
-                "pie": "The first Literary Afternoon at the Corona Library."
+                "year": "New York",
+                "pie": "At a New York Fashion Week"
             },
             {
-                "photo": "https://m.media-amazon.com/images/I/715ro5HaSRL._SL1499_.jpg",
+                "photo": "img-5166.jpg",
                 "photoAlt": "",
                 "shape": "alto",
-                "year": "",
-                "pie": ""
-            },
-            {
-                "photo": "https://m.media-amazon.com/images/I/71HQoXipoKL._SL1499_.jpg",
-                "photoAlt": "",
-                "shape": "cuadrado",
-                "year": "Queens",
-                "pie": "A knitting workshop, one of those that started it all."
+                "year": "Queens, NY",
+                "pie": "At a book fair with fellow Ecuadorian writers."
             }
         ]
     },
 
     "roles": [
-        "Doctor and surgeon",
+        "Doctor of Medicine and Surgery",
         "Writer",
         "Poet",
-        "Songwriter and singer",
+        "Composer and singer",
         "Graphic designer",
         "Video producer",
         "Cultural promoter",
-        "Knitting instructor"
+        "Workshop leader"
     ],
 
     "formacion": {
         "_guia": "La formación médica: su título de doctora, presentado como un certificado. 'degree' es el título obtenido, 'place' la institución y 'detail' la ciudad o una nota corta. 'photo' puede ser el diploma o una foto suya de esa época. Si se vacía 'degree', la sección desaparece.",
-        "kicker": "Training",
-        "title": "Doctor and surgeon",
-        "lead": "She was practicing medicine before she published a single book. It is the training that shapes everything else: the patience to explain, and the habit of caring for whoever is in front of her.",
-        "photo": "https://m.media-amazon.com/images/I/71DrIzgx26L._SL1499_.jpg",
+        "kicker": "Education",
+        "title": "Doctor of Medicine and Surgery",
+        "lead": "Graduated from the Faculty of Medical Sciences of the State University of Cuenca, Ecuador.\nShe worked as a doctor in several hospitals in Ecuador and in New York, USA.",
+        "photo": "53c2fa45-7e57-4a32-ab1b-ee8bd2576da0-2.webp",
         "photoAlt": "Diploma of Doctor of Medicine and Surgery",
         "shape": "ancho",
         "degree": "Doctor of Medicine and Surgery",
@@ -95,102 +88,290 @@
     },
 
     "timeline": {
-        "kicker": "Step by step",
+        "kicker": "Some important moments in my life",
         "title": "Timeline",
         "items": [
             {
-                "year": "Azogues",
-                "title": "Born in Azogues",
-                "text": "Province of Cañar, Ecuador."
+                "year": "Province of Cañar",
+                "title": "Hometown",
+                "text": "Azogues, Ecuador."
             },
             {
-                "year": "Age 11",
-                "title": "Her first story",
-                "text": "She writes her first story, and never stops writing after that."
+                "year": "First Story",
+                "title": "Age 11",
+                "text": "She wrote her first story, about a princess, at the age of 11. Sadly, there is no copy — those writings were lost."
             },
             {
-                "year": "Cuenca",
+                "year": "Province of Azuay",
                 "title": "Doctor of Medicine and Surgery",
-                "text": "She graduates from the State University of Cuenca."
+                "text": "She graduated from the State University of Cuenca, Ecuador."
             },
             {
-                "year": "New York",
-                "title": "Elder care",
-                "text": "Studies at CUNY, by then settled in the United States."
+                "year": "2011 New York",
+                "title": "LAIA International Short Story Award",
+                "text": "Winner of the LAIA International short story contest. Her story was included in an anthology on the theme «Journeys»."
             },
             {
-                "year": "2011",
-                "title": "Short story prize",
-                "text": "She wins the LAIA International short story contest on the theme «Travels». Her story is included in an anthology."
+                "year": "2015",
+                "title": "2 YouTube channels",
+                "text": "She opened a crochet channel, \"Marcia Gomezcoello Creations,\" which now has more than 173,400 subscribers. Months later she opened her second channel, for two-needle knitting, \"Knitting with Marcia Gomezcoello,\" which now has more than 87,900 subscribers."
             },
             {
                 "year": "2019",
-                "title": "TARLITEART is born",
-                "text": "She founds the Literary and Artistic Afternoons at the Corona Library, Queens. On the last Saturday of every month."
+                "title": "Creates TARLITEART",
+                "text": "-Founded Tardes Literarias y Artísticas NY at the Corona Library, Queens, NY.\n-Received recognition from Walking Through Art Corp."
             },
             {
                 "year": "2020",
-                "title": "«El ojo de la muerte»",
-                "text": "She publishes her first novel: drama and suspense, 348 pages."
+                "title": "Published her first novel",
+                "text": "\"El Ojo de la Muerte,\" a drama and suspense novel."
             },
             {
                 "year": "2021",
-                "title": "«La reliquia: Invasión mortal»",
-                "text": "Her second novel, a fantasy and suspense story."
+                "title": "Second novel and YouTube plaque",
+                "text": "-Publishes her second novel, \"La Reliquia: Invasión Mortal,\" a fantasy, action and suspense story. -Received recognition from Multicultural Poder Hispano INC. -YouTube awards her a plaque for passing 100,000 subscribers."
+            },
+            {
+                "year": "2022",
+                "title": "Received recognitions",
+                "text": "-From Ciudades Didácticas, endorsed by UNESCO.\n-From Senator Jessica Ramos.\n-From Assemblyman Manny De Los Santos."
+            },
+            {
+                "year": "2023",
+                "title": "Published her third novel",
+                "text": "\"Yo Exterminé al Último Hombre,\" a science fiction, action and adventure novel."
             },
             {
                 "year": "2024",
-                "title": "«Sueños de mi Niñez»",
-                "text": "A book of poems for children."
+                "title": "Published her fourth novel and other works",
+                "text": "1- \"Secretos tras los Muros,\" a drama and suspense novel.\n2- Poetry collection: \"Jardín de Ilusiones.\"\n3- Children's poetry collection: \"Sueños de mi Niñez.\"\n4- Cofre de Sueños Collection: \"Teresita y los dos Ositos\" and \"Bella.\"\n5- Becomes a member of the Confederation of Ecuadorian Journalists in NY."
+            },
+            {
+                "year": "2025",
+                "title": "Published several children's books",
+                "text": "1- Box of Dreams Collection: \"Teresa & the Two Puppies.\"\n2- Children's poetry collection: \"Sueños y Fantasías.\"\n3- Children's story: \"Chánir y Mayaluca.\""
+            },
+            {
+                "year": "2026",
+                "title": "Published her fifth novel",
+                "text": "\"New York casi devora a mis Abuelos,\" a drama, suspense and comedy novel."
             }
         ]
     },
 
     "recognition": {
         "_guia": "Premios, menciones y participaciones. Cada bloque lleva 'year', 'title', 'text', 'photo' y 'shape' — la foto puede ser el diploma, la placa o una foto de la entrega, y 'shape' es la forma del marco: 'cuadrado', 'alto' (más alto que ancho) o 'ancho' (más ancho que alto) — las mismas tres formas que se usan en todo el sitio. La foto de arriba, la del diploma, también lleva su 'shape'. Sin foto sale un marco de reserva. Para añadir otro, copiar un bloque entero.",
-        "kicker": "Awards",
-        "title": "Recognition",
-        "lead": "Awards, honors and appearances.",
+        "kicker": "Diplomas and trophies",
+        "title": "Some Recognitions",
+        "lead": "Here are some of the diplomas and recognitions I have received throughout my professional life.",
         "_nota": "SOLO EL PRIMERO ES REAL. Los cuatro bloques siguientes están vacíos a propósito, para que ella escriba encima los reconocimientos que faltan; el que no se use se borra entero y la pared se acomoda sola.",
         "items": [
             {
-                "year": "2011",
-                "title": "LAIA International short story contest",
-                "text": "Winner, theme «Travels». Story included in an anthology.",
+                "year": "1989",
+                "title": "Thesis for my doctorate",
+                "text": "I found my thesis, written with two colleagues, in the library of the Faculty of Medical Sciences in Cuenca, Ecuador. It was presented at an international pediatrics congress.",
                 "shape": "ancho",
-                "photo": "https://m.media-amazon.com/images/I/816yYf6wfZL._SL1500_.jpg",
+                "photo": "557607991-31781595431454206-3098364383384026252-n.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2013",
-                "title": "Second award",
-                "text": "What it was goes here: who presented it, for which work and in which city.",
+                "year": "1992",
+                "title": "Gastroenterology Congress Diploma",
+                "text": "For taking part in the 7th International Congress.",
                 "shape": "alto",
-                "photo": "https://m.media-amazon.com/images/I/71eWE3nHvCL._SL1499_.jpg",
+                "photo": "img-3871.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2016",
-                "title": "Third award",
-                "text": "The year goes in 'year', and it appears on the gold seal in the corner. If it is left empty, the seal doesn't appear.",
+                "year": "1993",
+                "title": "Surgery Congress Diploma",
+                "text": "For taking part in the 17th Surgery Congress.",
                 "shape": "cuadrado",
-                "photo": "https://m.media-amazon.com/images/I/71exWUeutVL._SL1499_.jpg",
+                "photo": "img-3872.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2019",
-                "title": "Fourth award",
-                "text": "The name of the diploma file, or of the photo of the ceremony, goes in 'photo', placed in public/content/.",
+                "year": "1993",
+                "title": "Continuing Medical Education Diploma",
+                "text": "For taking part in the Continuing Medical Education Course.",
                 "shape": "ancho",
-                "photo": "https://m.media-amazon.com/images/I/61Q5vO63e4L._SL1000_.jpg",
+                "photo": "img-3873.jpg",
                 "photoAlt": ""
             },
             {
-                "year": "2022",
-                "title": "Fifth award",
-                "text": "To add another, copy a whole block and change its values. There is no limit.",
+                "year": "2011",
+                "title": "LAIA International Contest",
+                "text": "Taking part in the short story contest held by LAIA International.",
                 "shape": "alto",
-                "photo": "https://m.media-amazon.com/images/I/613cOmIKFRL._SL1000_.jpg",
+                "photo": "ceafb811-82f4-428b-b6be-e05397614db8.webp",
+                "photoAlt": ""
+            },
+            {
+                "title": "Walking Through Art",
+                "year": "2019",
+                "text": "Recognition received at the Ecuadorian Consulate.",
+                "photo": "img-3874.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "12th Latin American Cultural Gathering",
+                "year": "2019",
+                "text": "Taking part in the event organized by LACUHE.",
+                "photo": "79540678-3426312267409235-3357973884925116416-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Multicultural Poder Hispano INC.",
+                "year": "2021",
+                "text": "Certificate awarded for International Women's Day.",
+                "photo": "img-3930-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "5th LACUHE International Book Fair",
+                "year": "2022",
+                "text": "Taking part in the Book Fair.",
+                "photo": "492589387-29450443651236074-5891000462828558541-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Nuestro Arte Abraza la Paz (Our Art Embraces Peace)",
+                "year": "2022",
+                "text": "Taking part in events for world peace.",
+                "photo": "493277311-29450443474569425-7497996938048162122-n-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Queens Public Library",
+                "year": "2022",
+                "text": "Certificate awarded for holding the Tardes Literarias y Artísticas Annual Awards Ceremony.",
+                "photo": "491915261-29450443504569422-6056537414435138511-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Senator Jessica Ramos",
+                "year": "2022",
+                "text": "Certificate awarded by Senator Jessica Ramos.",
+                "photo": "491954249-29450443477902758-4682681697769450181-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "New York State Assembly",
+                "year": "2022",
+                "text": "Certificate awarded by Assemblyman Manny De Los Santos.",
+                "photo": "492353013-29450443711236068-5665186126506864521-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Ciudades Didácticas",
+                "year": "2022",
+                "text": "Endorsed by UNESCO, awarded for my work as an Ecuadorian cultural manager.",
+                "photo": "491831911-29450443591236080-5415333884484611029-n-3.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "6th LACUHE International Book Fair",
+                "year": "2023",
+                "text": "Taking part in the Book Fair.",
+                "photo": "img-4008.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Queens Public Library",
+                "year": "2024",
+                "text": "For holding the Tardes Literarias y Artísticas Annual Awards Ceremony.",
+                "photo": "img-3924-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "National Confederation of Ecuadorian Journalists NY",
+                "year": "2024",
+                "text": "Certificate awarded by the CNPENY.",
+                "photo": "img-3927-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "National Confederation of Ecuadorian Journalists, NY Chapter",
+                "year": "2024",
+                "text": "Certificate for becoming a new member of the CNPENY.",
+                "photo": "img-3932-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "LACUHE International Book Fair",
+                "year": "2025",
+                "text": "Taking part in the Book Fair.",
+                "photo": "img-0533.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "National Confederation of Ecuadorian Journalists, NY Chapter",
+                "year": "2026",
+                "text": "Recognition from the CNPENY for my contribution to literature and for being an active member of the Confederation.",
+                "photo": "img-3923-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "AR. GLOBAL PRODUCTIONS COMPANY NEW YORK 2026",
+                "year": "2026",
+                "text": "",
+                "photo": "645493784-34353136670966723-6183386953683042418-n.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "AR. GLOBAL PRODUCTIONS COMPANY NY ",
+                "year": "2026",
+                "text": "Awarded for being named Lady Power.",
+                "photo": "img-2186.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "AR. GLOBAL PRODUCTIONS COMPANY NEW YORK",
+                "year": "2026",
+                "text": "Trophy awarded for being named Lady Power 2026.",
+                "photo": "img-2188.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "Grito de Mujer 2026",
+                "year": "2026",
+                "text": "Taking part in the Grito de Mujer events.",
+                "photo": "img-3925-2.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "9th LACUHE International Book Fair",
+                "year": "2026",
+                "text": "Taking part in the Book Fair.",
+                "photo": "img-2639.jpg",
+                "shape": "alto",
+                "photoAlt": ""
+            },
+            {
+                "title": "10th New Jersey International Book Fair",
+                "year": "2026",
+                "text": "Taking part in the New Jersey Book Fair.",
+                "photo": "img-3926-2.jpg",
+                "shape": "alto",
                 "photoAlt": ""
             }
         ]

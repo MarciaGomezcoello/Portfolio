@@ -24,3 +24,7 @@ yarn-error.log*
 /.versiones
 /.borrador
 
+
+# smaller copies of the photographs, made before each build (scripts/tallas.mjs)
+/public/content/_tallas
+/src/tallas.json

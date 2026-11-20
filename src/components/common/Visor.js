@@ -4,6 +4,7 @@ import {
 import { useWords } from "./Words";
 import { asset } from "../../content/site";
 import useBodyLock from "./useBodyLock";
+import { srcSetFor } from "./tallas";
 import "./Visor.css";
 
 /* ============================================================================
@@ -128,6 +129,8 @@ function Visor({ item, onClose }) {
                     <img
                         className="visorPrint"
                         src={asset(item.src)}
+                        srcSet={srcSetFor(item.src)}
+                        sizes="100vw"
                         alt={item.alt || ""}
                         draggable="false"
                     />

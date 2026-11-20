@@ -28,19 +28,35 @@ const NOT_WORDS = new Set([
     "fontTitles", "fontText", "holidayExtras",
 ]);
 
+/* Her own writing is never translated: a poem is shown as she wrote it, in
+   Spanish, on the English site too. Like a photo or a link it is left out of
+   what is sent and always copied from the Spanish, so no translator can turn
+   a poem into something she did not write. The labels around a poem — "Más
+   poemas", "de: «…»" — are still words and are translated.
+
+   Where her writing lives, file by file: under each named block, the fields
+   that hold it. A list applies its fields to every item in it. */
+const WRITING = {
+    home: { poem: ["title", "body"] },
+    arte: { poems: { items: ["title", "preview", "body"] } },
+};
+
 const isNote = (key) => key.startsWith("_");
-const wanted = (key) => !isNote(key) && !NOT_WORDS.has(key);
+const isWord = (key, writing) =>
+    !isNote(key) && !NOT_WORDS.has(key) && !(Array.isArray(writing) && writing.includes(key));
+const inside = (writing, key) =>
+    writing && !Array.isArray(writing) && typeof writing === "object" ? writing[key] : undefined;
 
 /* Just the words of a value, in the same shape. Empty strings are dropped: a
    translator has nothing to do with them and they only make the text longer. */
-function wordsOf(node) {
+function wordsOf(node, writing) {
     if (typeof node === "string") return node.trim() ? node : undefined;
-    if (Array.isArray(node)) return node.map((v) => wordsOf(v) ?? null);
+    if (Array.isArray(node)) return node.map((v) => wordsOf(v, writing) ?? null);
     if (node && typeof node === "object") {
         const out = {};
         for (const [k, v] of Object.entries(node)) {
-            if (!wanted(k)) continue;
-            const w = wordsOf(v);
+            if (!isWord(k, writing)) continue;
+            const w = wordsOf(v, inside(writing, k));
             if (w !== undefined && !(w && typeof w === "object" && !Array.isArray(w) && !Object.keys(w).length)) {
                 out[k] = w;
             }
@@ -65,7 +81,7 @@ const INSTRUCTIONS = [
 export function spanishForTranslation(content) {
     const files = {};
     for (const name of FILES) {
-        if (content?.[name]) files[name] = wordsOf(content[name]);
+        if (content?.[name]) files[name] = wordsOf(content[name], WRITING[name]);
     }
     return `${INSTRUCTIONS}\n\n${JSON.stringify(files, null, 2)}\n`;
 }
@@ -85,7 +101,7 @@ function parsePasted(text) {
 
 /* Spanish structure, English words wherever the translation has a word for
    the same place. Counts what was and was not found. */
-function overlay(es, tr, tally) {
+function overlay(es, tr, tally, writing) {
     if (typeof es === "string") {
         if (!es.trim()) return es;
         tally.total += 1;
@@ -96,12 +112,14 @@ function overlay(es, tr, tally) {
         return es;
     }
     if (Array.isArray(es)) {
-        return es.map((v, i) => overlay(v, Array.isArray(tr) ? tr[i] : undefined, tally));
+        return es.map((v, i) => overlay(v, Array.isArray(tr) ? tr[i] : undefined, tally, writing));
     }
     if (es && typeof es === "object") {
         const out = {};
         for (const [k, v] of Object.entries(es)) {
-            out[k] = wanted(k) ? overlay(v, tr && typeof tr === "object" ? tr[k] : undefined, tally) : v;
+            out[k] = isWord(k, writing)
+                ? overlay(v, tr && typeof tr === "object" ? tr[k] : undefined, tally, inside(writing, k))
+                : v;
         }
         return out;
     }
@@ -113,7 +131,7 @@ export function englishFromTranslation(content, pasted) {
     const en = {};
     const tally = { total: 0, done: 0 };
     for (const name of FILES) {
-        if (content?.[name]) en[name] = overlay(content[name], translated[name], tally);
+        if (content?.[name]) en[name] = overlay(content[name], translated[name], tally, WRITING[name]);
     }
     return { en, ...tally };
 }
@@ -123,18 +141,21 @@ export function englishFromTranslation(content, pasted) {
    everything else must match. */
 export function englishIsBehind(content, en) {
     if (!en) return false;
-    const frame = (node) => {
+    // Her writing counts as structure here, not words: a poem changed in the
+    // Spanish leaves the English behind until it is copied across again.
+    const frame = (node, writing) => {
         if (typeof node === "string") return "";
-        if (Array.isArray(node)) return node.map(frame);
+        if (Array.isArray(node)) return node.map((v) => frame(v, writing));
         if (node && typeof node === "object") {
             const out = {};
             for (const [k, v] of Object.entries(node)) {
                 if (isNote(k)) continue;
-                out[k] = wanted(k) ? frame(v) : v;
+                out[k] = isWord(k, writing) ? frame(v, inside(writing, k)) : v;
             }
             return out;
         }
         return node;
     };
-    return FILES.some((name) => en[name] && JSON.stringify(frame(content[name])) !== JSON.stringify(frame(en[name])));
+    return FILES.some((name) => en[name]
+        && JSON.stringify(frame(content[name], WRITING[name])) !== JSON.stringify(frame(en[name], WRITING[name])));
 }

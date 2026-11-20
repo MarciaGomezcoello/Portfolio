@@ -5,6 +5,7 @@ import {
     findEvent, eventSlug, eventCategories, hasItems, hasText, toLines, shapeRatio,
 } from "../content/site";
 import Figure from "../components/common/Figure";
+import { preload } from "../components/common/tallas";
 import { ratioStyle, useNaturalRatio } from "../components/common/naturalRatio";
 import Reveal from "../components/common/Reveal";
 import "./EventoDetalle.css";
@@ -85,6 +86,28 @@ function Gallery({ frames, label, shape }) {
     // The plate closes around the photograph itself once the file is known; the
     // shape it was filed under only reserves the space until then.
     const plateRatio = useNaturalRatio(current.src, ratioOf(current));
+
+    // The prints on either side of this one are fetched while this one is
+    // looked at, so stepping to the next is immediate rather than a wait on
+    // an empty mount. Every print stands the same height on the mount and its
+    // width follows its shape, capped by the mount — the same size the print
+    // itself will measure when it is shown, so it is one fetch, not two.
+    const mat = useRef(null);
+    useEffect(() => {
+        if (!many || !mat.current) return;
+        const img = mat.current.querySelector(".figureImg");
+        const plate = mat.current.querySelector(".eventPrintPlate");
+        const box = {
+            width: plate && plate.parentElement
+                ? plate.parentElement.getBoundingClientRect().width
+                : 0,
+            height: img ? img.getBoundingClientRect().height : 0,
+        };
+        [shown + 1, shown - 1, shown + 2].forEach((i) => {
+            const f = frames[(i + count) % count];
+            if (f) preload(f.src, box);
+        });
+    }, [shown, many, count, frames]);
 
     /* --- The strip of small prints ---------------------------------------- */
 
@@ -181,7 +204,7 @@ function Gallery({ frames, label, shape }) {
                     photograph sits narrow on the sheet and a lying one runs
                     nearly across it — the mount does not change height as they
                     are changed. */}
-                <div className="eventPrintMat" role="group" aria-label={label}>
+                <div className="eventPrintMat" role="group" aria-label={label} ref={mat}>
                     <div
                         className="eventPrintPlate"
                         style={ratioStyle(plateRatio)}
@@ -440,7 +463,10 @@ function EventoDetalle({ eventos = {} }) {
     const { slug } = useParams();
     const { state } = useLocation();
     const labels = (eventos.past || {}).detalle || {};
-    const event = state?.evento || findEvent(eventos, slug);
+    // The address names one encounter now, so it is the authority; what the
+    // card handed over is only the fallback, for an encounter the content no
+    // longer has under that address.
+    const event = findEvent(eventos, slug) || state?.evento;
 
     if (!event) return <EventMissing labels={labels} />;
 

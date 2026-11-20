@@ -180,7 +180,68 @@ function itemSlug(item) {
 export const bookSlug = itemSlug;
 export const poemSlug = itemSlug;
 
-export const eventSlug = itemSlug;
+/* An encounter's address. Her evenings repeat their names year after year —
+   there is an "Evento de Febrero" in 2019, 2020 and 2023 — so the title alone
+   gave three encounters one address, and opening it from a shared link or a
+   reload always showed the first. The year is added to the address unless the
+   title already carries it ("evento-de-febrero-2023", but
+   "herencia-hispana-2026" as it was), and a slug written in the JSON is used
+   exactly as written.
+
+   Two that still meet — the same title in the same year — are told apart by
+   position: the later one in her list takes "-2", "-3". That needs the whole
+   list, so the addresses are worked out once per list (`indexEvents`, which
+   App runs whenever the content changes) and each encounter is looked up. */
+function ownEventSlug(ev) {
+    if (!ev) return "";
+    if (typeof ev.slug === "string" && ev.slug.trim() !== "") return ev.slug.trim();
+    const base = slugify(ev.title);
+    const year = (String(ev.year || "").match(/\d{4}/) || [""])[0];
+    if (!year || new RegExp(`(^|-)${year}(-|$)`).test(base)) return base;
+    return base ? `${base}-${year}` : year;
+}
+
+/* The English copy of the events, given the Spanish addresses. The English
+   file is the Spanish one with the words laid over it, item for item, so the
+   item in the same place is the same encounter — and its address must not
+   change with the language, or a link shared from one would be "not found"
+   in the other. Only an address worked out from the title needs this; one
+   written into the JSON is already the same in both. */
+export function withSpanishEventAddresses(en, es) {
+    const enItems = en?.past?.items;
+    const esItems = es?.past?.items;
+    if (!Array.isArray(enItems) || !Array.isArray(esItems)) return en;
+    const items = enItems.map((ev, i) => {
+        const twin = esItems[i];
+        if (!ev || typeof ev !== "object" || !twin) return ev;
+        if (typeof ev.slug === "string" && ev.slug.trim() !== "") return ev;
+        return { ...ev, slug: ownEventSlug(twin) };
+    });
+    return { ...en, past: { ...en.past, items } };
+}
+
+const eventAddresses = new WeakMap();
+const indexedLists = new WeakSet();
+
+export function indexEvents(block) {
+    const items = ((block || {}).past || {}).items;
+    if (!Array.isArray(items) || indexedLists.has(items)) return;
+    indexedLists.add(items);
+    const used = new Set();
+    items.forEach((ev) => {
+        if (!ev || typeof ev !== "object") return;
+        const own = ownEventSlug(ev);
+        let slug = own;
+        for (let n = 2; used.has(slug); n += 1) slug = `${own}-${n}`;
+        used.add(slug);
+        eventAddresses.set(ev, slug);
+    });
+}
+
+export function eventSlug(ev) {
+    if (!ev || typeof ev !== "object") return "";
+    return eventAddresses.get(ev) || ownEventSlug(ev);
+}
 
 export function findBook(items, slug) {
     if (!Array.isArray(items)) return null;
@@ -193,14 +254,19 @@ export function findBook(items, slug) {
 // filed copy wins, because that is the one with the photographs and the account
 // on it.
 export function findEvent(block, slug) {
+    indexEvents(block);
     const items = ((block || {}).past || {}).items;
-    const filed = Array.isArray(items)
-        ? items.find((e) => eventSlug(e) === slug)
-        : null;
+    const list = Array.isArray(items) ? items : [];
+    const filed = list.find((e) => eventSlug(e) === slug);
     if (filed) return filed;
 
     const next = (block || {}).upcoming;
-    return next && eventSlug(next) === slug ? next : null;
+    if (next && eventSlug(next) === slug) return next;
+
+    // An address from before the year was added to it — shared, bookmarked,
+    // already in a search engine — still opens, on the encounter it always
+    // opened: the first one with that title.
+    return list.find((e) => !e.slug && slugify(e.title) === slug) || null;
 }
 
 // An encounter earns a page of its own once there is something on it to read or

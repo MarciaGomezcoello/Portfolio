@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { asset } from "../../content/site";
 import Placeholder from "./Placeholder";
 import { remember, useNaturalRatio } from "./naturalRatio";
 import { useVisor } from "./Visor";
+import { srcSetFor } from "./tallas";
 import "./Figure.css";
 
 /* ============================================================================
@@ -26,6 +27,11 @@ import "./Figure.css";
    marking the first row lazy is what makes the first row slow. Pass `priority`
    for pictures that are visible without scrolling.
 
+   Each photograph offers the browser its smaller copies (see tallas.js), and
+   says how wide it is actually drawn, measured from the page itself before the
+   browser chooses — so no caller has to describe its own layout, and a card
+   takes a card-sized file. The measure follows the frame if it changes size.
+
    Pass `zoom` — this picture's own `{ src, alt, caption, note }` — and pressing
    it opens the viewer on it. Each picture is independent: there is no band to
    step through. A reserved frame never takes it, because the early return below
@@ -48,6 +54,31 @@ function Figure({
     // holding a band of empty ground beside a photograph that turned out to be
     // a different shape from the word it was filed under.
     const shape = useNaturalRatio(src, ratio);
+    const srcSet = srcSetFor(src);
+
+    // How wide the picture is drawn, for the browser to pick a copy by. Set
+    // before the browser makes its choice — a layout effect runs before it
+    // does — and again whenever the frame changes width. Left alone while the
+    // frame has no width yet (inside something hidden), so it is not fixed at
+    // the wrong size.
+    useLayoutEffect(() => {
+        const el = ref.current;
+        if (!el || !srcSet) return undefined;
+        // On a phone whose screen packs three pixels into every point the
+        // browser would fetch a copy three times the drawn width; past twice
+        // the eye cannot tell at these sizes, so the width is given as if the
+        // screen were 2×, which cuts what a phone downloads by about half.
+        const measure = () => {
+            const w = el.getBoundingClientRect().width;
+            const dpr = window.devicePixelRatio || 1;
+            if (w > 0) el.sizes = `${Math.ceil((w * Math.min(dpr, 2)) / dpr)}px`;
+        };
+        measure();
+        if (typeof ResizeObserver === "undefined") return undefined;
+        const watch = new ResizeObserver(measure);
+        watch.observe(el);
+        return () => watch.disconnect();
+    }, [srcSet]);
 
     // An image already in the browser's cache can finish before React has the
     // node, and its load event is then long gone — so its measurement would be
@@ -90,6 +121,7 @@ function Figure({
             }
             style={{ aspectRatio: shape }}
             src={resolved}
+            srcSet={srcSet}
             alt={alt}
             loading={priority ? "eager" : "lazy"}
             fetchpriority={priority ? "high" : "auto"}

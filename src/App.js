@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import {
     site, home, libros, arte, tejidos, eventos, biografia, english, sectionOn,
+    indexEvents, withSpanishEventAddresses,
 } from "./content/site";
 import Navbar from "./components/Navbar";
 import SiteFooter from "./components/Footer/SiteFooter";
@@ -228,6 +229,7 @@ function inLanguage(all, lang) {
     for (const name of ["site", "home", "libros", "arte", "tejidos", "eventos", "biografia"]) {
         if (all.en?.[name]) out[name] = withSpanishSwitches(all.en[name], all[name] || {});
     }
+    if (all.en?.eventos) out.eventos = withSpanishEventAddresses(out.eventos, all.eventos);
     return out;
 }
 
@@ -235,6 +237,9 @@ function App() {
     const all = useContent();
     const [lang, setLang] = useLang();
     const c = inLanguage(all, lang);
+    // Every encounter's address, worked out once per list so that the archive,
+    // the home page and the encounter's own page all agree on it.
+    indexEvents(c.eventos);
 
     useEffect(() => {
         document.documentElement.lang = lang;
