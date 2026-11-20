@@ -4,7 +4,7 @@
    Her photographs arrive straight from a phone, 3000–4000px across and up to
    several megabytes each, and the site used to send that whole file even to a
    card 175px wide. This makes WebP copies of each one at a few widths into
-   `public/content/_tallas/`, and writes `src/tallas.json` saying which copies
+   `public/content/tallas/`, and writes `src/tallas.json` saying which copies
    exist, so a picture can offer the browser the size it actually needs.
 
    - Her originals are never touched. The copies are made from them, and both
@@ -17,8 +17,9 @@
    - Runs on its own before `npm start`, `npm run build` (and so before
      `npm run deploy`) and `npm run build:preview`.
 
-   The folder is `_tallas`, not `.tallas`: GitHub Pages publishing and the
-   editor's own server both skip files whose names start with a dot.
+   The folder is plain `tallas`: GitHub Pages skips any folder whose name
+   starts with "_" (it runs Jekyll), and both the publishing tool and the
+   editor's own server skip names that start with ".".
    ============================================================================ */
 
 import fs from "node:fs/promises";
@@ -29,14 +30,16 @@ import sharp from "sharp";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTENT = path.join(ROOT, "public", "content");
-const OUT = path.join(CONTENT, "_tallas");
+const OUT = path.join(CONTENT, "tallas");
 const LIST = path.join(ROOT, "src", "tallas.json");
 
 export const WIDTHS = [480, 960, 1600];
 const PICTURE = /\.(jpe?g|png|webp)$/i;
 const QUALITY = 80;
 
-const copyName = (name, w) => `${name.replace(/\.[^.]+$/, "")}-${w}.webp`;
+// The original's own extension stays in the name: "foto.jpg" and "foto.png"
+// are different photographs and must not share a copy.
+const copyName = (name, w) => `${name}-${w}.webp`;
 
 async function mtime(file) {
     try {

@@ -37,8 +37,8 @@ export function srcSetFor(name) {
     const found = entryFor(name);
     if (!found) return undefined;
     const [key, e] = found;
-    const stem = key.replace(/\.[^.]+$/, "");
-    const copies = e.w.map((w) => `${BASE}/content/_tallas/${encodeURIComponent(`${stem}-${w}.webp`)} ${w}w`);
+    // Named after the whole original name, extension included (see the script).
+    const copies = e.w.map((w) => `${BASE}/content/tallas/${encodeURIComponent(`${key}-${w}.webp`)} ${w}w`);
     // The original as the largest choice, for a big screen that needs it.
     copies.push(`${encodeURI(asset(key))} ${e.s[0]}w`);
     return copies.join(", ");

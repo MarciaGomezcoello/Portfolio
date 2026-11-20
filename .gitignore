@@ -26,5 +26,5 @@ yarn-error.log*
 
 
 # smaller copies of the photographs, made before each build (scripts/tallas.mjs)
-/public/content/_tallas
+/public/content/tallas
 /src/tallas.json
