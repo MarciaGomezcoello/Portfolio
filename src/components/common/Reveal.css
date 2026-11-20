@@ -5,6 +5,12 @@
     will-change: opacity, transform;
 }
 
+/* A card in a grid: a short rise, so a row is there by the time it is read. */
+.reveal.isCard {
+    transform: translateY(12px);
+    transition-duration: 0.4s;
+}
+
 .reveal.isShown {
     opacity: 1;
     transform: none;
