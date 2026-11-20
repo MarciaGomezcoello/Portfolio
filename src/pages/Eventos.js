@@ -238,7 +238,6 @@ function ArchiveEntry({ ev, category }) {
                 />
             </div>
             <div className="archiveMeta">
-                {ev.year && <span className="archiveYear">{ev.year}</span>}
                 {ev.title && <h3 className="archiveTitle">{ev.title}</h3>}
                 <span className="archiveWhere">
                     {[ev.venue, ev.city].filter(Boolean).join(" · ")}
@@ -260,6 +259,25 @@ function ArchiveEntry({ ev, category }) {
             {inside}
         </Link>
     );
+}
+
+/* The shown encounters gathered by year, newest year first. The year is read
+   as written but trimmed, so "2019 " and "2019" land together; anything that
+   is not a number (or nothing at all) gathers in one group at the end. */
+function byYear(list) {
+    const groups = new Map();
+    list.forEach((ev) => {
+        const n = parseInt(String(ev.year || "").trim(), 10);
+        const year = Number.isNaN(n) ? "" : String(n);
+        if (!groups.has(year)) groups.set(year, []);
+        groups.get(year).push(ev);
+    });
+    return Array.from(groups, ([year, items]) => ({ year, list: items }))
+        .sort((a, b) => {
+            if (a.year === "") return 1;
+            if (b.year === "") return -1;
+            return Number(b.year) - Number(a.year);
+        });
 }
 
 function ArchiveIndex({ past, items, returning }) {
@@ -366,24 +384,37 @@ function ArchiveIndex({ past, items, returning }) {
                     </Reveal>
                 )}
 
-                {/* No key on the list: rebuilding every card on every press reads
-                    as the page reloading, so the entries that stay are left alone
-                    and only the arriving ones fade in. */}
-                <ul className="archiveGrid">
-                    {shown.map((ev, i) => (
-                        <Reveal
-                            as="li"
-                            className="archiveCard"
-                            key={`${ev.title || "ficha"}-${ev.year || ""}`}
-                            delay={Math.min(i, 5) * 80}
-                        >
-                            {/* An encounter with an account or photographs of
-                                its own opens; one with neither stays a card, so
-                                a link never leads to its own title repeated. */}
-                            <ArchiveEntry ev={ev} category={active} />
-                        </Reveal>
-                    ))}
-                </ul>
+                {/* One shelf per year, newest first, so the archive reads as
+                    a run of years rather than one long wall of cards. Within a
+                    year the encounters keep the order she gave them. One with
+                    no year written goes last, under its own word. No key on
+                    the lists: rebuilding every card on every press reads as the
+                    page reloading, so the entries that stay are left alone and
+                    only the arriving ones fade in. */}
+                {byYear(shown).map(({ year, list }) => (
+                    <div className="archiveYearGroup" key={year || "sin-fecha"}>
+                        <h3 className="archiveYearHead">
+                            <span className="archiveYearHeadText">{year || words.undated}</span>
+                            <span className="archiveYearHeadCount">{list.length}</span>
+                        </h3>
+                        <ul className="archiveGrid">
+                            {list.map((ev, i) => (
+                                <Reveal
+                                    as="li"
+                                    className="archiveCard"
+                                    key={`${ev.title || "ficha"}-${ev.year || ""}`}
+                                    delay={Math.min(i, 5) * 80}
+                                >
+                                    {/* An encounter with an account or
+                                        photographs of its own opens; one with
+                                        neither stays a card, so a link never
+                                        leads to its own title repeated. */}
+                                    <ArchiveEntry ev={ev} category={active} />
+                                </Reveal>
+                            ))}
+                        </ul>
+                    </div>
+                ))}
             </div>
         </section>
     );

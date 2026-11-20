@@ -357,9 +357,52 @@
 
 /* The index line hands straight down to the note, so it does not also hold the
    gap that separated it from the grid. */
-.archiveNote + .archiveGrid,
-.indexLine + .archiveGrid {
+.archiveNote + .archiveYearGroup,
+.indexLine + .archiveYearGroup {
     margin-top: 0;
+}
+
+/* --- A year ---------------------------------------------------------------
+   Each year is its own shelf: the year set large in the display face, a
+   hairline running out from it to the edge, and the tally small at the end —
+   so scrolling down the archive reads as turning through the years. */
+.archiveYearGroup + .archiveYearGroup {
+    margin-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.archiveYearHead {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin: 0 0 clamp(1.5rem, 3vw, 2rem);
+    font-weight: normal;
+}
+
+.archiveYearHeadText {
+    font-family: var(--title);
+    font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+    font-weight: 500;
+    line-height: 1;
+    font-variant-numeric: lining-nums;
+    color: var(--rose-deep);
+}
+
+.archiveYearHead::after {
+    content: "";
+    order: 1;
+    flex: 1;
+    align-self: center;
+    height: 1px;
+    background: var(--line);
+}
+
+.archiveYearHeadCount {
+    order: 2;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    font-variant-numeric: tabular-nums;
+    color: var(--muted);
 }
 
 .indexLine:has(+ .archiveNote) {

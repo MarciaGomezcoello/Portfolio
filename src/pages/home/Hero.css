@@ -266,3 +266,30 @@
         max-width: min(68vw, 250px);
     }
 }
+
+/* On a tablet the portrait stands centred over the words, and words ranged
+   left under it read as having drifted to the side of the photograph. Centred
+   with it, the two read as one column. The rule beside the cycling roles is
+   left out here: centred, it slid back and forth as each word typed itself. */
+@media (min-width: 561px) and (max-width: 900px) {
+    .heroText {
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroRoles {
+        justify-content: center;
+    }
+
+    .heroRolesRule {
+        display: none;
+    }
+
+    .heroIntro {
+        margin-inline: auto;
+    }
+
+    .heroActions {
+        justify-content: center;
+    }
+}

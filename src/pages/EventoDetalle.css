@@ -13,9 +13,18 @@
     margin-inline: auto;
 }
 
-/* The way back lines up with the left edge of the pictures under it. */
-.eventDetailBackRow {
-    max-width: min(100%, 620px);
+/* The way back sits at the page's own left edge, straight under the name in
+   the bar above, rather than tucked in over the centred pictures. The bar holds
+   its gutter inside the widest width and the band holds it outside, so on a
+   wide screen the bar's name starts further in; the padding is that
+   difference, and is nothing once the screen is narrower than the widest. */
+.eventDetail .bandInner > .eventDetailBackRow {
+    max-width: none;
+    margin-inline: 0;
+    padding-left: max(0px, calc(
+        (min(100vw - 2 * var(--gutter), var(--maxw))
+         - (min(100vw, var(--maxw)) - 2 * var(--gutter))) / 2
+    ));
 }
 
 .eventDetailBack {
@@ -292,9 +301,12 @@
        static that is measured from an ancestor instead. */
     position: relative;
     display: flex;
-    gap: 0.7rem;
+    gap: 0.95rem;
     margin: 0;
-    padding: 0 0 0.15rem;
+    /* Room on every side for the ring around the print that is up and the
+       lift it gets — a scrolling strip clips whatever spills past its edge,
+       so without this the ring was cut off at the top and the ends. */
+    padding: 0.85rem 0.75rem 0.3rem;
     list-style: none;
     /* Centred while the prints do not fill the tray, so a short set reads as
        laid out rather than pushed to one end. `safe` is what makes that
@@ -356,7 +368,7 @@
 
 .eventStrip > li.isUp .eventStripNum {
     font-weight: 700;
-    color: var(--gold-ink);
+    color: var(--rose-deep);
 }
 
 .eventStripFrame {
@@ -372,21 +384,35 @@
     border: 1px solid var(--line);
     border-radius: 4px;
     cursor: pointer;
-    opacity: 0.62;
+    /* The ones not up are faded well back and drained of most of their
+       colour, so the one in full colour is the only one that reads. */
+    opacity: 0.4;
+    filter: grayscale(0.7);
     transition: opacity 0.35s var(--ease), border-color 0.35s var(--ease),
-                transform 0.35s var(--ease);
+                transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+                filter 0.35s var(--ease);
 }
 
 .eventStripFrame:hover,
 .eventStripFrame:focus-visible {
-    opacity: 0.9;
+    opacity: 0.85;
+    filter: none;
     transform: translateY(-3px);
 }
 
-/* The one that is face up, ringed in thread-gold. */
-.eventStripFrame.isUp {
+/* The one that is face up: fully lit, lifted off the tray, and ringed in her
+   rose with a sliver of the tray showing between ring and print, so it reads
+   as chosen at a glance rather than only a shade brighter than the rest. */
+.eventStripFrame.isUp,
+.eventStripFrame.isUp:hover {
     opacity: 1;
-    border-color: var(--gold);
+    filter: none;
+    border-color: transparent;
+    transform: translateY(-3px) scale(1.06);
+    box-shadow:
+        0 0 0 3px var(--paper-deep),
+        0 0 0 6px var(--rose-deep),
+        var(--shadow-md);
     cursor: default;
 }
 

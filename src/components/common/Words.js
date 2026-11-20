@@ -23,6 +23,7 @@ export const DEFAULT_WORDS = {
     all: "Todos",
     newBook: "Nuevo",
     filterEvents: "Clases de encuentro",
+    undated: "Sin fecha",
     posterFrame: "Afiche",
     coverFrame: "Portada",
     portraitFrame: "Retrato",
