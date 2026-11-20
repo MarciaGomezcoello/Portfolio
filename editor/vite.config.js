@@ -9,5 +9,7 @@ export default defineConfig({
         port: 5174,
         open: true,
         proxy: { "/api": "http://localhost:5175" },
+        // The video-link reader is shared with the site and lives in its src/.
+        fs: { allow: [".."] },
     },
 });

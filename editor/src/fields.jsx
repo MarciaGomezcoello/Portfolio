@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { getPreviewUrl } from "./config.js";
 import Confirm from "./Confirm.jsx";
+// Shared with the site, so a link the editor accepts is one the site can play.
+import { videoEmbed } from "../../src/content/videoLink.js";
 
 /* ============================================================================
    One control per `kind` in the schema, and nothing else.
@@ -1201,14 +1203,28 @@ function Field({ field, obj, base, onPatch }) {
     }
 
     if (field.kind === "video") {
-        const kind = !value.trim()
+        // A YouTube or Vimeo link is turned into its player address the moment
+        // it is pasted, so she can copy the link from wherever she is watching.
+        const v = value.trim();
+        const isYouTube = /^(https?:\/\/)?([a-z]+\.)?(youtube\.com|youtu\.be)(\/|$)/i.test(v);
+        const kind = !v
             ? "Vacío — queda el marco de reserva."
-            : /\.(mp4|webm|ogv|ogg|mov|m4v)(\?.*)?$/i.test(value.trim())
+            : /\.(mp4|webm|ogv|ogg|mov|m4v)(\?.*)?$/i.test(v)
                 ? "Se leyó como un archivo de video de public/content/."
-                : "Se leyó como un enlace a un video de internet.";
+                : /player\.vimeo\.com\/video\//i.test(v)
+                    ? "Video de Vimeo ✓"
+                    : videoEmbed(v)
+                        ? "Video de YouTube ✓"
+                        : isYouTube
+                            ? "⚠ Es un enlace de YouTube, pero no a un video. Copie el enlace del video mismo."
+                            : "Se usará tal cual, como un enlace a un video de internet.";
         return (
             <Row field={field} changed={changed} onRevert={revert}>
-                <input type="text" value={value} onChange={(e) => set(e.target.value)} />
+                <input
+                    type="text"
+                    value={value}
+                    onChange={(e) => set(videoEmbed(e.target.value) || e.target.value)}
+                />
                 <span className="rowHelp">{kind}</span>
             </Row>
         );

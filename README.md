@@ -21,17 +21,18 @@ implementation detail.
 | Portada              | `/`              | Hero with cycling roles, a line in her voice, three books, a poem, the two channels, TARLITEART |
 | Libros               | `/libros`        | Every book, filterable by genre; each links to its own page          |
 | A book               | `/libros/:slug`  | Cover, synopsis, optional excerpt, buy link, and what's coming next  |
-| Poemas               | `/poemas`        | An illustrated contents page — every poem in order, opening lines    |
-| A poem               | `/poemas/:slug`  | The verse set on a page beside its picture, with previous and next   |
+| Arte                 | `/arte`          | Her poems, in order with their opening lines, and her songs          |
+| A poem               | `/arte/:slug`    | The verse set on a page beside its picture, with previous and next   |
 | Tejidos              | `/tejidos`       | The two channels, chosen videos, where they began, and a gallery     |
-| Eventos              | `/eventos`       | TARLITEART, the monthly literary afternoon she has run since 2019    |
+| Eventos              | `/eventos`       | The next event, then every past one — by kind, grouped by year       |
+| An event             | `/eventos/:slug` | Its account and a carousel of its photos                             |
 | Biografía            | `/biografia`     | The long version, a dated timeline, recognitions                     |
 
 **Decisions worth knowing**
 
-- **No photographs yet.** Every image slot renders a designed placeholder
-  frame — a woven panel with a thin-line glyph saying what belongs there. That
-  is deliberate, not a broken image.
+- **Empty frames are designed.** An image slot with no photo yet renders a
+  placeholder frame — a woven panel with a thin-line glyph saying what belongs
+  there. That is deliberate, not a broken image.
 - **Nothing is fetched at runtime.** No APIs, no live data. In particular there
   are no YouTube subscriber counts anywhere: a number the site cannot refresh
   goes stale on its own, so the copy avoids citing figures that change.
@@ -41,6 +42,16 @@ implementation detail.
   from the page rather than leaving an empty heading behind.
 - **Lists grow on their own.** Add a book and it appears; give it a new
   `categoria` and a new filter tab appears with it. No code changes.
+- **Every event has its own address**, made from its title plus its year
+  (`/eventos/evento-de-febrero-2023`) unless the title already has the year;
+  two with the same title and year get `-2`. Her evenings repeat their names
+  every year, so the title alone was not enough. Older year-less addresses
+  still open, and the English site uses the same addresses as the Spanish.
+- **English is a translation, never a second copy to keep in step.** The files
+  in `src/content/en/` are the Spanish ones with the words laid over them, made
+  with the editor's Traducir tools. Her poems are never translated — titles,
+  verses and excerpts stay in Spanish on the English site, and the editor
+  enforces it.
 
 ---
 
@@ -72,6 +83,25 @@ To put a real photo into a placeholder frame:
 A full `https://...` URL works too. Leave a field as `""` and the placeholder
 stays. If a file name is wrong or the image fails to load, the page falls back
 to the placeholder rather than showing a broken image.
+
+Every photo also gets smaller WebP copies (480, 960 and 1600px wide), made
+automatically before each `npm start`, `npm run build` and `npm run deploy` by
+`scripts/tallas.mjs`, and the browser downloads the smallest one that is sharp
+where the photo is shown. Her originals are never touched; the copies sit in
+`public/content/tallas/` and their list in `src/tallas.json`, both left out of
+git because they can always be made again. The first run takes a minute or two;
+after that only new photos are processed.
+
+The published site is about 860 MB of GitHub Pages' ~1 GB limit, almost all of
+it photos — worth keeping an eye on as she adds more.
+
+### Videos
+
+A video field takes a file in `public/content/` (`"clase.mp4"`) or a link. A
+YouTube or Vimeo link can be pasted exactly as copied from the address bar or
+the Share button — `youtube.com/watch?v=…`, `youtu.be/…`, Shorts, Live — and is
+played from its embed address (`src/content/videoLink.js`). The editor converts
+it the moment it is pasted.
 
 Book covers can be either shape — `"shape": "alto"` (rectangular) or
 `"cuadrado"`. The two mix freely in one row: covers stand on a shared bottom
@@ -123,15 +153,21 @@ respects `prefers-reduced-motion`.
 
 ```
 public/
-  content/              # editable images go here (empty for now)
+  content/              # her photos and video files
+    tallas/             # smaller copies, made before each build (not in git)
   index.html            # metadata, fonts, GitHub Pages SPA shim
+scripts/
+  tallas.mjs            # makes the smaller photo copies
+editor/                 # the Mac editing app — see docs/EDITOR-APP.md
 src/
   styles/tokens.css     # ← the design system: colour, type, spacing, motion
   content/
     site.json           # name, menu, footer, the two channels
     home.json           # the cover page
-    libros.json  poemas.json  tejidos.json  eventos.json  biografia.json
-    site.js             # loads the JSON; image paths, slugs, categories
+    libros.json  arte.json  tejidos.json  eventos.json  biografia.json
+    en/                 # the English copy of each file
+    site.js             # loads the JSON; image paths, addresses, categories
+    videoLink.js        # a pasted YouTube/Vimeo link → its embed address
     README.md           # ← the editing guide (Spanish)
   components/
     Navbar.js           # sticky bar, floats over the hero on the home page
@@ -139,6 +175,7 @@ src/
     common/
       Placeholder.js    # the designed empty box that stands in for a photo
       Figure.js         # a picture, or that placeholder
+      tallas.js         # offers each picture's smaller copies to the browser
       Reveal.js         # fade-up on scroll
       PageHeader.js     # the masthead each inner page opens with
       Upcoming.js       # "Lo que viene", shown on the book pages
@@ -147,9 +184,11 @@ src/
     Home.js  home/      # Hero + the cover-page bands
     Libros.js           # the shelf and its genre tabs
     LibroDetalle.js     # one book
-    Poemas.js           # the illustrated contents run
+    Arte.js             # the poems and the songs
     PoemaDetalle.js     # one poem
-    Tejidos.js  Eventos.js  Biografia.js  NotFound.js
+    Eventos.js          # the next event and the archive, by year
+    EventoDetalle.js    # one event and its photo carousel
+    Tejidos.js  Biografia.js  NotFound.js
 ```
 
 ## Tech

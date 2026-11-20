@@ -11,6 +11,7 @@
 // the page shows a designed placeholder frame instead — never a broken image.
 // ============================================================================
 
+import { videoEmbed } from "./videoLink";
 import site from "./site.json";
 import home from "./home.json";
 import libros from "./libros.json";
@@ -59,7 +60,10 @@ export function videoSource(value) {
     if (VIDEO_FILE.test(trimmed)) {
         return { kind: "file", src: asset(trimmed) };
     }
-    return { kind: "embed", src: trimmed };
+    // A YouTube or Vimeo link as copied from the address bar or the Share
+    // button only plays once it is the embed address; anything else is used
+    // exactly as written.
+    return { kind: "embed", src: videoEmbed(trimmed) || trimmed };
 }
 
 // Which of her channels a video belongs to. Matched on the short name the
