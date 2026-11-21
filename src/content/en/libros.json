@@ -227,7 +227,10 @@
         "body": "In the Big Apple — not just a city, but an indecipherable maze of skyscrapers and strange noises — with nothing to guide them but their wits, their own courage and the language barrier, the grandparents set out to conquer the metropolis, amid the chaos of the subway, cultural misunderstandings and the struggle to survive in a world that never stops.\n",
         "cover": "71drizgx26l.-sl1499.jpg",
         "shape": "alto",
-        "photoAlt": "Cover of the next book"
+        "photoAlt": "Cover of the next book",
+        "_guiaVideo": "Un video corto del libro, debajo del texto: sale su foto con el botón de play y, al tocarlo, se ve ahí mismo con sonido. En el editor se arrastra el video tal cual y se comprime solo. También sirve un enlace de YouTube o Vimeo. 'poster' es la foto con el botón de play. Si se deja \"\", no sale video.",
+        "video": "nueva-novela-trailer.mp4",
+        "poster": "nueva-novela-trailer.jpg"
     },
 
     "detail": {

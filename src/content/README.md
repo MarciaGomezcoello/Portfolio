@@ -314,7 +314,12 @@ aquí no cambia nada allá, y al revés.
 
 Cada libro lleva `title`, `year`, `categoria`, `pages`, `cover`, `synopsis` y el
 enlace de compra (`buyLabel`, `buyUrl`). El bloque `upcoming` es para los
-títulos que todavía no salen.
+títulos que todavía no salen. Puede llevar un video corto del libro en `video`
+(un archivo puesto en `public/content/`, como `trailer.mp4`, o un enlace de
+YouTube o Vimeo) y en `poster` la foto con el botón de play. Sale debajo del
+texto como los demás videos del sitio: al tocar play se ve ahí mismo, con
+sonido. En el editor basta con arrastrar el video: se comprime solo (unos 4 MB
+por cada 20 segundos) y su primera imagen queda de foto.
 
 `generos` es la lista de géneros: las pestañas de arriba, en ese orden. La
 `categoria` de cada libro tiene que ser uno de ellos, escrito igual. Un género

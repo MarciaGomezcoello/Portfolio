@@ -227,7 +227,10 @@
         "body": " En la Gran Manzana, que no es solo una urbe; sino un laberinto indescifrable de rascacielos y ruidos extraños, sin más brújula que su ingenio, su propia valentía y la barrera del idioma, los abuelos se lanzan a conquistar esta metrópolis, entre el caos del metro, los malentendidos culturales y la lucha por sobrevivir en un mundo que no se detiene. \n",
         "cover": "71drizgx26l.-sl1499.jpg",
         "shape": "alto",
-        "photoAlt": "Portada del próximo libro"
+        "photoAlt": "Portada del próximo libro",
+        "_guiaVideo": "Un video corto del libro, debajo del texto: sale su foto con el botón de play y, al tocarlo, se ve ahí mismo con sonido. En el editor se arrastra el video tal cual y se comprime solo. También sirve un enlace de YouTube o Vimeo. 'poster' es la foto con el botón de play. Si se deja \"\", no sale video.",
+        "video": "nueva-novela-trailer.mp4",
+        "poster": "nueva-novela-trailer.jpg"
     },
 
     "detail": {

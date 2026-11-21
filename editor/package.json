@@ -11,7 +11,7 @@
     "app": "npm run preview-site && vite build && electron .",
     "package": "npm run preview-site && vite build && npm run prepack && electron-builder --mac --dir",
     "dmg": "npm run preview-site && vite build && npm run prepack && electron-builder --mac",
-    "prepack": "node electron/write-default-site.js"
+    "prepack": "node electron/write-default-site.js && mkdir -p tools/bin && swiftc -O tools/comprimir-video.swift -o tools/bin/comprimir-video"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -38,6 +38,7 @@
       "electron/**/*",
       "server.js",
       "schema/**/*",
+      "tools/bin/**/*",
       "dist/**/*",
       "preview-site/**/*",
       "package.json",
@@ -49,7 +50,10 @@
       ],
       "category": "public.app-category.productivity",
       "identity": null
-    }
+    },
+    "asarUnpack": [
+      "tools/bin/**"
+    ]
   },
   "productName": "Sitio de Marcia",
   "description": "Editor del sitio de la Dra. Marcia Gomezcoello",

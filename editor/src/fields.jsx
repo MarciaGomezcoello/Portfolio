@@ -1030,6 +1030,190 @@ function CategoryField({ field, value, changed, onRevert, set }) {
     );
 }
 
+/* --- Video ----------------------------------------------------------------
+   A video can be dropped straight in. It is copied to the editor, made small
+   enough for the website by the Mac's own video engine, and a still from its
+   first moment is taken for the picture under the play button — with a bar
+   showing how far along it is, first copying, then compressing. Like a photo,
+   it only becomes part of the site at Aplicar. A YouTube or Vimeo link can be
+   pasted instead, and is turned into its player address as it is pasted. */
+const VIDEO_TYPES = /\.(mp4|mov|m4v|webm|avi|mkv|3gp)$/i;
+
+function VideoField({ field, obj, base, onPatch }) {
+    const value = obj?.[field.name] ?? "";
+    const baseValue = base?.[field.name] ?? "";
+    const changed = !same(value, baseValue) || (field.poster && !same(obj?.[field.poster], base?.[field.poster]));
+    const input = useRef(null);
+    const alive = useRef(true);
+    const [over, setOver] = useState(false);
+    const [work, setWork] = useState(null); // { step: "copy" | "squeeze", progress }
+    const [error, setError] = useState("");
+
+    useEffect(() => {
+        alive.current = true;
+        return () => { alive.current = false; };
+    }, []);
+
+    const revert = () => {
+        const patch = { [field.name]: baseValue };
+        if (field.poster) patch[field.poster] = base?.[field.poster] ?? "";
+        onPatch(patch);
+    };
+
+    const take = (file) => {
+        if (!file || work) return;
+        if (!file.type.startsWith("video/") && !VIDEO_TYPES.test(file.name)) {
+            setError("Eso no es un video. Elija un archivo de video, como MP4 o MOV.");
+            return;
+        }
+        setError("");
+        setWork({ step: "copy", progress: 0 });
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", `/api/video?name=${encodeURIComponent(file.name)}`);
+        xhr.setRequestHeader("Content-Type", file.type || "application/octet-stream");
+        xhr.upload.onprogress = (e) => {
+            if (e.lengthComputable && alive.current) setWork({ step: "copy", progress: e.loaded / e.total });
+        };
+        xhr.onerror = () => {
+            if (!alive.current) return;
+            setWork(null);
+            setError("No se pudo copiar ese video. Pruebe otra vez.");
+        };
+        xhr.onload = () => {
+            let data = {};
+            try { data = JSON.parse(xhr.responseText); } catch { /* left empty */ }
+            if (xhr.status !== 200 || !data.job) {
+                setWork(null);
+                setError(data.error || "No se pudo copiar ese video. Pruebe otra vez.");
+                return;
+            }
+            const ask = async () => {
+                if (!alive.current) return;
+                try {
+                    const job = await (await fetch(`/api/video/${data.job}`)).json();
+                    if (job.state === "working") {
+                        setWork({ step: "squeeze", progress: job.progress || 0 });
+                        setTimeout(ask, 300);
+                        return;
+                    }
+                    setWork(null);
+                    if (job.state !== "done") {
+                        setError(job.error || "No se pudo comprimir ese video. Pruebe otra vez.");
+                        return;
+                    }
+                    const patch = { [field.name]: `${window.location.origin}${job.path}` };
+                    if (field.poster && job.poster) patch[field.poster] = `${window.location.origin}${job.poster}`;
+                    onPatch(patch);
+                } catch {
+                    setWork(null);
+                    setError("Se perdió la conexión mientras se comprimía. Pruebe otra vez.");
+                }
+            };
+            setWork({ step: "squeeze", progress: 0 });
+            ask();
+        };
+        xhr.send(file);
+    };
+
+    const drop = {
+        onDragOver: (e) => {
+            if (e.dataTransfer.types.includes(ORDER_TYPE)) return;
+            e.preventDefault();
+            setOver(true);
+        },
+        onDragLeave: (e) => { if (!e.currentTarget.contains(e.relatedTarget)) setOver(false); },
+        onDrop: (e) => {
+            e.preventDefault();
+            setOver(false);
+            take(e.dataTransfer.files?.[0]);
+        },
+    };
+
+    const v = value.trim();
+    const isFile = /\.(mp4|webm|ogv|ogg|mov|m4v)(\?.*)?$/i.test(v);
+    const isYouTube = /^(https?:\/\/)?([a-z]+\.)?(youtube\.com|youtu\.be)(\/|$)/i.test(v);
+    const kind = !v
+        ? "Sin video."
+        : isStaged(v)
+            ? "Video nuevo · se guarda al Aplicar"
+            : isFile
+                ? "Un video guardado en el sitio."
+                : /player\.vimeo\.com\/video\//i.test(v)
+                    ? "Video de Vimeo ✓"
+                    : videoEmbed(v)
+                        ? "Video de YouTube ✓"
+                        : isYouTube
+                            ? "⚠ Es un enlace de YouTube, pero no a un video. Copie el enlace del video mismo."
+                            : "Se usará tal cual, como un enlace a un video de internet.";
+    const shown = isStaged(v) ? stagedName(v) : isFile ? v.split("/").pop() : "";
+    const pct = work ? Math.round(work.progress * 100) : 0;
+
+    return (
+        <div className={`row videoRow ${changed ? "isChanged" : ""}`}>
+            <span className="rowHead">
+                <span className="rowLabel">{field.label}</span>
+                <Revert show={changed} onClick={revert} />
+            </span>
+
+            <div className={`pic isEmpty ${over ? "isOver" : ""}`} {...drop}>
+                {work ? (
+                    <div className="videoWork" role="status">
+                        <span className="picEmptyTitle">
+                            {work.step === "copy" ? "Copiando el video…" : "Comprimiendo el video para el sitio…"} {pct}%
+                        </span>
+                        <span className="videoBar"><span style={{ width: `${pct}%` }} /></span>
+                        <span className="picEmptyHint">
+                            {work.step === "copy"
+                                ? "Paso 1 de 2"
+                                : "Paso 2 de 2 · se hace más liviano para que cargue rápido"}
+                        </span>
+                    </div>
+                ) : (
+                    <button type="button" className="picEmpty" onClick={() => input.current?.click()}>
+                        <span className="picEmptyTitle">
+                            {over ? "Suelte el video aquí" : shown ? "Arrastre otro video para cambiarlo" : "Arrastre un video aquí"}
+                        </span>
+                        <span className={`picEmptyHint ${error ? "picMetaBad" : ""}`}>
+                            {error || "o toque para elegirlo · se comprime solo"}
+                        </span>
+                    </button>
+                )}
+                {shown && !work && (
+                    <span className="videoNow">
+                        <span className="picName" title={shown}>🎬 {shown}</span>
+                        <button type="button" className="picBtn quiet" onClick={() => {
+                            const patch = { [field.name]: "" };
+                            if (field.poster) patch[field.poster] = "";
+                            onPatch(patch);
+                        }}>
+                            Quitar
+                        </button>
+                    </span>
+                )}
+                <div className="picOr"><span>o pegue el enlace de YouTube o Vimeo</span></div>
+                <input
+                    type="text"
+                    value={value}
+                    onChange={(e) => onPatch({ [field.name]: videoEmbed(e.target.value) || e.target.value })}
+                />
+                <span className={`rowHelp ${isStaged(v) ? "picMetaNew" : ""}`}>{kind}</span>
+            </div>
+
+            <input
+                ref={input}
+                type="file"
+                accept="video/*,.mov,.mp4,.m4v"
+                hidden
+                onChange={(e) => {
+                    take(e.target.files?.[0]);
+                    e.target.value = "";
+                }}
+            />
+            {field.help && <span className="rowHelp">{field.help}</span>}
+        </div>
+    );
+}
+
 function Field({ field, obj, base, onPatch }) {
     const value = obj?.[field.name] ?? "";
     const baseValue = base?.[field.name] ?? "";
@@ -1203,31 +1387,7 @@ function Field({ field, obj, base, onPatch }) {
     }
 
     if (field.kind === "video") {
-        // A YouTube or Vimeo link is turned into its player address the moment
-        // it is pasted, so she can copy the link from wherever she is watching.
-        const v = value.trim();
-        const isYouTube = /^(https?:\/\/)?([a-z]+\.)?(youtube\.com|youtu\.be)(\/|$)/i.test(v);
-        const kind = !v
-            ? "Vacío — queda el marco de reserva."
-            : /\.(mp4|webm|ogv|ogg|mov|m4v)(\?.*)?$/i.test(v)
-                ? "Se leyó como un archivo de video de public/content/."
-                : /player\.vimeo\.com\/video\//i.test(v)
-                    ? "Video de Vimeo ✓"
-                    : videoEmbed(v)
-                        ? "Video de YouTube ✓"
-                        : isYouTube
-                            ? "⚠ Es un enlace de YouTube, pero no a un video. Copie el enlace del video mismo."
-                            : "Se usará tal cual, como un enlace a un video de internet.";
-        return (
-            <Row field={field} changed={changed} onRevert={revert}>
-                <input
-                    type="text"
-                    value={value}
-                    onChange={(e) => set(videoEmbed(e.target.value) || e.target.value)}
-                />
-                <span className="rowHelp">{kind}</span>
-            </Row>
-        );
+        return <VideoField field={field} obj={obj} base={base} onPatch={onPatch} />;
     }
 
     if (field.kind === "url") {

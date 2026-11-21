@@ -25,7 +25,11 @@
 /* Smaller than it was. Poster-led is the point of the band, but at full width
    the flyer was taking most of the first screen before a word of the encounter
    had been read. */
+/* The width is set outright: centred with auto margins the box would shrink
+   to the flyer, whose width comes from the copy the browser picked to fit the
+   box — on a 3× phone each pass picked a smaller one until it vanished. */
 .nextPoster {
+    width: 100%;
     max-width: min(250px, 31vh);
     margin-inline: auto;
 }

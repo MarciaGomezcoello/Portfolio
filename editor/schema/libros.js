@@ -50,6 +50,11 @@ export const LIBROS = {
                 { name: "title", kind: "text", label: "Título" },
                 { name: "body", kind: "prose", label: "Qué libro viene" },
                 { name: "cover", kind: "image", label: "Imagen al lado", shape: "shape" },
+                {
+                    name: "video", kind: "video", label: "Video del libro", poster: "poster",
+                    help: "Sale debajo del texto con el botón de play, como los otros videos del sitio. Arrastre el video tal cual: se comprime solo y su primera imagen queda de foto. Sin video, la sección sale igual.",
+                },
+                { name: "poster", kind: "image", label: "Foto con el botón de play", help: "Se pone sola al arrastrar un video; se puede cambiar por otra." },
             ],
         },
     ],

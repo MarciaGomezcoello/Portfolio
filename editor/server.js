@@ -4,7 +4,8 @@ import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { execFile } from "node:child_process";
+import { execFile, spawn } from "node:child_process";
+import { pipeline } from "node:stream/promises";
 import { promisify } from "node:util";
 
 /* ============================================================================
@@ -103,6 +104,53 @@ export function formatJson(value) {
 
 const HEIC = /^\.(heic|heif)$/;
 const run = promisify(execFile);
+
+/* --- Videos -----------------------------------------------------------------
+   A dropped video is made small enough for the site by tools/comprimir-video,
+   a little program on the Mac's own video engine (see the .swift beside it).
+   In the packaged app it sits outside the archive, where it can be run; while
+   the editor runs from source it is compiled the first time it is needed. */
+const videoJobs = new Map();
+const TOOL = path.join(HERE, "tools", "bin", "comprimir-video").replace(
+    `${path.sep}app.asar${path.sep}`,
+    `${path.sep}app.asar.unpacked${path.sep}`
+);
+
+async function videoTool() {
+    if (fsSync.existsSync(TOOL)) return TOOL;
+    if (TOOL.includes("app.asar")) throw new Error("Falta el compresor de video en la aplicación.");
+    await fs.mkdir(path.dirname(TOOL), { recursive: true });
+    await run("swiftc", ["-O", path.join(HERE, "tools", "comprimir-video.swift"), "-o", TOOL]);
+    return TOOL;
+}
+
+/* Runs the compressor, keeping `job.progress` up to date from what it says. */
+async function compressVideo(input, output, poster, job) {
+    const tool = await videoTool();
+    await new Promise((resolve, reject) => {
+        const child = spawn(tool, [input, output, poster]);
+        let said = "";
+        let error = "";
+        child.stdout.on("data", (chunk) => {
+            said += chunk;
+            const lines = said.split("\n");
+            said = lines.pop();
+            for (const line of lines) {
+                if (line.startsWith("progress ")) job.progress = Number(line.slice(9)) || job.progress;
+                else if (line.startsWith("error ")) error = line.slice(6);
+            }
+        });
+        child.on("error", reject);
+        child.on("close", (code) => {
+            if (code === 0) resolve();
+            else reject(new Error(
+                /no es un video/.test(error)
+                    ? "No se pudo leer ese video. Pruebe con otro archivo (MP4 o MOV)."
+                    : "No se pudo comprimir ese video. Pruebe otra vez."
+            ));
+        });
+    });
+}
 const PICTURE = /\.(jpe?g|png|webp|gif|avif|svg)$/i;
 
 const draftDir = () => path.join(SITE, ".borrador");
@@ -586,6 +634,52 @@ function makeApi({ uiDir, previewUrl }) {
             }
         }
     );
+    /* A chosen video. It is streamed to disk rather than held in memory — a
+       phone video can be hundreds of megabytes — and the answer comes back
+       as soon as it has arrived, with a job to ask about. The compressing
+       happens after, and the editor asks how far along it is. */
+    app.post("/api/video", async (req, res) => {
+        try {
+            const original = path.basename(String(req.query.name || "video.mp4"));
+            const base = slugify(path.basename(original, path.extname(original))) || "video";
+            const id = `${process.pid}-${Date.now().toString(36)}${Math.random().toString(36).slice(2, 7)}`;
+            const dir = photosDir();
+            await fs.mkdir(dir, { recursive: true });
+            const raw = path.join(dir, `${id}__raw${path.extname(original).toLowerCase() || ".mov"}`);
+            await pipeline(req, fsSync.createWriteStream(raw));
+            const job = { progress: 0, state: "working" };
+            videoJobs.set(id, job);
+            compressVideo(raw, path.join(dir, `${id}__${base}.mp4`), path.join(dir, `${id}__${base}.jpg`), job)
+                .then(() => {
+                    job.state = "done";
+                    job.progress = 1;
+                    job.path = `/api/staging/${id}__${base}.mp4`;
+                    job.poster = fsSync.existsSync(path.join(dir, `${id}__${base}.jpg`))
+                        ? `/api/staging/${id}__${base}.jpg`
+                        : "";
+                })
+                .catch((err) => {
+                    job.state = "failed";
+                    job.error = err.message;
+                })
+                .finally(() => fs.rm(raw, { force: true }));
+            res.json({ job: id });
+        } catch (err) {
+            res.status(500).json({ error: String(err.message || err) });
+        }
+    });
+
+    app.get("/api/video/:job", (req, res) => {
+        const job = videoJobs.get(req.params.job);
+        if (!job) return res.status(404).json({ error: "Ese video ya no está." });
+        res.json(job);
+        // Asked about once more after it ended, it is forgotten.
+        if (job.state !== "working") {
+            if (job.told) videoJobs.delete(req.params.job);
+            job.told = true;
+        }
+    });
+
     app.use("/api/staging", express.static(photosDir()));
 
     /* Aplicar. Staged photos become files, then any content file whose contents

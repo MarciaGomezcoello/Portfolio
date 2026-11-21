@@ -248,9 +248,14 @@
     /* The portrait leads on a narrow screen, and it is centred: capped at
        320px it is narrower than the column it sits in, and left in the corner
        of a full-width band it reads as having slipped rather than as having
-       been placed. */
+       been placed.
+       The width is set outright. Centred with auto margins, the box would
+       otherwise shrink to the photo, and the photo's width comes from the copy
+       the browser picked to fit the box: on a 3× phone each pass picked a
+       smaller copy until the portrait was two pixels wide. */
     .heroPortrait {
         order: -1;
+        width: 100%;
         max-width: 320px;
         margin-inline: auto;
     }

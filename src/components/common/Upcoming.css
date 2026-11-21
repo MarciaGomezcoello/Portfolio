@@ -64,6 +64,94 @@
     margin-bottom: 0;
 }
 
+/* --- Trailer ------------------------------------------------------------- */
+
+/* Under the words, the width of the text column, in the frame every picture
+   on the site sits in. Widescreen, because that is the shape a trailer is. */
+.upcomingVideo {
+    position: relative;
+    margin-top: clamp(1.4rem, 3vw, 1.9rem);
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: var(--ink);
+}
+
+.upcomingVideo video,
+.upcomingVideo iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+}
+
+/* Before it is pressed: the picture with the play mark, the same badge the
+   video cards on Tejidos carry, so it reads as one of the site's videos. */
+.upcomingVideoOpen {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.upcomingVideoOpen .figureImg,
+.upcomingVideoOpen .ph {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform 0.7s var(--ease);
+}
+
+.upcomingVideoPlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin: -1.8rem 0 0 -1.8rem;
+    border-radius: 30%;
+    background: var(--rose-deep);
+    box-shadow: var(--shadow-rose);
+    transform: rotate(45deg);
+    transition: background 0.35s var(--ease), transform 0.4s var(--ease);
+}
+
+.upcomingVideoPlay svg {
+    width: 52%;
+    height: 52%;
+    fill: var(--on-accent);
+    transform: rotate(-45deg) translateX(4%);
+}
+
+@media (hover: hover) {
+    .upcomingVideoOpen:hover .figureImg,
+    .upcomingVideoOpen:hover .ph {
+        transform: scale(1.05);
+    }
+
+    .upcomingVideoOpen:hover .upcomingVideoPlay {
+        background: var(--rose-dark);
+        transform: rotate(45deg) scale(1.09);
+    }
+}
+
+.upcomingVideoOpen:focus-visible {
+    outline: 3px solid var(--paper);
+    outline-offset: -3px;
+}
+
 /* --- Cover --------------------------------------------------------------- */
 
 /* No shape of its own: the cover inside takes the picture's proportion, so
@@ -89,7 +177,10 @@
         padding-right: 0;
     }
 
+    /* On a narrow screen the cover leads: the book first, then what it is
+       about, then its trailer. */
     .upcomingPhoto {
+        order: -1;
         max-width: 210px;
         width: 100%;
     }
