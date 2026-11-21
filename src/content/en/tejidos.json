@@ -45,7 +45,7 @@
                 "channel": "Crochet",
                 "photo": "https://i.ytimg.com/vi/s7t2KEfRs6Y/hqdefault.jpg",
                 "photoAlt": "Very easy sweater",
-                "video": "https://www.youtube.com/embed/s7t2KEfRs6Y"
+                "video": "https://www.youtube.com/watch?v=s7t2KEfRs6Y"
             },
             {
                 "title": "Cropped sweater (part 1)",
@@ -56,52 +56,52 @@
                 "video": "https://www.youtube.com/embed/cr_4aWkEfWk"
             },
             {
-                "title": "Butterfly stitch, for blankets",
-                "note": "A stitch that shines on its own: enough for a whole blanket.",
+                "title": "Star square",
+                "note": "A beautiful square for blankets and bedspreads.",
                 "channel": "Crochet",
-                "photo": "https://i.ytimg.com/vi/jn788apYpg8/hqdefault.jpg",
-                "photoAlt": "Butterfly stitch, for blankets",
-                "video": "https://www.youtube.com/embed/jn788apYpg8"
+                "photo": "https://i.ytimg.com/vi/SHMK0NpogTY/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC9pOBrF6X273Xs3z_wLJCp5QxToA",
+                "photoAlt": "Star square",
+                "video": "https://www.youtube.com/embed/SHMK0NpogTY?start=211"
             },
             {
-                "title": "Little daisies",
+                "title": "Mixed puff flowers",
                 "note": "Tiny flowers to sew onto any garment.",
                 "channel": "Crochet",
-                "photo": "https://i.ytimg.com/vi/GeRNC_89304/hqdefault.jpg",
-                "photoAlt": "Little daisies",
-                "video": "https://www.youtube.com/embed/GeRNC_89304"
+                "photo": "hq720.jpg",
+                "photoAlt": "Mixed puff flowers",
+                "video": "https://www.youtube.com/embed/bY7Y9NDRfhM?start=2"
             },
             {
-                "title": "Crochet flowers",
-                "note": "Petal by petal, up close and slowly.",
+                "title": "Three-petal puff flowers",
+                "note": "A beautiful stitch, easy to make.",
                 "channel": "Crochet",
                 "photo": "https://i.ytimg.com/vi/UWOURi5odJY/hqdefault.jpg",
-                "photoAlt": "Crochet flowers",
+                "photoAlt": "Three-petal puff flowers",
                 "video": "https://www.youtube.com/embed/UWOURi5odJY"
             },
             {
-                "title": "Crochet strawberries",
-                "note": "A little fruit you can make in an afternoon.",
+                "title": "Large roses",
+                "note": "Beautiful roses that are easy to make, perfect for Mother's Day or Valentine's Day.",
                 "channel": "Crochet",
-                "photo": "https://i.ytimg.com/vi/eGAGz0DwGPU/hqdefault.jpg",
-                "photoAlt": "Crochet strawberries",
-                "video": "https://www.youtube.com/embed/eGAGz0DwGPU"
-            },
-            {
-                "title": "Kitten keychain",
-                "note": "A whole little doll, from nose to tail.",
-                "channel": "Crochet",
-                "photo": "https://i.ytimg.com/vi/7e_FOvFGDSY/hqdefault.jpg",
-                "photoAlt": "Kitten keychain",
-                "video": "https://www.youtube.com/embed/7e_FOvFGDSY"
+                "photo": "21be094e-ec64-46b7-898a-a0e4d53ff74a.webp",
+                "photoAlt": "Large roses",
+                "video": "https://www.youtube.com/embed/fT8YTKINbJ4?start=1368"
             },
             {
                 "title": "Flower edging or trim",
-                "note": "The finishing touch that transforms a simple garment.",
+                "note": "Very easy to make: an edging for your towels, bedspreads or napkins.",
                 "channel": "Crochet",
                 "photo": "https://i.ytimg.com/vi/SEyxAWP__js/hqdefault.jpg",
                 "photoAlt": "Flower edging or trim",
                 "video": "https://www.youtube.com/embed/SEyxAWP__js"
+            },
+            {
+                "title": "Swan keychain",
+                "note": "A lovely keychain, easy to make.",
+                "channel": "Crochet",
+                "photo": "cca2f3c6-36fa-44a2-ba72-035ad2854dcf.webp",
+                "photoAlt": "Swan keychain",
+                "video": "https://www.youtube.com/embed/YEe4xAW9Uqo"
             },
             {
                 "title": "Puff stitch",
@@ -121,7 +121,7 @@
             },
             {
                 "title": "Tree stitch",
-                "note": "A pattern of little trees repeated across the fabric.",
+                "note": "Very easy to knit on two needles, perfect for sweaters, scarves or any other project.",
                 "channel": "Knitting",
                 "photo": "https://i.ytimg.com/vi/GZWJo45W2QI/hqdefault.jpg",
                 "photoAlt": "Tree stitch",
@@ -129,7 +129,7 @@
             },
             {
                 "title": "Rose stitch",
-                "note": "Raised roses, one of the channel's most requested stitches.",
+                "note": "A pretty stitch, perfect for baby clothes.",
                 "channel": "Knitting",
                 "photo": "https://i.ytimg.com/vi/Yghs3m-6_1U/hqdefault.jpg",
                 "photoAlt": "Rose stitch",
